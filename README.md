@@ -22,3 +22,4 @@ to run the model_test > main.py
 first the follow commands 
 pip install transformers
 pip install sentencepiece
+then just run python main.py in the directory to answer questions
