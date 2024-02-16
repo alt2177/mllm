@@ -16,3 +16,9 @@ We specifically will be assessing summarization performance on a particular doma
 ## Technologies
 
 Our data is stored on [XetHub](https://about.xethub.com/?) at [https://xethub.com/alt2177/mllm-data](https://xethub.com/alt2177/mllm-data). We use both [Polars](https://github.com/pola-rs/polars) and [Pandas](https://pandas.pydata.org/) for our EDA and data pre-processing. For examples, see the `notebooks` folder.
+
+##
+to run the model_test > main.py
+first the follow commands 
+pip install transformers
+pip install sentencepiece
