@@ -18,6 +18,8 @@ install: venv
 # Run your program
 run: 
 	main.py
+# run: venv
+# 	${VENV}/bin/python main.py
 
 # Run tests
 test: venv
