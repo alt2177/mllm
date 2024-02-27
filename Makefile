@@ -16,9 +16,14 @@ $(VENV)/bin/activate: requirements.txt
 install: venv
 
 # Run your program
+<<<<<<< HEAD
 run:
 	sbatch lambda_fine_tune.sh
 	make clean
+=======
+run: venv
+	${VENV}/bin/python main.py
+>>>>>>> cb8f8f6aa (updated .gitignore and Makefile)
 
 # Run tests
 test: venv
