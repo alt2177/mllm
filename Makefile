@@ -17,7 +17,7 @@ install: venv
 
 # Run your program
 run: venv
-	${VENV}/bin/python src/main.py
+	${VENV}/bin/python main.py
 
 run2: venv
 	${VENV}/bin/python src/drug_data.py
