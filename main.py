@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from huggingface_hub import HfApi, HfFolder, create_repo
 from transformers import AutoTokenizer, DataCollatorWithPadding, AutoModelForSequenceClassification, TrainingArguments, Trainer
 from datasets import load_dataset
@@ -22,6 +23,20 @@ def main():
     username = "mllm-dev"
     # repo that will be made on huggingface
     output_repo = "yelp_finetuned_6gpu_full"
+=======
+
+import pyxet         # make xet:// protocol available   
+import pandas as pd 
+import polars as pl  # faster alternative to pandas
+import numpy as np
+import pyarrow
+import matplotlib.pyplot as plt
+import smd
+
+def main():
+    fs = pyxet.XetFS()
+    print("hello sheep")
+>>>>>>> 98e6ae202 (created stuff)
 
     # load and tokenize data
     dataset = load_dataset("imdb")
