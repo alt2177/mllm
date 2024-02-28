@@ -1,1 +1,1 @@
-import data
+from .data import clean_data 
