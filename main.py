@@ -31,9 +31,10 @@ import polars as pl  # faster alternative to pandas
 import numpy as np
 import pyarrow
 import matplotlib.pyplot as plt
-import smd
+from smd.data.load_drug_data import load_drug_data
 
 def main():
+<<<<<<< HEAD
     fs = pyxet.XetFS()
     print("hello sheep")
 >>>>>>> 98e6ae202 (created stuff)
@@ -42,6 +43,10 @@ def main():
     dataset = load_dataset("imdb")
     tokenizer = AutoTokenizer.from_pretrained("openai-community/gpt2", use_auth_token = access_token)
     tokenizer.pad_token = tokenizer.eos_token
+=======
+    df_training, df_testing = load_drug_data()
+    print(df_training.head())
+>>>>>>> 2503f0e0a (got imports to work)
 
     tokenized_yelp = dataset.map(lambda examples:tokenizer(examples["text"], truncation=True,max_length=1024),batched=True)
     
