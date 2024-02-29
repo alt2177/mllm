@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 from huggingface_hub import HfApi, HfFolder, create_repo
 from transformers import AutoTokenizer, DataCollatorWithPadding, AutoModelForSequenceClassification, TrainingArguments, Trainer
 from datasets import load_dataset
@@ -25,15 +26,23 @@ def main():
     output_repo = "yelp_finetuned_6gpu_full"
 =======
 
+=======
+import os
+>>>>>>> 4565eef23 (began trying to use mergekit in our data pipeline)
 import pyxet         # make xet:// protocol available   
 import pandas as pd 
 import polars as pl  # faster alternative to pandas
 import numpy as np
 import pyarrow
 import matplotlib.pyplot as plt
-from smd.data.load_drug_data import load_drug_data
+
+from mllm.data.load_drug_data import load_drug_data
+from mllm.core.MLLM import MLLM 
+from mergekit.config import MergeConfiguration
+from mergekit.merge import MergeOptions, run_merge
 
 def main():
+<<<<<<< HEAD
 <<<<<<< HEAD
     fs = pyxet.XetFS()
     print("hello sheep")
@@ -47,6 +56,12 @@ def main():
     df_training, df_testing = load_drug_data()
     print(df_training.head())
 >>>>>>> 2503f0e0a (got imports to work)
+=======
+    os.chdir("mergekit")
+    df_training, df_testing = load_drug_data()
+    print(df_training.head())
+    model = MLLM()
+>>>>>>> 4565eef23 (began trying to use mergekit in our data pipeline)
 
     tokenized_yelp = dataset.map(lambda examples:tokenizer(examples["text"], truncation=True,max_length=1024),batched=True)
     
