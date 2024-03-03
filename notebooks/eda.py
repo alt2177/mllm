@@ -39,7 +39,7 @@ Now, let's access our data and load it into `pd.DataFrame` objects,
 # get the drug training and testing data
 df_drugs_train = pl.read_csv('xet://alt2177/mllm-data/main/data/drug_data/drugsComTrain_raw.tsv', separator = '\t')
 df_drugs_test = pl.read_csv('xet://alt2177/mllm-data/main/data/drug_data/drugsComTest_raw.tsv', separator = '\t')
-df_drugs_train.head(10)
+df_drugs_train.head(11)
 
 #|%%--%%| <XDe5SYSB0k|iSvjEduknc>
 
@@ -117,6 +117,7 @@ plt.savefig("rating_dist")
 plt.xlabel('Score (from 1 to 10)')
 plt.ylabel('Frequency')
 plt.legend()
+plt.savefig("images/drug_ratings.png")
 plt.show()
 
 #|%%--%%| <N9hsnW9cp9|X6s3rvd4gD>
@@ -134,8 +135,7 @@ plt.hist(df_drugs_train['usefulCount'], range = [0, 200], bins = 100, color = "v
 plt.xlabel('Number of users who found the review helpful')
 plt.ylabel('Frequency')
 plt.title("Distribution of Useful Ratings")
-plt.savefig("rating_dist")
-plt.legend()
+plt.savefig("images/drug_usefulness.png")
 plt.show()
 
 # |%%--%%| <X6s3rvd4gD|fjfsqaLMgZ>
@@ -156,6 +156,7 @@ plt.ylabel('Frequency')
 plt.xlim(14, 200)
 plt.hist(review_word_count, bins = 200, color = "lightskyblue")
 plt.axvline(review_word_count.mean(), color = "gold", linestyle = "dashed", linewidth = 2, label = "Average Word Count")
+plt.savefig("images/review_word_count.png")
 plt.show()
 
 #|%%--%%| <ihHMAnQ3Pc|CDPsEMelgx>
