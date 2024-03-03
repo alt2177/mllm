@@ -188,12 +188,17 @@ plt.xlabel('Review Length')
 plt.ylabel('Frequency')
 plt.legend()
 <<<<<<< HEAD
+<<<<<<< HEAD
 plt.title("Distribution of Length of Drug Reviews")
 plt.savefig("images/count_dist.png")
 =======
 plt.savefig("images/count_dist.png")
 plt.title("Distribution of Length of Drug Reviews")
 >>>>>>> c1dc9724a (created new figuers in notebooks)
+=======
+plt.title("Distribution of Length of Drug Reviews")
+plt.savefig("images/count_dist.png")
+>>>>>>> 2b81c5dbd (fixed image title)
 plt.show()
 #for rev in df_drugs_train.filter(review_word_count['map'] < 5)['review']:
 #   print(rev.strip('\n'))
