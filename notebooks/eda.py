@@ -156,10 +156,14 @@ plt.ylabel('Frequency')
 plt.xlim(14, 200)
 plt.hist(review_word_count, bins = 200, color = "lightskyblue")
 <<<<<<< HEAD
+<<<<<<< HEAD
 plt.axvline(review_word_count.mean().row(0)[0], color = "gold", linestyle = "dashed", linewidth = 2, label = "Average Word Count")
 =======
 plt.axvline(review_word_count.mean(), color = "gold", linestyle = "dashed", linewidth = 2, label = "Average Word Count")
 >>>>>>> a63225b39 (updating notebooks for presentation figures)
+=======
+plt.axvline(review_word_count.mean().row(0)[0], color = "gold", linestyle = "dashed", linewidth = 2, label = "Average Word Count")
+>>>>>>> c1dc9724a (created new figuers in notebooks)
 plt.savefig("images/review_word_count.png")
 plt.show()
 
@@ -183,8 +187,13 @@ plt.xlim(14, 900)
 plt.xlabel('Review Length')
 plt.ylabel('Frequency')
 plt.legend()
+<<<<<<< HEAD
 plt.title("Distribution of Length of Drug Reviews")
 plt.savefig("images/count_dist.png")
+=======
+plt.savefig("images/count_dist.png")
+plt.title("Distribution of Length of Drug Reviews")
+>>>>>>> c1dc9724a (created new figuers in notebooks)
 plt.show()
 #for rev in df_drugs_train.filter(review_word_count['map'] < 5)['review']:
 #   print(rev.strip('\n'))
