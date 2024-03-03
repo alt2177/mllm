@@ -1,0 +1,10 @@
+models:
+  - model: google-bert/bert-base-uncased
+    parameters:
+      weight: 1.0
+  - model: google-bert/bert-base-uncased
+    parameters:
+      weight: 1.0
+
+merge_method: linear
+dtype: float16
