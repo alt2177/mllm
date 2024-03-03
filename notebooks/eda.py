@@ -155,7 +155,11 @@ plt.xlabel('Word Count')
 plt.ylabel('Frequency')
 plt.xlim(14, 200)
 plt.hist(review_word_count, bins = 200, color = "lightskyblue")
+<<<<<<< HEAD
 plt.axvline(review_word_count.mean().row(0)[0], color = "gold", linestyle = "dashed", linewidth = 2, label = "Average Word Count")
+=======
+plt.axvline(review_word_count.mean(), color = "gold", linestyle = "dashed", linewidth = 2, label = "Average Word Count")
+>>>>>>> a63225b39 (updating notebooks for presentation figures)
 plt.savefig("images/review_word_count.png")
 plt.show()
 
