@@ -16,8 +16,8 @@ $(VENV)/bin/activate: requirements.txt
 install: venv
 
 # Run your program
-run: venv
-	${VENV}/bin/python main.py
+run: 
+	main.py
 
 # Run tests
 test: venv
@@ -29,6 +29,7 @@ clean:
 	rm -rf src/__pycache__
 	rm -rf tests/__pycache__
 	find . -name '*.pyc' -exec rm -f {} +
+	find . -name '*.log' -exec rm -f {} +
 	find . -name '*.pyo' -exec rm -f {} +
 	find . -name '*~' -exec rm -f {} +
 	find . -type d -name "mergekit" -exec rm -rf {} +
