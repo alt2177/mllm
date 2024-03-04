@@ -18,7 +18,6 @@ module load python/3.8
 module load cuda/10.1                 # Load CUDA module, if required
 
 # run script via Makefile
-<<<<<<< HEAD
 pip uninstall transformers
 pip install transformers==4.28.0
 pip install torch
