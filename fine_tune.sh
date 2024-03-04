@@ -22,6 +22,7 @@ pip install datasets
 pip install evaluate
 pip install numpy
 pip install huggingface
+pip install regex --upgrade
 echo $(pwd)
 python3 ./main.py
 #make run
