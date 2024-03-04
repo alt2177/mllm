@@ -86,7 +86,7 @@ def main():
     tokenizer = AutoTokenizer.from_pretrained("openai-community/gpt2", token = access_token)
     tokenizer.pad_token = tokenizer.eos_token
 
-    tokenized_yelp = dataset.map(preprocess_function, batched=True)
+    tokenized_yelp = dataset.map(lambda examples:tokenizer(examples["text"], truncation=True,max_length=1024),batched=True)
 
     # pad tokens
     data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
@@ -121,6 +121,7 @@ def main():
         save_strategy="epoch",
         load_best_model_at_end=True,
         push_to_hub=True,
+        hub_token=access_tokens,
     )
 
     trainer = Trainer(
@@ -131,6 +132,7 @@ def main():
         tokenizer=tokenizer,
         data_collator=data_collator,
         compute_metrics=compute_metrics,
+        hub_token=access_tokens,
     )
 
     result = trainer.train()
