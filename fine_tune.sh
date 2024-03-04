@@ -6,15 +6,22 @@
 #SBATCH --partition=jsteinhardt        # Specify the partition to run on
 #SBATCH --nodelist=saruman
 #SBATCH --gres=gpu:1                   # Request one GPU
+<<<<<<< HEAD
 #SBATCH --output=output.log     # Standard output and error log
 #SBATCH --mail-type=END,FAIL           # Send email on job END and FAIL
 #SBATCH --mail-user=robert_thompson@berkeley.edu
+=======
+#SBATCH --output=my_gpu_job_%j.log     # Standard output and error log
+#SBATCH --mail-type=BEGIN, END, FAIL           # Send email on job END and FAIL
+#SBATCH --mail-user= austin.tao@berkeley.edu, phudish_p@berkeley.edu, sean_mcavoy@berkeley.edu, robert_thompson@berkeley.edu 
+>>>>>>> 82f519b2f (created sbatch file)
 
 # Load any modules and set up your environment
 module load python/3.8
 module load cuda/10.1                 # Load CUDA module, if required
 
 # run script via Makefile
+<<<<<<< HEAD
 pip uninstall transformers
 pip install transformers==4.28.0
 pip install torch
@@ -29,3 +36,6 @@ git config user.name "mllm-dev"
 echo $(pwd)
 #python -m torch.distributed.launch --nproc_per_node=1 main.py
 python main.py
+=======
+make run
+>>>>>>> 82f519b2f (created sbatch file)
