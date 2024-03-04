@@ -37,6 +37,9 @@ module load cuda/10.1                 # Load CUDA module, if required
 # run script via Makefile
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3d1721335 (job completed)
 pip uninstall transformers
 pip install transformers==4.28.0
 pip install torch
