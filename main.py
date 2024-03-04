@@ -24,7 +24,7 @@ def main():
 
     # load and tokenize data
     dataset = load_dataset("yelp_review_full")
-    tokenizer = AutoTokenizer.from_pretrained("openai-community/gpt2", token = access_token)
+    tokenizer = AutoTokenizer.from_pretrained("openai-community/gpt2", use_auth_token = access_token)
     tokenizer.pad_token = tokenizer.eos_token
 
     tokenized_yelp = dataset.map(lambda examples:tokenizer(examples["text"], truncation=True,max_length=1024),batched=True)
@@ -41,7 +41,7 @@ def main():
     model = AutoModelForSequenceClassification.from_pretrained(
         "openai-community/gpt2",
         num_labels=5,
-        token = access_token
+        use_auth_token = access_token
     )
     model.config.pad_token_id = tokenizer.eos_token_id
     model.resize_token_embeddings(len(tokenizer))
@@ -62,7 +62,8 @@ def main():
         save_strategy="epoch",
         load_best_model_at_end=True,
         push_to_hub=True,
-        hub_token=access_tokens,
+        use_auth_token = access_token
+
     )
 
     trainer = Trainer(
@@ -73,7 +74,7 @@ def main():
         tokenizer=tokenizer,
         data_collator=data_collator,
         compute_metrics=compute_metrics,
-        hub_token=access_tokens,
+        use_auth_token = access_token
     )
 
     result = trainer.train()
