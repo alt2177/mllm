@@ -1,4 +1,7 @@
 .venv
 venv/
 /yelp_finetune_epoch_1_gpt2_1
+<<<<<<< HEAD
 output.log
+=======
+>>>>>>> 6370e429a (model trained)
