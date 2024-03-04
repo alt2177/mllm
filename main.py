@@ -46,8 +46,8 @@ def main():
     model.resize_token_embeddings(len(tokenizer))
 
     # create training-val split
-    small_train_dataset = tokenized_yelp["train"].shuffle(seed=42).select(range(100))
-    small_eval_dataset = tokenized_yelp["test"].shuffle(seed=42).select(range(100))
+    small_train_dataset = tokenized_yelp["train"].shuffle(seed=42).select(range(1000))
+    small_eval_dataset = tokenized_yelp["test"].shuffle(seed=42).select(range(1000))
  
     # training loop
     training_args = TrainingArguments(
