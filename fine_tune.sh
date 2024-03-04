@@ -8,7 +8,7 @@
 #SBATCH --gres=gpu:1                   # Request one GPU
 #SBATCH --output=output.log     # Standard output and error log
 #SBATCH --mail-type=END,FAIL           # Send email on job END and FAIL
-#SBATCH --mail-user=austin.tao@berkeley.edu,phudish_p@berkeley.edu,sean_mcavoy@berkeley.edu,robert_thompson@berkeley.edu 
+#SBATCH --mail-user=robert_thompson@berkeley.edu 
 
 # Load any modules and set up your environment
 module load python/3.8
