@@ -48,6 +48,7 @@ import numpy as np
 # from mergekit.merge import MergeOptions, run_merge
 
 def compute_metrics(eval_pred):
+    accuracy = evaluate.load("accuracy")
     predictions, labels = eval_pred
     predictions = np.argmax(predictions, axis=1)
     return accuracy.compute(predictions=predictions, references=labels)
@@ -89,9 +90,7 @@ def main():
     tokenized_yelp = dataset.map(lambda examples:tokenizer(examples["text"], truncation=True,max_length=1024),batched=True)
 
     # pad tokens
-    data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
-
-    accuracy = evaluate.load("accuracy")
+    data_collator = DataCollatorWithPadding(tokenizer=tokenizer) 
 
     # id2label = {0: "NEGATIVE", 1: "POSITIVE"}
     # label2id = {"NEGATIVE": 0, "POSITIVE": 1}
@@ -106,8 +105,8 @@ def main():
     model.resize_token_embeddings(len(tokenizer))
 
     # create training-val split
-    small_train_dataset = tokenized_yelp["train"].shuffle(seed=42).select(range(1000))
-    small_eval_dataset = tokenized_yelp["test"].shuffle(seed=42).select(range(1000))
+    small_train_dataset = tokenized_yelp["train"].shuffle(seed=42).select(range(100))
+    small_eval_dataset = tokenized_yelp["test"].shuffle(seed=42).select(range(100))
  
     # training loop
     training_args = TrainingArguments(
@@ -121,7 +120,11 @@ def main():
         save_strategy="epoch",
         load_best_model_at_end=True,
         push_to_hub=True,
+<<<<<<< HEAD
         hub_token=access_tokens,
+=======
+        hub_token = access_token
+>>>>>>> e8a460892 (model trained)
     )
 
     trainer = Trainer(
@@ -132,7 +135,11 @@ def main():
         tokenizer=tokenizer,
         data_collator=data_collator,
         compute_metrics=compute_metrics,
+<<<<<<< HEAD
         hub_token=access_tokens,
+=======
+#        hub_token = access_token
+>>>>>>> e8a460892 (model trained)
     )
 
     result = trainer.train()

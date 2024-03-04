@@ -1,5 +1,11 @@
 .venv
 venv/
 /yelp_finetune_epoch_1_gpt2_1
+<<<<<<< HEAD
 output.log
+<<<<<<< HEAD
 *.csv
+=======
+=======
+>>>>>>> 6370e429a (model trained)
+>>>>>>> e8a460892 (model trained)
