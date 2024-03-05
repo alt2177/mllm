@@ -23,6 +23,9 @@ pip install evaluate
 pip install numpy
 pip install huggingface
 pip install regex --upgrade
+pip install huggingface_hub
+git config user.email "mllm.dev.222@gmail.com"
+git config user.name "mllm-dev"
 echo $(pwd)
-python3 ./main.py
-#make run
+#python -m torch.distributed.launch --nproc_per_node=1 main.py
+python main.py
