@@ -7,8 +7,8 @@
 #SBATCH --nodelist=saruman
 #SBATCH --gres=gpu:1                   # Request one GPU
 #SBATCH --output=output.log     # Standard output and error log
-#SBATCH --mail-type=END,FAIL           # Send email on job END and FAIL
-#SBATCH --mail-user=robert_thompson@berkeley.edu
+#SBATCH --mail-type=BEGIN,END,FAIL           # Send email on job END and FAIL
+#SBATCH --mail-user=mllm.dev.222@gmail.com
 
 # Load any modules and set up your environment
 module load python/3.8
@@ -23,14 +23,9 @@ pip install evaluate
 pip install numpy
 pip install huggingface
 pip install regex --upgrade
-echo $(pwd)
-python3 ./main.py
-#make run
-=======
 pip install huggingface_hub
 git config user.email "mllm.dev.222@gmail.com"
 git config user.name "mllm-dev"
 echo $(pwd)
 #python -m torch.distributed.launch --nproc_per_node=1 main.py
-python main.py
->>>>>>> bobby_testing
+python3 ./main.py

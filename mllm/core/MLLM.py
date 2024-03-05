@@ -44,8 +44,8 @@ class MLLM:
         """
 
         """
-        self.model = self.create_model()
-        self.dataset = self.load_dataset() 
+        self.model = create_model(self)
+        self.dataset = load_dataset(self) 
         self.result = None
 
     
@@ -107,14 +107,14 @@ class MLLM:
             return train_dataset, test_dataset
 
 
-    def create_model(self):
+    def create_model(cls, self):
         """
         Create model 
         """
         model = AutoModelForSequenceClassification.from_pretrained(
             "openai-community/gpt2",
             num_labels = 5,
-            use_auth_token = access_token
+            use_auth_token = cls.access_token
         )
         model.config.pad_token_id = tokenizer.eos_token_id
         model.resize_token_embeddings(len(tokenizer))
