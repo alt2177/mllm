@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 from mllm.core import mergekit 
 =======
 from mllm.core import MLLM
@@ -7,3 +8,5 @@ from mllm.core import MLLM
 =======
 from mllm.core import mergekit 
 >>>>>>> a63225b39 (updating notebooks for presentation figures)
+=======
+>>>>>>> 25445bbcf (began transitioning code into package structure)
