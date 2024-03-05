@@ -16,10 +16,6 @@ $(VENV)/bin/activate: requirements.txt
 install: venv
 
 # Run your program
-<<<<<<< HEAD
-run: 
-	main.py
-=======
 run: venv
 	${VENV}/bin/python main.py
 
