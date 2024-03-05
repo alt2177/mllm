@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #from huggingface_hub import notebook_login
+=======
+from huggingface_hub import HfApi, HfFolder, create_repo
+>>>>>>> bobby_testing
 from transformers import DataCollatorWithPadding, AutoModelForSequenceClassification, TrainingArguments, Trainer
 from datasets import load_dataset
 from transformers import AutoTokenizer
@@ -20,8 +24,10 @@ def preprocess_function(examples):
     return tokenizer(examples["text"], truncation=True,max_length=1024)
 
 def main():
-    # set tam's token
-    access_token = "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" 
+    # set our collective token
+    access_token = "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" 
+    username = "mllm-dev"
+    output_repo = "yelp_finetuned_sbatch_upload_test"
 
     # load and tokenize data
     dataset = load_dataset("yelp_review_full")
@@ -46,12 +52,22 @@ def main():
     model.resize_token_embeddings(len(tokenizer))
 
     # create training-val split
+<<<<<<< HEAD
     small_train_dataset = tokenized_yelp["train"].shuffle(seed=42).select(range(1000))
     small_eval_dataset = tokenized_yelp["test"].shuffle(seed=42).select(range(1000))
  
     # training loop
     training_args = TrainingArguments(
         output_dir="yelp_finetune_epoch_1_gpt2_1",
+=======
+    small_train_dataset = tokenized_yelp["train"].shuffle(seed=42).select(range(10))
+    small_eval_dataset = tokenized_yelp["test"].shuffle(seed=42).select(range(10))
+ 
+    output_dir = "yelp_finetune_gpt2_test"
+    # training loop
+    training_args = TrainingArguments(
+        output_dir=output_dir,
+>>>>>>> bobby_testing
         learning_rate=2e-5,
         per_device_train_batch_size=8,
         per_device_eval_batch_size=8,
@@ -61,6 +77,10 @@ def main():
         save_strategy="epoch",
         load_best_model_at_end=True,
         push_to_hub=True,
+<<<<<<< HEAD
+=======
+	hub_model_id=f"{username}/{output_repo}",
+>>>>>>> bobby_testing
         hub_token = access_token
     )
 
@@ -71,12 +91,36 @@ def main():
         eval_dataset=small_eval_dataset,
         tokenizer=tokenizer,
         data_collator=data_collator,
+<<<<<<< HEAD
         compute_metrics=compute_metrics,
 #        hub_token = access_token
+=======
+        compute_metrics=compute_metrics
+>>>>>>> bobby_testing
     )
 
     result = trainer.train()
     print(result)
+<<<<<<< HEAD
+=======
+#    trainer.push_to_hub(f"{username}/{output_repo}")
+	
+    HfFolder.save_token(access_token)
+
+# Optionally, you can directly use the token with the HfApi instance
+    api = HfApi()
+    user = api.whoami(token=access_token)
+    print("Logged in as:", user['name'])
+    
+    print('UPLOADING')
+    api.upload_folder(
+        folder_path=f"./{output_dir}",
+        repo_id=f"{username}/{output_repo}",
+        repo_type="model"
+    )
+    print('uploading done!')
+
+>>>>>>> bobby_testing
 
     # model eval
     #eval_result = trainer.evaluate(eval_dataset=tokenized_imdb["test"])
