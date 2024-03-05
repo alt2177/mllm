@@ -1,13 +1,21 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # MLLM Class source file
 # 
 
 import os
+=======
+# Class for MLLM, which we can create instances of to run tests or otherwise
+#
+#
+
+>>>>>>> be4e74db6 (began transitioning code into package structure)
 from transformers import DataCollatorWithPadding, AutoModelForSequenceClassification, TrainingArguments, Trainer
 from datasets import load_dataset
 from transformers import AutoTokenizer
 import evaluate
 import numpy as np
+<<<<<<< HEAD
 =======
 """
 Class file for the actual MLLM we want to use
@@ -23,16 +31,25 @@ import os
 
 
 >>>>>>> f522bc7a8 (began trying to use mergekit in our data pipeline)
+=======
+>>>>>>> be4e74db6 (began transitioning code into package structure)
 
 
 class MLLM:
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> be4e74db6 (began transitioning code into package structure)
     # HuggingFace access token
     access_token = "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"
 
     # specify output directory
+<<<<<<< HEAD
     output_dir = "test_MLLM"
+=======
+    output_dir = "test"
+>>>>>>> be4e74db6 (began transitioning code into package structure)
 
     # training arguments
     training_args = TrainingArguments(
@@ -61,6 +78,7 @@ class MLLM:
         """
 
         """
+<<<<<<< HEAD
         # set dataset and tokenize
         self.dataset = self.load_dataset() 
         self.tokenize_data()
@@ -75,6 +93,11 @@ class MLLM:
         self.result: Object
         self.tokenizer: AutoTokenizer 
 
+=======
+        self.model = self.create_model()
+        self.dataset = self.load_dataset() 
+        self.result = None
+>>>>>>> be4e74db6 (began transitioning code into package structure)
 
     
     def load_dataset(self, hf_dataset_name: str = "yelp_review_full" , local_path: str = None):
@@ -97,7 +120,11 @@ class MLLM:
             else:
                 raise FileNotFoundError(f"The specified path does not exist: {local_path}")
         # otherwise, load from HF
+<<<<<<< HEAD
         elif hf_dataset_name:
+=======
+        elif dataset_name:
+>>>>>>> be4e74db6 (began transitioning code into package structure)
             dataset = load_dataset(hf_dataset_name)
         else:
             raise ValueError("Either dataset_name or local_path must be provided.")
@@ -112,25 +139,43 @@ class MLLM:
         assert self.dataset is not None, "Dataset Missing"
     
         # create tokenizer and tokenize
+<<<<<<< HEAD
         tokenizer = AutoTokenizer.from_pretrained("openai-community/gpt2", use_auth_token = self.access_token)
         self.tokenizer = tokenizer
         tokenizer.pad_token = tokenizer.eos_token
         tokenized_data = self.dataset.map(lambda examples:tokenizer(examples["text"], truncation=True,max_length=1024),batched=True)
+=======
+        tokenizer = AutoTokenizer.from_pretrained("openai-community/gpt2", use_auth_token = access_token)
+        tokenizer.pad_token = tokenizer.eos_token
+        tokenized_data = dataset.map(lambda examples:tokenizer(examples["text"], truncation=True,max_length=1024),batched=True)
+>>>>>>> be4e74db6 (began transitioning code into package structure)
 
         # set data collator with tokenizer
         self.data_collator = DataCollatorWithPadding(tokenizer = tokenizer) 
         self.dataset = tokenized_data
 
+<<<<<<< HEAD
     def train_test_val_split(self, train_size : int = 1000, test_size : int = 1000, val_size : int = None):
+=======
+    def train_test_val_split(self, train_size : int, test_size : int, val_size : int = None):
+>>>>>>> be4e74db6 (began transitioning code into package structure)
         """
 
         """
         train_dataset = self.dataset["train"].shuffle(seed=42).select(range(train_size))
+<<<<<<< HEAD
         test_dataset = self.dataset["test"].shuffle(seed=4).select(range(test_size))
         
         # create validation set if we ask for one
         if val_size:
             val_dataset = self.dataset["train"].shuffle(seed=420).select(range(val_size))
+=======
+        test_dataset = self.dataset["test"].shuffle(seed=42).select(range(test_size))
+        
+        # create validation set if we ask for one
+        if val_size:
+            val_dataset = self.dataset["train"].shuffle(seed=42).select(range(val_size))
+>>>>>>> be4e74db6 (began transitioning code into package structure)
             return train_dataset, test_dataset, val_dataset
         else:
             return train_dataset, test_dataset
@@ -143,10 +188,17 @@ class MLLM:
         model = AutoModelForSequenceClassification.from_pretrained(
             "openai-community/gpt2",
             num_labels = 5,
+<<<<<<< HEAD
             use_auth_token = self.access_token
         )
         model.config.pad_token_id = self.tokenizer.eos_token_id
         model.resize_token_embeddings(len(self.tokenizer))
+=======
+            use_auth_token = access_token
+        )
+        model.config.pad_token_id = tokenizer.eos_token_id
+        model.resize_token_embeddings(len(tokenizer))
+>>>>>>> be4e74db6 (began transitioning code into package structure)
         return model
 
 
@@ -154,12 +206,21 @@ class MLLM:
 
         trainer = Trainer(
             model=self.model,
+<<<<<<< HEAD
             args=self.training_args,
             train_dataset=self.train_dataset,
             eval_dataset=self.test_dataset,
             tokenizer=self.tokenizer,
             data_collator=self.data_collator,
             compute_metrics=self.compute_metrics,
+=======
+            args=training_args,
+            train_dataset=small_train_dataset,
+            eval_dataset=small_eval_dataset,
+            tokenizer=tokenizer,
+            data_collator=data_collator,
+            compute_metrics=compute_metrics,
+>>>>>>> be4e74db6 (began transitioning code into package structure)
         )
 
         self.result = trainer.train()
@@ -171,6 +232,7 @@ class MLLM:
 
 
 
+<<<<<<< HEAD
 =======
 
     def __init__(self) -> None:
@@ -227,6 +289,8 @@ class MLLM:
         print(os.getcwd())
         pass
 >>>>>>> f522bc7a8 (began trying to use mergekit in our data pipeline)
+=======
+>>>>>>> be4e74db6 (began transitioning code into package structure)
 
 
 
