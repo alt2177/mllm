@@ -79,6 +79,7 @@ class MLLM:
 
         """
 <<<<<<< HEAD
+<<<<<<< HEAD
         # set dataset and tokenize
         self.dataset = self.load_dataset() 
         self.tokenize_data()
@@ -96,6 +97,10 @@ class MLLM:
 =======
         self.model = self.create_model()
         self.dataset = self.load_dataset() 
+=======
+        self.model = create_model(self)
+        self.dataset = load_dataset(self) 
+>>>>>>> f97b2ef44 (began testing MLLM.py)
         self.result = None
 >>>>>>> be4e74db6 (began transitioning code into package structure)
 
@@ -181,7 +186,7 @@ class MLLM:
             return train_dataset, test_dataset
 
 
-    def create_model(self):
+    def create_model(cls, self):
         """
         Create model 
         """
@@ -189,12 +194,16 @@ class MLLM:
             "openai-community/gpt2",
             num_labels = 5,
 <<<<<<< HEAD
+<<<<<<< HEAD
             use_auth_token = self.access_token
         )
         model.config.pad_token_id = self.tokenizer.eos_token_id
         model.resize_token_embeddings(len(self.tokenizer))
 =======
             use_auth_token = access_token
+=======
+            use_auth_token = cls.access_token
+>>>>>>> f97b2ef44 (began testing MLLM.py)
         )
         model.config.pad_token_id = tokenizer.eos_token_id
         model.resize_token_embeddings(len(tokenizer))

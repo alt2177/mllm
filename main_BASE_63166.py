@@ -1,9 +1,12 @@
+<<<<<<< HEAD
+#from huggingface_hub import notebook_login
+=======
 from huggingface_hub import HfApi, HfFolder, create_repo
+>>>>>>> bobby_testing
 from transformers import DataCollatorWithPadding, AutoModelForSequenceClassification, TrainingArguments, Trainer
 from datasets import load_dataset
 from transformers import AutoTokenizer
 import evaluate
->>>>>>> 82f519b2f (created sbatch file)
 import numpy as np
 
 # from mllm.data.load_drug_data import load_drug_data
@@ -28,7 +31,7 @@ def main():
 
     # load and tokenize data
     dataset = load_dataset("yelp_review_full")
-    tokenizer = AutoTokenizer.from_pretrained("openai-community/gpt2", token = access_token)
+    tokenizer = AutoTokenizer.from_pretrained("openai-community/gpt2", use_auth_token = access_token)
     tokenizer.pad_token = tokenizer.eos_token
 
     tokenized_yelp = dataset.map(lambda examples:tokenizer(examples["text"], truncation=True,max_length=1024),batched=True)
@@ -43,12 +46,20 @@ def main():
     model = AutoModelForSequenceClassification.from_pretrained(
         "openai-community/gpt2",
         num_labels=5,
-        token = access_token
+        use_auth_token = access_token
     )
     model.config.pad_token_id = tokenizer.eos_token_id
     model.resize_token_embeddings(len(tokenizer))
 
     # create training-val split
+<<<<<<< HEAD
+    small_train_dataset = tokenized_yelp["train"].shuffle(seed=42).select(range(1000))
+    small_eval_dataset = tokenized_yelp["test"].shuffle(seed=42).select(range(1000))
+ 
+    # training loop
+    training_args = TrainingArguments(
+        output_dir="yelp_finetune_epoch_1_gpt2_1",
+=======
     small_train_dataset = tokenized_yelp["train"].shuffle(seed=42).select(range(10))
     small_eval_dataset = tokenized_yelp["test"].shuffle(seed=42).select(range(10))
  
@@ -56,6 +67,7 @@ def main():
     # training loop
     training_args = TrainingArguments(
         output_dir=output_dir,
+>>>>>>> bobby_testing
         learning_rate=2e-5,
         per_device_train_batch_size=8,
         per_device_eval_batch_size=8,
@@ -66,14 +78,10 @@ def main():
         load_best_model_at_end=True,
         push_to_hub=True,
 <<<<<<< HEAD
-<<<<<<< HEAD
-        hub_token=access_tokens,
 =======
-=======
-	    hub_model_id=f"{username}/{output_repo}",
->>>>>>> f97b2ef44 (began testing MLLM.py)
+	hub_model_id=f"{username}/{output_repo}",
+>>>>>>> bobby_testing
         hub_token = access_token
->>>>>>> e8a460892 (model trained)
     )
 
     trainer = Trainer(
@@ -85,18 +93,16 @@ def main():
         data_collator=data_collator,
 <<<<<<< HEAD
         compute_metrics=compute_metrics,
-<<<<<<< HEAD
-        hub_token=access_tokens,
-=======
 #        hub_token = access_token
->>>>>>> e8a460892 (model trained)
 =======
         compute_metrics=compute_metrics
->>>>>>> f97b2ef44 (began testing MLLM.py)
+>>>>>>> bobby_testing
     )
 
     result = trainer.train()
     print(result)
+<<<<<<< HEAD
+=======
 #    trainer.push_to_hub(f"{username}/{output_repo}")
 	
     HfFolder.save_token(access_token)
@@ -114,6 +120,7 @@ def main():
     )
     print('uploading done!')
 
+>>>>>>> bobby_testing
 
     # model eval
     #eval_result = trainer.evaluate(eval_dataset=tokenized_imdb["test"])
