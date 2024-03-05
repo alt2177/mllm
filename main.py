@@ -4,6 +4,7 @@ from datasets import load_dataset
 from transformers import AutoTokenizer
 import evaluate
 import numpy as np
+import torch
 
 # from mllm.data.load_drug_data import load_drug_data
 # from mllm.core.MLLM import MLLM 
@@ -20,6 +21,8 @@ def preprocess_function(examples):
     return tokenizer(examples["text"], truncation=True,max_length=1024)
 
 def main():
+    #initialize the torch distributed api
+    torch.distributed.init_process_group(backend="nccl")
     # set our collective token
     access_token = "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" 
     username = "mllm-dev"
@@ -48,8 +51,8 @@ def main():
     model.resize_token_embeddings(len(tokenizer))
 
     # create training-val split
-    small_train_dataset = tokenized_yelp["train"].shuffle(seed=42).select(range(10))
-    small_eval_dataset = tokenized_yelp["test"].shuffle(seed=42).select(range(10))
+    small_train_dataset = tokenized_yelp["train"].shuffle(seed=42).select(range(1000))
+    small_eval_dataset = tokenized_yelp["test"].shuffle(seed=42).select(range(1000))
  
     output_dir = "yelp_finetune_gpt2_test"
     # training loop
