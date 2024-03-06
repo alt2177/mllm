@@ -25,7 +25,7 @@ def main():
     # set our collective token
     access_token = "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" 
     username = "mllm-dev"
-    output_repo = "gpt2_finetune_1_with_prob"
+    output_repo = "gpt2_finetune_2_with_prob"
 
     # load and tokenize data
     dataset = load_dataset("imdb")
@@ -55,7 +55,7 @@ def main():
     small_train_dataset = tokenized_imdb["train"].shuffle(seed=42).select(range(1000))
     small_eval_dataset = tokenized_imdb["test"].shuffle(seed=42).select(range(1000))
  
-    output_dir = "imdb_finetune_gpt2_test_epoch_5_with_prob"
+    output_dir = "imdb_finetune_gpt2_test_epoch_5_with_prob_1"
     # training loop
     training_args = TrainingArguments(
         output_dir=output_dir,
@@ -87,7 +87,7 @@ def main():
     predictions = trainer.predict(small_eval_dataset)
     logits = predictions.predictions
     probs  = softmax(torch.tensor(logits),dim=1).numpy()
-    torch.save(probs,"test_probs_1.pt")
+    torch.save(probs,"test_probs_2.pt")
     
 #    trainer.push_to_hub(f"{username}/{output_repo}")
 	
