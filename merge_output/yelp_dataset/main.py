@@ -66,7 +66,7 @@ def main():
 #	gradient_accumulation_steps=4,   #want to explore what this is
         per_device_train_batch_size=24,
         per_device_eval_batch_size=24,
-        num_train_epochs=1,
+        num_train_epochs=2,
 	    fp16=True,
         weight_decay=0.01,
         evaluation_strategy="epoch",
@@ -90,7 +90,7 @@ def main():
     print(result)
     predictions = trainer.predict(tokenized_yelp_test)
     logits = predictions.predictions
-    probs  = softmax(torch.tensor(logits),dim=1).numpy()
+    probs  = softmax(torch.tensor(logits).float(),dim=1).numpy()
     torch.save(probs,"test_probs_yelp_1.pt")
    # trainer.evaluate()
 
