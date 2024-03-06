@@ -22,7 +22,7 @@ def main():
     # set our collective token
     access_token = "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" 
     username = "mllm-dev"
-    output_repo = "yelp_finetuned_sbatch_upload_4gpu_BIG"
+    output_repo = "yelp_finetuned_sbatch_upload_1gpu_BIG"
 
     # load and tokenize data
     dataset = load_dataset("yelp_review_full")
@@ -34,6 +34,15 @@ def main():
     # pad tokens
     data_collator = DataCollatorWithPadding(tokenizer=tokenizer) 
 
+    HfFolder.save_token(access_token)
+
+    api = HfApi()
+    user = api.whoami(token=access_token)
+#    try:
+#    	create_repo(f"{username}/{output_repo}", repo_type="model")
+#    except:
+#        print('error creating repo for model. it probably already exists')
+
     # create model
     model = AutoModelForSequenceClassification.from_pretrained(
         "openai-community/gpt2",
@@ -43,28 +52,17 @@ def main():
     model.config.pad_token_id = tokenizer.eos_token_id
     model.resize_token_embeddings(len(tokenizer))
 
-    small_train_dataset = tokenized_yelp["train"].shuffle(seed=42).select(range(300000))
-    small_eval_dataset = tokenized_yelp["test"].shuffle(seed=42).select(range(50000))
-
-    HfFolder.save_token(access_token)
-
-    api = HfApi()
-    user = api.whoami(token=access_token)
-    try:
-    	create_repo(f"{username}/{output_repo}", repo_type="model")
-    except:
-        print('error creating repo for model. it probably already exists')
+    small_train_dataset = tokenized_yelp["train"].shuffle(seed=42).select(range(10000))
+    small_eval_dataset = tokenized_yelp["test"].shuffle(seed=42).select(range(10000))
 
     output_dir = "yelp_finetune_gpt2_test"
     # training loop
     training_args = TrainingArguments(
         output_dir=output_dir,
-        learning_rate=6e-5,    #read that with larger batch size we can increase learning rate
-#	gradient_accumulation_steps=4,   #want to explore what this is
-        per_device_train_batch_size=24,
-        per_device_eval_batch_size=24,
+        learning_rate=2e-5,
+        per_device_train_batch_size=16,
+        per_device_eval_batch_size=16,
         num_train_epochs=1,
-	fp16=True,
         weight_decay=0.01,
         evaluation_strategy="epoch",
         save_strategy="epoch",
@@ -88,19 +86,17 @@ def main():
     print('*************TRAINING COMPLETED**************')
    # trainer.evaluate()
 
-    #HfFolder.save_token(access_token)
+#    HfFolder.save_token(access_token)
 
-    #api = HfApi()
-   # user = api.whoami(token=access_token)
-    #print("Logged in as:", user['name'])
-
-    #create_repo(f"{username}/{output_repo}", repo_type="model")
-
-    #api.upload_folder(
-    #	folder_path=f"./{output_dir}",
+#    api = HfApi()
+#    user = api.whoami(token=access_token)
+#    print("Logged in as:", user['name'])
+    
+#    api.upload_folder(
+#    	folder_path=f"./{output_dir}",
 #	repo_id=f"{username}/{output_repo}",
- #       repo_type="model"
-  #  )
+#        repo_type="model"
+#    )
 
     # model eval
     #eval_result = trainer.evaluate(eval_dataset=tokenized_imdb["test"])
