@@ -4,6 +4,7 @@ import pytest
 import mllm
 from datasets import load_dataset
 import os
+from typing import Type
 
 class TestMLLM:
     @pytest.fixture
@@ -11,7 +12,7 @@ class TestMLLM:
         """Fixture to create an instance of the MLLM class."""
         return mllm.MLLM()
 
-    def test_init(self, mllm_instance):
+    def test_init(self, mllm_instance: Type[mllm.MLLM]):
         """Test initialization of the MLLM class."""
         assert mllm_instance is not None
         assert mllm_instance.model is not None
