@@ -82,6 +82,7 @@ def main():
 
     result = trainer.train()
     print(result)
+    
 #    trainer.push_to_hub(f"{username}/{output_repo}")
 	
     HfFolder.save_token(access_token)
