@@ -23,42 +23,44 @@ def main():
     # set our collective token
     access_token = "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" 
     username = "mllm-dev"
-    output_repo = "yelp_finetuned_sbatch_upload_test"
+    output_repo = "gpt2_finetune_2"
 
     # load and tokenize data
-    dataset = load_dataset("yelp_review_full")
+    dataset = load_dataset("imdb")
     tokenizer = AutoTokenizer.from_pretrained("openai-community/gpt2", use_auth_token = access_token)
     tokenizer.pad_token = tokenizer.eos_token
 
-    tokenized_yelp = dataset.map(lambda examples:tokenizer(examples["text"], truncation=True,max_length=1024),batched=True)
+    tokenized_imdb = dataset.map(lambda examples:tokenizer(examples["text"], truncation=True,max_length=1024),batched=True)
 
     # pad tokens
     data_collator = DataCollatorWithPadding(tokenizer=tokenizer) 
 
-    # id2label = {0: "NEGATIVE", 1: "POSITIVE"}
-    # label2id = {"NEGATIVE": 0, "POSITIVE": 1}
+    id2label = {0: "NEGATIVE", 1: "POSITIVE"}
+    label2id = {"NEGATIVE": 0, "POSITIVE": 1}
 
     # create model
     model = AutoModelForSequenceClassification.from_pretrained(
         "openai-community/gpt2",
-        num_labels=5,
-        use_auth_token = access_token
+        num_labels=2,
+        use_auth_token = access_token,
+        id2label=id2label, 
+        label2id=label2id
     )
     model.config.pad_token_id = tokenizer.eos_token_id
     model.resize_token_embeddings(len(tokenizer))
 
     # create training-val split
-    small_train_dataset = tokenized_yelp["train"].shuffle(seed=42).select(range(10))
-    small_eval_dataset = tokenized_yelp["test"].shuffle(seed=42).select(range(10))
+    #small_train_dataset = tokenized_yelp["train"].shuffle(seed=42).select(range(10))
+    #small_eval_dataset = tokenized_yelp["test"].shuffle(seed=42).select(range(10))
  
-    output_dir = "yelp_finetune_gpt2_test"
+    output_dir = "imdb_finetune_gpt2_test_epoch_5"
     # training loop
     training_args = TrainingArguments(
         output_dir=output_dir,
         learning_rate=2e-5,
         per_device_train_batch_size=8,
         per_device_eval_batch_size=8,
-        num_train_epochs=1,
+        num_train_epochs=5,
         weight_decay=0.01,
         evaluation_strategy="epoch",
         save_strategy="epoch",
@@ -71,8 +73,8 @@ def main():
     trainer = Trainer(
         model=model,
         args=training_args,
-        train_dataset=small_train_dataset,
-        eval_dataset=small_eval_dataset,
+        train_dataset=tokenized_imdb["train"],
+        eval_dataset=tokenized_imdb["test"],
         tokenizer=tokenizer,
         data_collator=data_collator,
         compute_metrics=compute_metrics
