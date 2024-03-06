@@ -6,6 +6,8 @@ from transformers import AutoTokenizer, TrainerCallback
 import evaluate
 import numpy as np
 import torch
+from torch.nn.functional import softmax 
+
 
 # from mllm.data.load_drug_data import load_drug_data
 # from mllm.core.MLLM import MLLM 
@@ -22,7 +24,7 @@ def main():
     # set our collective token
     access_token = "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" 
     username = "mllm-dev"
-    output_repo = "yelp_finetuned_sbatch_upload_4gpu_BIG"
+    output_repo = "yelp_finetuned_gpt2_6gpu_2"
 
     # load and tokenize data
     dataset = load_dataset("yelp_review_full")
@@ -45,7 +47,8 @@ def main():
 
     #small_train_dataset = tokenized_yelp["train"].shuffle(seed=42).select(range(300000))
     #small_eval_dataset = tokenized_yelp["test"].shuffle(seed=42).select(range(50000))
-
+    tokenized_yelp_train = tokenized_yelp["train"].shuffle(seed=42)
+    tokenized_yelp_test = tokenized_yelp["test"].shuffle(seed=42)
     HfFolder.save_token(access_token)
 
     api = HfApi()
@@ -55,15 +58,16 @@ def main():
     except:
         print('error creating repo for model. it probably already exists')
 
-    output_dir = "yelp_finetune_gpt2_test"
+    output_dir = "yelp_finetune_gpt2_test_gpu6_2"
     # training loop
     training_args = TrainingArguments(
         output_dir=output_dir,
-        learning_rate=2e-5,    #read that with larger batch size we can increase learning rate
-        #	gradient_accumulation_steps=4,   #want to explore what this is
+        learning_rate=6e-5,    #read that with larger batch size we can increase learning rate
+#	gradient_accumulation_steps=4,   #want to explore what this is
         per_device_train_batch_size=24,
         per_device_eval_batch_size=24,
         num_train_epochs=1,
+	    fp16=True,
         weight_decay=0.01,
         evaluation_strategy="epoch",
         save_strategy="epoch",
@@ -76,22 +80,33 @@ def main():
     trainer = Trainer(
         model=model,
         args=training_args,
-        train_dataset=small_train_dataset,
-        eval_dataset=small_eval_dataset,
+        train_dataset=tokenized_yelp_train,
+        eval_dataset=tokenized_yelp_test,
         tokenizer=tokenizer,
         data_collator=data_collator,
         compute_metrics=compute_metrics,
     )
-    print('************TRAINING STARTED*************')
-    trainer.train()
-    print('*************TRAINING COMPLETED**************')
+    result = trainer.train()
+    print(result)
+    predictions = trainer.predict(tokenized_yelp_test)
+    logits = predictions.predictions
+    probs  = softmax(torch.tensor(logits),dim=1).numpy()
+    torch.save(probs,"test_probs_yelp_2.pt")
    # trainer.evaluate()
 
-    #HfFolder.save_token(access_token)
+    HfFolder.save_token(access_token)
 
-    #api = HfApi()
-   # user = api.whoami(token=access_token)
-    #print("Logged in as:", user['name'])
+    api = HfApi()
+    user = api.whoami(token=access_token)
+    print("Logged in as:", user['name'])
+    print('UPLOADING')
+    api.upload_folder(
+        folder_path=f"./{output_dir}",
+        repo_id=f"{username}/{output_repo}",
+        repo_type="model"
+    )
+    print('uploading done!')
+
 
     #create_repo(f"{username}/{output_repo}", repo_type="model")
 
