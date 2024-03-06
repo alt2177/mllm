@@ -4,8 +4,6 @@ from datasets import load_dataset
 from transformers import AutoTokenizer
 import evaluate
 import numpy as np
-import torch
-from torch.nn.functional import softmax 
 
 # from mllm.data.load_drug_data import load_drug_data
 # from mllm.core.MLLM import MLLM 
@@ -25,7 +23,7 @@ def main():
     # set our collective token
     access_token = "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" 
     username = "mllm-dev"
-    output_repo = "gpt2_finetune_2_with_prob_epoch_1"
+    output_repo = "gpt2_finetune_2"
 
     # load and tokenize data
     dataset = load_dataset("imdb")
@@ -52,19 +50,17 @@ def main():
     model.resize_token_embeddings(len(tokenizer))
 
     # create training-val split
-    train_dataset = tokenized_imdb["train"].shuffle(seed=42)
-    eval_dataset = tokenized_imdb["test"].shuffle(seed=42)
-    #small_train_dataset = tokenized_imdb["train"].shuffle(seed=42).select(range(1000))
-    #small_eval_dataset = tokenized_imdb["test"].shuffle(seed=42).select(range(1000))
+    #small_train_dataset = tokenized_yelp["train"].shuffle(seed=42).select(range(10))
+    #small_eval_dataset = tokenized_yelp["test"].shuffle(seed=42).select(range(10))
  
-    output_dir = "imdb_finetune_gpt2_test_epoch_1_with_prob_1_merge_output"
+    output_dir = "imdb_finetune_gpt2_test_epoch_5"
     # training loop
     training_args = TrainingArguments(
         output_dir=output_dir,
         learning_rate=2e-5,
         per_device_train_batch_size=8,
         per_device_eval_batch_size=8,
-        num_train_epochs=1,
+        num_train_epochs=5,
         weight_decay=0.01,
         evaluation_strategy="epoch",
         save_strategy="epoch",
@@ -77,8 +73,8 @@ def main():
     trainer = Trainer(
         model=model,
         args=training_args,
-        train_dataset=train_dataset,
-        eval_dataset=eval_dataset,
+        train_dataset=tokenized_imdb["train"],
+        eval_dataset=tokenized_imdb["test"],
         tokenizer=tokenizer,
         data_collator=data_collator,
         compute_metrics=compute_metrics
@@ -86,10 +82,6 @@ def main():
 
     result = trainer.train()
     print(result)
-    predictions = trainer.predict(eval_dataset)
-    logits = predictions.predictions
-    probs  = softmax(torch.tensor(logits),dim=1).numpy()
-    torch.save(probs,"test_probs_epoch_1.pt")
     
 #    trainer.push_to_hub(f"{username}/{output_repo}")
 	
