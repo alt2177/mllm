@@ -1,4 +1,3 @@
-# Class for MLLM, which we can create instances of to run tests or otherwise
 #
 #
 
@@ -44,9 +43,10 @@ class MLLM:
         """
 
         """
-        self.model = create_model(self)
-        self.dataset = load_dataset(self) 
-        self.result = None
+        self.dataset = self.load_dataset() 
+        self.model = self.create_model()
+        self.result: Object
+        self.tokenizer: AutoTokenizer 
 
     
     def load_dataset(self, hf_dataset_name: str = "yelp_review_full" , local_path: str = None):
@@ -69,7 +69,7 @@ class MLLM:
             else:
                 raise FileNotFoundError(f"The specified path does not exist: {local_path}")
         # otherwise, load from HF
-        elif dataset_name:
+        elif hf_dataset_name:
             dataset = load_dataset(hf_dataset_name)
         else:
             raise ValueError("Either dataset_name or local_path must be provided.")
@@ -85,6 +85,7 @@ class MLLM:
     
         # create tokenizer and tokenize
         tokenizer = AutoTokenizer.from_pretrained("openai-community/gpt2", use_auth_token = access_token)
+        self.tokenizer = tokenizer
         tokenizer.pad_token = tokenizer.eos_token
         tokenized_data = dataset.map(lambda examples:tokenizer(examples["text"], truncation=True,max_length=1024),batched=True)
 
@@ -116,7 +117,7 @@ class MLLM:
             num_labels = 5,
             use_auth_token = cls.access_token
         )
-        model.config.pad_token_id = tokenizer.eos_token_id
+        model.config.pad_token_id = self.tokenizer.eos_token_id
         model.resize_token_embeddings(len(tokenizer))
         return model
 
