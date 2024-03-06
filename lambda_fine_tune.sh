@@ -25,11 +25,8 @@
 #git config user.name "mllm-dev"
 =======
 
-# Load any modules and set up your environment
-module load python/3.8
-module load cuda/10.1                 # Load CUDA module, if required
-
 # run script via Makefile
+<<<<<<< HEAD
 pip uninstall transformers
 pip install transformers==4.28.0
 pip install torch 
@@ -45,6 +42,19 @@ git config user.name "mllm-dev"
 python -m torch.distributed.launch --nproc_per_node=4 main.py
 #python main.py
 >>>>>>> 817d4eeb6 (starting to parallelize with torch)
+=======
+#pip uninstall transformers
+#pip install transformers==4.28.0
+#pip install torch 
+#pip install datasets
+#pip install evaluate
+#pip install numpy
+#pip install huggingface
+#pip install regex --upgrade
+#pip install huggingface_hub
+#git config user.email "mllm.dev.222@gmail.com"
+#git config user.name "mllm-dev"
+>>>>>>> 4f63ef5a3 (main is working well with pushing)
 
 #python -m torch.distributed.launch --nproc_per_node=4 main.py
 python main.py
