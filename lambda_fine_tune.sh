@@ -2,7 +2,7 @@
 
 ## Resource Requests
 #SBATCH --job-name=fine_tuning # Job name
-#SBATCH --nodes=1# Use one node
+#SBATCH --nodes=2# Use one node
 #SBATCH --account=robert_thompson
 #SBATCH --partition=lambda        # Specify the partition to run on
 #SBATCH --gres=gpu:8                   # Request one GPU
