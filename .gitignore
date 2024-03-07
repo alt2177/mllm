@@ -2,3 +2,4 @@
 venv/
 /yelp_finetune_epoch_1_gpt2_1
 output.log
+*.csv

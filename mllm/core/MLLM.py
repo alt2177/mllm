@@ -1,6 +1,7 @@
-#
-#
+# MLLM Class source file
+# 
 
+import os
 from transformers import DataCollatorWithPadding, AutoModelForSequenceClassification, TrainingArguments, Trainer
 from datasets import load_dataset
 from transformers import AutoTokenizer
@@ -14,7 +15,7 @@ class MLLM:
     access_token = "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"
 
     # specify output directory
-    output_dir = "test"
+    output_dir = "test_MLLM"
 
     # training arguments
     training_args = TrainingArguments(
@@ -43,10 +44,20 @@ class MLLM:
         """
 
         """
+        # set dataset and tokenize
         self.dataset = self.load_dataset() 
+        self.tokenize_data()
+
+        # split data
+        self.train_dataset, self.test_dataset = self.train_test_val_split()
+
+        # create our model
         self.model = self.create_model()
+
+        # initialize result variables
         self.result: Object
         self.tokenizer: AutoTokenizer 
+
 
     
     def load_dataset(self, hf_dataset_name: str = "yelp_review_full" , local_path: str = None):
@@ -84,41 +95,41 @@ class MLLM:
         assert self.dataset is not None, "Dataset Missing"
     
         # create tokenizer and tokenize
-        tokenizer = AutoTokenizer.from_pretrained("openai-community/gpt2", use_auth_token = access_token)
+        tokenizer = AutoTokenizer.from_pretrained("openai-community/gpt2", use_auth_token = self.access_token)
         self.tokenizer = tokenizer
         tokenizer.pad_token = tokenizer.eos_token
-        tokenized_data = dataset.map(lambda examples:tokenizer(examples["text"], truncation=True,max_length=1024),batched=True)
+        tokenized_data = self.dataset.map(lambda examples:tokenizer(examples["text"], truncation=True,max_length=1024),batched=True)
 
         # set data collator with tokenizer
         self.data_collator = DataCollatorWithPadding(tokenizer = tokenizer) 
         self.dataset = tokenized_data
 
-    def train_test_val_split(self, train_size : int, test_size : int, val_size : int = None):
+    def train_test_val_split(self, train_size : int = 1000, test_size : int = 1000, val_size : int = None):
         """
 
         """
         train_dataset = self.dataset["train"].shuffle(seed=42).select(range(train_size))
-        test_dataset = self.dataset["test"].shuffle(seed=42).select(range(test_size))
+        test_dataset = self.dataset["test"].shuffle(seed=4).select(range(test_size))
         
         # create validation set if we ask for one
         if val_size:
-            val_dataset = self.dataset["train"].shuffle(seed=42).select(range(val_size))
+            val_dataset = self.dataset["train"].shuffle(seed=420).select(range(val_size))
             return train_dataset, test_dataset, val_dataset
         else:
             return train_dataset, test_dataset
 
 
-    def create_model(cls, self):
+    def create_model(self):
         """
         Create model 
         """
         model = AutoModelForSequenceClassification.from_pretrained(
             "openai-community/gpt2",
             num_labels = 5,
-            use_auth_token = cls.access_token
+            use_auth_token = self.access_token
         )
         model.config.pad_token_id = self.tokenizer.eos_token_id
-        model.resize_token_embeddings(len(tokenizer))
+        model.resize_token_embeddings(len(self.tokenizer))
         return model
 
 
@@ -126,12 +137,12 @@ class MLLM:
 
         trainer = Trainer(
             model=self.model,
-            args=training_args,
-            train_dataset=small_train_dataset,
-            eval_dataset=small_eval_dataset,
-            tokenizer=tokenizer,
-            data_collator=data_collator,
-            compute_metrics=compute_metrics,
+            args=self.training_args,
+            train_dataset=self.train_dataset,
+            eval_dataset=self.test_dataset,
+            tokenizer=self.tokenizer,
+            data_collator=self.data_collator,
+            compute_metrics=self.compute_metrics,
         )
 
         self.result = trainer.train()
