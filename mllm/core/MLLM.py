@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # MLLM Class source file
 # 
 
@@ -10,6 +11,12 @@ import os
 #
 
 >>>>>>> be4e74db6 (began transitioning code into package structure)
+=======
+# MLLM Class source file
+# 
+
+import os
+>>>>>>> b83eb4ba6 (debugged MLLM)
 from transformers import DataCollatorWithPadding, AutoModelForSequenceClassification, TrainingArguments, Trainer
 from datasets import load_dataset
 from transformers import AutoTokenizer
@@ -46,10 +53,14 @@ class MLLM:
 
     # specify output directory
 <<<<<<< HEAD
+<<<<<<< HEAD
     output_dir = "test_MLLM"
 =======
     output_dir = "test"
 >>>>>>> be4e74db6 (began transitioning code into package structure)
+=======
+    output_dir = "test_MLLM"
+>>>>>>> b83eb4ba6 (debugged MLLM)
 
     # training arguments
     training_args = TrainingArguments(
@@ -80,6 +91,9 @@ class MLLM:
         """
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b83eb4ba6 (debugged MLLM)
         # set dataset and tokenize
         self.dataset = self.load_dataset() 
         self.tokenize_data()
@@ -94,6 +108,7 @@ class MLLM:
         self.result: Object
         self.tokenizer: AutoTokenizer 
 
+<<<<<<< HEAD
 =======
         self.model = self.create_model()
         self.dataset = self.load_dataset() 
@@ -103,6 +118,8 @@ class MLLM:
 >>>>>>> f97b2ef44 (began testing MLLM.py)
         self.result = None
 >>>>>>> be4e74db6 (began transitioning code into package structure)
+=======
+>>>>>>> b83eb4ba6 (debugged MLLM)
 
     
     def load_dataset(self, hf_dataset_name: str = "yelp_review_full" , local_path: str = None):
@@ -145,29 +162,40 @@ class MLLM:
     
         # create tokenizer and tokenize
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b83eb4ba6 (debugged MLLM)
         tokenizer = AutoTokenizer.from_pretrained("openai-community/gpt2", use_auth_token = self.access_token)
         self.tokenizer = tokenizer
         tokenizer.pad_token = tokenizer.eos_token
         tokenized_data = self.dataset.map(lambda examples:tokenizer(examples["text"], truncation=True,max_length=1024),batched=True)
+<<<<<<< HEAD
 =======
         tokenizer = AutoTokenizer.from_pretrained("openai-community/gpt2", use_auth_token = access_token)
         tokenizer.pad_token = tokenizer.eos_token
         tokenized_data = dataset.map(lambda examples:tokenizer(examples["text"], truncation=True,max_length=1024),batched=True)
 >>>>>>> be4e74db6 (began transitioning code into package structure)
+=======
+>>>>>>> b83eb4ba6 (debugged MLLM)
 
         # set data collator with tokenizer
         self.data_collator = DataCollatorWithPadding(tokenizer = tokenizer) 
         self.dataset = tokenized_data
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     def train_test_val_split(self, train_size : int = 1000, test_size : int = 1000, val_size : int = None):
 =======
     def train_test_val_split(self, train_size : int, test_size : int, val_size : int = None):
 >>>>>>> be4e74db6 (began transitioning code into package structure)
+=======
+    def train_test_val_split(self, train_size : int = 1000, test_size : int = 1000, val_size : int = None):
+>>>>>>> b83eb4ba6 (debugged MLLM)
         """
 
         """
         train_dataset = self.dataset["train"].shuffle(seed=42).select(range(train_size))
+<<<<<<< HEAD
 <<<<<<< HEAD
         test_dataset = self.dataset["test"].shuffle(seed=4).select(range(test_size))
         
@@ -181,12 +209,19 @@ class MLLM:
         if val_size:
             val_dataset = self.dataset["train"].shuffle(seed=42).select(range(val_size))
 >>>>>>> be4e74db6 (began transitioning code into package structure)
+=======
+        test_dataset = self.dataset["test"].shuffle(seed=4).select(range(test_size))
+        
+        # create validation set if we ask for one
+        if val_size:
+            val_dataset = self.dataset["train"].shuffle(seed=420).select(range(val_size))
+>>>>>>> b83eb4ba6 (debugged MLLM)
             return train_dataset, test_dataset, val_dataset
         else:
             return train_dataset, test_dataset
 
 
-    def create_model(cls, self):
+    def create_model(self):
         """
         Create model 
         """
@@ -195,10 +230,14 @@ class MLLM:
             num_labels = 5,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b83eb4ba6 (debugged MLLM)
             use_auth_token = self.access_token
         )
         model.config.pad_token_id = self.tokenizer.eos_token_id
         model.resize_token_embeddings(len(self.tokenizer))
+<<<<<<< HEAD
 =======
             use_auth_token = access_token
 =======
@@ -208,6 +247,8 @@ class MLLM:
         model.config.pad_token_id = tokenizer.eos_token_id
         model.resize_token_embeddings(len(tokenizer))
 >>>>>>> be4e74db6 (began transitioning code into package structure)
+=======
+>>>>>>> b83eb4ba6 (debugged MLLM)
         return model
 
 
@@ -216,12 +257,16 @@ class MLLM:
         trainer = Trainer(
             model=self.model,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b83eb4ba6 (debugged MLLM)
             args=self.training_args,
             train_dataset=self.train_dataset,
             eval_dataset=self.test_dataset,
             tokenizer=self.tokenizer,
             data_collator=self.data_collator,
             compute_metrics=self.compute_metrics,
+<<<<<<< HEAD
 =======
             args=training_args,
             train_dataset=small_train_dataset,
@@ -230,6 +275,8 @@ class MLLM:
             data_collator=data_collator,
             compute_metrics=compute_metrics,
 >>>>>>> be4e74db6 (began transitioning code into package structure)
+=======
+>>>>>>> b83eb4ba6 (debugged MLLM)
         )
 
         self.result = trainer.train()

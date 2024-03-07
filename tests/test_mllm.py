@@ -33,6 +33,9 @@ class TestMLLM:
         assert "test" in dataset
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b83eb4ba6 (debugged MLLM)
     # def test_load_dataset_local(self, tmp_path, mllm_instance):
     #     """Test loading a dataset from a local file."""
     #     # Create a dummy dataset file
@@ -40,6 +43,7 @@ class TestMLLM:
     #     dataset_file.write_text("dummy content")
     #     with pytest.raises(FileNotFoundError):
     #         mllm_instance.load_dataset(local_path=str(dataset_file))
+<<<<<<< HEAD
 =======
     def test_load_dataset_local(self, tmp_path, mllm_instance):
         """Test loading a dataset from a local file."""
@@ -49,6 +53,8 @@ class TestMLLM:
         with pytest.raises(FileNotFoundError):
             mllm_instance.load_dataset(local_path=str(dataset_file))
 >>>>>>> f97b2ef44 (began testing MLLM.py)
+=======
+>>>>>>> b83eb4ba6 (debugged MLLM)
 
     def test_tokenize_data(self, mllm_instance):
         """Test the tokenization process."""

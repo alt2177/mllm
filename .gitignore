@@ -5,8 +5,11 @@ venv/
 <<<<<<< HEAD
 output.log
 <<<<<<< HEAD
+<<<<<<< HEAD
 *.csv
 =======
+=======
+>>>>>>> b83eb4ba6 (debugged MLLM)
 =======
 >>>>>>> 6370e429a (model trained)
 <<<<<<< HEAD
@@ -15,4 +18,10 @@ output.log
 =======
 output.log
 >>>>>>> 313add349 (pushing again)
+<<<<<<< HEAD
 >>>>>>> 114167d1e (pushing again)
+=======
+=======
+*.csv
+>>>>>>> 65f8d1f67 (debugged MLLM)
+>>>>>>> b83eb4ba6 (debugged MLLM)
