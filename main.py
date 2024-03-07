@@ -1,8 +1,6 @@
 from huggingface_hub import HfApi, HfFolder, create_repo
-from transformers import DataCollatorWithPadding, AutoModelForSequenceClassification, TrainingArguments, Trainer
-from torch.utils.data.distributed import DistributedSampler
+from transformers import AutoTokenizer, DataCollatorWithPadding, AutoModelForSequenceClassification, TrainingArguments, Trainer
 from datasets import load_dataset
-from transformers import AutoTokenizer, TrainerCallback
 import evaluate
 import numpy as np
 import torch
@@ -19,10 +17,11 @@ def compute_metrics(eval_pred):
     return accuracy.compute(predictions=predictions, references=labels)
 
 def main():
-    # set our collective token
+    # set our collective token and HF info
     access_token = "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" 
     username = "mllm-dev"
-    output_repo = "yelp_finetuned_sbatch_upload_4gpu_BIG"
+    # repo that will be made on huggingface
+    output_repo = "yelp_finetuned_6gpu_full"
 
     # load and tokenize data
     dataset = load_dataset("yelp_review_full")
@@ -43,11 +42,11 @@ def main():
     model.config.pad_token_id = tokenizer.eos_token_id
     model.resize_token_embeddings(len(tokenizer))
 
-    small_train_dataset = tokenized_yelp["train"].shuffle(seed=42).select(range(300000))
-    small_eval_dataset = tokenized_yelp["test"].shuffle(seed=42).select(range(50000))
+    small_train_dataset = tokenized_yelp["train"].shuffle(seed=42)
+    small_eval_dataset = tokenized_yelp["test"].shuffle(seed=42)
 
+    # create the repo before we try to push the model to huggingface
     HfFolder.save_token(access_token)
-
     api = HfApi()
     user = api.whoami(token=access_token)
     try:
@@ -63,7 +62,7 @@ def main():
 #	gradient_accumulation_steps=4,   #want to explore what this is
         per_device_train_batch_size=24,
         per_device_eval_batch_size=24,
-        num_train_epochs=1,
+        num_train_epochs=2,
 	fp16=True,
         weight_decay=0.01,
         evaluation_strategy="epoch",
@@ -87,28 +86,6 @@ def main():
     trainer.train()
     print('*************TRAINING COMPLETED**************')
    # trainer.evaluate()
-
-    #HfFolder.save_token(access_token)
-
-    #api = HfApi()
-   # user = api.whoami(token=access_token)
-    #print("Logged in as:", user['name'])
-
-    #create_repo(f"{username}/{output_repo}", repo_type="model")
-
-    #api.upload_folder(
-    #	folder_path=f"./{output_dir}",
-#	repo_id=f"{username}/{output_repo}",
- #       repo_type="model"
-  #  )
-
-    # model eval
-    #eval_result = trainer.evaluate(eval_dataset=tokenized_imdb["test"])
-
-
-    #print(f"Fine tune model accuracy : {eval_result['eval_accuracy']}")
-
-    #return
 
 if __name__ == "__main__":
     main()
