@@ -1,9 +1,13 @@
 from huggingface_hub import HfApi, HfFolder, create_repo
-from transformers import AutoTokenizer, DataCollatorWithPadding, AutoModelForSequenceClassification, TrainingArguments, Trainer
+from transformers import DataCollatorWithPadding, AutoModelForSequenceClassification, TrainingArguments, Trainer
+from torch.utils.data.distributed import DistributedSampler
 from datasets import load_dataset
+from transformers import AutoTokenizer, TrainerCallback
 import evaluate
 import numpy as np
 import torch
+from torch.nn.functional import softmax 
+
 
 # from mllm.data.load_drug_data import load_drug_data
 # from mllm.core.MLLM import MLLM 
@@ -17,11 +21,10 @@ def compute_metrics(eval_pred):
     return accuracy.compute(predictions=predictions, references=labels)
 
 def main():
-    # set our collective token and HF info
+    # set our collective token
     access_token = "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" 
     username = "mllm-dev"
-    # repo that will be made on huggingface
-    output_repo = "yelp_finetuned_6gpu_full"
+    output_repo = "yelp_finetuned_gpt2_6gpu_2"
 
     # load and tokenize data
     dataset = load_dataset("yelp_review_full")
@@ -42,11 +45,14 @@ def main():
     model.config.pad_token_id = tokenizer.eos_token_id
     model.resize_token_embeddings(len(tokenizer))
 
-    small_train_dataset = tokenized_yelp["train"].shuffle(seed=42)
-    small_eval_dataset = tokenized_yelp["test"].shuffle(seed=42)
-
-    # create the repo before we try to push the model to huggingface
+    #small_train_dataset = tokenized_yelp["train"].shuffle(seed=42).select(range(300000))
+    #small_eval_dataset = tokenized_yelp["test"].shuffle(seed=42).select(range(50000))
+    tokenized_yelp_train = tokenized_yelp["train"].shuffle(seed=42)
+    tokenized_yelp_test = tokenized_yelp["test"].shuffle(seed=42)
+    #tokenized_yelp_train = tokenized_yelp["train"].shuffle(seed=42).select(range(1000))
+    #tokenized_yelp_test = tokenized_yelp["test"].shuffle(seed=42).select(range(1000))
     HfFolder.save_token(access_token)
+
     api = HfApi()
     user = api.whoami(token=access_token)
     try:
@@ -54,7 +60,7 @@ def main():
     except:
         print('error creating repo for model. it probably already exists')
 
-    output_dir = "yelp_finetune_gpt2_test"
+    output_dir = "yelp_finetune_gpt2_test_gpu6_2"
     # training loop
     training_args = TrainingArguments(
         output_dir=output_dir,
@@ -63,7 +69,7 @@ def main():
         per_device_train_batch_size=24,
         per_device_eval_batch_size=24,
         num_train_epochs=2,
-	fp16=True,
+	    fp16=True,
         weight_decay=0.01,
         evaluation_strategy="epoch",
         save_strategy="epoch",
@@ -76,16 +82,49 @@ def main():
     trainer = Trainer(
         model=model,
         args=training_args,
-        train_dataset=small_train_dataset,
-        eval_dataset=small_eval_dataset,
+        train_dataset=tokenized_yelp_train,
+        eval_dataset=tokenized_yelp_test,
         tokenizer=tokenizer,
         data_collator=data_collator,
         compute_metrics=compute_metrics,
     )
-    print('************TRAINING STARTED*************')
-    trainer.train()
-    print('*************TRAINING COMPLETED**************')
+    result = trainer.train()
+    print(result)
+    predictions = trainer.predict(tokenized_yelp_test)
+    logits = predictions.predictions
+    probs  = softmax(torch.tensor(logits).float(),dim=1).numpy()
+    torch.save(probs,"test_probs_yelp_2.pt")
    # trainer.evaluate()
+
+    HfFolder.save_token(access_token)
+
+    api = HfApi()
+    user = api.whoami(token=access_token)
+    print("Logged in as:", user['name'])
+    print('UPLOADING')
+    api.upload_folder(
+        folder_path=f"./{output_dir}",
+        repo_id=f"{username}/{output_repo}",
+        repo_type="model"
+    )
+    print('uploading done!')
+
+
+    #create_repo(f"{username}/{output_repo}", repo_type="model")
+
+    #api.upload_folder(
+    #	folder_path=f"./{output_dir}",
+#	repo_id=f"{username}/{output_repo}",
+ #       repo_type="model"
+  #  )
+
+    # model eval
+    #eval_result = trainer.evaluate(eval_dataset=tokenized_imdb["test"])
+
+
+    #print(f"Fine tune model accuracy : {eval_result['eval_accuracy']}")
+
+    #return
 
 if __name__ == "__main__":
     main()
