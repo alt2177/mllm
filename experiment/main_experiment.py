@@ -42,8 +42,8 @@ def main():
     model.config.pad_token_id = tokenizer.eos_token_id
     model.resize_token_embeddings(len(tokenizer))
 
-    small_train_dataset = tokenized_yelp["train"].shuffle(seed=42)
-    small_eval_dataset = tokenized_yelp["test"].shuffle(seed=42)
+    small_train_dataset = tokenized_yelp["train"].shuffle(seed=42).select(range(100))
+    small_eval_dataset = tokenized_yelp["test"].shuffle(seed=42).select(range(100))
 
     # create the repo before we try to push the model to huggingface
     HfFolder.save_token(access_token)
