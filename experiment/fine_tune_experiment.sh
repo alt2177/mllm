@@ -8,7 +8,7 @@
 #SBATCH --gres=gpu:1                   # Request one GPU
 #SBATCH --output=output.log     # Standard output and error log
 #SBATCH --mail-type=END,FAIL           # Send email on job END and FAIL
-#SBATCH --mail-user=robert_thompson@berkeley.edu
+#SBATCH --mail-user=sean_mcavoy@berkeley.edu
 
 # Load any modules and set up your environment
 module load python/3.8
@@ -28,4 +28,5 @@ git config user.email "mllm.dev.222@gmail.com"
 git config user.name "mllm-dev"
 echo $(pwd)
 #python -m torch.distributed.launch --nproc_per_node=1 main.py
+git remote set-url origin https://huggingface.co/mllm-dev/sean_test
 python main_experiment.py

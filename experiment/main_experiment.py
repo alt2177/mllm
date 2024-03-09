@@ -20,8 +20,9 @@ def main():
     # set our collective token and HF info
     access_token = "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" 
     username = "mllm-dev"
+
     # repo that will be made on huggingface
-    output_repo = "yelp_finetuned_6gpu_full"
+    output_repo = "sean_test"
 
     # load and tokenize data
     dataset = load_dataset("yelp_review_full")
@@ -42,8 +43,12 @@ def main():
     model.config.pad_token_id = tokenizer.eos_token_id
     model.resize_token_embeddings(len(tokenizer))
 
-    small_train_dataset = tokenized_yelp["train"].shuffle(seed=42).select(range(100))
-    small_eval_dataset = tokenized_yelp["test"].shuffle(seed=42).select(range(100))
+    # Select 5% of the train data for finetuning a specific model
+    num_of_samples = int(len(tokenized_yelp["train"]) * 0.05)
+    print(num_of_samples) # 32500
+    num_of_samples = 100
+    small_train_dataset = tokenized_yelp["train"].shuffle(seed=42).select(range(num_of_samples))
+    small_eval_dataset = tokenized_yelp["test"].shuffle(seed=42).select(range(num_of_samples))
 
     # create the repo before we try to push the model to huggingface
     HfFolder.save_token(access_token)
@@ -63,14 +68,14 @@ def main():
         per_device_train_batch_size=24,
         per_device_eval_batch_size=24,
         num_train_epochs=2,
-	fp16=True,
+	    fp16=True,
         weight_decay=0.01,
         evaluation_strategy="epoch",
         save_strategy="epoch",
         load_best_model_at_end=True,
-	hub_model_id=f"{username}/{output_repo}",
+	    hub_model_id=f"{username}/{output_repo}",
         hub_token = access_token,
-	push_to_hub=True
+	    push_to_hub=True
     )
 
     trainer = Trainer(
