@@ -27,6 +27,4 @@ pip install huggingface_hub
 git config user.email "mllm.dev.222@gmail.com"
 git config user.name "mllm-dev"
 echo $(pwd)
-#python -m torch.distributed.launch --nproc_per_node=1 main.py
-git remote set-url origin https://huggingface.co/mllm-dev/sean_test
 python main_experiment.py
