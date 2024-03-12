@@ -24,7 +24,7 @@ def main():
     tokenizer = AutoTokenizer.from_pretrained("openai-community/gpt2", use_auth_token = access_token)
     tokenizer.pad_token = tokenizer.eos_token
 
-    tokenized_yelp = dataset.map(lambda examples:tokenizer(examples["text"], truncation=True,max_length=1024),batched=True)
+    tokenized_yelp = dataset.map(lambda examples:tokenizer(examples["text"], truncation=True, max_length=1024),batched=True)
     
     # pad tokens
     data_collator = DataCollatorWithPadding(tokenizer=tokenizer) 
@@ -89,13 +89,14 @@ def main():
         print('*************TRAINING COMPLETED**************')
         
         # Save the output probabilities for merging outputs
+        # use ALL of the training samples
         result = trainer.train()
-        print(result)
-        predictions = trainer.predict(small_eval_dataset)
+        #print(result)
+        predictions = trainer.predict(tokenized_yelp["train"])
         logits = predictions.predictions
         probs = softmax(torch.tensor(logits).float(),dim=1).numpy()
         torch.save(probs,f"{output_repo}.pt")
-        eval_result = trainer.evaluate(eval_dataset=small_eval_dataset)
+        eval_result = trainer.evaluate(eval_dataset=tokenized_yelp["train"])
 
         # Save the accuracy of each model for later comparison
         f = open("accuracy.txt", "a")
