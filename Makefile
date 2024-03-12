@@ -16,7 +16,6 @@ $(VENV)/bin/activate: requirements.txt
 install: venv
 
 # Run your program
-<<<<<<< HEAD
 run: 
 	main.py
 # run: venv
@@ -36,6 +35,7 @@ clean:
 	find . -name '*.pyo' -exec rm -f {} +
 	find . -name '*~' -exec rm -f {} +
 	find . -type d -name "mergekit" -exec rm -rf {} +
+	find . -type d -name "tmp_trainer" -exec rm -rf {} +
 
 # Clean everything including virtualenv
 clean-all: clean
