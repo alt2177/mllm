@@ -1,0 +1,5 @@
+Fine tune model 0 accuracy : 0.64128
+Fine tune model 1 accuracy : 0.64402
+Fine tune model 2 accuracy : 0.6397
+Fine tune model 3 accuracy : 0.63884
+Fine tune model 4 accuracy : 0.64232
