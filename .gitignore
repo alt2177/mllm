@@ -27,4 +27,8 @@ output.log
 =======
 *.csv
 exp_*/
+<<<<<<< HEAD
 >>>>>>> d97921162 (updated gitignore to ignore exp_*)
+=======
+experiment*/
+>>>>>>> de9d3b714 (updated gitignore)
