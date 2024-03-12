@@ -1,9 +1,8 @@
 .venv
 venv/
 /yelp_finetune_epoch_1_gpt2_1
-<<<<<<< HEAD
-<<<<<<< HEAD
 output.log
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 *.csv
@@ -25,3 +24,7 @@ output.log
 *.csv
 >>>>>>> 65f8d1f67 (debugged MLLM)
 >>>>>>> b83eb4ba6 (debugged MLLM)
+=======
+*.csv
+exp_*/
+>>>>>>> d97921162 (updated gitignore to ignore exp_*)
