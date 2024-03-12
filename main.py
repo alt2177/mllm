@@ -3,7 +3,6 @@ from transformers import DataCollatorWithPadding, AutoModelForSequenceClassifica
 from datasets import load_dataset
 from transformers import AutoTokenizer
 import evaluate
->>>>>>> 82f519b2f (created sbatch file)
 import numpy as np
 
 # from mllm.data.load_drug_data import load_drug_data
@@ -85,7 +84,7 @@ def main():
 	
     HfFolder.save_token(access_token)
 
-# Optionally, you can directly use the token with the HfApi instance
+    # Optionally, you can directly use the token with the HfApi instance
     api = HfApi()
     user = api.whoami(token=access_token)
     print("Logged in as:", user['name'])
