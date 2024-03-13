@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ## Resource Requests
-#SBATCH --job-name=gemma_fine 			# Job name
+#SBATCH --job-name=gen_fine 			# Job name
 #SBATCH --nodes=1				# Use one node
 #SBATCH --account=robert_thompson
 #SBATCH --partition=lambda 		        # Specify the partition to run on
