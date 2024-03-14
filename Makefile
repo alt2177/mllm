@@ -16,10 +16,8 @@ $(VENV)/bin/activate: requirements.txt
 install: venv
 
 # Run your program
-run: 
-	main.py
-# run: venv
-# 	${VENV}/bin/python main.py
+run: venv
+	./exp_mllm_class/main.py
 
 # Run tests
 test: venv
