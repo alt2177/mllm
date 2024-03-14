@@ -28,7 +28,7 @@ class MLLM:
         evaluation_strategy="epoch",
         save_strategy="epoch",
         load_best_model_at_end=True,
-        push_to_hub=True,
+        push_to_hub=False,
         hub_token=access_token
     )
 
@@ -133,7 +133,7 @@ class MLLM:
         return model
 
 
-    def train(self, train_dataset, test_dataset):
+    def train(self):
 
         trainer = Trainer(
             model=self.model,
@@ -146,9 +146,12 @@ class MLLM:
         )
 
         self.result = trainer.train()
-        print(result)
+        print(self.result)
 
-
+    def write_results(self, file_name: str = "results.txt"):
+        with open(file_name, "w") as file:
+	    results = "".join(self.result.to_tuple())
+            file.write(results)
 
 
 

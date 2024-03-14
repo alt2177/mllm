@@ -17,13 +17,14 @@ install: venv
 
 # Run your program
 run:
-	./exp_mllm_class/main.py
+	sbatch lambda_fine_tune.sh
 
 # Run tests
 test: venv
 	${VENV}/bin/pytest tests/
 
 # Clean up
+# TODO: find a way to set up deletion of output_dir in an MLLM instance
 clean:
 	rm -rf __pycache__
 	rm -rf src/__pycache__
@@ -34,6 +35,7 @@ clean:
 	find . -name '*~' -exec rm -f {} +
 	find . -type d -name "mergekit" -exec rm -rf {} +
 	find . -type d -name "tmp_trainer" -exec rm -rf {} +
+	find . -type d -name "test_MLLM" -exec rm -rf {} +
 
 # Clean everything including virtualenv
 clean-all: clean
