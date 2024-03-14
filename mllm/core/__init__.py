@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> ca457d8cb (updating notebooks for presentation figures)
@@ -34,3 +35,6 @@ from mllm.core import mergekit
 =======
 >>>>>>> 25445bbcf (began transitioning code into package structure)
 >>>>>>> main
+=======
+from mllm.core.MLLM import MLLM
+>>>>>>> 2b79c839a (confirmed MLLM functional on Lambda)

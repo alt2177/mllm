@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from mllm.data import load_drug_data, clean_data 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -38,3 +39,6 @@ from mllm.core.mergekit import MLLM
 from mllm.core import MLLM as MLLM
 >>>>>>> 25445bbcf (began transitioning code into package structure)
 >>>>>>> main
+=======
+from mllm.core import MLLM
+>>>>>>> 2b79c839a (confirmed MLLM functional on Lambda)

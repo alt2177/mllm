@@ -1,7 +1,25 @@
-import mllm
+from huggingface_hub import HfApi, HfFolder, create_repo
+from transformers import DataCollatorWithPadding, AutoModelForSequenceClassification, TrainingArguments, Trainer
+from datasets import load_dataset
+from transformers import AutoTokenizer
+import evaluate
+import numpy as np
+
+# from mllm.data.load_drug_data import load_drug_data
+# from mllm.core.MLLM import MLLM 
+# from mergekit.config import MergeConfiguration
+# from mergekit.merge import MergeOptions, run_merge
+
+def compute_metrics(eval_pred):
+    accuracy = evaluate.load("accuracy")
+    predictions, labels = eval_pred
+    predictions = np.argmax(predictions, axis=1)
+    return accuracy.compute(predictions=predictions, references=labels)
+
+def preprocess_function(examples):
+    return tokenizer(examples["text"], truncation=True,max_length=1024)
 
 def main():
-<<<<<<< HEAD
     # set our collective token
     access_token = "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" 
     username = "mllm-dev"
@@ -9,7 +27,7 @@ def main():
 
     # load and tokenize data
     dataset = load_dataset("yelp_review_full")
-    tokenizer = AutoTokenizer.from_pretrained("openai-community/gpt2", token = access_token)
+    tokenizer = AutoTokenizer.from_pretrained("openai-community/gpt2", use_auth_token = access_token)
     tokenizer.pad_token = tokenizer.eos_token
 
     tokenized_yelp = dataset.map(lambda examples:tokenizer(examples["text"], truncation=True,max_length=1024),batched=True)
@@ -24,7 +42,7 @@ def main():
     model = AutoModelForSequenceClassification.from_pretrained(
         "openai-community/gpt2",
         num_labels=5,
-        token = access_token
+        use_auth_token = access_token
     )
     model.config.pad_token_id = tokenizer.eos_token_id
     model.resize_token_embeddings(len(tokenizer))
@@ -46,19 +64,8 @@ def main():
         save_strategy="epoch",
         load_best_model_at_end=True,
         push_to_hub=True,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        hub_token=access_tokens,
-=======
-=======
 	    hub_model_id=f"{username}/{output_repo}",
->>>>>>> f97b2ef44 (began testing MLLM.py)
-=======
-	    hub_model_id=f"{username}/{output_repo}",
->>>>>>> main
         hub_token = access_token
->>>>>>> e8a460892 (model trained)
     )
 
     trainer = Trainer(
@@ -68,16 +75,7 @@ def main():
         eval_dataset=small_eval_dataset,
         tokenizer=tokenizer,
         data_collator=data_collator,
-<<<<<<< HEAD
-        compute_metrics=compute_metrics,
-<<<<<<< HEAD
-        hub_token=access_tokens,
-=======
-#        hub_token = access_token
->>>>>>> e8a460892 (model trained)
-=======
         compute_metrics=compute_metrics
->>>>>>> f97b2ef44 (began testing MLLM.py)
     )
 
     result = trainer.train()
@@ -106,13 +104,7 @@ def main():
 
     #print(f"Fine tune model accuracy : {eval_result['eval_accuracy']}")
 
-=======
-	my_mllm = mllm.MLLM()
-	my_mllm.train()
-	my_mllm.write_results()
-	print("DONE!")
->>>>>>> 2b79c839a (confirmed MLLM functional on Lambda)
 
 
 if __name__ == "__main__":
-	main()
+    main()
