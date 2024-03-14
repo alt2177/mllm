@@ -18,6 +18,7 @@ install: venv
 # Run your program
 run:
 	sbatch lambda_fine_tune.sh
+	make clean
 
 # Run tests
 test: venv
