@@ -150,7 +150,7 @@ class MLLM:
 
     def write_results(self, file_name: str = "results.txt"):
         with open(file_name, "w") as file:
-	    results = "".join(self.result.to_tuple())
+            results = "".join(self.result.to_tuple())
             file.write(results)
 
 
