@@ -1,12 +1,12 @@
 #!/bin/bash
 
 ## Resource Requests
-#SBATCH --job-name=fine_tuning # Job name
-#SBATCH --nodes=2# Use one node
+#SBATCH --job-name=fine_imdb # Job name
+#SBATCH --nodes=1# Use one node
 #SBATCH --account=robert_thompson
 #SBATCH --partition=lambda        # Specify the partition to run on
 #SBATCH --gres=gpu:8                   # Request one GPU
-#SBATCH --output=output.log     # Standard output and error log
+#SBATCH --output=output_imdb_10_full.log     # Standard output and error log
 #SBATCH --mail-type=END,FAIL           # Send email on job END and FAIL
 #SBATCH --mail-user=robert_thompson@berkeley.edu 
 
