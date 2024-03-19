@@ -2,7 +2,7 @@
 
 ## Resource Requests
 #SBATCH --job-name=mllm_fine_tuning # Job name
-#SBATCH --nodes=2# Use one node
+#SBATCH --nodes=1# Use one node
 #SBATCH --account=austin_tao
 #SBATCH --partition=lambda        # Specify the partition to run on
 #SBATCH --gres=gpu:8                   # Request one GPU
@@ -83,3 +83,4 @@ git config user.name "mllm-dev"
 #git remote set-url origin https://huggingface.co/mllm-dev/yelp_finetuned_6gpu_full
 >>>>>>> main
 python main.py
+

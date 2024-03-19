@@ -2,6 +2,7 @@ import mllm
 
 def main():
 <<<<<<< HEAD
+<<<<<<< HEAD
     # set our collective token
     access_token = "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" 
     username = "mllm-dev"
@@ -112,6 +113,13 @@ def main():
 	my_mllm.write_results()
 	print("DONE!")
 >>>>>>> 2b79c839a (confirmed MLLM functional on Lambda)
+=======
+	print("================= BEGIN! =================")
+	my_mllm = mllm.MLLM()
+	my_mllm.train()
+	my_mllm.write_results()
+	print("================= DONE! =================")
+>>>>>>> 898b93796 (fixed results printing)
 
 
 if __name__ == "__main__":
