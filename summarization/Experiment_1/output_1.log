@@ -1,0 +1,2314 @@
+2024-03-24 22:19:46.016077: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2024-03-24 22:19:46.691837: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2024-03-24 22:19:46.693424: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-03-24 22:19:48.438322: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/accounts/grad/phudish_p/.local/lib/python3.11/site-packages/transformers/models/auto/tokenization_auto.py:655: FutureWarning: The `use_auth_token` argument is deprecated and will be removed in v5 of Transformers.
+  warnings.warn(
+Downloading tokenizer_config.json:   0%|          | 0.00/26.0 [00:00<?, ?B/s]Downloading tokenizer_config.json: 100%|██████████| 26.0/26.0 [00:00<00:00, 184kB/s]
+Downloading config.json:   0%|          | 0.00/718 [00:00<?, ?B/s]Downloading config.json: 100%|██████████| 718/718 [00:00<00:00, 2.04MB/s]
+Downloading vocab.json:   0%|          | 0.00/1.04M [00:00<?, ?B/s]Downloading vocab.json: 100%|██████████| 1.04M/1.04M [00:00<00:00, 8.27MB/s]Downloading vocab.json: 100%|██████████| 1.04M/1.04M [00:00<00:00, 8.19MB/s]
+Downloading merges.txt:   0%|          | 0.00/456k [00:00<?, ?B/s]Downloading merges.txt: 100%|██████████| 456k/456k [00:00<00:00, 7.47MB/s]
+Downloading tokenizer.json:   0%|          | 0.00/1.36M [00:00<?, ?B/s]Downloading tokenizer.json: 100%|██████████| 1.36M/1.36M [00:00<00:00, 20.2MB/s]
+Map:   0%|          | 0/989 [00:00<?, ? examples/s]Map: 100%|██████████| 989/989 [00:03<00:00, 298.18 examples/s]Map: 100%|██████████| 989/989 [00:03<00:00, 296.66 examples/s]
+Map:   0%|          | 0/248 [00:00<?, ? examples/s]Map: 100%|██████████| 248/248 [00:00<00:00, 312.59 examples/s]Map: 100%|██████████| 248/248 [00:00<00:00, 311.36 examples/s]
+/accounts/grad/phudish_p/.local/lib/python3.11/site-packages/transformers/modeling_utils.py:2478: FutureWarning: The `use_auth_token` argument is deprecated and will be removed in v5 of Transformers.
+  warnings.warn(
+Downloading model.safetensors:   0%|          | 0.00/1.52G [00:00<?, ?B/s]Downloading model.safetensors:   1%|          | 10.5M/1.52G [00:00<00:44, 33.7MB/s]Downloading model.safetensors:   1%|▏         | 21.0M/1.52G [00:00<00:28, 51.9MB/s]Downloading model.safetensors:   2%|▏         | 31.5M/1.52G [00:00<00:22, 66.5MB/s]Downloading model.safetensors:   3%|▎         | 41.9M/1.52G [00:00<00:19, 76.2MB/s]Downloading model.safetensors:   3%|▎         | 52.4M/1.52G [00:00<00:17, 83.9MB/s]Downloading model.safetensors:   4%|▍         | 62.9M/1.52G [00:00<00:16, 86.9MB/s]Downloading model.safetensors:   5%|▍         | 73.4M/1.52G [00:00<00:16, 88.7MB/s]Downloading model.safetensors:   6%|▌         | 94.4M/1.52G [00:01<00:15, 92.7MB/s]Downloading model.safetensors:   7%|▋         | 105M/1.52G [00:01<00:16, 88.4MB/s] Downloading model.safetensors:   8%|▊         | 115M/1.52G [00:01<00:16, 84.7MB/s]Downloading model.safetensors:   8%|▊         | 126M/1.52G [00:01<00:17, 80.2MB/s]Downloading model.safetensors:   9%|▉         | 136M/1.52G [00:01<00:17, 78.8MB/s]Downloading model.safetensors:  10%|▉         | 147M/1.52G [00:01<00:17, 77.8MB/s]Downloading model.safetensors:  10%|█         | 157M/1.52G [00:02<00:17, 76.8MB/s]Downloading model.safetensors:  11%|█         | 168M/1.52G [00:02<00:17, 76.8MB/s]Downloading model.safetensors:  12%|█▏        | 178M/1.52G [00:02<00:17, 77.2MB/s]Downloading model.safetensors:  12%|█▏        | 189M/1.52G [00:02<00:17, 74.3MB/s]Downloading model.safetensors:  13%|█▎        | 199M/1.52G [00:02<00:16, 77.7MB/s]Downloading model.safetensors:  14%|█▍        | 210M/1.52G [00:02<00:16, 77.8MB/s]Downloading model.safetensors:  14%|█▍        | 220M/1.52G [00:02<00:16, 77.3MB/s]Downloading model.safetensors:  15%|█▌        | 231M/1.52G [00:02<00:16, 79.0MB/s]Downloading model.safetensors:  16%|█▌        | 241M/1.52G [00:03<00:16, 78.0MB/s]Downloading model.safetensors:  17%|█▋        | 252M/1.52G [00:03<00:16, 74.9MB/s]Downloading model.safetensors:  17%|█▋        | 262M/1.52G [00:03<00:22, 55.9MB/s]Downloading model.safetensors:  18%|█▊        | 273M/1.52G [00:04<00:39, 31.7MB/s]Downloading model.safetensors:  19%|█▊        | 283M/1.52G [00:04<00:31, 39.0MB/s]Downloading model.safetensors:  19%|█▉        | 294M/1.52G [00:04<00:26, 45.6MB/s]Downloading model.safetensors:  20%|██        | 304M/1.52G [00:04<00:23, 52.8MB/s]Downloading model.safetensors:  21%|██        | 315M/1.52G [00:04<00:20, 58.0MB/s]Downloading model.safetensors:  21%|██▏       | 325M/1.52G [00:04<00:18, 63.7MB/s]Downloading model.safetensors:  22%|██▏       | 336M/1.52G [00:05<00:17, 66.6MB/s]Downloading model.safetensors:  23%|██▎       | 346M/1.52G [00:05<00:16, 71.5MB/s]Downloading model.safetensors:  23%|██▎       | 357M/1.52G [00:05<00:15, 75.1MB/s]Downloading model.safetensors:  24%|██▍       | 367M/1.52G [00:05<00:14, 77.6MB/s]Downloading model.safetensors:  25%|██▍       | 377M/1.52G [00:05<00:14, 79.5MB/s]Downloading model.safetensors:  26%|██▌       | 388M/1.52G [00:05<00:14, 80.2MB/s]Downloading model.safetensors:  26%|██▌       | 398M/1.52G [00:05<00:13, 80.2MB/s]Downloading model.safetensors:  27%|██▋       | 409M/1.52G [00:05<00:13, 82.2MB/s]Downloading model.safetensors:  28%|██▊       | 419M/1.52G [00:06<00:13, 83.4MB/s]Downloading model.safetensors:  28%|██▊       | 430M/1.52G [00:06<00:13, 83.7MB/s]Downloading model.safetensors:  29%|██▉       | 440M/1.52G [00:06<00:12, 83.9MB/s]Downloading model.safetensors:  30%|██▉       | 451M/1.52G [00:06<00:12, 85.6MB/s]Downloading model.safetensors:  30%|███       | 461M/1.52G [00:06<00:12, 85.8MB/s]Downloading model.safetensors:  31%|███       | 472M/1.52G [00:06<00:13, 76.2MB/s]Downloading model.safetensors:  32%|███▏      | 482M/1.52G [00:06<00:13, 79.4MB/s]Downloading model.safetensors:  32%|███▏      | 493M/1.52G [00:06<00:12, 81.9MB/s]Downloading model.safetensors:  33%|███▎      | 503M/1.52G [00:07<00:12, 83.1MB/s]Downloading model.safetensors:  34%|███▍      | 514M/1.52G [00:07<00:11, 84.5MB/s]Downloading model.safetensors:  34%|███▍      | 524M/1.52G [00:07<00:11, 83.4MB/s]Downloading model.safetensors:  35%|███▌      | 535M/1.52G [00:07<00:11, 83.4MB/s]Downloading model.safetensors:  36%|███▌      | 545M/1.52G [00:07<00:11, 84.7MB/s]Downloading model.safetensors:  37%|███▋      | 556M/1.52G [00:07<00:11, 85.3MB/s]Downloading model.safetensors:  37%|███▋      | 566M/1.52G [00:07<00:12, 78.9MB/s]Downloading model.safetensors:  38%|███▊      | 577M/1.52G [00:08<00:14, 65.5MB/s]Downloading model.safetensors:  39%|███▊      | 587M/1.52G [00:08<00:13, 68.0MB/s]Downloading model.safetensors:  39%|███▉      | 598M/1.52G [00:08<00:12, 75.0MB/s]Downloading model.safetensors:  40%|████      | 608M/1.52G [00:08<00:14, 61.4MB/s]Downloading model.safetensors:  41%|████      | 619M/1.52G [00:08<00:13, 66.9MB/s]Downloading model.safetensors:  42%|████▏     | 640M/1.52G [00:08<00:11, 78.5MB/s]Downloading model.safetensors:  43%|████▎     | 650M/1.52G [00:08<00:10, 80.8MB/s]Downloading model.safetensors:  43%|████▎     | 661M/1.52G [00:09<00:10, 81.2MB/s]Downloading model.safetensors:  44%|████▍     | 671M/1.52G [00:09<00:10, 82.9MB/s]Downloading model.safetensors:  45%|████▍     | 682M/1.52G [00:09<00:09, 84.4MB/s]Downloading model.safetensors:  46%|████▌     | 692M/1.52G [00:09<00:09, 85.1MB/s]Downloading model.safetensors:  46%|████▌     | 703M/1.52G [00:09<00:09, 85.4MB/s]Downloading model.safetensors:  47%|████▋     | 713M/1.52G [00:09<00:09, 85.3MB/s]Downloading model.safetensors:  48%|████▊     | 724M/1.52G [00:09<00:09, 85.7MB/s]Downloading model.safetensors:  48%|████▊     | 734M/1.52G [00:10<00:12, 62.9MB/s]Downloading model.safetensors:  49%|████▉     | 744M/1.52G [00:10<00:15, 50.9MB/s]Downloading model.safetensors:  50%|████▉     | 755M/1.52G [00:10<00:14, 54.1MB/s]Downloading model.safetensors:  50%|█████     | 765M/1.52G [00:10<00:12, 61.5MB/s]Downloading model.safetensors:  51%|█████     | 776M/1.52G [00:10<00:11, 63.0MB/s]Downloading model.safetensors:  52%|█████▏    | 786M/1.52G [00:10<00:11, 66.6MB/s]Downloading model.safetensors:  52%|█████▏    | 797M/1.52G [00:11<00:10, 66.4MB/s]Downloading model.safetensors:  54%|█████▍    | 818M/1.52G [00:11<00:09, 72.9MB/s]Downloading model.safetensors:  54%|█████▍    | 828M/1.52G [00:11<00:09, 75.1MB/s]Downloading model.safetensors:  55%|█████▌    | 839M/1.52G [00:11<00:08, 77.3MB/s]Downloading model.safetensors:  56%|█████▌    | 849M/1.52G [00:11<00:08, 79.5MB/s]Downloading model.safetensors:  57%|█████▋    | 860M/1.52G [00:11<00:08, 75.8MB/s]Downloading model.safetensors:  58%|█████▊    | 881M/1.52G [00:12<00:08, 72.3MB/s]Downloading model.safetensors:  59%|█████▊    | 891M/1.52G [00:12<00:08, 73.1MB/s]Downloading model.safetensors:  59%|█████▉    | 902M/1.52G [00:12<00:08, 76.7MB/s]Downloading model.safetensors:  60%|██████    | 912M/1.52G [00:12<00:07, 79.5MB/s]Downloading model.safetensors:  61%|██████    | 923M/1.52G [00:12<00:07, 82.6MB/s]Downloading model.safetensors:  61%|██████▏   | 933M/1.52G [00:12<00:06, 84.3MB/s]Downloading model.safetensors:  62%|██████▏   | 944M/1.52G [00:12<00:06, 86.0MB/s]Downloading model.safetensors:  63%|██████▎   | 954M/1.52G [00:13<00:07, 75.7MB/s]Downloading model.safetensors:  64%|██████▍   | 975M/1.52G [00:13<00:06, 86.4MB/s]Downloading model.safetensors:  65%|██████▍   | 986M/1.52G [00:13<00:06, 87.2MB/s]Downloading model.safetensors:  66%|██████▌   | 996M/1.52G [00:13<00:06, 79.0MB/s]Downloading model.safetensors:  66%|██████▌   | 1.01G/1.52G [00:13<00:06, 82.6MB/s]Downloading model.safetensors:  67%|██████▋   | 1.02G/1.52G [00:13<00:05, 84.2MB/s]Downloading model.safetensors:  68%|██████▊   | 1.03G/1.52G [00:13<00:05, 85.1MB/s]Downloading model.safetensors:  68%|██████▊   | 1.04G/1.52G [00:14<00:05, 83.0MB/s]Downloading model.safetensors:  69%|██████▉   | 1.05G/1.52G [00:14<00:05, 87.2MB/s]Downloading model.safetensors:  70%|██████▉   | 1.06G/1.52G [00:14<00:05, 88.3MB/s]Downloading model.safetensors:  70%|███████   | 1.07G/1.52G [00:14<00:05, 89.4MB/s]Downloading model.safetensors:  71%|███████   | 1.08G/1.52G [00:14<00:04, 88.9MB/s]Downloading model.safetensors:  72%|███████▏  | 1.09G/1.52G [00:14<00:04, 89.0MB/s]Downloading model.safetensors:  72%|███████▏  | 1.10G/1.52G [00:14<00:04, 88.3MB/s]Downloading model.safetensors:  73%|███████▎  | 1.11G/1.52G [00:14<00:04, 87.7MB/s]Downloading model.safetensors:  74%|███████▍  | 1.12G/1.52G [00:15<00:04, 88.9MB/s]Downloading model.safetensors:  75%|███████▍  | 1.13G/1.52G [00:15<00:04, 88.0MB/s]Downloading model.safetensors:  75%|███████▌  | 1.14G/1.52G [00:15<00:04, 88.4MB/s]Downloading model.safetensors:  76%|███████▌  | 1.15G/1.52G [00:15<00:04, 82.1MB/s]Downloading model.safetensors:  77%|███████▋  | 1.16G/1.52G [00:15<00:04, 78.0MB/s]Downloading model.safetensors:  77%|███████▋  | 1.17G/1.52G [00:15<00:05, 68.8MB/s]Downloading model.safetensors:  78%|███████▊  | 1.18G/1.52G [00:15<00:05, 58.5MB/s]Downloading model.safetensors:  79%|███████▊  | 1.20G/1.52G [00:16<00:05, 54.7MB/s]Downloading model.safetensors:  79%|███████▉  | 1.21G/1.52G [00:16<00:06, 51.3MB/s]Downloading model.safetensors:  80%|████████  | 1.22G/1.52G [00:16<00:06, 48.3MB/s]Downloading model.safetensors:  81%|████████  | 1.23G/1.52G [00:16<00:06, 43.5MB/s]Downloading model.safetensors:  81%|████████▏ | 1.24G/1.52G [00:17<00:07, 40.4MB/s]Downloading model.safetensors:  82%|████████▏ | 1.25G/1.52G [00:17<00:07, 38.4MB/s]Downloading model.safetensors:  83%|████████▎ | 1.26G/1.52G [00:17<00:06, 37.8MB/s]Downloading model.safetensors:  83%|████████▎ | 1.27G/1.52G [00:18<00:06, 37.5MB/s]Downloading model.safetensors:  84%|████████▍ | 1.28G/1.52G [00:18<00:06, 37.5MB/s]Downloading model.safetensors:  85%|████████▍ | 1.29G/1.52G [00:18<00:06, 37.6MB/s]Downloading model.safetensors:  86%|████████▌ | 1.30G/1.52G [00:19<00:05, 37.6MB/s]Downloading model.safetensors:  86%|████████▌ | 1.31G/1.52G [00:19<00:05, 37.9MB/s]Downloading model.safetensors:  87%|████████▋ | 1.32G/1.52G [00:19<00:05, 37.8MB/s]Downloading model.safetensors:  88%|████████▊ | 1.33G/1.52G [00:19<00:04, 38.5MB/s]Downloading model.safetensors:  88%|████████▊ | 1.34G/1.52G [00:20<00:04, 38.6MB/s]Downloading model.safetensors:  89%|████████▉ | 1.35G/1.52G [00:20<00:04, 38.8MB/s]Downloading model.safetensors:  90%|████████▉ | 1.36G/1.52G [00:20<00:03, 39.4MB/s]Downloading model.safetensors:  90%|█████████ | 1.37G/1.52G [00:20<00:03, 39.3MB/s]Downloading model.safetensors:  91%|█████████ | 1.38G/1.52G [00:21<00:03, 39.6MB/s]Downloading model.safetensors:  92%|█████████▏| 1.39G/1.52G [00:21<00:03, 39.8MB/s]Downloading model.safetensors:  92%|█████████▏| 1.41G/1.52G [00:21<00:02, 39.6MB/s]Downloading model.safetensors:  93%|█████████▎| 1.42G/1.52G [00:21<00:02, 40.1MB/s]Downloading model.safetensors:  94%|█████████▍| 1.43G/1.52G [00:22<00:02, 40.0MB/s]Downloading model.safetensors:  95%|█████████▍| 1.44G/1.52G [00:22<00:02, 40.3MB/s]Downloading model.safetensors:  95%|█████████▌| 1.45G/1.52G [00:22<00:01, 40.2MB/s]Downloading model.safetensors:  96%|█████████▌| 1.46G/1.52G [00:22<00:01, 40.5MB/s]Downloading model.safetensors:  97%|█████████▋| 1.47G/1.52G [00:23<00:01, 40.3MB/s]Downloading model.safetensors:  97%|█████████▋| 1.48G/1.52G [00:23<00:01, 40.6MB/s]Downloading model.safetensors:  98%|█████████▊| 1.49G/1.52G [00:23<00:00, 40.4MB/s]Downloading model.safetensors:  99%|█████████▊| 1.50G/1.52G [00:24<00:00, 40.5MB/s]Downloading model.safetensors:  99%|█████████▉| 1.51G/1.52G [00:24<00:00, 39.5MB/s]Downloading model.safetensors: 100%|██████████| 1.52G/1.52G [00:24<00:00, 40.4MB/s]Downloading model.safetensors: 100%|██████████| 1.52G/1.52G [00:24<00:00, 62.0MB/s]
+/accounts/grad/phudish_p/.local/lib/python3.11/site-packages/transformers/utils/hub.py:374: FutureWarning: The `use_auth_token` argument is deprecated and will be removed in v5 of Transformers.
+  warnings.warn(
+Downloading generation_config.json:   0%|          | 0.00/124 [00:00<?, ?B/s]Downloading generation_config.json: 100%|██████████| 124/124 [00:00<00:00, 831kB/s]
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+/accounts/grad/phudish_p/.local/lib/python3.11/site-packages/accelerate/accelerator.py:432: FutureWarning: Passing the following arguments to `Accelerator` is deprecated and will be removed in version 1.0 of Accelerate: dict_keys(['dispatch_batches']). Please pass an `accelerate.DataLoaderConfiguration` instead: 
+dataloader_config = DataLoaderConfiguration(dispatch_batches=None)
+  warnings.warn(
+************TRAINING STARTED*************
+  0%|          | 0/155 [00:00<?, ?it/s]You're using a GPT2TokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+/usr/local/linux/mambaforge-3.11/lib/python3.11/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+  1%|          | 1/155 [00:22<56:56, 22.19s/it]  1%|▏         | 2/155 [00:22<24:22,  9.56s/it]  2%|▏         | 3/155 [00:23<13:59,  5.52s/it]  3%|▎         | 4/155 [00:24<09:08,  3.63s/it]  3%|▎         | 5/155 [00:25<06:27,  2.58s/it]  4%|▍         | 6/155 [00:25<04:49,  1.94s/it]  5%|▍         | 7/155 [00:26<03:56,  1.60s/it]  5%|▌         | 8/155 [00:27<03:13,  1.32s/it]  6%|▌         | 9/155 [00:28<02:45,  1.13s/it]  6%|▋         | 10/155 [00:28<02:25,  1.01s/it]  7%|▋         | 11/155 [00:29<02:12,  1.09it/s]  8%|▊         | 12/155 [00:30<02:03,  1.16it/s]  8%|▊         | 13/155 [00:31<01:57,  1.21it/s]  9%|▉         | 14/155 [00:31<01:51,  1.27it/s] 10%|▉         | 15/155 [00:32<01:54,  1.22it/s] 10%|█         | 16/155 [00:33<01:50,  1.26it/s] 11%|█         | 17/155 [00:34<01:46,  1.29it/s] 12%|█▏        | 18/155 [00:34<01:44,  1.31it/s] 12%|█▏        | 19/155 [00:35<01:42,  1.33it/s] 13%|█▎        | 20/155 [00:36<01:40,  1.35it/s] 14%|█▎        | 21/155 [00:37<01:38,  1.36it/s] 14%|█▍        | 22/155 [00:37<01:43,  1.28it/s] 15%|█▍        | 23/155 [00:38<01:40,  1.32it/s] 15%|█▌        | 24/155 [00:39<01:38,  1.33it/s] 16%|█▌        | 25/155 [00:40<01:36,  1.35it/s] 17%|█▋        | 26/155 [00:40<01:35,  1.35it/s] 17%|█▋        | 27/155 [00:41<01:33,  1.37it/s] 18%|█▊        | 28/155 [00:42<01:32,  1.37it/s] 19%|█▊        | 29/155 [00:43<01:37,  1.29it/s] 19%|█▉        | 30/155 [00:43<01:35,  1.31it/s] 20%|██        | 31/155 [00:44<01:32,  1.34it/s]Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+/accounts/grad/phudish_p/.local/lib/python3.11/site-packages/transformers/generation/utils.py:1260: UserWarning: Using the model-agnostic default `max_length` (=20) to control the generation length. We recommend setting `max_new_tokens` to control the maximum length of the generation.
+  warnings.warn(
+/accounts/grad/phudish_p/.local/lib/python3.11/site-packages/transformers/generation/utils.py:1268: UserWarning: Input length of input_ids is 512, but `max_length` is set to 20. This can lead to unexpected behavior. You should consider increasing `max_new_tokens`.
+  warnings.warn(
+
+  0%|          | 0/8 [00:00<?, ?it/s][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+
+ 25%|██▌       | 2/8 [00:01<00:04,  1.45it/s][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+
+ 38%|███▊      | 3/8 [00:02<00:04,  1.05it/s][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+
+ 50%|█████     | 4/8 [00:04<00:04,  1.09s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+
+ 62%|██████▎   | 5/8 [00:05<00:03,  1.19s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+
+ 75%|███████▌  | 6/8 [00:06<00:02,  1.24s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+
+ 88%|████████▊ | 7/8 [00:08<00:01,  1.32s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+
+100%|██████████| 8/8 [00:09<00:00,  1.23s/it][A                                                
+                                             [A 20%|██        | 31/155 [01:07<01:32,  1.34it/s]
+100%|██████████| 8/8 [00:21<00:00,  1.23s/it][A
+                                             [A/usr/local/linux/mambaforge-3.11/lib/python3.11/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+ 21%|██        | 32/155 [03:50<1:55:43, 56.45s/it] 21%|██▏       | 33/155 [03:51<1:20:46, 39.73s/it] 22%|██▏       | 34/155 [03:52<56:31, 28.03s/it]   23%|██▎       | 35/155 [03:53<39:41, 19.84s/it] 23%|██▎       | 36/155 [03:53<27:59, 14.11s/it] 24%|██▍       | 37/155 [03:54<19:51, 10.10s/it] 25%|██▍       | 38/155 [03:55<14:12,  7.29s/it] 25%|██▌       | 39/155 [03:56<10:23,  5.37s/it] 26%|██▌       | 40/155 [03:56<07:38,  3.98s/it] 26%|██▋       | 41/155 [03:57<05:43,  3.01s/it] 27%|██▋       | 42/155 [03:58<04:23,  2.33s/it] 28%|██▊       | 43/155 [03:59<03:27,  1.86s/it] 28%|██▊       | 44/155 [03:59<02:48,  1.51s/it] 29%|██▉       | 45/155 [04:00<02:20,  1.28s/it] 30%|██▉       | 46/155 [04:01<02:01,  1.12s/it] 30%|███       | 47/155 [04:02<01:53,  1.05s/it] 31%|███       | 48/155 [04:03<01:43,  1.04it/s] 32%|███▏      | 49/155 [04:03<01:34,  1.12it/s] 32%|███▏      | 50/155 [04:04<01:28,  1.18it/s] 33%|███▎      | 51/155 [04:05<01:25,  1.21it/s] 34%|███▎      | 52/155 [04:06<01:22,  1.25it/s] 34%|███▍      | 53/155 [04:06<01:19,  1.28it/s] 35%|███▍      | 54/155 [04:07<01:18,  1.29it/s] 35%|███▌      | 55/155 [04:08<01:21,  1.23it/s] 36%|███▌      | 56/155 [04:09<01:18,  1.26it/s] 37%|███▋      | 57/155 [04:09<01:15,  1.30it/s] 37%|███▋      | 58/155 [04:10<01:13,  1.31it/s] 38%|███▊      | 59/155 [04:11<01:11,  1.33it/s] 39%|███▊      | 60/155 [04:12<01:10,  1.34it/s] 39%|███▉      | 61/155 [04:12<01:08,  1.36it/s] 40%|████      | 62/155 [04:13<01:11,  1.30it/s]Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+/accounts/grad/phudish_p/.local/lib/python3.11/site-packages/transformers/generation/utils.py:1260: UserWarning: Using the model-agnostic default `max_length` (=20) to control the generation length. We recommend setting `max_new_tokens` to control the maximum length of the generation.
+  warnings.warn(
+/accounts/grad/phudish_p/.local/lib/python3.11/site-packages/transformers/generation/utils.py:1268: UserWarning: Input length of input_ids is 512, but `max_length` is set to 20. This can lead to unexpected behavior. You should consider increasing `max_new_tokens`.
+  warnings.warn(
+{'eval_loss': 6.422163486480713, 'eval_rouge1': 0.4405, 'eval_rouge2': 0.1874, 'eval_rougeL': 0.24, 'eval_rougeLsum': 0.3776, 'eval_gen_len': 513.0, 'eval_runtime': 23.0095, 'eval_samples_per_second': 10.778, 'eval_steps_per_second': 0.348, 'epoch': 1.0}
+
+  0%|          | 0/8 [00:00<?, ?it/s][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+
+ 25%|██▌       | 2/8 [00:01<00:04,  1.46it/s][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+
+ 38%|███▊      | 3/8 [00:02<00:04,  1.03it/s][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+
+ 50%|█████     | 4/8 [00:04<00:04,  1.13s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+
+ 62%|██████▎   | 5/8 [00:05<00:03,  1.20s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+
+ 75%|███████▌  | 6/8 [00:06<00:02,  1.24s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+
+ 88%|████████▊ | 7/8 [00:08<00:01,  1.28s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+
+100%|██████████| 8/8 [00:09<00:00,  1.20s/it][A                                                
+                                             [A 40%|████      | 62/155 [04:36<01:11,  1.30it/s]
+100%|██████████| 8/8 [00:21<00:00,  1.20s/it][A
+                                             [A/usr/local/linux/mambaforge-3.11/lib/python3.11/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+ 41%|████      | 63/155 [07:21<1:27:04, 56.79s/it] 41%|████▏     | 64/155 [07:22<1:00:43, 40.03s/it] 42%|████▏     | 65/155 [07:22<42:22, 28.25s/it]   43%|████▎     | 66/155 [07:23<29:39, 19.99s/it] 43%|████▎     | 67/155 [07:24<20:51, 14.22s/it] 44%|████▍     | 68/155 [07:25<14:45, 10.18s/it] 45%|████▍     | 69/155 [07:25<10:31,  7.34s/it] 45%|████▌     | 70/155 [07:26<07:35,  5.36s/it] 46%|████▌     | 71/155 [07:27<05:34,  3.98s/it] 46%|████▋     | 72/155 [07:28<04:13,  3.05s/it] 47%|████▋     | 73/155 [07:28<03:13,  2.36s/it] 48%|████▊     | 74/155 [07:29<02:31,  1.88s/it] 48%|████▊     | 75/155 [07:30<02:03,  1.54s/it] 49%|████▉     | 76/155 [07:31<01:42,  1.30s/it] 50%|████▉     | 77/155 [07:31<01:28,  1.13s/it] 50%|█████     | 78/155 [07:32<01:18,  1.01s/it] 51%|█████     | 79/155 [07:33<01:10,  1.07it/s] 52%|█████▏    | 80/155 [07:34<01:05,  1.15it/s] 52%|█████▏    | 81/155 [07:35<01:04,  1.14it/s] 53%|█████▎    | 82/155 [07:35<01:00,  1.20it/s] 54%|█████▎    | 83/155 [07:36<00:58,  1.24it/s] 54%|█████▍    | 84/155 [07:37<00:55,  1.28it/s] 55%|█████▍    | 85/155 [07:37<00:53,  1.30it/s] 55%|█████▌    | 86/155 [07:38<00:51,  1.33it/s] 56%|█████▌    | 87/155 [07:39<00:50,  1.34it/s] 57%|█████▋    | 88/155 [07:40<00:49,  1.35it/s] 57%|█████▋    | 89/155 [07:41<00:51,  1.28it/s] 58%|█████▊    | 90/155 [07:41<00:49,  1.31it/s] 59%|█████▊    | 91/155 [07:42<00:48,  1.32it/s] 59%|█████▉    | 92/155 [07:43<00:46,  1.34it/s] 60%|██████    | 93/155 [07:43<00:45,  1.37it/s]Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+/accounts/grad/phudish_p/.local/lib/python3.11/site-packages/transformers/generation/utils.py:1260: UserWarning: Using the model-agnostic default `max_length` (=20) to control the generation length. We recommend setting `max_new_tokens` to control the maximum length of the generation.
+  warnings.warn(
+/accounts/grad/phudish_p/.local/lib/python3.11/site-packages/transformers/generation/utils.py:1268: UserWarning: Input length of input_ids is 512, but `max_length` is set to 20. This can lead to unexpected behavior. You should consider increasing `max_new_tokens`.
+  warnings.warn(
+{'eval_loss': 6.226608753204346, 'eval_rouge1': 0.4405, 'eval_rouge2': 0.1874, 'eval_rougeL': 0.24, 'eval_rougeLsum': 0.3775, 'eval_gen_len': 513.0, 'eval_runtime': 23.0086, 'eval_samples_per_second': 10.779, 'eval_steps_per_second': 0.348, 'epoch': 2.0}
+
+  0%|          | 0/8 [00:00<?, ?it/s][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+
+ 25%|██▌       | 2/8 [00:01<00:04,  1.50it/s][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+
+ 38%|███▊      | 3/8 [00:02<00:04,  1.06it/s][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+
+ 50%|█████     | 4/8 [00:04<00:04,  1.09s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+
+ 62%|██████▎   | 5/8 [00:05<00:03,  1.18s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+
+ 75%|███████▌  | 6/8 [00:06<00:02,  1.29s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+
+ 88%|████████▊ | 7/8 [00:08<00:01,  1.30s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+
+100%|██████████| 8/8 [00:09<00:00,  1.21s/it][A                                                
+                                             [A 60%|██████    | 93/155 [08:07<00:45,  1.37it/s]
+100%|██████████| 8/8 [00:21<00:00,  1.21s/it][A
+                                             [A/usr/local/linux/mambaforge-3.11/lib/python3.11/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+ 61%|██████    | 94/155 [10:50<57:34, 56.62s/it] 61%|██████▏   | 95/155 [10:51<39:51, 39.86s/it] 62%|██████▏   | 96/155 [10:52<27:39, 28.13s/it] 63%|██████▎   | 97/155 [10:53<19:14, 19.91s/it] 63%|██████▎   | 98/155 [10:53<13:27, 14.16s/it] 64%|██████▍   | 99/155 [10:54<09:30, 10.19s/it] 65%|██████▍   | 100/155 [10:55<06:44,  7.35s/it] 65%|██████▌   | 101/155 [10:56<04:50,  5.37s/it] 66%|██████▌   | 102/155 [10:57<03:31,  3.98s/it] 66%|██████▋   | 103/155 [10:57<02:36,  3.00s/it] 67%|██████▋   | 104/155 [10:58<01:58,  2.32s/it] 68%|██████▊   | 105/155 [10:59<01:32,  1.85s/it] 68%|██████▊   | 106/155 [11:00<01:16,  1.57s/it] 69%|██████▉   | 107/155 [11:00<01:03,  1.31s/it] 70%|██████▉   | 108/155 [11:01<00:53,  1.14s/it] 70%|███████   | 109/155 [11:02<00:46,  1.01s/it] 71%|███████   | 110/155 [11:03<00:41,  1.08it/s] 72%|███████▏  | 111/155 [11:03<00:38,  1.14it/s] 72%|███████▏  | 112/155 [11:04<00:36,  1.19it/s] 73%|███████▎  | 113/155 [11:05<00:35,  1.17it/s] 74%|███████▎  | 114/155 [11:06<00:33,  1.23it/s] 74%|███████▍  | 115/155 [11:06<00:31,  1.26it/s] 75%|███████▍  | 116/155 [11:07<00:30,  1.28it/s] 75%|███████▌  | 117/155 [11:08<00:28,  1.31it/s] 76%|███████▌  | 118/155 [11:09<00:27,  1.32it/s] 77%|███████▋  | 119/155 [11:09<00:26,  1.33it/s] 77%|███████▋  | 120/155 [11:10<00:27,  1.27it/s] 78%|███████▊  | 121/155 [11:11<00:26,  1.29it/s] 79%|███████▊  | 122/155 [11:12<00:25,  1.31it/s] 79%|███████▉  | 123/155 [11:12<00:24,  1.33it/s] 80%|████████  | 124/155 [11:13<00:22,  1.36it/s]Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+/accounts/grad/phudish_p/.local/lib/python3.11/site-packages/transformers/generation/utils.py:1260: UserWarning: Using the model-agnostic default `max_length` (=20) to control the generation length. We recommend setting `max_new_tokens` to control the maximum length of the generation.
+  warnings.warn(
+/accounts/grad/phudish_p/.local/lib/python3.11/site-packages/transformers/generation/utils.py:1268: UserWarning: Input length of input_ids is 512, but `max_length` is set to 20. This can lead to unexpected behavior. You should consider increasing `max_new_tokens`.
+  warnings.warn(
+{'eval_loss': 6.1555304527282715, 'eval_rouge1': 0.4405, 'eval_rouge2': 0.1874, 'eval_rougeL': 0.24, 'eval_rougeLsum': 0.3776, 'eval_gen_len': 513.0, 'eval_runtime': 23.1242, 'eval_samples_per_second': 10.725, 'eval_steps_per_second': 0.346, 'epoch': 3.0}
+
+  0%|          | 0/8 [00:00<?, ?it/s][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+
+ 25%|██▌       | 2/8 [00:01<00:04,  1.50it/s][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+
+ 38%|███▊      | 3/8 [00:02<00:04,  1.05it/s][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+
+ 50%|█████     | 4/8 [00:04<00:04,  1.10s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+
+ 62%|██████▎   | 5/8 [00:05<00:03,  1.20s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+
+ 75%|███████▌  | 6/8 [00:06<00:02,  1.30s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+
+ 88%|████████▊ | 7/8 [00:08<00:01,  1.32s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+
+100%|██████████| 8/8 [00:09<00:00,  1.23s/it][A                                                 
+                                             [A 80%|████████  | 124/155 [11:37<00:22,  1.36it/s]
+100%|██████████| 8/8 [00:22<00:00,  1.23s/it][A
+                                             [A/usr/local/linux/mambaforge-3.11/lib/python3.11/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+ 81%|████████  | 125/155 [14:20<28:14, 56.50s/it] 81%|████████▏ | 126/155 [14:21<19:13, 39.77s/it] 82%|████████▏ | 127/155 [14:21<13:05, 28.06s/it] 83%|████████▎ | 128/155 [14:22<08:56, 19.86s/it] 83%|████████▎ | 129/155 [14:23<06:07, 14.12s/it] 84%|████████▍ | 130/155 [14:23<04:12, 10.11s/it] 85%|████████▍ | 131/155 [14:24<02:56,  7.36s/it] 85%|████████▌ | 132/155 [14:25<02:03,  5.37s/it] 86%|████████▌ | 133/155 [14:26<01:27,  3.99s/it] 86%|████████▋ | 134/155 [14:27<01:03,  3.01s/it] 87%|████████▋ | 135/155 [14:27<00:46,  2.33s/it] 88%|████████▊ | 136/155 [14:28<00:35,  1.85s/it] 88%|████████▊ | 137/155 [14:29<00:27,  1.52s/it] 89%|████████▉ | 138/155 [14:30<00:21,  1.28s/it] 90%|████████▉ | 139/155 [14:30<00:18,  1.18s/it] 90%|█████████ | 140/155 [14:31<00:15,  1.05s/it] 91%|█████████ | 141/155 [14:32<00:13,  1.05it/s] 92%|█████████▏| 142/155 [14:33<00:11,  1.13it/s] 92%|█████████▏| 143/155 [14:33<00:10,  1.18it/s] 93%|█████████▎| 144/155 [14:34<00:08,  1.23it/s] 94%|█████████▎| 145/155 [14:35<00:07,  1.27it/s] 94%|█████████▍| 146/155 [14:36<00:06,  1.29it/s] 95%|█████████▍| 147/155 [14:36<00:06,  1.30it/s] 95%|█████████▌| 148/155 [14:37<00:05,  1.23it/s] 96%|█████████▌| 149/155 [14:38<00:04,  1.27it/s] 97%|█████████▋| 150/155 [14:39<00:03,  1.30it/s] 97%|█████████▋| 151/155 [14:39<00:02,  1.34it/s] 98%|█████████▊| 152/155 [14:40<00:02,  1.34it/s] 99%|█████████▊| 153/155 [14:41<00:01,  1.35it/s] 99%|█████████▉| 154/155 [14:42<00:00,  1.37it/s]100%|██████████| 155/155 [14:42<00:00,  1.40it/s]Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+/accounts/grad/phudish_p/.local/lib/python3.11/site-packages/transformers/generation/utils.py:1260: UserWarning: Using the model-agnostic default `max_length` (=20) to control the generation length. We recommend setting `max_new_tokens` to control the maximum length of the generation.
+  warnings.warn(
+/accounts/grad/phudish_p/.local/lib/python3.11/site-packages/transformers/generation/utils.py:1268: UserWarning: Input length of input_ids is 512, but `max_length` is set to 20. This can lead to unexpected behavior. You should consider increasing `max_new_tokens`.
+  warnings.warn(
+{'eval_loss': 6.130452632904053, 'eval_rouge1': 0.4405, 'eval_rouge2': 0.1874, 'eval_rougeL': 0.24, 'eval_rougeLsum': 0.3775, 'eval_gen_len': 513.0, 'eval_runtime': 23.4035, 'eval_samples_per_second': 10.597, 'eval_steps_per_second': 0.342, 'epoch': 4.0}
+
+  0%|          | 0/8 [00:00<?, ?it/s][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+
+ 25%|██▌       | 2/8 [00:01<00:04,  1.47it/s][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+
+ 38%|███▊      | 3/8 [00:02<00:04,  1.04it/s][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+
+ 50%|█████     | 4/8 [00:04<00:04,  1.10s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+
+ 62%|██████▎   | 5/8 [00:05<00:03,  1.19s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+
+ 75%|███████▌  | 6/8 [00:06<00:02,  1.24s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+
+ 88%|████████▊ | 7/8 [00:08<00:01,  1.27s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+
+100%|██████████| 8/8 [00:09<00:00,  1.19s/it][A                                                 
+                                             [A100%|██████████| 155/155 [15:06<00:00,  1.40it/s]
+100%|██████████| 8/8 [00:21<00:00,  1.19s/it][A
+                                             [A                                                 100%|██████████| 155/155 [17:49<00:00,  1.40it/s]100%|██████████| 155/155 [17:49<00:00,  6.90s/it]
+{'eval_loss': 6.120211601257324, 'eval_rouge1': 0.4405, 'eval_rouge2': 0.1874, 'eval_rougeL': 0.24, 'eval_rougeLsum': 0.3775, 'eval_gen_len': 513.0, 'eval_runtime': 23.1823, 'eval_samples_per_second': 10.698, 'eval_steps_per_second': 0.345, 'epoch': 5.0}
+{'train_runtime': 1069.2975, 'train_samples_per_second': 4.625, 'train_steps_per_second': 0.145, 'train_loss': 6.413647854712702, 'epoch': 5.0}
+*************TRAINING COMPLETED**************
+Logged in as: mllm-dev
+UPLOADING
+optimizer.pt:   0%|          | 0.00/2.84G [00:00<?, ?B/s]
+pytorch_model.bin:   0%|          | 0.00/1.42G [00:00<?, ?B/s][A
+
+rng_state.pth:   0%|          | 0.00/14.6k [00:00<?, ?B/s][A[A
+
+
+scheduler.pt:   0%|          | 0.00/627 [00:00<?, ?B/s][A[A[A
+
+
+
+Upload 12 LFS files:   0%|          | 0/12 [00:00<?, ?it/s][A[A[A[A
+
+
+
+
+optimizer.pt:   0%|          | 0.00/2.84G [00:00<?, ?B/s][A[A[A[A[Aoptimizer.pt:   0%|          | 3.41M/2.84G [00:00<01:35, 29.7MB/s]
+pytorch_model.bin:   0%|          | 5.53M/1.42G [00:00<00:29, 48.2MB/s][A
+
+
+
+
+optimizer.pt:   0%|          | 4.50M/2.84G [00:00<01:13, 38.6MB/s][A[A[A[A[Ascheduler.pt: 100%|██████████| 627/627 [00:00<00:00, 3.79kB/s]
+rng_state.pth: 100%|██████████| 14.6k/14.6k [00:00<00:00, 76.1kB/s]
+optimizer.pt:   0%|          | 10.6M/2.84G [00:00<00:55, 50.9MB/s]
+pytorch_model.bin:   1%|          | 13.2M/1.42G [00:00<00:23, 60.4MB/s][A
+
+
+
+
+optimizer.pt:   0%|          | 10.9M/2.84G [00:00<01:01, 45.9MB/s][A[A[A[A[A
+
+rng_state.pth:   0%|          | 0.00/14.6k [00:00<?, ?B/s][A[A
+
+
+scheduler.pt:   0%|          | 0.00/627 [00:00<?, ?B/s][A[A[Arng_state.pth: 100%|██████████| 14.6k/14.6k [00:00<00:00, 163kB/s]
+optimizer.pt:   1%|          | 16.0M/2.84G [00:00<01:39, 28.5MB/s]
+pytorch_model.bin:   1%|▏         | 19.3M/1.42G [00:00<00:45, 30.9MB/s][A
+
+
+
+
+optimizer.pt:   1%|          | 16.0M/2.84G [00:00<01:54, 24.7MB/s][A[A[A[A[Ascheduler.pt: 100%|██████████| 627/627 [00:00<00:00, 6.44kB/s]
+optimizer.pt:   1%|          | 24.4M/2.84G [00:00<01:06, 42.3MB/s]
+pytorch_model.bin:   2%|▏         | 28.5M/1.42G [00:00<00:31, 44.0MB/s][A
+
+
+
+
+optimizer.pt:   1%|          | 28.5M/2.84G [00:00<00:59, 47.3MB/s][A[A[A[A[A
+
+optimizer.pt:   0%|          | 0.00/2.84G [00:00<?, ?B/s][A[Aoptimizer.pt:   1%|          | 31.4M/2.84G [00:00<00:57, 49.0MB/s]
+
+
+pytorch_model.bin:   0%|          | 0.00/1.42G [00:00<?, ?B/s][A[A[A
+
+
+pytorch_model.bin:   1%|          | 10.3M/1.42G [00:00<00:13, 103MB/s][A[A[A
+
+optimizer.pt:   0%|          | 9.29M/2.84G [00:00<00:37, 75.4MB/s][A[A
+pytorch_model.bin:   2%|▏         | 34.2M/1.42G [00:00<00:46, 29.9MB/s][A
+pytorch_model.bin:   3%|▎         | 44.5M/1.42G [00:01<00:32, 42.8MB/s][Aoptimizer.pt:   1%|▏         | 37.3M/2.84G [00:01<01:36, 28.9MB/s]
+
+
+
+
+optimizer.pt:   1%|          | 35.1M/2.84G [00:01<01:38, 28.5MB/s][A[A[A[A[A
+
+
+pytorch_model.bin:   1%|▏         | 20.6M/1.42G [00:00<00:29, 47.3MB/s][A[A[A
+
+optimizer.pt:   1%|          | 16.8M/2.84G [00:00<01:25, 33.0MB/s][A[Aoptimizer.pt:   2%|▏         | 44.2M/2.84G [00:01<01:18, 35.7MB/s]
+
+
+
+
+optimizer.pt:   2%|▏         | 46.9M/2.84G [00:01<01:04, 43.0MB/s][A[A[A[A[A
+
+
+pytorch_model.bin:   2%|▏         | 31.6M/1.42G [00:00<00:21, 64.3MB/s][A[A[A
+
+optimizer.pt:   1%|          | 26.3M/2.84G [00:00<00:58, 47.8MB/s][A[A
+pytorch_model.bin:   4%|▎         | 50.6M/1.42G [00:01<00:40, 33.6MB/s][A
+pytorch_model.bin:   4%|▍         | 58.5M/1.42G [00:01<00:32, 41.2MB/s][A
+
+optimizer.pt:   1%|          | 32.8M/2.84G [00:00<01:25, 33.0MB/s][A[Aoptimizer.pt:   2%|▏         | 49.4M/2.84G [00:01<01:54, 24.4MB/s]
+
+
+
+
+optimizer.pt:   2%|▏         | 54.1M/2.84G [00:01<01:30, 30.9MB/s][A[A[A[A[A
+
+
+pytorch_model.bin:   3%|▎         | 39.9M/1.42G [00:00<00:36, 38.1MB/s][A[A[A
+
+optimizer.pt:   2%|▏         | 43.4M/2.84G [00:00<00:59, 47.1MB/s][A[Aoptimizer.pt:   2%|▏         | 58.2M/2.84G [00:01<01:21, 34.0MB/s]
+
+
+pytorch_model.bin:   3%|▎         | 46.5M/1.42G [00:01<00:32, 42.5MB/s][A[A[A
+pytorch_model.bin:   5%|▍         | 64.2M/1.42G [00:01<00:42, 31.7MB/s][A
+pytorch_model.bin:   5%|▌         | 74.9M/1.42G [00:01<00:31, 42.8MB/s][A
+
+
+
+
+optimizer.pt:   2%|▏         | 64.0M/2.84G [00:02<01:38, 28.2MB/s][A[A[A[A[A
+
+
+pytorch_model.bin:   4%|▎         | 52.5M/1.42G [00:01<00:42, 31.9MB/s][A[A[Aoptimizer.pt:   2%|▏         | 64.0M/2.84G [00:02<01:52, 24.8MB/s]
+
+
+
+
+optimizer.pt:   3%|▎         | 75.0M/2.84G [00:02<01:12, 38.4MB/s][A[A[A[A[A
+
+optimizer.pt:   2%|▏         | 50.3M/2.84G [00:01<01:33, 29.8MB/s][A[A
+
+
+pytorch_model.bin:   4%|▍         | 58.4M/1.42G [00:01<00:37, 36.5MB/s][A[A[Aoptimizer.pt:   3%|▎         | 73.9M/2.84G [00:02<01:19, 34.7MB/s]
+
+optimizer.pt:   2%|▏         | 60.9M/2.84G [00:01<01:07, 41.0MB/s][A[A
+pytorch_model.bin:   6%|▌         | 80.7M/1.42G [00:02<00:43, 30.6MB/s][A
+pytorch_model.bin:   6%|▋         | 91.3M/1.42G [00:02<00:31, 41.7MB/s][A
+
+
+
+
+optimizer.pt:   3%|▎         | 81.4M/2.84G [00:02<01:28, 31.2MB/s][A[A[A[A[A
+
+
+pytorch_model.bin:   5%|▍         | 64.0M/1.42G [00:01<00:52, 26.0MB/s][A[A[Aoptimizer.pt:   3%|▎         | 80.0M/2.84G [00:02<01:37, 28.4MB/s]
+
+optimizer.pt:   2%|▏         | 67.7M/2.84G [00:01<01:24, 32.8MB/s][A[A
+
+
+
+
+optimizer.pt:   3%|▎         | 94.1M/2.84G [00:02<01:03, 43.2MB/s][A[A[A[A[A
+
+
+pytorch_model.bin:   5%|▌         | 72.1M/1.42G [00:01<00:40, 33.6MB/s][A[A[Aoptimizer.pt:   3%|▎         | 88.0M/2.84G [00:02<01:17, 35.3MB/s]
+
+optimizer.pt:   3%|▎         | 79.3M/2.84G [00:01<01:00, 45.5MB/s][A[A
+pytorch_model.bin:   7%|▋         | 97.5M/1.42G [00:02<00:46, 28.6MB/s][A
+pytorch_model.bin:   8%|▊         | 108M/1.42G [00:02<00:34, 37.9MB/s] [A
+
+
+
+
+optimizer.pt:   4%|▎         | 101M/2.84G [00:02<01:25, 32.1MB/s] [A[A[A[A[A
+
+optimizer.pt:   3%|▎         | 86.5M/2.84G [00:02<01:21, 33.7MB/s][A[Aoptimizer.pt:   3%|▎         | 96.0M/2.84G [00:03<01:37, 28.1MB/s]
+
+
+pytorch_model.bin:   6%|▌         | 80.0M/1.42G [00:02<00:50, 26.5MB/s][A[A[A
+
+optimizer.pt:   3%|▎         | 94.3M/2.84G [00:02<01:08, 40.1MB/s][A[Aoptimizer.pt:   4%|▎         | 106M/2.84G [00:03<01:13, 37.3MB/s] 
+
+
+pytorch_model.bin:   7%|▋         | 92.8M/1.42G [00:02<00:33, 39.7MB/s][A[A[A
+pytorch_model.bin:   8%|▊         | 114M/1.42G [00:03<00:44, 29.1MB/s][A
+
+
+
+
+optimizer.pt:   4%|▍         | 112M/2.84G [00:03<01:36, 28.1MB/s][A[A[A[A[A
+
+optimizer.pt:   4%|▎         | 101M/2.84G [00:02<01:28, 30.9MB/s] [A[Aoptimizer.pt:   4%|▍         | 112M/2.84G [00:03<01:32, 29.4MB/s]
+
+
+pytorch_model.bin:   7%|▋         | 99.0M/1.42G [00:02<00:43, 30.6MB/s][A[A[A
+
+
+
+
+optimizer.pt:   4%|▍         | 125M/2.84G [00:03<01:08, 39.8MB/s][A[A[A[A[A
+
+optimizer.pt:   4%|▍         | 111M/2.84G [00:02<01:08, 40.1MB/s][A[Aoptimizer.pt:   4%|▍         | 121M/2.84G [00:03<01:13, 37.2MB/s]
+pytorch_model.bin:   9%|▉         | 128M/1.42G [00:03<00:39, 32.5MB/s][A
+pytorch_model.bin:  10%|▉         | 140M/1.42G [00:03<00:30, 42.1MB/s][A
+
+
+pytorch_model.bin:   8%|▊         | 112M/1.42G [00:03<00:37, 34.6MB/s] [A[A[A
+
+optimizer.pt:   4%|▍         | 117M/2.84G [00:03<01:22, 33.0MB/s][A[A
+
+
+
+
+optimizer.pt:   5%|▍         | 132M/2.84G [00:03<01:26, 31.2MB/s][A[A[A[A[A
+
+
+pytorch_model.bin:   9%|▊         | 124M/1.42G [00:03<00:28, 45.1MB/s][A[A[Aoptimizer.pt:   5%|▍         | 128M/2.84G [00:03<01:29, 30.4MB/s]
+
+optimizer.pt:   4%|▍         | 125M/2.84G [00:03<01:06, 40.8MB/s][A[A
+pytorch_model.bin:  10%|█         | 146M/1.42G [00:04<00:37, 33.7MB/s][Aoptimizer.pt:   5%|▍         | 138M/2.84G [00:04<01:08, 39.3MB/s]
+pytorch_model.bin:  11%|█         | 155M/1.42G [00:04<00:30, 41.1MB/s][A
+
+
+pytorch_model.bin:   9%|▉         | 130M/1.42G [00:03<00:35, 35.9MB/s][A[A[A
+
+
+
+
+optimizer.pt:   5%|▌         | 144M/2.84G [00:04<01:25, 31.5MB/s][A[A[A[A[A
+
+optimizer.pt:   5%|▍         | 131M/2.84G [00:03<01:33, 28.9MB/s][A[Aoptimizer.pt:   5%|▌         | 144M/2.84G [00:04<01:30, 29.8MB/s]
+
+optimizer.pt:   5%|▍         | 140M/2.84G [00:03<01:10, 38.2MB/s][A[A
+pytorch_model.bin:  11%|█▏        | 161M/1.42G [00:04<00:39, 31.6MB/s][Aoptimizer.pt:   5%|▌         | 153M/2.84G [00:04<01:09, 38.6MB/s]
+
+
+pytorch_model.bin:  10%|█         | 144M/1.42G [00:03<00:35, 35.7MB/s][A[A[A
+pytorch_model.bin:  12%|█▏        | 170M/1.42G [00:04<00:31, 39.6MB/s][A
+
+
+
+
+optimizer.pt:   6%|▌         | 160M/2.84G [00:04<01:20, 33.3MB/s][A[A[A[A[A
+
+
+pytorch_model.bin:  11%|█         | 158M/1.42G [00:04<00:25, 49.2MB/s][A[A[A
+
+optimizer.pt:   5%|▌         | 146M/2.84G [00:04<01:28, 30.4MB/s][A[A
+
+
+
+
+optimizer.pt:   6%|▌         | 175M/2.84G [00:04<00:58, 45.5MB/s][A[A[A[A[A
+
+optimizer.pt:   5%|▌         | 155M/2.84G [00:04<01:08, 39.3MB/s][A[Aoptimizer.pt:   6%|▌         | 160M/2.84G [00:04<01:33, 28.8MB/s]
+
+
+pytorch_model.bin:  12%|█▏        | 166M/1.42G [00:04<00:30, 41.3MB/s][A[A[A
+pytorch_model.bin:  12%|█▏        | 176M/1.42G [00:05<00:44, 28.2MB/s][Aoptimizer.pt:   6%|▌         | 169M/2.84G [00:05<01:13, 36.3MB/s]
+pytorch_model.bin:  13%|█▎        | 187M/1.42G [00:05<00:31, 39.3MB/s][A
+
+optimizer.pt:   6%|▌         | 161M/2.84G [00:04<01:36, 27.7MB/s][A[A
+
+
+
+
+optimizer.pt:   6%|▋         | 182M/2.84G [00:05<01:21, 32.6MB/s][A[A[A[A[A
+
+
+pytorch_model.bin:  12%|█▏        | 176M/1.42G [00:04<00:32, 37.7MB/s][A[A[A
+
+optimizer.pt:   6%|▌         | 170M/2.84G [00:04<01:13, 36.2MB/s][A[Aoptimizer.pt:   6%|▌         | 176M/2.84G [00:05<01:28, 30.0MB/s]
+
+
+
+
+optimizer.pt:   7%|▋         | 190M/2.84G [00:05<01:10, 37.8MB/s][A[A[A[A[A
+pytorch_model.bin:  14%|█▎        | 193M/1.42G [00:05<00:37, 32.8MB/s][Aoptimizer.pt:   7%|▋         | 186M/2.84G [00:05<01:07, 39.5MB/s]
+pytorch_model.bin:  15%|█▍        | 206M/1.42G [00:05<00:26, 46.6MB/s][A
+
+
+
+
+optimizer.pt:   7%|▋         | 197M/2.84G [00:05<01:23, 31.6MB/s][A[A[A[A[A
+
+optimizer.pt:   6%|▌         | 176M/2.84G [00:05<01:41, 26.3MB/s][A[Aoptimizer.pt:   7%|▋         | 192M/2.84G [00:05<01:24, 31.3MB/s]
+
+
+pytorch_model.bin:  14%|█▎        | 192M/1.42G [00:05<00:35, 34.7MB/s][A[A[A
+
+optimizer.pt:   7%|▋         | 192M/2.84G [00:05<01:11, 36.9MB/s][A[Aoptimizer.pt:   7%|▋         | 208M/2.84G [00:06<01:07, 38.8MB/s]
+
+
+
+
+optimizer.pt:   7%|▋         | 208M/2.84G [00:06<01:29, 29.3MB/s][A[A[A[A[A
+
+
+pytorch_model.bin:  15%|█▍        | 208M/1.42G [00:05<00:31, 38.6MB/s][A[A[A
+
+
+
+
+optimizer.pt:   8%|▊         | 222M/2.84G [00:06<01:03, 40.9MB/s][A[A[A[A[A
+
+optimizer.pt:   7%|▋         | 208M/2.84G [00:05<00:59, 44.5MB/s][A[A
+
+
+pytorch_model.bin:  16%|█▌        | 223M/1.42G [00:05<00:23, 50.6MB/s][A[A[Aoptimizer.pt:   8%|▊         | 224M/2.84G [00:06<00:57, 45.1MB/s]
+
+optimizer.pt:   8%|▊         | 219M/2.84G [00:05<00:48, 53.9MB/s][A[A
+pytorch_model.bin:  15%|█▌        | 213M/1.42G [00:06<01:02, 19.4MB/s][A
+
+
+pytorch_model.bin:  16%|█▌        | 231M/1.42G [00:05<00:29, 40.4MB/s][A[A[Aoptimizer.pt:   8%|▊         | 240M/2.84G [00:06<00:51, 50.0MB/s]
+pytorch_model.bin:  15%|█▌        | 219M/1.42G [00:06<00:54, 22.2MB/s][A
+
+
+pytorch_model.bin:  17%|█▋        | 239M/1.42G [00:06<00:26, 45.3MB/s][A[A[Aoptimizer.pt:   9%|▉         | 250M/2.84G [00:06<00:45, 56.4MB/s]
+
+optimizer.pt:   8%|▊         | 226M/2.84G [00:06<01:08, 38.3MB/s][A[A
+
+
+
+
+optimizer.pt:   8%|▊         | 228M/2.84G [00:06<01:32, 28.3MB/s][A[A[A[A[A
+
+optimizer.pt:   8%|▊         | 239M/2.84G [00:06<00:52, 49.2MB/s][A[A
+pytorch_model.bin:  16%|█▌        | 224M/1.42G [00:07<00:58, 20.5MB/s][A
+
+
+pytorch_model.bin:  17%|█▋        | 245M/1.42G [00:06<00:31, 36.7MB/s][A[A[Aoptimizer.pt:   9%|▉         | 256M/2.84G [00:07<01:00, 42.7MB/s]
+pytorch_model.bin:  17%|█▋        | 235M/1.42G [00:07<00:39, 30.3MB/s][Aoptimizer.pt:   9%|▉         | 266M/2.84G [00:07<00:50, 50.8MB/s]
+
+
+
+
+optimizer.pt:   8%|▊         | 240M/2.84G [00:07<01:36, 26.8MB/s][A[A[A[A[A
+
+optimizer.pt:   9%|▊         | 246M/2.84G [00:06<01:13, 35.2MB/s][A[A
+
+
+pytorch_model.bin:  18%|█▊        | 256M/1.42G [00:06<00:30, 38.0MB/s][A[A[A
+
+
+
+
+optimizer.pt:   9%|▉         | 253M/2.84G [00:07<01:10, 36.7MB/s][A[A[A[A[A
+
+optimizer.pt:   9%|▉         | 255M/2.84G [00:06<01:00, 42.4MB/s][A[A
+pytorch_model.bin:  17%|█▋        | 241M/1.42G [00:07<00:47, 25.0MB/s][Aoptimizer.pt:  10%|▉         | 273M/2.84G [00:07<01:09, 37.1MB/s]
+pytorch_model.bin:  18%|█▊        | 251M/1.42G [00:07<00:34, 33.7MB/s][A
+
+
+pytorch_model.bin:  19%|█▉        | 272M/1.42G [00:06<00:26, 42.8MB/s][A[A[Aoptimizer.pt:  10%|▉         | 281M/2.84G [00:07<00:58, 43.7MB/s]
+
+
+
+
+optimizer.pt:   9%|▉         | 259M/2.84G [00:07<01:26, 29.7MB/s][A[A[A[A[A
+
+optimizer.pt:   9%|▉         | 262M/2.84G [00:07<01:19, 32.2MB/s][A[A
+
+
+pytorch_model.bin:  20%|██        | 288M/1.42G [00:07<00:23, 48.6MB/s][A[A[Aoptimizer.pt:  10%|█         | 288M/2.84G [00:08<01:16, 33.4MB/s]
+pytorch_model.bin:  18%|█▊        | 257M/1.42G [00:08<00:45, 25.8MB/s][A
+
+optimizer.pt:  10%|▉         | 272M/2.84G [00:07<01:11, 35.7MB/s][A[Aoptimizer.pt:  10%|█         | 297M/2.84G [00:08<01:01, 41.2MB/s]
+pytorch_model.bin:  19%|█▉        | 267M/1.42G [00:08<00:32, 35.3MB/s][A
+
+optimizer.pt:  10%|█         | 286M/2.84G [00:07<00:50, 50.2MB/s][A[A
+
+
+
+
+optimizer.pt:  10%|▉         | 272M/2.84G [00:08<01:25, 30.0MB/s][A[A[A[A[A
+
+
+pytorch_model.bin:  21%|██▏       | 304M/1.42G [00:07<00:22, 49.4MB/s][A[A[A
+
+
+
+
+optimizer.pt:  10%|█         | 286M/2.84G [00:08<01:01, 41.2MB/s][A[A[A[A[A
+
+
+pytorch_model.bin:  22%|██▏       | 317M/1.42G [00:07<00:18, 59.7MB/s][A[A[A
+pytorch_model.bin:  19%|█▉        | 273M/1.42G [00:08<00:40, 28.3MB/s][A
+
+optimizer.pt:  10%|█         | 293M/2.84G [00:07<01:07, 37.8MB/s][A[Aoptimizer.pt:  11%|█         | 304M/2.84G [00:08<01:26, 29.2MB/s]
+pytorch_model.bin:  20%|██        | 285M/1.42G [00:08<00:27, 41.3MB/s][A
+
+
+
+
+optimizer.pt:  10%|█         | 293M/2.84G [00:08<01:14, 34.4MB/s][A[A[A[A[Aoptimizer.pt:  11%|█         | 314M/2.84G [00:08<01:05, 38.4MB/s]
+
+
+pytorch_model.bin:  23%|██▎       | 324M/1.42G [00:08<00:26, 41.4MB/s][A[A[A
+
+
+
+
+optimizer.pt:  11%|█         | 302M/2.84G [00:08<01:00, 42.2MB/s][A[A[A[A[A
+
+optimizer.pt:  11%|█         | 304M/2.84G [00:08<01:12, 35.2MB/s][A[A
+
+
+pytorch_model.bin:  24%|██▎       | 336M/1.42G [00:08<00:24, 44.2MB/s][A[A[A
+
+optimizer.pt:  11%|█         | 315M/2.84G [00:08<00:57, 43.9MB/s][A[A
+pytorch_model.bin:  21%|██        | 292M/1.42G [00:09<00:38, 29.2MB/s][Aoptimizer.pt:  11%|█▏        | 320M/2.84G [00:09<01:27, 28.8MB/s]
+pytorch_model.bin:  21%|██▏       | 302M/1.42G [00:09<00:29, 37.6MB/s][A
+
+
+
+
+optimizer.pt:  11%|█         | 309M/2.84G [00:09<01:19, 32.0MB/s][A[A[A[A[Aoptimizer.pt:  12%|█▏        | 336M/2.84G [00:09<01:06, 37.9MB/s]
+
+
+pytorch_model.bin:  25%|██▍       | 352M/1.42G [00:08<00:24, 43.9MB/s][A[A[A
+
+optimizer.pt:  11%|█▏        | 321M/2.84G [00:08<01:16, 32.9MB/s][A[Aoptimizer.pt:  12%|█▏        | 346M/2.84G [00:09<00:55, 45.1MB/s]
+
+
+
+
+optimizer.pt:  11%|█▏        | 320M/2.84G [00:09<01:15, 33.3MB/s][A[A[A[A[A
+
+
+pytorch_model.bin:  26%|██▌       | 364M/1.42G [00:08<00:20, 51.9MB/s][A[A[A
+
+optimizer.pt:  12%|█▏        | 331M/2.84G [00:08<01:00, 41.3MB/s][A[A
+pytorch_model.bin:  22%|██▏       | 308M/1.42G [00:09<00:37, 29.7MB/s][A
+
+
+pytorch_model.bin:  26%|██▌       | 370M/1.42G [00:09<00:26, 39.7MB/s][A[A[Aoptimizer.pt:  12%|█▏        | 352M/2.84G [00:09<01:14, 33.4MB/s]
+
+optimizer.pt:  12%|█▏        | 337M/2.84G [00:09<01:20, 31.1MB/s][A[Aoptimizer.pt:  13%|█▎        | 360M/2.84G [00:09<01:02, 39.9MB/s]
+
+optimizer.pt:  12%|█▏        | 348M/2.84G [00:09<01:00, 41.2MB/s][A[A
+
+
+
+
+optimizer.pt:  12%|█▏        | 336M/2.84G [00:09<01:15, 33.2MB/s][A[A[A[A[A
+
+
+
+
+optimizer.pt:  12%|█▏        | 350M/2.84G [00:10<00:55, 44.8MB/s][A[A[A[A[A
+
+
+pytorch_model.bin:  27%|██▋       | 384M/1.42G [00:09<00:25, 40.0MB/s][A[A[A
+pytorch_model.bin:  23%|██▎       | 320M/1.42G [00:10<00:45, 24.0MB/s][Aoptimizer.pt:  13%|█▎        | 368M/2.84G [00:10<01:13, 33.7MB/s]
+pytorch_model.bin:  23%|██▎       | 331M/1.42G [00:10<00:33, 32.3MB/s][A
+
+optimizer.pt:  12%|█▏        | 354M/2.84G [00:09<01:22, 30.0MB/s][A[A
+
+
+pytorch_model.bin:  28%|██▊       | 400M/1.42G [00:09<00:22, 45.9MB/s][A[A[A
+
+
+
+
+optimizer.pt:  13%|█▎        | 357M/2.84G [00:10<01:09, 35.7MB/s][A[A[A[A[A
+
+
+pytorch_model.bin:  29%|██▉       | 413M/1.42G [00:09<00:17, 56.8MB/s][A[A[A
+
+
+
+
+optimizer.pt:  13%|█▎        | 366M/2.84G [00:10<00:58, 42.0MB/s][A[A[A[A[Aoptimizer.pt:  14%|█▎        | 384M/2.84G [00:10<00:59, 41.6MB/s]
+
+optimizer.pt:  13%|█▎        | 368M/2.84G [00:09<01:04, 38.5MB/s][A[A
+pytorch_model.bin:  24%|██▎       | 337M/1.42G [00:10<00:39, 27.2MB/s][Aoptimizer.pt:  14%|█▍        | 394M/2.84G [00:10<00:49, 49.6MB/s]
+pytorch_model.bin:  25%|██▍       | 350M/1.42G [00:10<00:27, 39.4MB/s][A
+
+
+
+
+optimizer.pt:  13%|█▎        | 372M/2.84G [00:10<01:10, 35.0MB/s][A[A[A[A[A
+
+
+pytorch_model.bin:  30%|██▉       | 421M/1.42G [00:10<00:24, 41.4MB/s][A[A[A
+
+
+
+
+optimizer.pt:  14%|█▎        | 384M/2.84G [00:10<00:52, 46.5MB/s][A[A[A[A[A
+
+optimizer.pt:  14%|█▎        | 384M/2.84G [00:10<01:02, 39.1MB/s][A[A
+pytorch_model.bin:  25%|██▌       | 357M/1.42G [00:11<00:30, 34.3MB/s][Aoptimizer.pt:  14%|█▍        | 400M/2.84G [00:11<01:10, 34.8MB/s]
+
+optimizer.pt:  14%|█▍        | 400M/2.84G [00:10<00:51, 47.2MB/s][A[A
+
+
+pytorch_model.bin:  30%|███       | 432M/1.42G [00:10<00:26, 37.3MB/s][A[A[Aoptimizer.pt:  15%|█▍        | 416M/2.84G [00:11<00:57, 42.3MB/s]
+
+
+
+
+optimizer.pt:  14%|█▍        | 391M/2.84G [00:11<01:16, 32.2MB/s][A[A[A[A[Aoptimizer.pt:  15%|█▌        | 427M/2.84G [00:11<00:46, 52.2MB/s]
+
+
+pytorch_model.bin:  32%|███▏      | 447M/1.42G [00:10<00:19, 49.6MB/s][A[A[A
+
+optimizer.pt:  15%|█▍        | 416M/2.84G [00:10<00:47, 51.0MB/s][A[A
+
+
+
+
+optimizer.pt:  14%|█▍        | 399M/2.84G [00:11<01:04, 38.0MB/s][A[A[A[A[A
+pytorch_model.bin:  26%|██▌       | 368M/1.42G [00:11<00:37, 28.1MB/s][A
+
+optimizer.pt:  15%|█▌        | 428M/2.84G [00:10<00:40, 59.8MB/s][A[A
+pytorch_model.bin:  27%|██▋       | 381M/1.42G [00:11<00:26, 39.3MB/s][Aoptimizer.pt:  15%|█▌        | 434M/2.84G [00:11<01:00, 39.7MB/s]
+
+
+
+
+optimizer.pt:  14%|█▍        | 405M/2.84G [00:11<01:19, 30.6MB/s][A[A[A[A[A
+
+
+
+
+optimizer.pt:  15%|█▍        | 416M/2.84G [00:11<00:58, 41.7MB/s][A[A[A[A[A
+
+optimizer.pt:  15%|█▌        | 436M/2.84G [00:11<00:55, 43.6MB/s][A[A
+pytorch_model.bin:  27%|██▋       | 388M/1.42G [00:11<00:30, 33.4MB/s][Aoptimizer.pt:  16%|█▌        | 448M/2.84G [00:12<00:58, 41.1MB/s]
+pytorch_model.bin:  28%|██▊       | 400M/1.42G [00:12<00:23, 43.0MB/s][A
+
+optimizer.pt:  16%|█▌        | 448M/2.84G [00:11<00:55, 43.4MB/s][A[A
+
+
+
+
+optimizer.pt:  15%|█▍        | 422M/2.84G [00:12<01:16, 31.5MB/s][A[A[A[A[Aoptimizer.pt:  16%|█▋        | 464M/2.84G [00:12<00:49, 47.5MB/s]
+
+
+pytorch_model.bin:  32%|███▏      | 454M/1.42G [00:11<00:39, 24.3MB/s][A[A[A
+
+optimizer.pt:  16%|█▌        | 459M/2.84G [00:11<00:45, 52.4MB/s][A[Aoptimizer.pt:  17%|█▋        | 477M/2.84G [00:12<00:41, 56.6MB/s]
+pytorch_model.bin:  29%|██▊       | 406M/1.42G [00:12<00:32, 31.5MB/s][A
+
+
+
+
+optimizer.pt:  15%|█▌        | 432M/2.84G [00:12<01:11, 33.4MB/s][A[A[A[A[A
+pytorch_model.bin:  29%|██▉       | 412M/1.42G [00:12<00:29, 33.9MB/s][A
+
+
+
+
+optimizer.pt:  16%|█▌        | 446M/2.84G [00:12<00:49, 48.3MB/s][A[A[A[A[A
+
+
+pytorch_model.bin:  33%|███▎      | 464M/1.42G [00:11<00:37, 25.5MB/s][A[A[A
+
+optimizer.pt:  16%|█▋        | 466M/2.84G [00:11<01:01, 38.9MB/s][A[Aoptimizer.pt:  17%|█▋        | 484M/2.84G [00:12<00:55, 42.4MB/s]
+
+
+pytorch_model.bin:  34%|███▍      | 480M/1.42G [00:12<00:28, 33.2MB/s][A[A[A
+
+optimizer.pt:  17%|█▋        | 480M/2.84G [00:12<00:54, 43.0MB/s][A[A
+pytorch_model.bin:  29%|██▉       | 417M/1.42G [00:12<00:39, 25.3MB/s][A
+
+
+
+
+optimizer.pt:  16%|█▌        | 453M/2.84G [00:12<01:06, 35.6MB/s][A[A[A[A[Aoptimizer.pt:  17%|█▋        | 496M/2.84G [00:13<00:54, 43.0MB/s]
+
+optimizer.pt:  17%|█▋        | 491M/2.84G [00:12<00:44, 52.6MB/s][A[A
+pytorch_model.bin:  30%|███       | 432M/1.42G [00:13<00:23, 41.8MB/s][A
+
+
+pytorch_model.bin:  35%|███▍      | 496M/1.42G [00:12<00:23, 38.7MB/s][A[A[Aoptimizer.pt:  18%|█▊        | 512M/2.84G [00:13<00:47, 48.8MB/s]
+
+optimizer.pt:  18%|█▊        | 498M/2.84G [00:12<00:57, 40.4MB/s][A[A
+pytorch_model.bin:  31%|███       | 439M/1.42G [00:13<00:27, 35.2MB/s][A
+
+
+
+
+optimizer.pt:  16%|█▋        | 464M/2.84G [00:13<01:20, 29.6MB/s][A[A[A[A[A
+
+
+pytorch_model.bin:  36%|███▌      | 512M/1.42G [00:12<00:21, 41.8MB/s][A[A[A
+pytorch_model.bin:  32%|███▏      | 448M/1.42G [00:13<00:22, 42.3MB/s][Aoptimizer.pt:  19%|█▊        | 528M/2.84G [00:13<00:44, 52.5MB/s]
+
+
+
+
+optimizer.pt:  17%|█▋        | 479M/2.84G [00:13<00:54, 43.7MB/s][A[A[A[A[A
+
+optimizer.pt:  18%|█▊        | 512M/2.84G [00:12<00:50, 46.0MB/s][A[Aoptimizer.pt:  19%|█▉        | 539M/2.84G [00:13<00:38, 59.2MB/s]
+
+
+pytorch_model.bin:  37%|███▋      | 528M/1.42G [00:13<00:19, 46.6MB/s][A[A[A
+
+optimizer.pt:  19%|█▊        | 528M/2.84G [00:13<00:45, 51.2MB/s][A[A
+
+
+pytorch_model.bin:  38%|███▊      | 542M/1.42G [00:13<00:15, 58.1MB/s][A[A[A
+pytorch_model.bin:  32%|███▏      | 454M/1.42G [00:13<00:30, 31.4MB/s][A
+
+
+
+
+optimizer.pt:  17%|█▋        | 487M/2.84G [00:13<01:09, 33.7MB/s][A[A[A[A[A
+pytorch_model.bin:  33%|███▎      | 464M/1.42G [00:14<00:24, 39.5MB/s][Aoptimizer.pt:  19%|█▉        | 545M/2.84G [00:14<00:56, 40.7MB/s]optimizer.pt:  20%|█▉        | 554M/2.84G [00:14<00:48, 46.7MB/s]
+
+optimizer.pt:  19%|█▉        | 544M/2.84G [00:13<00:44, 52.0MB/s][A[A
+
+
+pytorch_model.bin:  39%|███▉      | 550M/1.42G [00:13<00:19, 45.2MB/s][A[A[A
+
+optimizer.pt:  20%|█▉        | 555M/2.84G [00:13<00:38, 59.2MB/s][A[A
+pytorch_model.bin:  33%|███▎      | 470M/1.42G [00:14<00:32, 29.6MB/s][A
+
+
+
+
+optimizer.pt:  17%|█▋        | 496M/2.84G [00:14<01:20, 29.0MB/s][A[A[A[A[Aoptimizer.pt:  20%|█▉        | 560M/2.84G [00:14<01:07, 33.7MB/s]
+
+
+
+
+optimizer.pt:  18%|█▊        | 510M/2.84G [00:14<00:57, 40.4MB/s][A[A[A[A[A
+
+
+pytorch_model.bin:  39%|███▉      | 560M/1.42G [00:13<00:22, 39.0MB/s][A[A[A
+
+optimizer.pt:  20%|█▉        | 562M/2.84G [00:13<00:51, 44.3MB/s][A[Aoptimizer.pt:  20%|██        | 570M/2.84G [00:14<00:53, 42.3MB/s]
+pytorch_model.bin:  34%|███▍      | 480M/1.42G [00:14<00:30, 31.0MB/s][A
+pytorch_model.bin:  35%|███▍      | 492M/1.42G [00:14<00:21, 42.2MB/s][A
+
+
+pytorch_model.bin:  41%|████      | 576M/1.42G [00:14<00:18, 46.1MB/s][A[A[A
+
+optimizer.pt:  20%|██        | 576M/2.84G [00:14<00:46, 48.8MB/s][A[A
+
+
+
+
+optimizer.pt:  18%|█▊        | 517M/2.84G [00:14<01:06, 34.7MB/s][A[A[A[A[A
+
+optimizer.pt:  21%|██        | 591M/2.84G [00:14<00:35, 63.1MB/s][A[Aoptimizer.pt:  20%|██        | 576M/2.84G [00:14<01:07, 33.7MB/s]
+
+
+pytorch_model.bin:  42%|████▏     | 592M/1.42G [00:14<00:16, 49.7MB/s][A[A[A
+pytorch_model.bin:  35%|███▌      | 498M/1.42G [00:15<00:27, 32.9MB/s][Aoptimizer.pt:  21%|██        | 592M/2.84G [00:15<00:53, 42.1MB/s]
+
+optimizer.pt:  21%|██        | 599M/2.84G [00:14<00:49, 45.1MB/s][A[Aoptimizer.pt:  21%|██▏       | 604M/2.84G [00:15<00:42, 52.8MB/s]
+
+
+pytorch_model.bin:  43%|████▎     | 608M/1.42G [00:14<00:16, 50.7MB/s][A[A[A
+
+
+
+
+optimizer.pt:  19%|█▊        | 528M/2.84G [00:15<01:22, 28.0MB/s][A[A[A[A[A
+pytorch_model.bin:  36%|███▌      | 512M/1.42G [00:15<00:24, 37.4MB/s][A
+
+optimizer.pt:  21%|██▏       | 605M/2.84G [00:14<00:48, 46.3MB/s][A[A
+pytorch_model.bin:  37%|███▋      | 524M/1.42G [00:15<00:18, 48.8MB/s][A
+
+
+
+
+optimizer.pt:  19%|█▉        | 544M/2.84G [00:15<00:56, 40.9MB/s][A[A[A[A[A
+
+
+pytorch_model.bin:  44%|████▍     | 624M/1.42G [00:14<00:15, 52.0MB/s][A[A[Aoptimizer.pt:  22%|██▏       | 611M/2.84G [00:15<00:58, 37.8MB/s]
+
+optimizer.pt:  22%|██▏       | 612M/2.84G [00:15<01:00, 36.7MB/s][A[A
+pytorch_model.bin:  37%|███▋      | 531M/1.42G [00:15<00:22, 39.9MB/s][A
+
+
+
+
+optimizer.pt:  19%|█▉        | 551M/2.84G [00:15<01:06, 34.5MB/s][A[A[A[A[A
+pytorch_model.bin:  38%|███▊      | 542M/1.42G [00:15<00:17, 50.2MB/s][A
+
+optimizer.pt:  22%|██▏       | 624M/2.84G [00:15<00:56, 39.2MB/s][A[Aoptimizer.pt:  22%|██▏       | 624M/2.84G [00:16<00:58, 37.9MB/s]
+
+
+
+
+optimizer.pt:  20%|█▉        | 560M/2.84G [00:16<01:06, 34.3MB/s][A[A[A[A[Aoptimizer.pt:  22%|██▏       | 636M/2.84G [00:16<00:45, 48.0MB/s]
+
+
+
+
+optimizer.pt:  20%|██        | 575M/2.84G [00:16<00:46, 48.6MB/s][A[A[A[A[A
+pytorch_model.bin:  39%|███▊      | 549M/1.42G [00:16<00:24, 35.4MB/s][A
+
+optimizer.pt:  23%|██▎       | 640M/2.84G [00:15<00:51, 43.0MB/s][A[Aoptimizer.pt:  23%|██▎       | 643M/2.84G [00:16<00:55, 39.3MB/s]
+
+
+
+
+optimizer.pt:  21%|██        | 583M/2.84G [00:16<00:56, 40.0MB/s][A[A[A[A[A
+
+
+
+
+optimizer.pt:  21%|██        | 591M/2.84G [00:16<00:48, 46.4MB/s][A[A[A[A[Aoptimizer.pt:  23%|██▎       | 656M/2.84G [00:16<00:53, 40.9MB/s]
+pytorch_model.bin:  39%|███▉      | 560M/1.42G [00:16<00:28, 30.4MB/s][A
+
+optimizer.pt:  23%|██▎       | 656M/2.84G [00:16<00:56, 38.6MB/s][A[A
+
+optimizer.pt:  24%|██▎       | 670M/2.84G [00:16<00:43, 49.4MB/s][A[A
+
+
+
+
+optimizer.pt:  21%|██        | 598M/2.84G [00:16<01:01, 36.5MB/s][A[A[A[A[Aoptimizer.pt:  24%|██▎       | 672M/2.84G [00:17<00:48, 44.7MB/s]
+
+
+
+
+optimizer.pt:  21%|██▏       | 606M/2.84G [00:17<00:52, 42.7MB/s][A[A[A[A[A
+pytorch_model.bin:  41%|████      | 576M/1.42G [00:17<00:23, 36.0MB/s][Aoptimizer.pt:  24%|██▍       | 682M/2.84G [00:17<00:41, 51.9MB/s]
+
+optimizer.pt:  24%|██▍       | 677M/2.84G [00:16<00:51, 41.7MB/s][A[A
+pytorch_model.bin:  41%|████▏     | 588M/1.42G [00:17<00:18, 45.6MB/s][A
+
+
+pytorch_model.bin:  45%|████▌     | 640M/1.42G [00:16<00:34, 22.8MB/s][A[A[A
+
+optimizer.pt:  24%|██▍       | 683M/2.84G [00:16<00:48, 44.6MB/s][A[A
+
+
+
+
+optimizer.pt:  22%|██▏       | 612M/2.84G [00:17<01:09, 32.0MB/s][A[A[A[A[Aoptimizer.pt:  24%|██▍       | 689M/2.84G [00:17<00:52, 41.3MB/s]
+
+
+
+
+optimizer.pt:  22%|██▏       | 621M/2.84G [00:17<00:53, 41.3MB/s][A[A[A[A[A
+pytorch_model.bin:  42%|████▏     | 595M/1.42G [00:17<00:23, 34.8MB/s][A
+
+
+pytorch_model.bin:  46%|████▌     | 656M/1.42G [00:16<00:28, 26.5MB/s][A[A[A
+
+optimizer.pt:  24%|██▍       | 689M/2.84G [00:16<01:05, 32.8MB/s][A[A
+pytorch_model.bin:  43%|████▎     | 604M/1.42G [00:17<00:19, 41.9MB/s][A
+
+optimizer.pt:  25%|██▍       | 700M/2.84G [00:17<00:48, 44.3MB/s][A[Aoptimizer.pt:  25%|██▍       | 704M/2.84G [00:17<00:51, 41.4MB/s]
+
+
+pytorch_model.bin:  47%|████▋     | 672M/1.42G [00:17<00:23, 31.5MB/s][A[A[A
+
+
+
+
+optimizer.pt:  22%|██▏       | 628M/2.84G [00:17<01:18, 28.1MB/s][A[A[A[A[A
+pytorch_model.bin:  43%|████▎     | 610M/1.42G [00:18<00:24, 33.6MB/s][Aoptimizer.pt:  25%|██▌       | 720M/2.84G [00:18<00:46, 45.3MB/s]
+pytorch_model.bin:  44%|████▎     | 620M/1.42G [00:18<00:19, 41.7MB/s][A
+
+optimizer.pt:  25%|██▍       | 707M/2.84G [00:17<01:04, 32.9MB/s][A[A
+
+
+pytorch_model.bin:  48%|████▊     | 688M/1.42G [00:17<00:19, 37.0MB/s][A[A[A
+
+
+
+
+optimizer.pt:  23%|██▎       | 640M/2.84G [00:18<01:19, 27.8MB/s][A[A[A[A[A
+
+
+pytorch_model.bin:  50%|████▉     | 704M/1.42G [00:17<00:17, 41.9MB/s][A[A[Aoptimizer.pt:  26%|██▌       | 736M/2.84G [00:18<00:45, 46.0MB/s]
+pytorch_model.bin:  44%|████▍     | 626M/1.42G [00:18<00:25, 31.4MB/s][A
+
+
+
+
+optimizer.pt:  23%|██▎       | 652M/2.84G [00:18<00:57, 37.8MB/s][A[A[A[A[A
+
+optimizer.pt:  25%|██▌       | 720M/2.84G [00:17<01:05, 32.2MB/s][A[A
+pytorch_model.bin:  45%|████▍     | 638M/1.42G [00:18<00:17, 43.7MB/s][Aoptimizer.pt:  26%|██▋       | 752M/2.84G [00:18<00:42, 49.1MB/s]
+
+
+pytorch_model.bin:  51%|█████     | 720M/1.42G [00:18<00:16, 43.7MB/s][A[A[A
+
+
+
+
+optimizer.pt:  23%|██▎       | 658M/2.84G [00:18<01:13, 29.7MB/s][A[A[A[A[A
+
+optimizer.pt:  26%|██▌       | 736M/2.84G [00:18<00:57, 36.5MB/s][A[A
+pytorch_model.bin:  45%|████▌     | 645M/1.42G [00:18<00:23, 33.6MB/s][A
+
+
+
+
+optimizer.pt:  24%|██▎       | 670M/2.84G [00:18<00:53, 40.5MB/s][A[A[A[A[A
+
+optimizer.pt:  26%|██▋       | 750M/2.84G [00:18<00:43, 47.8MB/s][A[Aoptimizer.pt:  27%|██▋       | 768M/2.84G [00:19<00:41, 50.1MB/s]
+pytorch_model.bin:  46%|████▌     | 655M/1.42G [00:19<00:17, 42.8MB/s][A
+
+
+pytorch_model.bin:  52%|█████▏    | 736M/1.42G [00:18<00:14, 46.4MB/s][A[A[Aoptimizer.pt:  28%|██▊       | 784M/2.84G [00:19<00:39, 52.3MB/s]
+
+
+pytorch_model.bin:  53%|█████▎    | 752M/1.42G [00:18<00:13, 50.0MB/s][A[A[A
+
+optimizer.pt:  27%|██▋       | 757M/2.84G [00:18<00:57, 36.1MB/s][A[A
+pytorch_model.bin:  47%|████▋     | 661M/1.42G [00:19<00:23, 32.5MB/s][Aoptimizer.pt:  28%|██▊       | 800M/2.84G [00:19<00:30, 66.0MB/s]
+
+
+
+
+optimizer.pt:  24%|██▍       | 676M/2.84G [00:19<01:13, 29.6MB/s][A[A[A[A[A
+
+
+pytorch_model.bin:  54%|█████▍    | 768M/1.42G [00:18<00:12, 51.5MB/s][A[A[A
+pytorch_model.bin:  47%|████▋     | 672M/1.42G [00:19<00:20, 35.8MB/s][Aoptimizer.pt:  28%|██▊       | 808M/2.84G [00:19<00:36, 56.3MB/s]
+
+optimizer.pt:  27%|██▋       | 768M/2.84G [00:18<00:54, 38.3MB/s][A[A
+
+
+pytorch_model.bin:  55%|█████▌    | 781M/1.42G [00:18<00:10, 60.3MB/s][A[A[A
+pytorch_model.bin:  48%|████▊     | 687M/1.42G [00:19<00:14, 51.0MB/s][A
+
+optimizer.pt:  28%|██▊       | 782M/2.84G [00:19<00:40, 51.2MB/s][A[A
+
+
+
+
+optimizer.pt:  24%|██▍       | 688M/2.84G [00:19<01:13, 29.1MB/s][A[A[A[A[A
+
+
+
+
+optimizer.pt:  25%|██▍       | 702M/2.84G [00:19<00:51, 41.2MB/s][A[A[A[A[Aoptimizer.pt:  29%|██▊       | 816M/2.84G [00:19<00:45, 44.4MB/s]
+
+
+pytorch_model.bin:  56%|█████▌    | 789M/1.42G [00:19<00:14, 44.1MB/s][A[A[A
+pytorch_model.bin:  49%|████▉     | 694M/1.42G [00:20<00:18, 38.2MB/s][A
+
+optimizer.pt:  28%|██▊       | 789M/2.84G [00:19<00:55, 37.0MB/s][A[A
+pytorch_model.bin:  50%|████▉     | 704M/1.42G [00:20<00:15, 46.5MB/s][A
+
+optimizer.pt:  28%|██▊       | 798M/2.84G [00:19<00:47, 42.9MB/s][A[Aoptimizer.pt:  29%|██▉       | 832M/2.84G [00:20<00:42, 46.7MB/s]
+
+
+pytorch_model.bin:  56%|█████▋    | 800M/1.42G [00:19<00:13, 46.0MB/s][A[A[A
+
+
+
+
+optimizer.pt:  25%|██▍       | 709M/2.84G [00:20<01:07, 31.5MB/s][A[A[A[A[Aoptimizer.pt:  30%|██▉       | 848M/2.84G [00:20<00:38, 51.9MB/s]
+
+
+pytorch_model.bin:  57%|█████▋    | 816M/1.42G [00:19<00:11, 51.3MB/s][A[A[A
+pytorch_model.bin:  50%|█████     | 711M/1.42G [00:20<00:21, 33.3MB/s][A
+
+optimizer.pt:  28%|██▊       | 804M/2.84G [00:19<01:02, 32.7MB/s][A[A
+
+optimizer.pt:  29%|██▊       | 814M/2.84G [00:20<00:49, 40.9MB/s][A[A
+
+
+
+
+optimizer.pt:  25%|██▌       | 720M/2.84G [00:20<01:12, 29.2MB/s][A[A[A[A[A
+pytorch_model.bin:  51%|█████     | 720M/1.42G [00:20<00:19, 35.8MB/s][Aoptimizer.pt:  30%|███       | 864M/2.84G [00:20<00:38, 51.8MB/s]
+
+
+pytorch_model.bin:  59%|█████▊    | 832M/1.42G [00:20<00:11, 52.2MB/s][A[A[A
+
+
+
+
+optimizer.pt:  26%|██▌       | 733M/2.84G [00:20<00:51, 40.5MB/s][A[A[A[A[A
+pytorch_model.bin:  52%|█████▏    | 736M/1.42G [00:21<00:15, 42.9MB/s][Aoptimizer.pt:  31%|███       | 880M/2.84G [00:21<00:36, 53.9MB/s]
+pytorch_model.bin:  53%|█████▎    | 748M/1.42G [00:21<00:12, 54.0MB/s][Aoptimizer.pt:  31%|███▏      | 891M/2.84G [00:21<00:32, 59.6MB/s]
+
+
+pytorch_model.bin:  60%|█████▉    | 848M/1.42G [00:20<00:12, 45.5MB/s][A[A[A
+
+optimizer.pt:  29%|██▉       | 820M/2.84G [00:20<01:22, 24.5MB/s][A[A
+
+
+
+
+optimizer.pt:  26%|██▌       | 740M/2.84G [00:21<01:10, 29.8MB/s][A[A[A[A[Aoptimizer.pt:  32%|███▏      | 897M/2.84G [00:21<00:43, 44.5MB/s]
+
+optimizer.pt:  29%|██▉       | 832M/2.84G [00:20<01:04, 30.9MB/s][A[A
+pytorch_model.bin:  53%|█████▎    | 756M/1.42G [00:21<00:16, 39.1MB/s][A
+pytorch_model.bin:  54%|█████▍    | 766M/1.42G [00:21<00:13, 47.4MB/s][A
+
+optimizer.pt:  30%|██▉       | 848M/2.84G [00:21<00:47, 41.6MB/s][A[A
+
+
+
+
+optimizer.pt:  26%|██▋       | 752M/2.84G [00:21<01:12, 28.7MB/s][A[A[A[A[A
+pytorch_model.bin:  54%|█████▍    | 773M/1.42G [00:22<00:17, 37.7MB/s][A
+
+
+
+
+optimizer.pt:  27%|██▋       | 768M/2.84G [00:22<00:56, 36.6MB/s][A[A[A[A[A
+
+optimizer.pt:  30%|███       | 864M/2.84G [00:21<00:43, 45.9MB/s][A[A
+
+
+pytorch_model.bin:  61%|██████    | 864M/1.42G [00:21<00:17, 32.5MB/s][A[A[A
+pytorch_model.bin:  55%|█████▌    | 782M/1.42G [00:22<00:13, 45.9MB/s][Aoptimizer.pt:  32%|███▏      | 912M/2.84G [00:22<00:58, 32.7MB/s]
+
+optimizer.pt:  31%|███       | 880M/2.84G [00:21<00:37, 51.7MB/s][A[A
+
+
+
+
+optimizer.pt:  28%|██▊       | 784M/2.84G [00:22<00:48, 42.2MB/s][A[A[A[A[A
+
+optimizer.pt:  31%|███▏      | 893M/2.84G [00:21<00:31, 62.5MB/s][A[A
+
+
+pytorch_model.bin:  62%|██████▏   | 880M/1.42G [00:21<00:14, 36.7MB/s][A[A[A
+
+
+
+
+optimizer.pt:  28%|██▊       | 798M/2.84G [00:22<00:38, 53.0MB/s][A[A[A[A[A
+pytorch_model.bin:  56%|█████▌    | 789M/1.42G [00:22<00:19, 32.2MB/s][Aoptimizer.pt:  33%|███▎      | 928M/2.84G [00:22<00:49, 38.3MB/s]
+pytorch_model.bin:  56%|█████▌    | 798M/1.42G [00:22<00:15, 40.0MB/s][A
+
+
+pytorch_model.bin:  63%|██████▎   | 896M/1.42G [00:21<00:12, 40.3MB/s][A[A[Aoptimizer.pt:  33%|███▎      | 944M/2.84G [00:22<00:42, 44.1MB/s]
+
+
+
+
+optimizer.pt:  28%|██▊       | 805M/2.84G [00:22<00:50, 40.2MB/s][A[A[A[A[A
+
+optimizer.pt:  32%|███▏      | 901M/2.84G [00:22<00:47, 40.4MB/s][A[A
+
+
+
+
+optimizer.pt:  29%|██▊       | 816M/2.84G [00:23<00:47, 42.6MB/s][A[A[A[A[A
+
+
+pytorch_model.bin:  64%|██████▍   | 912M/1.42G [00:22<00:12, 42.2MB/s][A[A[Aoptimizer.pt:  34%|███▍      | 960M/2.84G [00:23<00:41, 44.9MB/s]
+
+
+
+
+optimizer.pt:  29%|██▉       | 830M/2.84G [00:23<00:36, 55.3MB/s][A[A[A[A[A
+
+optimizer.pt:  32%|███▏      | 912M/2.84G [00:22<00:47, 40.7MB/s][A[A
+pytorch_model.bin:  57%|█████▋    | 804M/1.42G [00:23<00:26, 23.4MB/s][A
+pytorch_model.bin:  57%|█████▋    | 811M/1.42G [00:23<00:21, 28.3MB/s][A
+
+
+pytorch_model.bin:  65%|██████▌   | 928M/1.42G [00:22<00:10, 45.6MB/s][A[A[Aoptimizer.pt:  34%|███▍      | 976M/2.84G [00:23<00:38, 48.0MB/s]
+
+optimizer.pt:  33%|███▎      | 928M/2.84G [00:22<00:41, 45.7MB/s][A[A
+
+optimizer.pt:  33%|███▎      | 940M/2.84G [00:22<00:34, 55.1MB/s][A[A
+
+
+
+
+optimizer.pt:  30%|██▉       | 838M/2.84G [00:23<00:51, 39.1MB/s][A[A[A[A[A
+
+
+pytorch_model.bin:  67%|██████▋   | 944M/1.42G [00:22<00:09, 48.7MB/s][A[A[A
+pytorch_model.bin:  57%|█████▋    | 816M/1.42G [00:23<00:26, 23.2MB/s][A
+pytorch_model.bin:  58%|█████▊    | 828M/1.42G [00:23<00:17, 34.3MB/s][Aoptimizer.pt:  35%|███▍      | 992M/2.84G [00:23<00:42, 43.6MB/s]
+
+
+pytorch_model.bin:  68%|██████▊   | 960M/1.42G [00:23<00:08, 51.5MB/s][A[A[A
+
+optimizer.pt:  33%|███▎      | 947M/2.84G [00:23<00:49, 38.0MB/s][A[A
+
+optimizer.pt:  34%|███▍      | 958M/2.84G [00:23<00:40, 46.5MB/s][A[Aoptimizer.pt:  36%|███▌      | 1.01G/2.84G [00:24<00:40, 45.4MB/s]
+
+
+
+
+optimizer.pt:  30%|██▉       | 848M/2.84G [00:24<01:14, 26.8MB/s][A[A[A[A[A
+pytorch_model.bin:  59%|█████▊    | 833M/1.42G [00:24<00:22, 25.9MB/s][A
+
+
+pytorch_model.bin:  69%|██████▉   | 976M/1.42G [00:23<00:09, 49.0MB/s][A[A[A
+pytorch_model.bin:  60%|█████▉    | 848M/1.42G [00:24<00:13, 40.9MB/s][A
+
+optimizer.pt:  34%|███▍      | 965M/2.84G [00:23<00:50, 37.4MB/s][A[Aoptimizer.pt:  36%|███▌      | 1.02G/2.84G [00:24<00:37, 48.4MB/s]
+
+optimizer.pt:  34%|███▍      | 973M/2.84G [00:23<00:43, 43.3MB/s][A[A
+
+
+
+
+optimizer.pt:  30%|███       | 864M/2.84G [00:24<00:58, 33.6MB/s][A[A[A[A[A
+
+
+pytorch_model.bin:  70%|██████▉   | 992M/1.42G [00:23<00:08, 49.9MB/s][A[A[A
+pytorch_model.bin:  60%|██████    | 855M/1.42G [00:24<00:16, 33.5MB/s][Aoptimizer.pt:  37%|███▋      | 1.04G/2.84G [00:24<00:36, 48.9MB/s]
+pytorch_model.bin:  61%|██████    | 863M/1.42G [00:24<00:14, 39.2MB/s][A
+
+
+pytorch_model.bin:  71%|███████   | 1.01G/1.42G [00:24<00:07, 53.5MB/s][A[A[A
+
+
+
+
+optimizer.pt:  31%|███       | 880M/2.84G [00:24<00:51, 37.9MB/s][A[A[A[A[A
+
+optimizer.pt:  34%|███▍      | 979M/2.84G [00:24<00:56, 32.7MB/s][A[A
+
+
+
+
+optimizer.pt:  31%|███▏      | 894M/2.84G [00:24<00:39, 48.8MB/s][A[A[A[A[Aoptimizer.pt:  37%|███▋      | 1.06G/2.84G [00:25<00:33, 52.6MB/s]
+pytorch_model.bin:  61%|██████    | 869M/1.42G [00:25<00:17, 31.4MB/s][A
+
+optimizer.pt:  35%|███▍      | 992M/2.84G [00:24<00:49, 37.2MB/s][A[A
+
+
+pytorch_model.bin:  72%|███████▏  | 1.02G/1.42G [00:24<00:07, 53.4MB/s][A[A[A
+pytorch_model.bin:  62%|██████▏   | 879M/1.42G [00:25<00:12, 42.1MB/s][A
+
+optimizer.pt:  35%|███▌      | 1.01G/2.84G [00:24<00:35, 51.2MB/s][A[Aoptimizer.pt:  38%|███▊      | 1.07G/2.84G [00:25<00:34, 51.5MB/s]
+
+
+
+
+optimizer.pt:  32%|███▏      | 901M/2.84G [00:25<00:54, 35.9MB/s][A[A[A[A[A
+
+
+pytorch_model.bin:  73%|███████▎  | 1.04G/1.42G [00:24<00:08, 46.6MB/s][A[A[A
+
+optimizer.pt:  36%|███▌      | 1.01G/2.84G [00:24<00:47, 38.5MB/s][A[A
+pytorch_model.bin:  62%|██████▏   | 886M/1.42G [00:25<00:17, 30.8MB/s][Aoptimizer.pt:  38%|███▊      | 1.09G/2.84G [00:25<00:34, 50.6MB/s]
+pytorch_model.bin:  63%|██████▎   | 896M/1.42G [00:25<00:13, 40.0MB/s][A
+
+optimizer.pt:  36%|███▌      | 1.02G/2.84G [00:25<00:43, 42.1MB/s][A[A
+
+
+pytorch_model.bin:  74%|███████▍  | 1.06G/1.42G [00:25<00:07, 50.5MB/s][A[A[A
+
+
+
+
+optimizer.pt:  32%|███▏      | 912M/2.84G [00:25<01:01, 31.3MB/s][A[A[A[A[A
+
+
+
+
+optimizer.pt:  33%|███▎      | 926M/2.84G [00:25<00:44, 42.6MB/s][A[A[A[A[Aoptimizer.pt:  39%|███▉      | 1.10G/2.84G [00:25<00:34, 50.7MB/s]
+pytorch_model.bin:  64%|██████▎   | 902M/1.42G [00:26<00:16, 30.7MB/s][A
+
+optimizer.pt:  37%|███▋      | 1.04G/2.84G [00:25<00:39, 45.3MB/s][A[A
+
+
+pytorch_model.bin:  76%|███████▌  | 1.07G/1.42G [00:25<00:06, 52.2MB/s][A[A[Aoptimizer.pt:  39%|███▉      | 1.12G/2.84G [00:26<00:33, 51.7MB/s]
+pytorch_model.bin:  64%|██████▍   | 912M/1.42G [00:26<00:16, 31.5MB/s][A
+
+
+
+
+optimizer.pt:  33%|███▎      | 933M/2.84G [00:26<00:58, 32.7MB/s][A[A[A[A[A
+
+optimizer.pt:  37%|███▋      | 1.06G/2.84G [00:25<00:36, 49.0MB/s][A[A
+
+
+pytorch_model.bin:  77%|███████▋  | 1.09G/1.42G [00:25<00:06, 51.7MB/s][A[A[A
+pytorch_model.bin:  65%|██████▌   | 926M/1.42G [00:26<00:10, 46.1MB/s][A
+
+
+
+
+optimizer.pt:  33%|███▎      | 944M/2.84G [00:26<00:52, 36.3MB/s][A[A[A[A[A
+
+optimizer.pt:  38%|███▊      | 1.07G/2.84G [00:25<00:34, 51.7MB/s][A[A
+
+
+
+
+optimizer.pt:  34%|███▍      | 959M/2.84G [00:26<00:38, 49.0MB/s][A[A[A[A[Aoptimizer.pt:  40%|████      | 1.14G/2.84G [00:26<00:41, 41.0MB/s]
+
+optimizer.pt:  38%|███▊      | 1.09G/2.84G [00:26<00:31, 55.0MB/s][A[A
+
+
+
+
+optimizer.pt:  34%|███▍      | 966M/2.84G [00:27<00:48, 38.4MB/s][A[A[A[A[A
+pytorch_model.bin:  66%|██████▌   | 933M/1.42G [00:27<00:18, 26.5MB/s][Aoptimizer.pt:  41%|████      | 1.15G/2.84G [00:27<00:37, 45.0MB/s]
+
+
+
+
+optimizer.pt:  34%|███▍      | 974M/2.84G [00:27<00:42, 43.5MB/s][A[A[A[A[A
+pytorch_model.bin:  67%|██████▋   | 944M/1.42G [00:27<00:13, 34.5MB/s][A
+
+optimizer.pt:  39%|███▉      | 1.10G/2.84G [00:26<00:34, 51.0MB/s][A[Aoptimizer.pt:  41%|████      | 1.17G/2.84G [00:27<00:35, 47.0MB/s]
+
+
+
+
+optimizer.pt:  35%|███▍      | 980M/2.84G [00:27<00:55, 33.6MB/s][A[A[A[A[A
+
+
+pytorch_model.bin:  78%|███████▊  | 1.10G/1.42G [00:26<00:10, 29.5MB/s][A[A[A
+
+optimizer.pt:  39%|███▉      | 1.12G/2.84G [00:26<00:32, 52.1MB/s][A[A
+pytorch_model.bin:  67%|██████▋   | 950M/1.42G [00:27<00:17, 27.3MB/s][Aoptimizer.pt:  42%|████▏     | 1.18G/2.84G [00:27<00:33, 49.2MB/s]
+
+
+
+
+optimizer.pt:  35%|███▍      | 992M/2.84G [00:27<00:48, 37.8MB/s][A[A[A[A[A
+
+optimizer.pt:  40%|████      | 1.14G/2.84G [00:27<00:30, 56.1MB/s][A[A
+
+
+
+
+optimizer.pt:  35%|███▌      | 1.01G/2.84G [00:27<00:34, 53.1MB/s][A[A[A[A[A
+
+
+pytorch_model.bin:  79%|███████▉  | 1.12G/1.42G [00:27<00:09, 32.7MB/s][A[A[A
+pytorch_model.bin:  68%|██████▊   | 960M/1.42G [00:27<00:15, 28.7MB/s][Aoptimizer.pt:  42%|████▏     | 1.20G/2.84G [00:28<00:32, 49.7MB/s]
+
+optimizer.pt:  41%|████      | 1.15G/2.84G [00:27<00:31, 53.9MB/s][A[A
+
+
+pytorch_model.bin:  80%|████████  | 1.14G/1.42G [00:27<00:07, 36.7MB/s][A[A[A
+pytorch_model.bin:  69%|██████▉   | 976M/1.42G [00:28<00:11, 37.0MB/s][A
+
+
+
+
+optimizer.pt:  36%|███▌      | 1.01G/2.84G [00:28<00:48, 37.7MB/s][A[A[A[A[Aoptimizer.pt:  43%|████▎     | 1.22G/2.84G [00:28<00:30, 53.1MB/s]
+
+
+pytorch_model.bin:  81%|████████  | 1.15G/1.42G [00:27<00:06, 40.2MB/s][A[A[Aoptimizer.pt:  43%|████▎     | 1.23G/2.84G [00:28<00:28, 56.4MB/s]
+
+
+
+
+optimizer.pt:  36%|███▌      | 1.02G/2.84G [00:28<00:55, 32.8MB/s][A[A[A[A[A
+pytorch_model.bin:  70%|██████▉   | 992M/1.42G [00:28<00:12, 34.8MB/s][A
+
+
+
+
+optimizer.pt:  37%|███▋      | 1.04G/2.84G [00:28<00:39, 45.1MB/s][A[A[A[A[Aoptimizer.pt:  44%|████▍     | 1.25G/2.84G [00:28<00:28, 55.5MB/s]
+
+optimizer.pt:  41%|████      | 1.17G/2.84G [00:28<00:44, 37.6MB/s][A[A
+
+
+pytorch_model.bin:  82%|████████▏ | 1.17G/1.42G [00:28<00:06, 38.0MB/s][A[A[A
+pytorch_model.bin:  71%|███████   | 1.01G/1.42G [00:29<00:10, 38.8MB/s][A
+
+
+
+
+optimizer.pt:  37%|███▋      | 1.05G/2.84G [00:29<00:50, 35.4MB/s][A[A[A[A[Aoptimizer.pt:  45%|████▍     | 1.26G/2.84G [00:29<00:28, 55.4MB/s]
+pytorch_model.bin:  72%|███████▏  | 1.02G/1.42G [00:29<00:08, 47.6MB/s][A
+
+optimizer.pt:  42%|████▏     | 1.18G/2.84G [00:28<00:41, 39.6MB/s][A[A
+
+
+pytorch_model.bin:  83%|████████▎ | 1.18G/1.42G [00:28<00:05, 41.1MB/s][A[A[A
+
+
+
+
+optimizer.pt:  37%|███▋      | 1.06G/2.84G [00:29<00:46, 38.0MB/s][A[A[A[A[Aoptimizer.pt:  45%|████▌     | 1.28G/2.84G [00:29<00:27, 55.8MB/s]
+pytorch_model.bin:  72%|███████▏  | 1.03G/1.42G [00:29<00:10, 37.0MB/s][A
+
+optimizer.pt:  42%|████▏     | 1.20G/2.84G [00:28<00:38, 42.4MB/s][A[A
+
+
+pytorch_model.bin:  85%|████████▍ | 1.20G/1.42G [00:28<00:04, 44.5MB/s][A[A[A
+
+
+
+
+optimizer.pt:  38%|███▊      | 1.07G/2.84G [00:29<00:38, 45.8MB/s][A[A[A[A[A
+pytorch_model.bin:  73%|███████▎  | 1.04G/1.42G [00:29<00:09, 40.7MB/s][Aoptimizer.pt:  46%|████▌     | 1.30G/2.84G [00:29<00:30, 51.1MB/s]
+
+optimizer.pt:  43%|████▎     | 1.22G/2.84G [00:29<00:35, 45.8MB/s][A[A
+
+
+
+
+optimizer.pt:  38%|███▊      | 1.09G/2.84G [00:29<00:33, 52.1MB/s][A[A[A[A[A
+
+
+pytorch_model.bin:  86%|████████▌ | 1.22G/1.42G [00:29<00:04, 47.4MB/s][A[A[A
+pytorch_model.bin:  74%|███████▍  | 1.06G/1.42G [00:30<00:07, 45.6MB/s][A
+
+optimizer.pt:  43%|████▎     | 1.23G/2.84G [00:29<00:33, 48.1MB/s][A[Aoptimizer.pt:  46%|████▌     | 1.31G/2.84G [00:30<00:29, 51.1MB/s]
+
+
+
+
+optimizer.pt:  39%|███▉      | 1.10G/2.84G [00:30<00:32, 52.7MB/s][A[A[A[A[A
+pytorch_model.bin:  75%|███████▌  | 1.07G/1.42G [00:30<00:05, 58.5MB/s][A
+
+
+pytorch_model.bin:  87%|████████▋ | 1.23G/1.42G [00:29<00:03, 48.3MB/s][A[A[A
+
+optimizer.pt:  44%|████▍     | 1.24G/2.84G [00:29<00:28, 56.2MB/s][A[Aoptimizer.pt:  47%|████▋     | 1.33G/2.84G [00:30<00:24, 61.2MB/s]
+pytorch_model.bin:  76%|███████▌  | 1.08G/1.42G [00:30<00:06, 50.8MB/s][Aoptimizer.pt:  47%|████▋     | 1.33G/2.84G [00:30<00:27, 54.6MB/s]
+
+
+
+
+optimizer.pt:  39%|███▉      | 1.12G/2.84G [00:30<00:32, 52.6MB/s][A[A[A[A[A
+
+optimizer.pt:  44%|████▍     | 1.25G/2.84G [00:29<00:36, 43.8MB/s][A[A
+
+
+pytorch_model.bin:  88%|████████▊ | 1.25G/1.42G [00:29<00:03, 47.4MB/s][A[A[A
+pytorch_model.bin:  77%|███████▋  | 1.09G/1.42G [00:30<00:07, 43.5MB/s][A
+
+
+
+
+optimizer.pt:  40%|████      | 1.14G/2.84G [00:30<00:31, 54.7MB/s][A[A[A[A[Aoptimizer.pt:  47%|████▋     | 1.34G/2.84G [00:30<00:30, 48.2MB/s]
+
+
+pytorch_model.bin:  89%|████████▉ | 1.26G/1.42G [00:30<00:03, 47.6MB/s][A[A[A
+
+
+
+
+optimizer.pt:  41%|████      | 1.15G/2.84G [00:30<00:30, 55.6MB/s][A[A[A[A[A
+
+optimizer.pt:  45%|████▍     | 1.26G/2.84G [00:30<00:42, 37.2MB/s][A[A
+pytorch_model.bin:  78%|███████▊  | 1.10G/1.42G [00:31<00:07, 43.6MB/s][Aoptimizer.pt:  48%|████▊     | 1.36G/2.84G [00:31<00:32, 46.1MB/s]
+
+
+pytorch_model.bin:  90%|█████████ | 1.28G/1.42G [00:30<00:02, 48.3MB/s][A[A[A
+pytorch_model.bin:  79%|███████▉  | 1.12G/1.42G [00:31<00:06, 49.8MB/s][Aoptimizer.pt:  48%|████▊     | 1.38G/2.84G [00:31<00:28, 51.7MB/s]
+
+optimizer.pt:  45%|████▌     | 1.28G/2.84G [00:30<00:39, 39.7MB/s][A[A
+
+
+
+
+optimizer.pt:  41%|████      | 1.17G/2.84G [00:31<00:34, 48.4MB/s][A[A[A[A[A
+
+
+pytorch_model.bin:  91%|█████████▏| 1.30G/1.42G [00:30<00:02, 50.2MB/s][A[A[Aoptimizer.pt:  49%|████▉     | 1.39G/2.84G [00:31<00:26, 54.8MB/s]
+pytorch_model.bin:  80%|████████  | 1.14G/1.42G [00:31<00:05, 51.1MB/s][A
+
+optimizer.pt:  46%|████▌     | 1.30G/2.84G [00:30<00:34, 44.1MB/s][A[A
+
+
+pytorch_model.bin:  92%|█████████▏| 1.31G/1.42G [00:30<00:01, 54.4MB/s][A[A[A
+
+
+
+
+optimizer.pt:  42%|████▏     | 1.18G/2.84G [00:31<00:37, 43.7MB/s][A[A[A[A[A
+pytorch_model.bin:  81%|████████  | 1.15G/1.42G [00:31<00:04, 53.6MB/s][Aoptimizer.pt:  50%|████▉     | 1.41G/2.84G [00:31<00:26, 53.9MB/s]
+
+optimizer.pt:  46%|████▌     | 1.31G/2.84G [00:31<00:31, 48.4MB/s][A[A
+pytorch_model.bin:  82%|████████▏ | 1.16G/1.42G [00:31<00:04, 61.4MB/s][A
+
+
+pytorch_model.bin:  94%|█████████▎| 1.33G/1.42G [00:31<00:01, 50.0MB/s][A[A[A
+
+
+
+
+optimizer.pt:  42%|████▏     | 1.20G/2.84G [00:32<00:34, 47.0MB/s][A[A[A[A[Aoptimizer.pt:  50%|█████     | 1.42G/2.84G [00:32<00:26, 53.1MB/s]
+
+optimizer.pt:  47%|████▋     | 1.33G/2.84G [00:31<00:31, 47.6MB/s][A[A
+
+optimizer.pt:  47%|████▋     | 1.34G/2.84G [00:31<00:27, 54.8MB/s][A[A
+
+
+pytorch_model.bin:  95%|█████████▍| 1.34G/1.42G [00:31<00:01, 51.8MB/s][A[A[A
+pytorch_model.bin:  83%|████████▎ | 1.17G/1.42G [00:32<00:05, 41.9MB/s][Aoptimizer.pt:  51%|█████     | 1.44G/2.84G [00:32<00:24, 56.4MB/s]
+
+
+
+
+optimizer.pt:  43%|████▎     | 1.22G/2.84G [00:32<00:33, 48.5MB/s][A[A[A[A[A
+
+
+pytorch_model.bin:  96%|█████████▌| 1.36G/1.42G [00:31<00:00, 62.1MB/s][A[A[A
+
+optimizer.pt:  47%|████▋     | 1.35G/2.84G [00:31<00:35, 41.9MB/s][A[Aoptimizer.pt:  51%|█████▏    | 1.46G/2.84G [00:32<00:24, 56.8MB/s]
+pytorch_model.bin:  83%|████████▎ | 1.18G/1.42G [00:32<00:05, 41.1MB/s][A
+
+
+
+
+optimizer.pt:  43%|████▎     | 1.23G/2.84G [00:32<00:32, 50.1MB/s][A[A[A[A[A
+
+
+pytorch_model.bin:  96%|█████████▌| 1.37G/1.42G [00:32<00:01, 50.0MB/s][A[A[A
+
+optimizer.pt:  48%|████▊     | 1.36G/2.84G [00:32<00:28, 52.8MB/s][A[Aoptimizer.pt:  52%|█████▏    | 1.47G/2.84G [00:32<00:22, 62.2MB/s]
+pytorch_model.bin:  84%|████████▍ | 1.20G/1.42G [00:32<00:04, 49.8MB/s][A
+
+
+
+
+optimizer.pt:  44%|████▍     | 1.24G/2.84G [00:32<00:28, 56.3MB/s][A[A[A[A[A
+
+optimizer.pt:  48%|████▊     | 1.37G/2.84G [00:32<00:27, 52.9MB/s][A[A
+
+
+pytorch_model.bin:  97%|█████████▋| 1.38G/1.42G [00:32<00:00, 48.5MB/s][A[A[Aoptimizer.pt:  52%|█████▏    | 1.47G/2.84G [00:33<00:25, 54.5MB/s]
+pytorch_model.bin:  85%|████████▍ | 1.20G/1.42G [00:33<00:04, 44.5MB/s][Aoptimizer.pt:  52%|█████▏    | 1.48G/2.84G [00:33<00:21, 62.5MB/s]
+pytorch_model.bin:  86%|████████▌ | 1.21G/1.42G [00:33<00:03, 56.5MB/s][A
+
+
+
+
+optimizer.pt:  44%|████▍     | 1.25G/2.84G [00:33<00:36, 43.6MB/s][A[A[A[A[A
+
+
+pytorch_model.bin:  98%|█████████▊| 1.39G/1.42G [00:32<00:00, 53.9MB/s][A[A[A
+
+optimizer.pt:  48%|████▊     | 1.38G/2.84G [00:32<00:34, 42.9MB/s][A[A
+
+
+
+
+optimizer.pt:  45%|████▍     | 1.26G/2.84G [00:33<00:32, 48.7MB/s][A[A[A[A[Aoptimizer.pt:  52%|█████▏    | 1.49G/2.84G [00:33<00:30, 44.1MB/s]
+
+
+pytorch_model.bin:  99%|█████████▉| 1.41G/1.42G [00:32<00:00, 57.1MB/s][A[A[A
+pytorch_model.bin:  86%|████████▌ | 1.22G/1.42G [00:33<00:04, 40.1MB/s][A
+
+
+
+
+optimizer.pt:  45%|████▌     | 1.28G/2.84G [00:33<00:25, 60.6MB/s][A[A[A[A[A
+
+optimizer.pt:  49%|████▉     | 1.39G/2.84G [00:32<00:29, 48.7MB/s][A[Apytorch_model.bin: 100%|██████████| 1.42G/1.42G [00:33<00:00, 43.0MB/s]
+
+pytorch_model.bin:  87%|████████▋ | 1.23G/1.42G [00:33<00:04, 40.0MB/s][A
+
+optimizer.pt:  50%|████▉     | 1.41G/2.84G [00:33<00:27, 53.0MB/s][A[Aoptimizer.pt:  53%|█████▎    | 1.50G/2.84G [00:33<00:33, 39.9MB/s]
+
+
+
+
+optimizer.pt:  45%|████▌     | 1.29G/2.84G [00:33<00:34, 45.0MB/s][A[A[A[A[A
+
+
+rng_state.pth:   0%|          | 0.00/14.6k [00:00<?, ?B/s][A[A[Arng_state.pth: 100%|██████████| 14.6k/14.6k [00:00<00:00, 123kB/s]
+optimizer.pt:  54%|█████▎    | 1.52G/2.84G [00:34<00:29, 45.4MB/s]
+
+optimizer.pt:  50%|█████     | 1.42G/2.84G [00:33<00:28, 50.2MB/s][A[A
+
+
+
+
+optimizer.pt:  46%|████▌     | 1.30G/2.84G [00:34<00:36, 41.8MB/s][A[A[A[A[A
+
+
+scheduler.pt:   0%|          | 0.00/627 [00:00<?, ?B/s][A[A[A
+
+
+
+
+optimizer.pt:  46%|████▌     | 1.31G/2.84G [00:34<00:28, 53.5MB/s][A[A[A[A[A
+pytorch_model.bin:  88%|████████▊ | 1.25G/1.42G [00:34<00:04, 36.9MB/s][Ascheduler.pt: 100%|██████████| 627/627 [00:00<00:00, 8.88kB/s]
+optimizer.pt:  54%|█████▍    | 1.54G/2.84G [00:34<00:26, 48.3MB/s]
+
+optimizer.pt:  51%|█████     | 1.44G/2.84G [00:33<00:27, 50.8MB/s][A[A
+
+
+events.out.tfevents.1711336838.lambda-hyperplane05.3209519.0:   0%|          | 0.00/7.63k [00:00<?, ?B/s][A[A[A
+pytorch_model.bin:  89%|████████▉ | 1.26G/1.42G [00:34<00:03, 41.1MB/s][A
+
+
+
+
+optimizer.pt:  46%|████▋     | 1.32G/2.84G [00:34<00:38, 39.4MB/s][A[A[A[A[Aevents.out.tfevents.1711336838.lambda-hyperplane05.3209519.0: 100%|██████████| 7.63k/7.63k [00:00<00:00, 73.5kB/s]
+optimizer.pt:  55%|█████▍    | 1.55G/2.84G [00:34<00:27, 47.4MB/s]
+pytorch_model.bin:  90%|█████████ | 1.28G/1.42G [00:34<00:03, 44.4MB/s][A
+
+optimizer.pt:  51%|█████▏    | 1.46G/2.84G [00:34<00:31, 44.6MB/s][A[Aoptimizer.pt:  55%|█████▌    | 1.57G/2.84G [00:35<00:26, 47.4MB/s]
+
+
+
+
+optimizer.pt:  47%|████▋     | 1.33G/2.84G [00:35<00:46, 32.6MB/s][A[A[A[A[A
+pytorch_model.bin:  91%|█████████▏| 1.30G/1.42G [00:35<00:02, 48.6MB/s][A
+
+optimizer.pt:  52%|█████▏    | 1.47G/2.84G [00:34<00:29, 45.9MB/s][A[A
+pytorch_model.bin:  92%|█████████▏| 1.31G/1.42G [00:35<00:01, 54.0MB/s][Aoptimizer.pt:  56%|█████▌    | 1.58G/2.84G [00:35<00:25, 48.4MB/s]
+pytorch_model.bin:  93%|█████████▎| 1.32G/1.42G [00:35<00:01, 61.5MB/s][A
+
+optimizer.pt:  52%|█████▏    | 1.49G/2.84G [00:34<00:28, 47.7MB/s][A[A
+
+
+
+
+optimizer.pt:  47%|████▋     | 1.34G/2.84G [00:35<00:43, 34.3MB/s][A[A[A[A[A
+
+
+
+
+optimizer.pt:  48%|████▊     | 1.36G/2.84G [00:35<00:31, 47.4MB/s][A[A[A[A[Aoptimizer.pt:  56%|█████▋    | 1.60G/2.84G [00:35<00:24, 50.7MB/s]
+pytorch_model.bin:  94%|█████████▍| 1.33G/1.42G [00:35<00:01, 45.8MB/s][A
+
+optimizer.pt:  53%|█████▎    | 1.50G/2.84G [00:35<00:28, 47.3MB/s][A[A
+pytorch_model.bin:  95%|█████████▍| 1.34G/1.42G [00:35<00:01, 53.5MB/s][A
+
+
+
+
+optimizer.pt:  48%|████▊     | 1.37G/2.84G [00:35<00:38, 38.4MB/s][A[A[A[A[A
+
+optimizer.pt:  53%|█████▎    | 1.52G/2.84G [00:35<00:24, 54.3MB/s][A[Aoptimizer.pt:  57%|█████▋    | 1.62G/2.84G [00:36<00:25, 48.4MB/s]
+
+
+
+
+optimizer.pt:  48%|████▊     | 1.38G/2.84G [00:36<00:38, 37.8MB/s][A[A[A[A[A
+
+optimizer.pt:  54%|█████▎    | 1.52G/2.84G [00:35<00:29, 44.6MB/s][A[A
+pytorch_model.bin:  95%|█████████▌| 1.35G/1.42G [00:36<00:01, 38.5MB/s][A
+
+
+
+
+optimizer.pt:  49%|████▉     | 1.39G/2.84G [00:36<00:28, 50.6MB/s][A[A[A[A[Aoptimizer.pt:  57%|█████▋    | 1.63G/2.84G [00:36<00:24, 49.4MB/s]
+pytorch_model.bin:  96%|█████████▌| 1.36G/1.42G [00:36<00:01, 38.9MB/s][A
+
+
+
+
+optimizer.pt:  49%|████▉     | 1.40G/2.84G [00:36<00:35, 40.7MB/s][A[A[A[A[A
+
+optimizer.pt:  54%|█████▍    | 1.54G/2.84G [00:36<00:33, 38.7MB/s][A[A
+pytorch_model.bin:  97%|█████████▋| 1.38G/1.42G [00:36<00:00, 44.5MB/s][A
+
+
+
+
+optimizer.pt:  50%|████▉     | 1.41G/2.84G [00:36<00:35, 40.2MB/s][A[A[A[A[A
+
+optimizer.pt:  55%|█████▍    | 1.55G/2.84G [00:36<00:28, 45.2MB/s][A[A
+pytorch_model.bin:  98%|█████████▊| 1.39G/1.42G [00:37<00:00, 48.8MB/s][A
+
+
+
+
+optimizer.pt:  50%|█████     | 1.42G/2.84G [00:37<00:29, 47.6MB/s][A[A[A[A[A
+
+optimizer.pt:  55%|█████▌    | 1.57G/2.84G [00:36<00:25, 49.1MB/s][A[A
+
+
+
+
+optimizer.pt:  51%|█████     | 1.44G/2.84G [00:37<00:23, 60.8MB/s][A[A[A[A[A
+pytorch_model.bin:  99%|█████████▉| 1.41G/1.42G [00:37<00:00, 48.6MB/s][A
+
+optimizer.pt:  56%|█████▌    | 1.58G/2.84G [00:36<00:23, 53.9MB/s][A[A
+
+
+
+
+optimizer.pt:  51%|█████     | 1.45G/2.84G [00:37<00:35, 39.8MB/s][A[A[A[A[A
+
+optimizer.pt:  56%|█████▋    | 1.60G/2.84G [00:37<00:23, 53.4MB/s][A[Apytorch_model.bin: 100%|██████████| 1.42G/1.42G [00:37<00:00, 37.6MB/s]
+
+
+optimizer.pt:  57%|█████▋    | 1.62G/2.84G [00:37<00:22, 54.0MB/s][A[A
+
+
+
+
+optimizer.pt:  51%|█████▏    | 1.46G/2.84G [00:38<00:44, 31.1MB/s][A[A[A[A[A
+
+optimizer.pt:  57%|█████▋    | 1.63G/2.84G [00:37<00:21, 56.5MB/s][A[A
+
+
+
+
+optimizer.pt:  52%|█████▏    | 1.47G/2.84G [00:38<00:32, 42.4MB/s][A[A[A[A[A
+
+optimizer.pt:  58%|█████▊    | 1.65G/2.84G [00:37<00:22, 53.8MB/s][A[A
+
+
+
+
+optimizer.pt:  52%|█████▏    | 1.48G/2.84G [00:38<00:41, 33.2MB/s][A[A[A[A[A
+
+
+
+
+optimizer.pt:  52%|█████▏    | 1.49G/2.84G [00:38<00:37, 35.8MB/s][A[A[A[A[A
+
+optimizer.pt:  59%|█████▊    | 1.66G/2.84G [00:38<00:23, 49.3MB/s][A[A
+
+
+
+
+optimizer.pt:  53%|█████▎    | 1.50G/2.84G [00:39<00:31, 42.7MB/s][A[A[A[A[A
+
+optimizer.pt:  59%|█████▉    | 1.68G/2.84G [00:38<00:22, 51.4MB/s][A[A
+
+optimizer.pt:  60%|█████▉    | 1.70G/2.84G [00:38<00:20, 54.5MB/s][A[A
+
+
+
+
+optimizer.pt:  54%|█████▎    | 1.52G/2.84G [00:39<00:33, 39.0MB/s][A[A[A[A[A
+
+
+
+
+optimizer.pt:  54%|█████▍    | 1.54G/2.84G [00:39<00:29, 44.8MB/s][A[A[A[A[A
+
+optimizer.pt:  60%|██████    | 1.71G/2.84G [00:39<00:27, 40.3MB/s][A[A
+
+
+
+
+optimizer.pt:  55%|█████▍    | 1.55G/2.84G [00:40<00:26, 48.9MB/s][A[A[A[A[A
+
+
+
+
+optimizer.pt:  55%|█████▌    | 1.57G/2.84G [00:40<00:21, 59.8MB/s][A[A[A[A[Aoptimizer.pt:  58%|█████▊    | 1.65G/2.84G [00:40<01:48, 10.9MB/s]
+
+optimizer.pt:  61%|██████    | 1.73G/2.84G [00:39<00:25, 43.7MB/s][A[Aoptimizer.pt:  59%|█████▊    | 1.66G/2.84G [00:40<01:21, 14.5MB/s]
+
+
+
+
+optimizer.pt:  55%|█████▌    | 1.57G/2.84G [00:40<00:28, 44.5MB/s][A[A[A[A[A
+
+optimizer.pt:  61%|██████▏   | 1.74G/2.84G [00:40<00:22, 47.8MB/s][A[Aoptimizer.pt:  59%|█████▉    | 1.67G/2.84G [00:40<01:14, 15.7MB/s]
+
+optimizer.pt:  62%|██████▏   | 1.76G/2.84G [00:40<00:18, 58.9MB/s][A[A
+
+
+
+
+optimizer.pt:  56%|█████▌    | 1.58G/2.84G [00:41<00:31, 39.7MB/s][A[A[A[A[Aoptimizer.pt:  59%|█████▉    | 1.68G/2.84G [00:41<01:00, 19.1MB/s]optimizer.pt:  60%|█████▉    | 1.69G/2.84G [00:41<00:46, 24.8MB/s]
+
+optimizer.pt:  62%|██████▏   | 1.77G/2.84G [00:40<00:25, 41.8MB/s][A[A
+
+
+
+
+optimizer.pt:  56%|█████▋    | 1.60G/2.84G [00:41<00:29, 42.5MB/s][A[A[A[A[A
+
+
+
+
+optimizer.pt:  57%|█████▋    | 1.61G/2.84G [00:41<00:23, 52.9MB/s][A[A[A[A[A
+
+optimizer.pt:  63%|██████▎   | 1.78G/2.84G [00:40<00:25, 42.1MB/s][A[A
+
+optimizer.pt:  63%|██████▎   | 1.79G/2.84G [00:41<00:21, 48.6MB/s][A[Aoptimizer.pt:  60%|█████▉    | 1.70G/2.84G [00:41<00:56, 20.1MB/s]
+
+
+
+
+optimizer.pt:  57%|█████▋    | 1.62G/2.84G [00:41<00:30, 40.3MB/s][A[A[A[A[Aoptimizer.pt:  60%|██████    | 1.71G/2.84G [00:42<00:43, 26.0MB/s]
+
+optimizer.pt:  64%|██████▎   | 1.81G/2.84G [00:41<00:20, 49.4MB/s][A[A
+
+
+
+
+optimizer.pt:  57%|█████▋    | 1.63G/2.84G [00:42<00:29, 40.3MB/s][A[A[A[A[A
+
+optimizer.pt:  64%|██████▍   | 1.82G/2.84G [00:41<00:18, 54.3MB/s][A[A
+
+
+
+
+optimizer.pt:  58%|█████▊    | 1.65G/2.84G [00:42<00:24, 48.0MB/s][A[A[A[A[Aoptimizer.pt:  61%|██████    | 1.73G/2.84G [00:42<00:35, 31.1MB/s]
+
+
+
+
+optimizer.pt:  59%|█████▊    | 1.66G/2.84G [00:42<00:19, 60.1MB/s][A[A[A[A[A
+
+optimizer.pt:  65%|██████▍   | 1.84G/2.84G [00:41<00:18, 53.9MB/s][A[Aoptimizer.pt:  61%|██████▏   | 1.74G/2.84G [00:42<00:31, 35.0MB/s]
+
+
+
+
+optimizer.pt:  59%|█████▉    | 1.67G/2.84G [00:42<00:27, 43.1MB/s][A[A[A[A[A
+
+optimizer.pt:  65%|██████▌   | 1.86G/2.84G [00:42<00:18, 52.1MB/s][A[A
+
+
+
+
+optimizer.pt:  59%|█████▉    | 1.68G/2.84G [00:42<00:23, 48.4MB/s][A[A[A[A[Aoptimizer.pt:  62%|██████▏   | 1.76G/2.84G [00:42<00:26, 41.0MB/s]
+
+optimizer.pt:  66%|██████▌   | 1.87G/2.84G [00:42<00:17, 55.8MB/s][A[A
+
+
+
+
+optimizer.pt:  59%|█████▉    | 1.69G/2.84G [00:43<00:31, 37.1MB/s][A[A[A[A[Aoptimizer.pt:  63%|██████▎   | 1.78G/2.84G [00:43<00:24, 43.0MB/s]
+
+optimizer.pt:  67%|██████▋   | 1.89G/2.84G [00:42<00:18, 52.0MB/s][A[Aoptimizer.pt:  63%|██████▎   | 1.79G/2.84G [00:43<00:23, 45.2MB/s]
+
+
+
+
+optimizer.pt:  60%|█████▉    | 1.70G/2.84G [00:43<00:36, 31.0MB/s][A[A[A[A[A
+
+optimizer.pt:  67%|██████▋   | 1.90G/2.84G [00:43<00:17, 52.4MB/s][A[A
+
+
+
+
+optimizer.pt:  60%|██████    | 1.71G/2.84G [00:43<00:26, 43.2MB/s][A[A[A[A[Aoptimizer.pt:  64%|██████▎   | 1.81G/2.84G [00:43<00:21, 48.0MB/s]
+
+optimizer.pt:  68%|██████▊   | 1.92G/2.84G [00:43<00:16, 54.2MB/s][A[Aoptimizer.pt:  64%|██████▍   | 1.82G/2.84G [00:44<00:20, 50.5MB/s]
+
+
+
+
+optimizer.pt:  60%|██████    | 1.72G/2.84G [00:44<00:33, 33.4MB/s][A[A[A[A[Aoptimizer.pt:  65%|██████▍   | 1.84G/2.84G [00:44<00:18, 54.4MB/s]
+
+optimizer.pt:  68%|██████▊   | 1.94G/2.84G [00:43<00:17, 50.5MB/s][A[A
+
+
+
+
+optimizer.pt:  61%|██████    | 1.73G/2.84G [00:44<00:32, 34.0MB/s][A[A[A[A[Aoptimizer.pt:  65%|██████▌   | 1.86G/2.84G [00:44<00:18, 52.7MB/s]
+
+optimizer.pt:  69%|██████▉   | 1.95G/2.84G [00:44<00:18, 47.0MB/s][A[A
+
+
+
+
+optimizer.pt:  61%|██████▏   | 1.74G/2.84G [00:44<00:27, 39.6MB/s][A[A[A[A[Aoptimizer.pt:  66%|██████▌   | 1.87G/2.84G [00:45<00:17, 54.8MB/s]
+
+optimizer.pt:  69%|██████▉   | 1.97G/2.84G [00:44<00:17, 50.8MB/s][A[A
+
+
+
+
+optimizer.pt:  62%|██████▏   | 1.76G/2.84G [00:45<00:24, 44.1MB/s][A[A[A[A[A
+
+
+
+
+optimizer.pt:  62%|██████▏   | 1.77G/2.84G [00:45<00:19, 55.1MB/s][A[A[A[A[Aoptimizer.pt:  67%|██████▋   | 1.89G/2.84G [00:45<00:17, 55.7MB/s]
+
+optimizer.pt:  70%|██████▉   | 1.98G/2.84G [00:44<00:15, 53.7MB/s][A[Aoptimizer.pt:  67%|██████▋   | 1.90G/2.84G [00:45<00:16, 58.1MB/s]
+
+
+
+
+optimizer.pt:  63%|██████▎   | 1.78G/2.84G [00:45<00:24, 43.8MB/s][A[A[A[A[A
+
+optimizer.pt:  70%|███████   | 2.00G/2.84G [00:44<00:14, 57.7MB/s][A[A
+
+optimizer.pt:  71%|███████   | 2.02G/2.84G [00:45<00:13, 63.1MB/s][A[A
+
+
+
+
+optimizer.pt:  63%|██████▎   | 1.79G/2.84G [00:45<00:23, 44.2MB/s][A[A[A[A[Aoptimizer.pt:  68%|██████▊   | 1.92G/2.84G [00:45<00:17, 54.0MB/s]
+
+
+
+
+optimizer.pt:  64%|██████▎   | 1.80G/2.84G [00:45<00:18, 56.0MB/s][A[A[A[A[A
+
+optimizer.pt:  72%|███████▏  | 2.03G/2.84G [00:45<00:13, 60.6MB/s][A[Aoptimizer.pt:  68%|██████▊   | 1.94G/2.84G [00:46<00:15, 57.9MB/s]
+
+
+
+
+optimizer.pt:  64%|██████▍   | 1.81G/2.84G [00:46<00:27, 37.7MB/s][A[A[A[A[A
+
+optimizer.pt:  72%|███████▏  | 2.05G/2.84G [00:45<00:14, 55.7MB/s][A[Aoptimizer.pt:  69%|██████▉   | 1.95G/2.84G [00:46<00:17, 52.2MB/s]
+
+optimizer.pt:  73%|███████▎  | 2.06G/2.84G [00:46<00:13, 55.8MB/s][A[A
+
+
+
+
+optimizer.pt:  64%|██████▍   | 1.82G/2.84G [00:46<00:29, 34.6MB/s][A[A[A[A[Aoptimizer.pt:  69%|██████▉   | 1.97G/2.84G [00:46<00:16, 53.9MB/s]
+
+optimizer.pt:  73%|███████▎  | 2.08G/2.84G [00:46<00:13, 56.7MB/s][A[A
+
+
+
+
+optimizer.pt:  65%|██████▍   | 1.84G/2.84G [00:47<00:26, 37.8MB/s][A[A[A[A[Aoptimizer.pt:  70%|██████▉   | 1.98G/2.84G [00:47<00:16, 51.1MB/s]
+
+optimizer.pt:  74%|███████▍  | 2.10G/2.84G [00:46<00:14, 52.5MB/s][A[A
+
+
+
+
+optimizer.pt:  65%|██████▌   | 1.86G/2.84G [00:47<00:22, 42.9MB/s][A[A[A[A[A
+
+optimizer.pt:  74%|███████▍  | 2.11G/2.84G [00:46<00:13, 54.0MB/s][A[A
+
+
+
+
+optimizer.pt:  66%|██████▌   | 1.87G/2.84G [00:47<00:21, 45.6MB/s][A[A[A[A[Aoptimizer.pt:  70%|███████   | 2.00G/2.84G [00:47<00:21, 39.5MB/s]
+
+optimizer.pt:  75%|███████▍  | 2.13G/2.84G [00:47<00:13, 54.6MB/s][A[A
+
+
+
+
+optimizer.pt:  67%|██████▋   | 1.89G/2.84G [00:48<00:19, 48.8MB/s][A[A[A[A[Aoptimizer.pt:  71%|███████   | 2.02G/2.84G [00:48<00:19, 42.6MB/s]
+
+optimizer.pt:  76%|███████▌  | 2.14G/2.84G [00:47<00:12, 55.4MB/s][A[A
+
+
+
+
+optimizer.pt:  67%|██████▋   | 1.90G/2.84G [00:48<00:17, 52.6MB/s][A[A[A[A[Aoptimizer.pt:  72%|███████▏  | 2.03G/2.84G [00:48<00:17, 46.8MB/s]
+
+
+
+
+optimizer.pt:  68%|██████▊   | 1.92G/2.84G [00:48<00:17, 51.5MB/s][A[A[A[A[A
+
+optimizer.pt:  76%|███████▌  | 2.16G/2.84G [00:47<00:13, 50.5MB/s][A[Aoptimizer.pt:  72%|███████▏  | 2.05G/2.84G [00:48<00:15, 49.5MB/s]
+
+optimizer.pt:  77%|███████▋  | 2.18G/2.84G [00:48<00:12, 54.0MB/s][A[A
+
+
+
+
+optimizer.pt:  68%|██████▊   | 1.94G/2.84G [00:48<00:16, 54.1MB/s][A[A[A[A[Aoptimizer.pt:  73%|███████▎  | 2.06G/2.84G [00:48<00:14, 53.1MB/s]
+
+
+
+
+optimizer.pt:  69%|██████▉   | 1.95G/2.84G [00:49<00:15, 56.6MB/s][A[A[A[A[Aoptimizer.pt:  73%|███████▎  | 2.08G/2.84G [00:49<00:13, 55.4MB/s]
+
+optimizer.pt:  77%|███████▋  | 2.19G/2.84G [00:48<00:12, 51.9MB/s][A[A
+
+
+
+
+optimizer.pt:  69%|██████▉   | 1.97G/2.84G [00:49<00:16, 54.0MB/s][A[A[A[A[Aoptimizer.pt:  74%|███████▍  | 2.10G/2.84G [00:49<00:13, 53.9MB/s]
+
+optimizer.pt:  78%|███████▊  | 2.21G/2.84G [00:48<00:12, 49.3MB/s][A[A
+
+
+
+
+optimizer.pt:  70%|██████▉   | 1.98G/2.84G [00:49<00:15, 55.8MB/s][A[A[A[A[Aoptimizer.pt:  74%|███████▍  | 2.11G/2.84G [00:49<00:14, 51.9MB/s]
+
+optimizer.pt:  78%|███████▊  | 2.22G/2.84G [00:49<00:11, 51.7MB/s][A[A
+
+
+
+
+optimizer.pt:  70%|███████   | 2.00G/2.84G [00:49<00:14, 58.4MB/s][A[A[A[A[A
+
+optimizer.pt:  79%|███████▉  | 2.24G/2.84G [00:49<00:11, 53.2MB/s][A[Aoptimizer.pt:  75%|███████▍  | 2.13G/2.84G [00:50<00:14, 48.7MB/s]
+
+
+
+
+optimizer.pt:  71%|███████   | 2.02G/2.84G [00:50<00:15, 54.8MB/s][A[A[A[A[Aoptimizer.pt:  76%|███████▌  | 2.14G/2.84G [00:50<00:13, 51.6MB/s]
+
+optimizer.pt:  79%|███████▉  | 2.26G/2.84G [00:49<00:11, 51.7MB/s][A[A
+
+
+
+
+optimizer.pt:  72%|███████▏  | 2.03G/2.84G [00:50<00:14, 55.8MB/s][A[A[A[A[Aoptimizer.pt:  76%|███████▌  | 2.16G/2.84G [00:50<00:13, 50.5MB/s]
+
+optimizer.pt:  80%|████████  | 2.27G/2.84G [00:50<00:11, 48.8MB/s][A[A
+
+
+
+
+optimizer.pt:  72%|███████▏  | 2.05G/2.84G [00:50<00:14, 56.4MB/s][A[A[A[A[A
+
+optimizer.pt:  81%|████████  | 2.29G/2.84G [00:50<00:10, 52.7MB/s][A[A
+
+
+
+
+optimizer.pt:  73%|███████▎  | 2.06G/2.84G [00:51<00:14, 54.7MB/s][A[A[A[A[A
+
+
+
+
+optimizer.pt:  73%|███████▎  | 2.08G/2.84G [00:51<00:11, 64.3MB/s][A[A[A[A[Aoptimizer.pt:  77%|███████▋  | 2.18G/2.84G [00:51<00:16, 41.2MB/s]
+
+optimizer.pt:  81%|████████  | 2.30G/2.84G [00:50<00:10, 50.9MB/s][A[Aoptimizer.pt:  77%|███████▋  | 2.19G/2.84G [00:51<00:14, 43.2MB/s]
+
+optimizer.pt:  82%|████████▏ | 2.32G/2.84G [00:50<00:09, 52.6MB/s][A[A
+
+
+
+
+optimizer.pt:  73%|███████▎  | 2.09G/2.84G [00:51<00:17, 44.0MB/s][A[A[A[A[A
+
+optimizer.pt:  82%|████████▏ | 2.34G/2.84G [00:51<00:08, 57.7MB/s][A[Aoptimizer.pt:  78%|███████▊  | 2.21G/2.84G [00:51<00:13, 47.0MB/s]
+
+optimizer.pt:  83%|████████▎ | 2.35G/2.84G [00:51<00:07, 61.6MB/s][A[A
+
+
+
+
+optimizer.pt:  74%|███████▍  | 2.10G/2.84G [00:52<00:20, 36.9MB/s][A[A[A[A[Aoptimizer.pt:  78%|███████▊  | 2.22G/2.84G [00:52<00:12, 50.2MB/s]
+
+
+
+
+optimizer.pt:  74%|███████▍  | 2.11G/2.84G [00:52<00:18, 40.3MB/s][A[A[A[A[A
+
+optimizer.pt:  83%|████████▎ | 2.37G/2.84G [00:51<00:08, 53.9MB/s][A[A
+
+
+
+
+optimizer.pt:  75%|███████▍  | 2.13G/2.84G [00:52<00:13, 51.0MB/s][A[A[A[A[A
+
+optimizer.pt:  84%|████████▍ | 2.38G/2.84G [00:51<00:07, 57.7MB/s][A[Aoptimizer.pt:  79%|███████▉  | 2.24G/2.84G [00:52<00:14, 41.3MB/s]
+
+optimizer.pt:  85%|████████▍ | 2.40G/2.84G [00:52<00:07, 58.0MB/s][A[Aoptimizer.pt:  79%|███████▉  | 2.26G/2.84G [00:53<00:12, 44.9MB/s]
+
+
+
+
+optimizer.pt:  75%|███████▌  | 2.13G/2.84G [00:53<00:21, 32.7MB/s][A[A[A[A[A
+
+optimizer.pt:  85%|████████▌ | 2.42G/2.84G [00:52<00:07, 57.4MB/s][A[A
+
+
+
+
+optimizer.pt:  76%|███████▌  | 2.14G/2.84G [00:53<00:19, 36.3MB/s][A[A[A[A[A
+
+optimizer.pt:  86%|████████▌ | 2.43G/2.84G [00:52<00:07, 53.2MB/s][A[A
+
+optimizer.pt:  86%|████████▌ | 2.45G/2.84G [00:53<00:07, 51.3MB/s][A[A
+
+
+
+
+optimizer.pt:  76%|███████▌  | 2.16G/2.84G [00:53<00:21, 30.9MB/s][A[A[A[A[Aoptimizer.pt:  80%|████████  | 2.27G/2.84G [00:54<00:21, 25.9MB/s]
+
+optimizer.pt:  87%|████████▋ | 2.46G/2.84G [00:53<00:07, 53.0MB/s][A[A
+
+
+
+
+optimizer.pt:  77%|███████▋  | 2.18G/2.84G [00:54<00:18, 35.3MB/s][A[A[A[A[A
+
+
+
+
+optimizer.pt:  77%|███████▋  | 2.19G/2.84G [00:54<00:15, 42.3MB/s][A[A[A[A[A
+
+optimizer.pt:  87%|████████▋ | 2.48G/2.84G [00:53<00:06, 52.7MB/s][A[Aoptimizer.pt:  81%|████████  | 2.29G/2.84G [00:54<00:18, 29.6MB/s]
+
+optimizer.pt:  88%|████████▊ | 2.50G/2.84G [00:54<00:06, 54.0MB/s][A[A
+
+
+
+
+optimizer.pt:  78%|███████▊  | 2.21G/2.84G [00:54<00:13, 45.8MB/s][A[A[A[A[Aoptimizer.pt:  81%|████████  | 2.30G/2.84G [00:54<00:15, 33.8MB/s]
+
+
+
+
+optimizer.pt:  78%|███████▊  | 2.22G/2.84G [00:55<00:12, 49.1MB/s][A[A[A[A[A
+
+optimizer.pt:  88%|████████▊ | 2.51G/2.84G [00:54<00:06, 54.3MB/s][A[Aoptimizer.pt:  82%|████████▏ | 2.32G/2.84G [00:55<00:13, 39.4MB/s]
+
+
+
+
+optimizer.pt:  79%|███████▉  | 2.24G/2.84G [00:55<00:10, 60.0MB/s][A[A[A[A[Aoptimizer.pt:  82%|████████▏ | 2.34G/2.84G [00:55<00:11, 44.0MB/s]
+
+optimizer.pt:  89%|████████▉ | 2.53G/2.84G [00:54<00:05, 53.4MB/s][A[A
+
+
+
+
+optimizer.pt:  79%|███████▉  | 2.25G/2.84G [00:55<00:13, 43.4MB/s][A[A[A[A[A
+
+optimizer.pt:  90%|████████▉ | 2.54G/2.84G [00:55<00:05, 52.0MB/s][A[Aoptimizer.pt:  83%|████████▎ | 2.35G/2.84G [00:55<00:10, 44.9MB/s]
+
+
+
+
+optimizer.pt:  79%|███████▉  | 2.26G/2.84G [00:55<00:14, 41.6MB/s][A[A[A[A[A
+
+optimizer.pt:  90%|█████████ | 2.56G/2.84G [00:55<00:05, 51.2MB/s][A[Aoptimizer.pt:  83%|████████▎ | 2.37G/2.84G [00:56<00:10, 46.4MB/s]
+
+
+
+
+optimizer.pt:  80%|████████  | 2.27G/2.84G [00:56<00:11, 47.9MB/s][A[A[A[A[Aoptimizer.pt:  84%|████████▍ | 2.38G/2.84G [00:56<00:09, 49.9MB/s]
+
+
+
+
+optimizer.pt:  81%|████████  | 2.29G/2.84G [00:56<00:10, 53.8MB/s][A[A[A[A[A
+
+optimizer.pt:  91%|█████████ | 2.58G/2.84G [00:55<00:05, 50.3MB/s][A[A
+
+
+
+
+optimizer.pt:  81%|████████  | 2.30G/2.84G [00:56<00:08, 64.1MB/s][A[A[A[A[Aoptimizer.pt:  85%|████████▍ | 2.40G/2.84G [00:56<00:08, 50.4MB/s]
+
+optimizer.pt:  91%|█████████▏| 2.59G/2.84G [00:55<00:04, 51.8MB/s][A[A
+
+
+
+
+optimizer.pt:  81%|████████▏ | 2.31G/2.84G [00:56<00:13, 40.6MB/s][A[A[A[A[Aoptimizer.pt:  85%|████████▌ | 2.42G/2.84G [00:56<00:08, 49.9MB/s]
+
+optimizer.pt:  92%|█████████▏| 2.61G/2.84G [00:56<00:04, 52.7MB/s][A[A
+
+
+
+
+optimizer.pt:  82%|████████▏ | 2.32G/2.84G [00:57<00:13, 39.3MB/s][A[A[A[A[A
+
+optimizer.pt:  92%|█████████▏| 2.62G/2.84G [00:56<00:03, 54.8MB/s][A[Aoptimizer.pt:  86%|████████▌ | 2.43G/2.84G [00:57<00:07, 51.6MB/s]
+
+optimizer.pt:  93%|█████████▎| 2.64G/2.84G [00:56<00:03, 56.7MB/s][A[A
+
+
+
+
+optimizer.pt:  82%|████████▏ | 2.34G/2.84G [00:57<00:11, 44.4MB/s][A[A[A[A[Aoptimizer.pt:  86%|████████▌ | 2.45G/2.84G [00:57<00:07, 53.4MB/s]optimizer.pt:  87%|████████▋ | 2.46G/2.84G [00:57<00:06, 56.2MB/s]
+
+optimizer.pt:  94%|█████████▎| 2.66G/2.84G [00:57<00:03, 56.3MB/s][A[A
+
+
+
+
+optimizer.pt:  83%|████████▎ | 2.35G/2.84G [00:57<00:10, 47.4MB/s][A[A[A[A[A
+
+optimizer.pt:  94%|█████████▍| 2.67G/2.84G [00:57<00:02, 55.8MB/s][A[Aoptimizer.pt:  87%|████████▋ | 2.48G/2.84G [00:58<00:06, 55.0MB/s]
+
+
+
+
+optimizer.pt:  83%|████████▎ | 2.37G/2.84G [00:58<00:09, 49.9MB/s][A[A[A[A[A
+
+optimizer.pt:  95%|█████████▍| 2.69G/2.84G [00:57<00:02, 55.3MB/s][A[Aoptimizer.pt:  88%|████████▊ | 2.50G/2.84G [00:58<00:06, 53.1MB/s]
+
+optimizer.pt:  95%|█████████▌| 2.70G/2.84G [00:57<00:02, 56.3MB/s][A[Aoptimizer.pt:  88%|████████▊ | 2.51G/2.84G [00:58<00:06, 53.3MB/s]
+
+optimizer.pt:  96%|█████████▌| 2.72G/2.84G [00:58<00:02, 56.0MB/s][A[Aoptimizer.pt:  89%|████████▉ | 2.53G/2.84G [00:58<00:05, 55.9MB/s]optimizer.pt:  90%|████████▉ | 2.54G/2.84G [00:59<00:05, 56.2MB/s]
+
+optimizer.pt:  96%|█████████▋| 2.74G/2.84G [00:58<00:01, 54.2MB/s][A[A
+
+optimizer.pt:  97%|█████████▋| 2.75G/2.84G [00:58<00:01, 56.8MB/s][A[Aoptimizer.pt:  90%|█████████ | 2.56G/2.84G [00:59<00:05, 52.9MB/s]
+
+
+
+
+optimizer.pt:  84%|████████▍ | 2.38G/2.84G [00:59<00:20, 22.6MB/s][A[A[A[A[A
+
+
+
+
+optimizer.pt:  84%|████████▍ | 2.40G/2.84G [00:59<00:15, 29.3MB/s][A[A[A[A[A
+
+optimizer.pt:  98%|█████████▊| 2.77G/2.84G [00:59<00:01, 52.5MB/s][A[Aoptimizer.pt:  91%|█████████ | 2.58G/2.84G [00:59<00:05, 49.6MB/s]
+
+optimizer.pt:  98%|█████████▊| 2.78G/2.84G [00:59<00:01, 53.6MB/s][A[Aoptimizer.pt:  91%|█████████▏| 2.59G/2.84G [01:00<00:04, 54.2MB/s]
+
+
+
+
+optimizer.pt:  85%|████████▍ | 2.40G/2.84G [01:00<00:17, 25.1MB/s][A[A[A[A[A
+
+optimizer.pt:  99%|█████████▊| 2.80G/2.84G [00:59<00:00, 55.1MB/s][A[Aoptimizer.pt:  92%|█████████▏| 2.61G/2.84G [01:00<00:04, 53.4MB/s]
+
+
+
+
+optimizer.pt:  85%|████████▌ | 2.42G/2.84G [01:00<00:16, 25.7MB/s][A[A[A[A[A
+
+optimizer.pt:  99%|█████████▉| 2.82G/2.84G [01:00<00:00, 54.8MB/s][A[Aoptimizer.pt:  92%|█████████▏| 2.62G/2.84G [01:00<00:04, 52.4MB/s]
+
+
+
+
+optimizer.pt:  86%|████████▌ | 2.43G/2.84G [01:00<00:12, 31.5MB/s][A[A[A[A[A
+
+optimizer.pt: 100%|█████████▉| 2.83G/2.84G [01:00<00:00, 53.9MB/s][A[Aoptimizer.pt:  93%|█████████▎| 2.64G/2.84G [01:01<00:03, 51.1MB/s]optimizer.pt: 100%|██████████| 2.84G/2.84G [01:00<00:00, 46.9MB/s]
+
+
+
+
+
+optimizer.pt:  86%|████████▌ | 2.45G/2.84G [01:01<00:11, 34.3MB/s][A[A[A[A[Aoptimizer.pt:  94%|█████████▎| 2.66G/2.84G [01:01<00:03, 53.1MB/s]
+
+
+
+
+optimizer.pt:  87%|████████▋ | 2.46G/2.84G [01:01<00:09, 38.3MB/s][A[A[A[A[Aoptimizer.pt:  94%|█████████▍| 2.67G/2.84G [01:01<00:03, 53.6MB/s]
+
+
+
+
+optimizer.pt:  87%|████████▋ | 2.48G/2.84G [01:01<00:08, 41.0MB/s][A[A[A[A[Aoptimizer.pt:  95%|█████████▍| 2.69G/2.84G [01:02<00:02, 51.4MB/s]optimizer.pt:  95%|█████████▌| 2.70G/2.84G [01:02<00:02, 55.2MB/s]
+
+
+
+
+optimizer.pt:  88%|████████▊ | 2.50G/2.84G [01:02<00:08, 42.4MB/s][A[A[A[A[Aoptimizer.pt:  96%|█████████▌| 2.72G/2.84G [01:02<00:02, 55.1MB/s]
+
+
+
+
+optimizer.pt:  88%|████████▊ | 2.51G/2.84G [01:02<00:07, 45.2MB/s][A[A[A[A[Aoptimizer.pt:  96%|█████████▌| 2.73G/2.84G [01:02<00:01, 61.1MB/s]
+
+
+
+
+optimizer.pt:  89%|████████▉ | 2.53G/2.84G [01:02<00:05, 53.9MB/s][A[A[A[A[Aoptimizer.pt:  96%|█████████▋| 2.74G/2.84G [01:03<00:02, 45.7MB/s]
+
+
+
+
+optimizer.pt:  89%|████████▉ | 2.53G/2.84G [01:03<00:07, 39.5MB/s][A[A[A[A[Aoptimizer.pt:  97%|█████████▋| 2.75G/2.84G [01:03<00:01, 45.3MB/s]
+
+
+
+
+optimizer.pt:  90%|████████▉ | 2.54G/2.84G [01:03<00:08, 35.0MB/s][A[A[A[A[Aoptimizer.pt:  98%|█████████▊| 2.77G/2.84G [01:03<00:01, 45.5MB/s]
+
+
+
+
+optimizer.pt:  90%|█████████ | 2.56G/2.84G [01:03<00:06, 39.9MB/s][A[A[A[A[Aoptimizer.pt:  98%|█████████▊| 2.78G/2.84G [01:03<00:01, 48.7MB/s]
+
+
+
+
+optimizer.pt:  91%|█████████ | 2.58G/2.84G [01:04<00:05, 45.6MB/s][A[A[A[A[Aoptimizer.pt:  99%|█████████▊| 2.80G/2.84G [01:04<00:00, 51.6MB/s]
+
+
+
+
+optimizer.pt:  91%|█████████▏| 2.59G/2.84G [01:04<00:05, 47.1MB/s][A[A[A[A[A
+
+
+
+
+optimizer.pt:  92%|█████████▏| 2.61G/2.84G [01:04<00:04, 56.7MB/s][A[A[A[A[Aoptimizer.pt:  99%|█████████▉| 2.82G/2.84G [01:04<00:00, 48.7MB/s]optimizer.pt: 100%|█████████▉| 2.83G/2.84G [01:04<00:00, 52.6MB/s]
+
+
+
+
+optimizer.pt:  92%|█████████▏| 2.61G/2.84G [01:04<00:05, 42.9MB/s][A[A[A[A[Aoptimizer.pt: 100%|██████████| 2.84G/2.84G [01:05<00:00, 43.6MB/s]
+
+
+
+
+
+optimizer.pt:  92%|█████████▏| 2.62G/2.84G [01:05<00:05, 41.4MB/s][A[A[A[A[A
+
+
+
+
+optimizer.pt:  93%|█████████▎| 2.64G/2.84G [01:05<00:03, 52.6MB/s][A[A[A[A[A
+
+
+
+Upload 12 LFS files:   8%|▊         | 1/12 [01:05<11:59, 65.45s/it][A[A[A[A
+
+
+
+
+optimizer.pt:  93%|█████████▎| 2.64G/2.84G [01:05<00:05, 37.7MB/s][A[A[A[A[A
+
+
+
+
+optimizer.pt:  94%|█████████▎| 2.66G/2.84G [01:06<00:05, 33.3MB/s][A[A[A[A[A
+
+
+
+
+optimizer.pt:  94%|█████████▍| 2.67G/2.84G [01:06<00:03, 44.4MB/s][A[A[A[A[A
+
+
+
+
+optimizer.pt:  94%|█████████▍| 2.68G/2.84G [01:06<00:04, 33.4MB/s][A[A[A[A[A
+
+
+
+
+optimizer.pt:  95%|█████████▍| 2.69G/2.84G [01:06<00:04, 37.6MB/s][A[A[A[A[A
+
+
+
+
+optimizer.pt:  95%|█████████▌| 2.70G/2.84G [01:07<00:03, 44.1MB/s][A[A[A[A[A
+
+
+
+
+optimizer.pt:  96%|█████████▌| 2.72G/2.84G [01:07<00:02, 55.9MB/s][A[A[A[A[A
+
+
+
+
+optimizer.pt:  96%|█████████▌| 2.73G/2.84G [01:07<00:02, 41.1MB/s][A[A[A[A[A
+
+
+
+
+optimizer.pt:  96%|█████████▋| 2.74G/2.84G [01:07<00:02, 40.1MB/s][A[A[A[A[A
+
+
+
+
+optimizer.pt:  97%|█████████▋| 2.75G/2.84G [01:08<00:02, 43.0MB/s][A[A[A[A[A
+
+
+
+
+optimizer.pt:  98%|█████████▊| 2.77G/2.84G [01:08<00:01, 45.0MB/s][A[A[A[A[A
+
+
+
+
+optimizer.pt:  98%|█████████▊| 2.78G/2.84G [01:08<00:01, 44.4MB/s][A[A[A[A[A
+
+
+
+
+optimizer.pt:  99%|█████████▊| 2.80G/2.84G [01:09<00:00, 48.1MB/s][A[A[A[A[A
+
+
+
+
+optimizer.pt:  99%|█████████▉| 2.82G/2.84G [01:09<00:00, 49.6MB/s][A[A[A[A[A
+
+
+
+
+optimizer.pt: 100%|█████████▉| 2.83G/2.84G [01:09<00:00, 49.9MB/s][A[A[A[A[Aoptimizer.pt: 100%|██████████| 2.84G/2.84G [01:10<00:00, 40.5MB/s]
+
+
+
+
+Upload 12 LFS files:  42%|████▏     | 5/12 [01:10<01:15, 10.81s/it][A[A[A[AUpload 12 LFS files: 100%|██████████| 12/12 [01:10<00:00,  5.87s/it]
+uploading done!
