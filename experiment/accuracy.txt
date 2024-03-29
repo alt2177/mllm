@@ -7,16 +7,6 @@ Merge DARE TIES accuracy : 0.6176
 Fine tune large model accuracy : 0.68412
 
 
-Fine tune model 0 : TrainOutput(global_step=452, training_loss=0.9740125267906526, metrics={'train_runtime': 351.0741, 'train_samples_per_second': 92.573, 'train_steps_per_second': 1.287, 'train_loss': 0.9740125267906526, 'epoch': 1.0})
-Fine tune model 0 all train data result : {'test_loss': 0.8238558769226074, 'test_accuracy': 0.63566, 'test_runtime': 165.8785, 'test_samples_per_second': 301.426, 'test_steps_per_second': 4.19}
-Fine tine model 0 validation result : {'eval_loss': 0.8289288878440857, 'eval_accuracy': 0.6367, 'eval_runtime': 33.068, 'eval_samples_per_second': 302.407, 'eval_steps_per_second': 4.203, 'epoch': 1.0}
-Fine tune model 0 test results : {'eval_loss': 0.8225207924842834, 'eval_accuracy': 0.6354, 'eval_runtime': 134.6646, 'eval_samples_per_second': 297.034, 'eval_steps_per_second': 4.129, 'epoch': 1.0}
-
-Fine tune model 1 : TrainOutput(global_step=452, training_loss=0.9981543616910952, metrics={'train_runtime': 325.9383, 'train_samples_per_second': 99.712, 'train_steps_per_second': 1.387, 'train_loss': 0.9981543616910952, 'epoch': 1.0})
-Fine tune model 1 all train data result : {'test_loss': 0.8310232162475586, 'test_accuracy': 0.63258, 'test_runtime': 166.0975, 'test_samples_per_second': 301.028, 'test_steps_per_second': 4.184}
-Fine tine model 1 validation result : {'eval_loss': 0.8357105255126953, 'eval_accuracy': 0.6274, 'eval_runtime': 33.2061, 'eval_samples_per_second': 301.15, 'eval_steps_per_second': 4.186, 'epoch': 1.0}
-Fine tune model 1 test results : {'eval_loss': 0.8297995924949646, 'eval_accuracy': 0.633875, 'eval_runtime': 134.8974, 'eval_samples_per_second': 296.522, 'eval_steps_per_second': 4.122, 'epoch': 1.0}
-
 Fine tune model 0 : TrainOutput(global_step=903, training_loss=0.8919589865379292, metrics={'train_runtime': 592.3071, 'train_samples_per_second': 109.74, 'train_steps_per_second': 1.525, 'train_loss': 0.8919589865379292, 'epoch': 1.0})
 Fine tune model 0 all train data result : {'test_loss': 0.7857880592346191, 'test_accuracy': 0.65242, 'test_runtime': 165.4063, 'test_samples_per_second': 302.286, 'test_steps_per_second': 4.202}
 Fine tine model 0 validation result : {'eval_loss': 0.7920864224433899, 'eval_accuracy': 0.6518, 'eval_runtime': 33.3143, 'eval_samples_per_second': 300.171, 'eval_steps_per_second': 4.172, 'epoch': 1.0}

@@ -18,7 +18,8 @@ def main():
     # set our collective token and HF info
     access_token = "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" 
     username = "mllm-dev"
-    model_name = "microsoft/phi-1"
+    #model_name = "microsoft/phi-1"
+    model_name = "openai-community/gpt2-xl"
 
     # load and tokenize data
     dataset = load_dataset("yelp_review_full")
@@ -30,7 +31,6 @@ def main():
     # pad tokens
     data_collator = DataCollatorWithPadding(tokenizer=tokenizer) 
     
-    
     # create model
     model = AutoModelForSequenceClassification.from_pretrained(
             model_name,
@@ -41,25 +41,33 @@ def main():
     model.resize_token_embeddings(len(tokenizer))
 
     # repo that will be made on huggingface
-    output_repo = f"llama_f_experiment_large"
-    # Select 5% of the train data for finetuning a specific model
-    num_of_samples = int(len(tokenized_yelp["train"]) )
-    # print(num_of_samples) # 32500
+    output_repo = f"gpt_f_experiment_large"
 
-    small_train_dataset = tokenized_yelp["train"]
-    small_eval_dataset = tokenized_yelp["test"]
+    # datasets train/test
+    train_dataset = tokenized_yelp["train"]
+    eval_dataset = tokenized_yelp["test"].shuffle(seed=42)
 
+    # Define the size of the validation set (e.g., 20% of the total data)
+    validation_size = int(0.2 * len(eval_dataset))
+    indices = list(range(len(eval_dataset)))
+    test_indices = indices[validation_size:]
+    validation_indices = indices[:validation_size]
+
+    # Split the shuffled training dataset into training and validation sets
+    test_dataset = eval_dataset.select(test_indices)
+    validation_dataset = eval_dataset.select(validation_indices)
+    
     # create the repo before we try to push the model to huggingface
     HfFolder.save_token(access_token)
     api = HfApi()
     user = api.whoami(token=access_token)
     try:
-    	create_repo(f"{username}/{output_repo}", repo_type="model")
+        create_repo(f"{username}/{output_repo}", repo_type="model")
     except:
         print('error creating repo for model. it probably already exists')
 
-    output_dir = "sean_test_out"
-        # training loop
+    output_dir = "sean_test_out_large"
+    # training loop
     training_args = TrainingArguments(
             output_dir=output_dir,
             learning_rate=6e-5,    #read that with larger batch size we can increase learning rate
@@ -79,31 +87,36 @@ def main():
     trainer = Trainer(
             model=model,
             args=training_args,
-            train_dataset=small_train_dataset,
-            eval_dataset=small_eval_dataset,
+            train_dataset=train_dataset,
+            eval_dataset=validation_dataset,
             tokenizer=tokenizer,
             data_collator=data_collator,
             compute_metrics=compute_metrics,
         )
     print('************TRAINING STARTED*************')
-    trainer.train()
-    print('*************TRAINING COMPLETED**************')
-        
-        # Save the output probabilities for merging outputs
-        # use ALL of the training samples
-	# result = trainer.train()
-        #print(result)
+    result = trainer.train()
+    print('*************TRAINING COMPLETED**************')  
     
+    # Check the amount of GPU memory currently allocated
+    allocated_memory = torch.cuda.memory_allocated()
+    print("Allocated GPU memory:", allocated_memory / 1024**2, "MB")
 
-    eval_result = trainer.evaluate(eval_dataset=tokenized_yelp["test"])
+    # Check the peak GPU memory usage
+    peak_memory = torch.cuda.max_memory_allocated()
+    print("Peak GPU memory usage:", peak_memory / 1024**2, "MB")
 
-        # Save the accuracy of each model for later comparison
-    f = open("accuracy.txt", "a")
-    f.write(f"Fine tune large model accuracy : {eval_result['eval_accuracy']}\n")
+    eval_result = trainer.evaluate(eval_dataset=test_dataset)
+    validation_result = trainer.evaluate(eval_dataset = validation_dataset)
+    
+    # Save the accuracy of each model for later comparison
+    f = open("accuracy_large.txt", "a")
+    f.write(f"Fine tune model {m} : {result}\n")
+    f.write(f"Fine tine model {m} validation result : {validation_result}\n")
+    f.write(f"Fine tune large model accuracy : {eval_result}\n")
     f.close()
 
-        # When push to hub is false, the model is saved under a folder that
-        # starts with "checkpoint"
+    # When push to hub is false, the model is saved under a folder that
+    # starts with "checkpoint"
     directories = [d for d in os.listdir(output_dir) if os.path.isdir(os.path.join(output_dir, d))]
     checkpoint_directories = [d for d in directories if d.startswith("checkpoint")]
 

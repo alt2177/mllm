@@ -11,8 +11,8 @@
 
 # run script via Makefile
 #pip uninstall transformers
-git clone https://github.com/cg123/mergekit.git
-cd mergekit
-pip install -e .
-cd ..
+#git clone https://github.com/cg123/mergekit.git
+#cd mergekit
+#pip install -e .
+#cd ..
 python merge_experiment.py
