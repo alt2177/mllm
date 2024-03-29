@@ -1,0 +1,36 @@
+models:
+  - model: mllm-dev/gpt2_f_experiment_0
+    parameters:
+      weight: 0.1
+  - model: mllm-dev/gpt2_f_experiment_1
+    parameters:
+      weight: 0.1
+  - model: mllm-dev/gpt2_f_experiment_2
+    parameters:
+      weight: 0.1
+  - model: mllm-dev/gpt2_f_experiment_3
+    parameters:
+      weight: 0.1
+  - model: mllm-dev/gpt2_f_experiment_4
+    parameters:
+      weight: 0.1
+  - model: mllm-dev/gpt2_f_experiment_5
+    parameters:
+      weight: 0.1
+  - model: mllm-dev/gpt2_f_experiment_6
+    parameters:
+      weight: 0.1
+  - model: mllm-dev/gpt2_f_experiment_7
+    parameters:
+      weight: 0.1
+  - model: mllm-dev/gpt2_f_experiment_8
+    parameters:
+      weight: 0.1
+  - model: mllm-dev/gpt2_f_experiment_9
+    parameters:
+      weight: 0.1
+merge_method: dare_linear
+base_model: mllm-dev/gpt2_f_experiment_0
+parameters:
+  normalize: true
+dtype: float16
