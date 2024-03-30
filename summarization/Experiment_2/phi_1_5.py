@@ -4,15 +4,16 @@ from datasets import load_dataset
 import evaluate
 import numpy as np
 import torch
+import os
 
 rouge = evaluate.load("rouge")
 
-prefix = "summarize: "
+#prefix = "summarize: "
 
 def preprocess_function(examples,tokenizer):
-    inputs = [prefix + doc + " TL;DR" for doc in examples["text"]]
-    model_inputs = tokenizer(inputs, max_length=1024, truncation=True,padding="max_length")
-    labels = tokenizer(text_target=examples["summary"], max_length=1024, truncation=True,padding="max_length")
+    inputs = [doc + "\nTL;DR:\n" for doc in examples["text"]]
+    model_inputs = tokenizer(inputs, max_length=512, truncation=True)
+    labels = tokenizer(text_target=examples["summary"], max_length=512, truncation=True)
     model_inputs["labels"] = labels["input_ids"]
     return model_inputs
 
@@ -32,6 +33,7 @@ def main():
     output_repo = "bill_sum_experiment_1"
     dataset = load_dataset("billsum", split="ca_test")
     dataset = dataset.train_test_split(test_size=0.2,seed=42)
+    #checkpoint = "openai-community/gpt2-medium"
     checkpoint = "openai-community/gpt2"
     tokenizer = AutoTokenizer.from_pretrained(checkpoint,use_auth_token = access_token, padding_side='left')
     tokenizer.pad_token = tokenizer.eos_token
@@ -55,14 +57,17 @@ def main():
         learning_rate=2e-5,
         per_device_train_batch_size=8,
         per_device_eval_batch_size=8,
+        load_best_model_at_end=True,
         weight_decay=0.01,
         save_total_limit=3,
-        num_train_epochs=1,
+        num_train_epochs=200,
         predict_with_generate=True,
         fp16=True,
         push_to_hub=True,
         hub_model_id=f"{username}/{output_repo}",
         hub_token = access_token,
+        save_strategy="epoch",
+        generation_max_length=600,
     )
 
     trainer = Seq2SeqTrainer(
@@ -84,13 +89,20 @@ def main():
     user = api.whoami(token=access_token)
     print("Logged in as:", user['name'])
     print('UPLOADING')
+    # directories = [d for d in os.listdir(output_dir) if os.path.isdir(os.path.join(output_dir, d))]
+    # checkpoint_directories = [d for d in directories if d.startswith("checkpoint")]
+    # api.upload_folder(
+    #     folder_path=os.path.join(output_dir, checkpoint_directories[0]),
+    #     repo_id=f"{username}/{output_repo}",
+    #     repo_type="model",
+    # )
     api.upload_folder(
         folder_path=f"./{output_dir}",
         repo_id=f"{username}/{output_repo}",
         repo_type="model"
     )
     print('uploading done!')
-   # trainer.evaluate()
+    #trainer.evaluate()
 
 if __name__ == "__main__":
     main()

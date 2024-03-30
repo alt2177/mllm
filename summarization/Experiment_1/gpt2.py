@@ -60,13 +60,14 @@ def main():
         load_best_model_at_end=True,
         weight_decay=0.01,
         save_total_limit=3,
-        num_train_epochs=10,
+        num_train_epochs=35,
         predict_with_generate=True,
         fp16=True,
         push_to_hub=True,
         hub_model_id=f"{username}/{output_repo}",
         hub_token = access_token,
         save_strategy="epoch",
+        generation_max_length=600,
     )
 
     trainer = Seq2SeqTrainer(
