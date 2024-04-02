@@ -12,8 +12,8 @@ rouge = evaluate.load("rouge")
 
 def preprocess_function(examples,tokenizer):
     inputs = [doc + "\nTL;DR:\n" for doc in examples["text"]]
-    model_inputs = tokenizer(inputs, max_length=512, truncation=True)
-    labels = tokenizer(text_target=examples["summary"], max_length=512, truncation=True)
+    model_inputs = tokenizer(inputs, max_length=20, truncation=True)
+    labels = tokenizer(text_target=examples["summary"], max_length=20, truncation=True)
     model_inputs["labels"] = labels["input_ids"]
     return model_inputs
 
@@ -30,7 +30,7 @@ def compute_metrics(eval_pred,tokenizer):
 def main():
     access_token = "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" 
     username = "mllm-dev"
-    output_repo = "bill_sum_experiment_1"
+    output_repo = "bill_sum_experiment_3"
     dataset = load_dataset("billsum", split="ca_test")
     dataset = dataset.train_test_split(test_size=0.2,seed=42)
     #checkpoint = "openai-community/gpt2-medium"
@@ -49,25 +49,25 @@ def main():
     except:
         print('error creating repo for model. it probably already exists')
 
-    output_dir = "bill_sum_finetune_test_gpt2"
+    output_dir = "bill_sum_finetune_test_gpt2_3"
     # training loop
     training_args = Seq2SeqTrainingArguments(
         output_dir=output_dir,
         evaluation_strategy="epoch",
-        learning_rate=2e-5,
-        per_device_train_batch_size=8,
-        per_device_eval_batch_size=8,
+        learning_rate=6e-5,
+        per_device_train_batch_size=1,
+        per_device_eval_batch_size=1,
         load_best_model_at_end=True,
         weight_decay=0.01,
         save_total_limit=3,
-        num_train_epochs=35,
+        num_train_epochs=5,
         predict_with_generate=True,
         fp16=True,
         push_to_hub=True,
         hub_model_id=f"{username}/{output_repo}",
         hub_token = access_token,
         save_strategy="epoch",
-        generation_max_length=600,
+        generation_max_length=25,
     )
 
     trainer = Seq2SeqTrainer(
