@@ -101,9 +101,9 @@ def main():
         training_args = TrainingArguments(
             output_dir=output_dir,
             learning_rate=6e-5,    #read that with larger batch size we can increase learning rate
-            per_device_train_batch_size=12,
-            per_device_eval_batch_size=12,
-            num_train_epochs=20,
+            per_device_train_batch_size=16,
+            per_device_eval_batch_size=16,
+            num_train_epochs=1,
             fp16=True,
             weight_decay=0.01,
             evaluation_strategy="epoch",
