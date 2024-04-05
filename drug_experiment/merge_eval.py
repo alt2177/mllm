@@ -3,7 +3,7 @@ dataset = load_dataset("lewtun/drug-reviews")
 
 # Load model directly
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
-tokenizer = AutoTokenizer.from_pretrained("mllm-dev/gpt2_m_experiment_drug_data_ties")
+tokenizer = AutoTokenizer.from_pretrained("mllm-dev/gpt2_m_experiment_drug_data_dare_linear")
 
 
 def preprocess_function(examples):
@@ -37,7 +37,7 @@ def compute_metrics(eval_pred):
 
 from transformers import AutoModelForSequenceClassification, TrainingArguments, Trainer
 model = AutoModelForSequenceClassification.from_pretrained(
-    "mllm-dev/gpt2_m_experiment_drug_data_ties", num_labels=10
+    "mllm-dev/gpt2_m_experiment_drug_data_dare_linear", num_labels=10
 )
 model.config.pad_token_id = tokenizer.eos_token_id
 model.resize_token_embeddings(len(tokenizer))
@@ -70,7 +70,7 @@ print("Merge validation:", validation_result)
 
 test_result = trainer.evaluate(eval_dataset=test_dataset)
 
-f = open("accuracy_merge_drug_data_ties.txt", "a")
+f = open("accuracy_merge_drug_data_dare_linear.txt", "a")
 f.write(f"DARE Ties merge validation results : {validation_result}\n")
 f.write(f"DARE Ties test results : {test_result}\n\n")
 f.close()

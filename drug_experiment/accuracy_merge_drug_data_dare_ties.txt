@@ -1,3 +1,6 @@
-DARE Ties merge validation results : {'eval_loss': 2.2836239337921143, 'eval_accuracy': 0.4775411513066121, 'eval_runtime': 30.5849, 'eval_samples_per_second': 351.579, 'eval_steps_per_second': 11.019}
-DARE Ties test results : {'eval_loss': 2.2867376804351807, 'eval_accuracy': 0.47539116081184757, 'eval_runtime': 90.399, 'eval_samples_per_second': 475.813, 'eval_steps_per_second': 14.878}
+DARE Ties merge validation results : {'eval_loss': 2.2836239337921143, 'eval_accuracy': 0.4775411513066121, 'eval_runtime': 36.4392, 'eval_samples_per_second': 295.095, 'eval_steps_per_second': 6.175}
+DARE Ties test results : {'eval_loss': 2.2867658138275146, 'eval_accuracy': 0.47539116081184757, 'eval_runtime': 96.266, 'eval_samples_per_second': 446.814, 'eval_steps_per_second': 9.318}
+
+DARE Ties merge validation results : {'eval_loss': 2.2836239337921143, 'eval_accuracy': 0.4775411513066121, 'eval_runtime': 36.0935, 'eval_samples_per_second': 297.921, 'eval_steps_per_second': 6.234}
+DARE Ties test results : {'eval_loss': 2.2867658138275146, 'eval_accuracy': 0.47539116081184757, 'eval_runtime': 95.996, 'eval_samples_per_second': 448.071, 'eval_steps_per_second': 9.344}
 
