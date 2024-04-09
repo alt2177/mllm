@@ -13,14 +13,33 @@ First, installation of `pyxet` and other dependencies:
 %pip install numpy
 %pip install pyarrow
 
-# |%%--%%| <ESapP0plJi|qIursMh7Hg>
+#|%%--%%| <ESapP0plJi|WthiWdIKYx>
+
+%pip install datasets
+
+# |%%--%%| <WthiWdIKYx|qIursMh7Hg>
 
 import pyxet         # make xet:// protocol available   
 import pandas as pd 
 import polars as pl  # faster alternative to pandas
 import numpy as np
 import pyarrow
+import matplotlib
 import matplotlib.pyplot as plt
+# List available font styles
+print(plt.rcParams['font.family'])
+
+# Set to a font that supports the character, e.g., 'Arial Unicode MS'
+plt.rcParams['font.family'] = 'Arial Unicode MS'
+
+# fix matplotlib error
+# matplotlib.rcParams.update(
+#     {
+#         'text.usetex': False,
+#         'font.family': 'stixgeneral',
+#         'mathtext.fontset': 'stix',
+#     }
+# )
 
 fs = pyxet.XetFS()
 
@@ -41,7 +60,27 @@ df_drugs_train.head(10)
 
 df_drugs_train["review"][0]
 
-# |%%--%%| <wgFoMZLF7L|Svziulo8Sh>
+#|%%--%%| <wgFoMZLF7L|dAqe1ERVIx>
+
+print(df_drugs_train.select("rating"))
+
+# create scatter plot
+plt.figure(figsize = (10, 6))
+
+# Remove top and 
+ax = plt.gca()
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+
+# labels
+plt.hist(df_drugs_train.select("rating"))
+plt.title("Predicting `MedHouseval` on `MedInc`")
+plt.xlabel('MedInc')
+plt.ylabel('MedHouseVal')
+plt.legend()
+plt.savefig("images/rating_distribution.png")
+plt.show()
+# |%%--%%| <dAqe1ERVIx|Svziulo8Sh>
 r"""°°°
 ## Data Description / Visualization
 °°°"""
@@ -73,7 +112,44 @@ plt.hist(df_drugs_train['usefulCount'], bins = 100)
 #df_drugs_train.select(['usefulCount']).unique()
 
 
-# |%%--%%| <Sf419kjb0F|668K8p14C1>
+#|%%--%%| <Sf419kjb0F|snB1DM1M8z>
+
+# FOR INTERIM REPORT
+from datasets import load_dataset
+
+dataset = load_dataset("billsum")
+#|%%--%%| <snB1DM1M8z|7NI6RKV0z7>
+
+import re
+
+billsum_train = dataset["train"]
+
+# Example function to remove non-ASCII characters
+def remove_non_ascii(text):
+    return re.sub(r'[^\x00-\x7F]+', '', text)
+
+# Apply this function to your dataset if it's text data
+# Assuming `feature_data` is a list of strings
+cleaned_text = [remove_non_ascii(text) for text in billsum_train["text"]]
+
+#|%%--%%| <7NI6RKV0z7|cPIbIpftsX>
+
+
+
+# Remove top and 
+plt.figure(figsize = (10, 6))
+ax = plt.gca()
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+
+plt.hist(cleaned_text, bins = 30)
+plt.title(f'Distribution of Text Feature')
+plt.xlabel("text")
+plt.ylabel('Frequency')
+# plt.savefig("images/billsum_text_dist.png")
+plt.show()
+
+# |%%--%%| <cPIbIpftsX|668K8p14C1>
 
 print(np.quantile(review_word_count, 0.95))
 print(np.quantile(review_word_count, 0.05)) # 14 words
@@ -153,9 +229,10 @@ r"""°°°
 °°°"""
 # |%%--%%| <usVwDwg3iN|ZoYWry144X>
 
-df_xsum = pl.from_pandas(pd.read_parquet('xet://alt2177/mllm-data/main/data/xsum/predictions.parquet'))
-print(df_xsum.shape)
-df_xsum.head()
+
+# df_xsum = pl.from_pandas(pd.read_parquet('xet://alt2177/mllm-data/main/data/xsum/predictions.parquet'))
+# print(df_xsum.shape)
+# df_xsum.head()
 
 # |%%--%%| <ZoYWry144X|YA2gz70CKy>
 
@@ -167,15 +244,15 @@ r"""°°°
 °°°"""
 # |%%--%%| <OQUCsUjILc|rK67ZRraL8>
 
-files_cnn = fs.ls('xet://alt2177/mllm-data/main/data/cnn_dailymail/1.0.0')
-df_dir = pl.from_dicts(files_cnn)
-print("==================== Current Working Dir ls =====================")
-print(df_dir.head())
-# print(df_dir.select(["name"]).head(1).item())
-df_cnn = pl.from_pandas(pd.read_parquet('xet://{}'.format(df_dir.select(["name"]).head(1).item())))
-# df_cnn = pl.from_pandas(pd.read_parquet('xet://alt2177/mllm-data/main/data/cnn_dailymail/1.0.0/test-00000-of-00001.parquet'))
-print(df_cnn.shape)
-df_cnn.head()
+# files_cnn = fs.ls('xet://alt2177/mllm-data/main/data/cnn_dailymail/1.0.0')
+# df_dir = pl.from_dicts(files_cnn)
+# print("==================== Current Working Dir ls =====================")
+# print(df_dir.head())
+# # print(df_dir.select(["name"]).head(1).item())
+# df_cnn = pl.from_pandas(pd.read_parquet('xet://{}'.format(df_dir.select(["name"]).head(1).item())))
+# # df_cnn = pl.from_pandas(pd.read_parquet('xet://alt2177/mllm-data/main/data/cnn_dailymail/1.0.0/test-00000-of-00001.parquet'))
+# print(df_cnn.shape)
+# df_cnn.head()
 
 # |%%--%%| <rK67ZRraL8|hh7Mst4TfO>
 
