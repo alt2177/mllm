@@ -59,8 +59,8 @@ print("Merge validation:", validation_result)
 test_result = trainer.evaluate(eval_dataset=test_dataset)
 
 f = open("accuracy_merge.txt", "a")
-f.write(f"DARE Ties merge validation results : {validation_result}\n")
-f.write(f"DARE Ties test results : {test_result}\n\n")
+f.write(f"DareTies merge validation results : {validation_result}\n")
+f.write(f"DareTies test results : {test_result}\n\n")
 f.close()
 
 

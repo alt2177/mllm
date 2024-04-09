@@ -28,4 +28,5 @@
 git config user.email "mllm.dev.222@gmail.com"
 git config user.name "mllm-dev"
 #git remote set-url origin https://huggingface.co/mllm-dev/yelp_finetuned_6gpu_full
-python main_experiment.py
+#python main_experiment.py
+python untrained_model.py

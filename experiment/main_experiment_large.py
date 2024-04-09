@@ -110,8 +110,8 @@ def main():
     
     # Save the accuracy of each model for later comparison
     f = open("accuracy_large.txt", "a")
-    f.write(f"Fine tune model {m} : {result}\n")
-    f.write(f"Fine tine model {m} validation result : {validation_result}\n")
+    f.write(f"Fine tune model large : {result}\n")
+    f.write(f"Fine tune model large validation result : {validation_result}\n")
     f.write(f"Fine tune large model accuracy : {eval_result}\n")
     f.close()
 

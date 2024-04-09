@@ -5,7 +5,7 @@
 #SBATCH --nodes=1# Use one node
 #SBATCH --account=sean_mcavoy
 #SBATCH --partition=lambda        # Specify the partition to run on
-#SBATCH --gres=gpu:4                   # Request one GPU
+#SBATCH --gres=gpu:6                   # Request one GPU
 #SBATCH --output=output_merge.log     # Standard output and error log
 #SBATCH --mail-type=END,FAIL           # Send email on job END and FAIL
 #SBATCH --mail-user=sean_mcavoy@berkeley.edu
