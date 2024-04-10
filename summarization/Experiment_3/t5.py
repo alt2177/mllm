@@ -7,6 +7,7 @@ import torch
 import os
 import shutil
 
+
 rouge = evaluate.load("rouge")
 prefix = "summarize: "
 
@@ -30,13 +31,14 @@ def compute_metrics(eval_pred,tokenizer):
 
 def main():
     # set our collective token and HF info
-    access_token = "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" 
+    #access_token = "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" 
+    access_token = "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"
     username = "mllm-dev"
 
     # load and tokenize data
     billsum = load_dataset("billsum", split="ca_test")
     billsum = billsum.train_test_split(test_size=0.2)
-    tokenizer = AutoTokenizer.from_pretrained("google-t5/t5-small", token = access_token)
+    tokenizer = AutoTokenizer.from_pretrained("google-t5/t5-small",token=access_token)
     tokenized_billsum = billsum.map(lambda examples:preprocess_function(examples,tokenizer),batched=True)    
     data_collator = DataCollatorForSeq2Seq(tokenizer=tokenizer) 
     # Start index for the first subset
@@ -61,13 +63,13 @@ def main():
         output_repo = f"t5_f_experiment_{m}"
 
         # Select 5% of the train data for finetuning a specific model
-        #num_of_samples = int(len(tokenized_billsum["train"]) * 0.2)
-        #end_index = start_index + num_of_samples
+        num_of_samples = int(len(tokenized_billsum["train"]) * 0.2)
+        end_index = start_index + num_of_samples
         
-        train_dataset = tokenized_billsum["train"].shuffle(seed=42)
+        train_dataset = tokenized_billsum["train"].shuffle(seed=42).select(range(start_index, end_index))
         eval_dataset = tokenized_billsum["test"].shuffle(seed=42)
         
-        #start_index = end_index
+        start_index = end_index
         
         # Define the size of the validation set (e.g., 20% of the total data)
         validation_size = int(0.2 * len(eval_dataset))
@@ -113,13 +115,15 @@ def main():
             load_best_model_at_end=True,
             hub_model_id=f"{username}/{output_repo}",
             hub_token = access_token,
-            push_to_hub=False
+            push_to_hub=False,
+            report_to="none",
         )
         # Note that currently we use the validation_data as the eval set
         # It doesn't really matter since we get the test results later
         trainer = Seq2SeqTrainer(
             model=model,
             args=training_args,
+            
             train_dataset=train_dataset,
             eval_dataset=validation_dataset,
             tokenizer=tokenizer,
