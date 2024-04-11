@@ -1,2811 +1,0 @@
-2024-03-27 12:59:55.623949: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
-To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-2024-03-27 12:59:58.187764: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
-Downloading readme:   0%|          | 0.00/7.27k [00:00<?, ?B/s]Downloading readme: 100%|██████████| 7.27k/7.27k [00:00<00:00, 4.92MB/s]
-/accounts/grad/phudish_p/.local/lib/python3.11/site-packages/transformers/models/auto/tokenization_auto.py:732: FutureWarning: The `use_auth_token` argument is deprecated and will be removed in v5 of Transformers. Please use `token` instead.
-  warnings.warn(
-Map:   0%|          | 0/989 [00:00<?, ? examples/s]Map: 100%|██████████| 989/989 [00:03<00:00, 294.44 examples/s]Map: 100%|██████████| 989/989 [00:03<00:00, 293.39 examples/s]
-Map:   0%|          | 0/248 [00:00<?, ? examples/s]Map: 100%|██████████| 248/248 [00:00<00:00, 321.05 examples/s]Map: 100%|██████████| 248/248 [00:00<00:00, 319.56 examples/s]
-/accounts/grad/phudish_p/.local/lib/python3.11/site-packages/transformers/modeling_utils.py:2875: FutureWarning: The `use_auth_token` argument is deprecated and will be removed in v5 of Transformers. Please use `token` instead.
-  warnings.warn(
-************TRAINING STARTED*************
-  0%|          | 0/465 [00:00<?, ?it/s]/usr/local/linux/mambaforge-3.11/lib/python3.11/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
-  warnings.warn('Was asked to gather along dimension 0, but all '
-  0%|          | 1/465 [00:24<3:12:21, 24.87s/it]  0%|          | 2/465 [00:25<1:21:29, 10.56s/it]  1%|          | 3/465 [00:25<46:07,  5.99s/it]    1%|          | 4/465 [00:26<29:30,  3.84s/it]  1%|          | 5/465 [00:27<20:23,  2.66s/it]  1%|▏         | 6/465 [00:27<14:52,  1.94s/it]  2%|▏         | 7/465 [00:28<11:49,  1.55s/it]  2%|▏         | 8/465 [00:28<09:24,  1.23s/it]  2%|▏         | 9/465 [00:29<07:45,  1.02s/it]  2%|▏         | 10/465 [00:30<06:38,  1.14it/s]  2%|▏         | 11/465 [00:30<05:53,  1.28it/s]  3%|▎         | 12/465 [00:31<05:22,  1.40it/s]  3%|▎         | 13/465 [00:31<04:58,  1.51it/s]  3%|▎         | 14/465 [00:32<04:43,  1.59it/s]  3%|▎         | 15/465 [00:32<04:54,  1.53it/s]  3%|▎         | 16/465 [00:33<04:40,  1.60it/s]  4%|▎         | 17/465 [00:34<04:31,  1.65it/s]  4%|▍         | 18/465 [00:34<04:25,  1.69it/s]  4%|▍         | 19/465 [00:35<04:18,  1.72it/s]  4%|▍         | 20/465 [00:35<04:14,  1.75it/s]  5%|▍         | 21/465 [00:36<04:10,  1.77it/s]  5%|▍         | 22/465 [00:37<04:32,  1.62it/s]  5%|▍         | 23/465 [00:37<04:25,  1.67it/s]  5%|▌         | 24/465 [00:38<04:18,  1.71it/s]  5%|▌         | 25/465 [00:38<04:15,  1.73it/s]  6%|▌         | 26/465 [00:39<04:11,  1.74it/s]  6%|▌         | 27/465 [00:39<04:07,  1.77it/s]  6%|▌         | 28/465 [00:40<04:05,  1.78it/s]  6%|▌         | 29/465 [00:41<04:20,  1.68it/s]  6%|▋         | 30/465 [00:41<04:14,  1.71it/s]  7%|▋         | 31/465 [00:42<04:03,  1.78it/s]Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
-  0%|          | 0/8 [00:00<?, ?it/s][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 25%|██▌       | 2/8 [00:02<00:07,  1.27s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 38%|███▊      | 3/8 [00:05<00:08,  1.79s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 50%|█████     | 4/8 [00:07<00:08,  2.07s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 62%|██████▎   | 5/8 [00:10<00:06,  2.23s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 75%|███████▌  | 6/8 [00:12<00:04,  2.33s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 88%|████████▊ | 7/8 [00:15<00:02,  2.39s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
-100%|██████████| 8/8 [00:17<00:00,  2.35s/it][A                                                
-                                             [A  7%|▋         | 31/465 [01:16<04:03,  1.78it/s]
-100%|██████████| 8/8 [00:31<00:00,  2.35s/it][A
-                                             [A/usr/local/linux/mambaforge-3.11/lib/python3.11/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
-  warnings.warn('Was asked to gather along dimension 0, but all '
-  7%|▋         | 32/465 [03:58<7:08:41, 59.40s/it]  7%|▋         | 33/465 [03:59<5:00:39, 41.76s/it]  7%|▋         | 34/465 [03:59<3:31:12, 29.40s/it]  8%|▊         | 35/465 [04:00<2:28:46, 20.76s/it]  8%|▊         | 36/465 [04:01<1:45:09, 14.71s/it]  8%|▊         | 37/465 [04:01<1:14:42, 10.47s/it]  8%|▊         | 38/465 [04:02<53:46,  7.56s/it]    8%|▊         | 39/465 [04:03<38:46,  5.46s/it]  9%|▊         | 40/465 [04:03<28:15,  3.99s/it]  9%|▉         | 41/465 [04:04<20:57,  2.97s/it]  9%|▉         | 42/465 [04:04<15:51,  2.25s/it]  9%|▉         | 43/465 [04:05<12:17,  1.75s/it]  9%|▉         | 44/465 [04:05<09:49,  1.40s/it] 10%|▉         | 45/465 [04:06<08:22,  1.20s/it] 10%|▉         | 46/465 [04:07<07:03,  1.01s/it] 10%|█         | 47/465 [04:07<06:07,  1.14it/s] 10%|█         | 48/465 [04:08<05:28,  1.27it/s] 11%|█         | 49/465 [04:08<05:00,  1.38it/s] 11%|█         | 50/465 [04:09<04:39,  1.48it/s] 11%|█         | 51/465 [04:10<04:26,  1.56it/s] 11%|█         | 52/465 [04:10<04:38,  1.49it/s] 11%|█▏        | 53/465 [04:11<04:25,  1.55it/s] 12%|█▏        | 54/465 [04:11<04:14,  1.62it/s] 12%|█▏        | 55/465 [04:12<04:10,  1.63it/s] 12%|█▏        | 56/465 [04:13<04:06,  1.66it/s] 12%|█▏        | 57/465 [04:13<04:02,  1.68it/s] 12%|█▏        | 58/465 [04:14<04:00,  1.69it/s] 13%|█▎        | 59/465 [04:14<03:56,  1.72it/s] 13%|█▎        | 60/465 [04:15<04:20,  1.56it/s] 13%|█▎        | 61/465 [04:16<04:08,  1.63it/s] 13%|█▎        | 62/465 [04:16<03:58,  1.69it/s]Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-{'eval_loss': 6.400322914123535, 'eval_rouge1': 0.3998, 'eval_rouge2': 0.1672, 'eval_rougeL': 0.2188, 'eval_rougeLsum': 0.3449, 'eval_gen_len': 600.0, 'eval_runtime': 34.2204, 'eval_samples_per_second': 7.247, 'eval_steps_per_second': 0.234, 'epoch': 1.0}
-
-  0%|          | 0/8 [00:00<?, ?it/s][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 25%|██▌       | 2/8 [00:02<00:07,  1.31s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 38%|███▊      | 3/8 [00:05<00:09,  1.85s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 50%|█████     | 4/8 [00:07<00:08,  2.13s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 62%|██████▎   | 5/8 [00:10<00:06,  2.29s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 75%|███████▌  | 6/8 [00:13<00:04,  2.40s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 88%|████████▊ | 7/8 [00:15<00:02,  2.46s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
-100%|██████████| 8/8 [00:18<00:00,  2.46s/it][A                                                
-                                             [A 13%|█▎        | 62/465 [04:51<03:58,  1.69it/s]
-100%|██████████| 8/8 [00:32<00:00,  2.46s/it][A
-                                             [A'(MaxRetryError("HTTPSConnectionPool(host='hf-hub-lfs-us-east-1.s3-accelerate.amazonaws.com', port=443): Max retries exceeded with url: /repos/b2/46/b24626c9146af73e73aa519d4a20c1a86b307a35f46032052e370d56f2b91339/6e4f710522795004a270a7efa5a6365f38fd9a34c435f21f2e28bc0bd8ec766b?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2JU7TKAQFN2FTF47%2F20240327%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240327T200437Z&X-Amz-Expires=86400&X-Amz-Signature=1df8c4723a718922dc139edc09f6c73df928f89aeb0864c0a23ee7b6fdb73819&X-Amz-SignedHeaders=host&partNumber=59&uploadId=EtPvm2V9hJ8nDkF6l2zPaFpGdn6Uley6J6m8VZT4fWvRFac8jMAJleKJVDwnUQqZ_gl_3rvmRZtYsVHEXucgykhlU8L0qonR36DmhpEi6igsg3Hcxsk.ABTnoEhArVIb&x-id=UploadPart (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:2393)')))"), '(Request ID: 43168263-59d5-48d0-954a-bda80cde664d)')' thrown while requesting PUT https://hf-hub-lfs-us-east-1.s3-accelerate.amazonaws.com/repos/b2/46/b24626c9146af73e73aa519d4a20c1a86b307a35f46032052e370d56f2b91339/6e4f710522795004a270a7efa5a6365f38fd9a34c435f21f2e28bc0bd8ec766b?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2JU7TKAQFN2FTF47%2F20240327%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240327T200437Z&X-Amz-Expires=86400&X-Amz-Signature=1df8c4723a718922dc139edc09f6c73df928f89aeb0864c0a23ee7b6fdb73819&X-Amz-SignedHeaders=host&partNumber=59&uploadId=EtPvm2V9hJ8nDkF6l2zPaFpGdn6Uley6J6m8VZT4fWvRFac8jMAJleKJVDwnUQqZ_gl_3rvmRZtYsVHEXucgykhlU8L0qonR36DmhpEi6igsg3Hcxsk.ABTnoEhArVIb&x-id=UploadPart
-WARNING:huggingface_hub.utils._http:'(MaxRetryError("HTTPSConnectionPool(host='hf-hub-lfs-us-east-1.s3-accelerate.amazonaws.com', port=443): Max retries exceeded with url: /repos/b2/46/b24626c9146af73e73aa519d4a20c1a86b307a35f46032052e370d56f2b91339/6e4f710522795004a270a7efa5a6365f38fd9a34c435f21f2e28bc0bd8ec766b?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2JU7TKAQFN2FTF47%2F20240327%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240327T200437Z&X-Amz-Expires=86400&X-Amz-Signature=1df8c4723a718922dc139edc09f6c73df928f89aeb0864c0a23ee7b6fdb73819&X-Amz-SignedHeaders=host&partNumber=59&uploadId=EtPvm2V9hJ8nDkF6l2zPaFpGdn6Uley6J6m8VZT4fWvRFac8jMAJleKJVDwnUQqZ_gl_3rvmRZtYsVHEXucgykhlU8L0qonR36DmhpEi6igsg3Hcxsk.ABTnoEhArVIb&x-id=UploadPart (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:2393)')))"), '(Request ID: 43168263-59d5-48d0-954a-bda80cde664d)')' thrown while requesting PUT https://hf-hub-lfs-us-east-1.s3-accelerate.amazonaws.com/repos/b2/46/b24626c9146af73e73aa519d4a20c1a86b307a35f46032052e370d56f2b91339/6e4f710522795004a270a7efa5a6365f38fd9a34c435f21f2e28bc0bd8ec766b?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2JU7TKAQFN2FTF47%2F20240327%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240327T200437Z&X-Amz-Expires=86400&X-Amz-Signature=1df8c4723a718922dc139edc09f6c73df928f89aeb0864c0a23ee7b6fdb73819&X-Amz-SignedHeaders=host&partNumber=59&uploadId=EtPvm2V9hJ8nDkF6l2zPaFpGdn6Uley6J6m8VZT4fWvRFac8jMAJleKJVDwnUQqZ_gl_3rvmRZtYsVHEXucgykhlU8L0qonR36DmhpEi6igsg3Hcxsk.ABTnoEhArVIb&x-id=UploadPart
-Retrying in 1s [Retry 1/5].
-WARNING:huggingface_hub.utils._http:Retrying in 1s [Retry 1/5].
-/usr/local/linux/mambaforge-3.11/lib/python3.11/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
-  warnings.warn('Was asked to gather along dimension 0, but all '
- 14%|█▎        | 63/465 [06:54<5:19:48, 47.73s/it] 14%|█▍        | 64/465 [06:55<3:44:26, 33.58s/it] 14%|█▍        | 65/465 [06:55<2:37:51, 23.68s/it] 14%|█▍        | 66/465 [06:56<1:51:20, 16.74s/it] 14%|█▍        | 67/465 [06:56<1:18:54, 11.89s/it] 15%|█▍        | 68/465 [06:57<56:13,  8.50s/it]   15%|█▍        | 69/465 [06:58<40:43,  6.17s/it] 15%|█▌        | 70/465 [06:58<29:31,  4.49s/it] 15%|█▌        | 71/465 [06:59<21:46,  3.32s/it] 15%|█▌        | 72/465 [06:59<16:18,  2.49s/it] 16%|█▌        | 73/465 [07:00<12:28,  1.91s/it] 16%|█▌        | 74/465 [07:00<09:49,  1.51s/it] 16%|█▌        | 75/465 [07:01<07:56,  1.22s/it] 16%|█▋        | 76/465 [07:02<07:00,  1.08s/it] 17%|█▋        | 77/465 [07:02<05:58,  1.08it/s] 17%|█▋        | 78/465 [07:03<05:16,  1.22it/s] 17%|█▋        | 79/465 [07:03<04:44,  1.36it/s] 17%|█▋        | 80/465 [07:04<04:23,  1.46it/s] 17%|█▋        | 81/465 [07:05<04:11,  1.53it/s] 18%|█▊        | 82/465 [07:05<03:59,  1.60it/s] 18%|█▊        | 83/465 [07:06<03:52,  1.65it/s] 18%|█▊        | 84/465 [07:06<03:47,  1.68it/s] 18%|█▊        | 85/465 [07:07<03:45,  1.69it/s] 18%|█▊        | 86/465 [07:08<04:03,  1.56it/s] 19%|█▊        | 87/465 [07:08<03:56,  1.60it/s] 19%|█▉        | 88/465 [07:09<03:51,  1.63it/s] 19%|█▉        | 89/465 [07:09<03:48,  1.65it/s] 19%|█▉        | 90/465 [07:10<03:44,  1.67it/s] 20%|█▉        | 91/465 [07:10<03:38,  1.71it/s] 20%|█▉        | 92/465 [07:11<03:39,  1.70it/s] 20%|██        | 93/465 [07:12<03:32,  1.75it/s]Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-{'eval_loss': 6.197171688079834, 'eval_rouge1': 0.4092, 'eval_rouge2': 0.1715, 'eval_rougeL': 0.2241, 'eval_rougeLsum': 0.3526, 'eval_gen_len': 600.0, 'eval_runtime': 34.6438, 'eval_samples_per_second': 7.159, 'eval_steps_per_second': 0.231, 'epoch': 2.0}
-
-  0%|          | 0/8 [00:00<?, ?it/s][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 25%|██▌       | 2/8 [00:02<00:08,  1.35s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 38%|███▊      | 3/8 [00:05<00:09,  1.84s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 50%|█████     | 4/8 [00:07<00:08,  2.10s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 62%|██████▎   | 5/8 [00:10<00:06,  2.25s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 75%|███████▌  | 6/8 [00:12<00:04,  2.34s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 88%|████████▊ | 7/8 [00:15<00:02,  2.40s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
-100%|██████████| 8/8 [00:17<00:00,  2.30s/it][A                                                
-                                             [A 20%|██        | 93/465 [07:46<03:32,  1.75it/s]
-100%|██████████| 8/8 [00:31<00:00,  2.30s/it][A
-                                             [A/usr/local/linux/mambaforge-3.11/lib/python3.11/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
-  warnings.warn('Was asked to gather along dimension 0, but all '
- 20%|██        | 94/465 [10:40<6:28:30, 62.83s/it] 20%|██        | 95/465 [10:40<4:32:17, 44.15s/it] 21%|██        | 96/465 [10:41<3:11:08, 31.08s/it] 21%|██        | 97/465 [10:42<2:14:54, 22.00s/it] 21%|██        | 98/465 [10:42<1:35:12, 15.57s/it] 21%|██▏       | 99/465 [10:43<1:07:30, 11.07s/it] 22%|██▏       | 100/465 [10:43<48:08,  7.91s/it]  22%|██▏       | 101/465 [10:44<34:37,  5.71s/it] 22%|██▏       | 102/465 [10:44<25:12,  4.17s/it] 22%|██▏       | 103/465 [10:45<18:40,  3.10s/it] 22%|██▏       | 104/465 [10:46<14:05,  2.34s/it] 23%|██▎       | 105/465 [10:46<10:51,  1.81s/it] 23%|██▎       | 106/465 [10:47<08:54,  1.49s/it] 23%|██▎       | 107/465 [10:47<07:14,  1.21s/it] 23%|██▎       | 108/465 [10:48<06:05,  1.02s/it] 23%|██▎       | 109/465 [10:49<05:15,  1.13it/s] 24%|██▎       | 110/465 [10:49<04:42,  1.26it/s] 24%|██▍       | 111/465 [10:50<04:18,  1.37it/s] 24%|██▍       | 112/465 [10:50<04:02,  1.45it/s] 24%|██▍       | 113/465 [10:51<03:49,  1.54it/s] 25%|██▍       | 114/465 [10:52<03:39,  1.60it/s] 25%|██▍       | 115/465 [10:52<03:51,  1.51it/s] 25%|██▍       | 116/465 [10:53<03:41,  1.58it/s] 25%|██▌       | 117/465 [10:53<03:34,  1.62it/s] 25%|██▌       | 118/465 [10:54<03:30,  1.65it/s] 26%|██▌       | 119/465 [10:55<03:23,  1.70it/s] 26%|██▌       | 120/465 [10:55<03:23,  1.69it/s] 26%|██▌       | 121/465 [10:56<03:21,  1.71it/s] 26%|██▌       | 122/465 [10:56<03:21,  1.71it/s] 26%|██▋       | 123/465 [10:57<03:18,  1.72it/s] 27%|██▋       | 124/465 [10:58<03:35,  1.58it/s]Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-{'eval_loss': 6.118707656860352, 'eval_rouge1': 0.3997, 'eval_rouge2': 0.1673, 'eval_rougeL': 0.2187, 'eval_rougeLsum': 0.3447, 'eval_gen_len': 600.0, 'eval_runtime': 34.107, 'eval_samples_per_second': 7.271, 'eval_steps_per_second': 0.235, 'epoch': 3.0}
-
-  0%|          | 0/8 [00:00<?, ?it/s][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 25%|██▌       | 2/8 [00:02<00:07,  1.32s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 38%|███▊      | 3/8 [00:05<00:09,  1.86s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 50%|█████     | 4/8 [00:07<00:08,  2.14s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 62%|██████▎   | 5/8 [00:10<00:06,  2.33s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 75%|███████▌  | 6/8 [00:13<00:04,  2.43s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 88%|████████▊ | 7/8 [00:15<00:02,  2.49s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
-100%|██████████| 8/8 [00:18<00:00,  2.42s/it][A                                                 
-                                             [A 27%|██▋       | 124/465 [11:33<03:35,  1.58it/s]
-100%|██████████| 8/8 [00:32<00:00,  2.42s/it][A
-                                             [A'(MaxRetryError("HTTPSConnectionPool(host='hf-hub-lfs-us-east-1.s3-accelerate.amazonaws.com', port=443): Max retries exceeded with url: /repos/b2/46/b24626c9146af73e73aa519d4a20c1a86b307a35f46032052e370d56f2b91339/4d5cc73e6013e42e6d7f25c6db1e8dba47172e2349570d6434bab932ce65e151?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2JU7TKAQFN2FTF47%2F20240327%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240327T201118Z&X-Amz-Expires=86400&X-Amz-Signature=624e8288a73c1d7ebe5d94834e57eac88ae2d9215ddb6878db7ce1ecfa7a1420&X-Amz-SignedHeaders=host&partNumber=71&uploadId=3dTvWqpniGrL7d6R3YIuDBNVIuPyeltdGywOLYz.ElBYy9BwWGV9mqhQAMypwStF0gdfzdNoYZaSwrs8V0qEXEc_9Wr3tPIF8pkLehjGGyetZ4b.rlsIuq0DKNWTroV6&x-id=UploadPart (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:2393)')))"), '(Request ID: 2bac47e3-7a7d-495b-8418-6370f6671654)')' thrown while requesting PUT https://hf-hub-lfs-us-east-1.s3-accelerate.amazonaws.com/repos/b2/46/b24626c9146af73e73aa519d4a20c1a86b307a35f46032052e370d56f2b91339/4d5cc73e6013e42e6d7f25c6db1e8dba47172e2349570d6434bab932ce65e151?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2JU7TKAQFN2FTF47%2F20240327%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240327T201118Z&X-Amz-Expires=86400&X-Amz-Signature=624e8288a73c1d7ebe5d94834e57eac88ae2d9215ddb6878db7ce1ecfa7a1420&X-Amz-SignedHeaders=host&partNumber=71&uploadId=3dTvWqpniGrL7d6R3YIuDBNVIuPyeltdGywOLYz.ElBYy9BwWGV9mqhQAMypwStF0gdfzdNoYZaSwrs8V0qEXEc_9Wr3tPIF8pkLehjGGyetZ4b.rlsIuq0DKNWTroV6&x-id=UploadPart
-WARNING:huggingface_hub.utils._http:'(MaxRetryError("HTTPSConnectionPool(host='hf-hub-lfs-us-east-1.s3-accelerate.amazonaws.com', port=443): Max retries exceeded with url: /repos/b2/46/b24626c9146af73e73aa519d4a20c1a86b307a35f46032052e370d56f2b91339/4d5cc73e6013e42e6d7f25c6db1e8dba47172e2349570d6434bab932ce65e151?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2JU7TKAQFN2FTF47%2F20240327%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240327T201118Z&X-Amz-Expires=86400&X-Amz-Signature=624e8288a73c1d7ebe5d94834e57eac88ae2d9215ddb6878db7ce1ecfa7a1420&X-Amz-SignedHeaders=host&partNumber=71&uploadId=3dTvWqpniGrL7d6R3YIuDBNVIuPyeltdGywOLYz.ElBYy9BwWGV9mqhQAMypwStF0gdfzdNoYZaSwrs8V0qEXEc_9Wr3tPIF8pkLehjGGyetZ4b.rlsIuq0DKNWTroV6&x-id=UploadPart (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:2393)')))"), '(Request ID: 2bac47e3-7a7d-495b-8418-6370f6671654)')' thrown while requesting PUT https://hf-hub-lfs-us-east-1.s3-accelerate.amazonaws.com/repos/b2/46/b24626c9146af73e73aa519d4a20c1a86b307a35f46032052e370d56f2b91339/4d5cc73e6013e42e6d7f25c6db1e8dba47172e2349570d6434bab932ce65e151?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2JU7TKAQFN2FTF47%2F20240327%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240327T201118Z&X-Amz-Expires=86400&X-Amz-Signature=624e8288a73c1d7ebe5d94834e57eac88ae2d9215ddb6878db7ce1ecfa7a1420&X-Amz-SignedHeaders=host&partNumber=71&uploadId=3dTvWqpniGrL7d6R3YIuDBNVIuPyeltdGywOLYz.ElBYy9BwWGV9mqhQAMypwStF0gdfzdNoYZaSwrs8V0qEXEc_9Wr3tPIF8pkLehjGGyetZ4b.rlsIuq0DKNWTroV6&x-id=UploadPart
-Retrying in 1s [Retry 1/5].
-WARNING:huggingface_hub.utils._http:Retrying in 1s [Retry 1/5].
-/usr/local/linux/mambaforge-3.11/lib/python3.11/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
-  warnings.warn('Was asked to gather along dimension 0, but all '
- 27%|██▋       | 125/465 [13:36<4:31:25, 47.90s/it] 27%|██▋       | 126/465 [13:36<3:10:23, 33.70s/it] 27%|██▋       | 127/465 [13:37<2:13:54, 23.77s/it] 28%|██▊       | 128/465 [13:38<1:34:23, 16.81s/it] 28%|██▊       | 129/465 [13:38<1:06:49, 11.93s/it] 28%|██▊       | 130/465 [13:39<47:35,  8.52s/it]   28%|██▊       | 131/465 [13:39<34:09,  6.14s/it] 28%|██▊       | 132/465 [13:40<24:49,  4.47s/it] 29%|██▊       | 133/465 [13:41<18:36,  3.36s/it] 29%|██▉       | 134/465 [13:41<13:54,  2.52s/it] 29%|██▉       | 135/465 [13:42<10:38,  1.93s/it] 29%|██▉       | 136/465 [13:42<08:20,  1.52s/it] 29%|██▉       | 137/465 [13:43<06:44,  1.23s/it] 30%|██▉       | 138/465 [13:43<05:40,  1.04s/it] 30%|██▉       | 139/465 [13:44<04:52,  1.12it/s] 30%|███       | 140/465 [13:45<04:20,  1.25it/s] 30%|███       | 141/465 [13:45<04:16,  1.27it/s] 31%|███       | 142/465 [13:46<03:54,  1.38it/s] 31%|███       | 143/465 [13:46<03:37,  1.48it/s] 31%|███       | 144/465 [13:47<03:26,  1.56it/s] 31%|███       | 145/465 [13:48<03:18,  1.61it/s] 31%|███▏      | 146/465 [13:48<03:12,  1.66it/s] 32%|███▏      | 147/465 [13:49<03:07,  1.69it/s] 32%|███▏      | 148/465 [13:49<03:02,  1.74it/s] 32%|███▏      | 149/465 [13:50<03:14,  1.62it/s] 32%|███▏      | 150/465 [13:51<03:07,  1.68it/s] 32%|███▏      | 151/465 [13:51<03:04,  1.70it/s] 33%|███▎      | 152/465 [13:52<03:02,  1.72it/s] 33%|███▎      | 153/465 [13:52<03:00,  1.73it/s] 33%|███▎      | 154/465 [13:53<02:57,  1.75it/s] 33%|███▎      | 155/465 [13:53<02:53,  1.79it/s]Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-{'eval_loss': 6.087508201599121, 'eval_rouge1': 0.4, 'eval_rouge2': 0.1676, 'eval_rougeL': 0.219, 'eval_rougeLsum': 0.3451, 'eval_gen_len': 600.0, 'eval_runtime': 34.99, 'eval_samples_per_second': 7.088, 'eval_steps_per_second': 0.229, 'epoch': 4.0}
-
-  0%|          | 0/8 [00:00<?, ?it/s][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 25%|██▌       | 2/8 [00:02<00:08,  1.36s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 38%|███▊      | 3/8 [00:05<00:09,  1.85s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 50%|█████     | 4/8 [00:07<00:08,  2.10s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 62%|██████▎   | 5/8 [00:10<00:06,  2.26s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 75%|███████▌  | 6/8 [00:12<00:04,  2.35s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 88%|████████▊ | 7/8 [00:15<00:02,  2.41s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
-100%|██████████| 8/8 [00:17<00:00,  2.30s/it][A                                                 
-                                             [A 33%|███▎      | 155/465 [14:27<02:53,  1.79it/s]
-100%|██████████| 8/8 [00:31<00:00,  2.30s/it][A
-                                             [A/usr/local/linux/mambaforge-3.11/lib/python3.11/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
-  warnings.warn('Was asked to gather along dimension 0, but all '
- 34%|███▎      | 156/465 [17:11<5:06:52, 59.59s/it] 34%|███▍      | 157/465 [17:11<3:34:59, 41.88s/it] 34%|███▍      | 158/465 [17:12<2:31:14, 29.56s/it] 34%|███▍      | 159/465 [17:13<1:46:23, 20.86s/it] 34%|███▍      | 160/465 [17:13<1:15:06, 14.78s/it] 35%|███▍      | 161/465 [17:14<53:16, 10.51s/it]   35%|███▍      | 162/465 [17:14<38:02,  7.53s/it] 35%|███▌      | 163/465 [17:15<27:25,  5.45s/it] 35%|███▌      | 164/465 [17:15<20:01,  3.99s/it] 35%|███▌      | 165/465 [17:16<15:04,  3.02s/it] 36%|███▌      | 166/465 [17:17<11:23,  2.29s/it] 36%|███▌      | 167/465 [17:17<08:48,  1.77s/it] 36%|███▌      | 168/465 [17:18<06:59,  1.41s/it] 36%|███▋      | 169/465 [17:19<05:44,  1.17s/it] 37%|███▋      | 170/465 [17:19<04:53,  1.01it/s] 37%|███▋      | 171/465 [17:20<04:14,  1.15it/s] 37%|███▋      | 172/465 [17:20<03:59,  1.22it/s] 37%|███▋      | 173/465 [17:21<03:38,  1.34it/s] 37%|███▋      | 174/465 [17:22<03:24,  1.42it/s] 38%|███▊      | 175/465 [17:22<03:12,  1.51it/s] 38%|███▊      | 176/465 [17:23<03:03,  1.58it/s] 38%|███▊      | 177/465 [17:23<02:57,  1.62it/s] 38%|███▊      | 178/465 [17:24<02:53,  1.65it/s] 38%|███▊      | 179/465 [17:25<03:00,  1.59it/s] 39%|███▊      | 180/465 [17:25<02:54,  1.63it/s] 39%|███▉      | 181/465 [17:26<02:50,  1.66it/s] 39%|███▉      | 182/465 [17:26<02:47,  1.69it/s] 39%|███▉      | 183/465 [17:27<02:44,  1.72it/s] 40%|███▉      | 184/465 [17:27<02:42,  1.72it/s] 40%|███▉      | 185/465 [17:28<02:43,  1.72it/s] 40%|████      | 186/465 [17:29<02:43,  1.71it/s]Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-{'eval_loss': 6.069467544555664, 'eval_rouge1': 0.3999, 'eval_rouge2': 0.1674, 'eval_rougeL': 0.2189, 'eval_rougeLsum': 0.3449, 'eval_gen_len': 600.0, 'eval_runtime': 33.9661, 'eval_samples_per_second': 7.301, 'eval_steps_per_second': 0.236, 'epoch': 5.0}
-
-  0%|          | 0/8 [00:00<?, ?it/s][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 25%|██▌       | 2/8 [00:02<00:07,  1.30s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 38%|███▊      | 3/8 [00:05<00:09,  1.85s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 50%|█████     | 4/8 [00:07<00:08,  2.14s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 62%|██████▎   | 5/8 [00:10<00:06,  2.31s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 75%|███████▌  | 6/8 [00:13<00:04,  2.40s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 88%|████████▊ | 7/8 [00:15<00:02,  2.48s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
-100%|██████████| 8/8 [00:17<00:00,  2.40s/it][A                                                 
-                                             [A 40%|████      | 186/465 [18:03<02:43,  1.71it/s]
-100%|██████████| 8/8 [00:32<00:00,  2.40s/it][A
-                                             [A'(MaxRetryError("HTTPSConnectionPool(host='hf-hub-lfs-us-east-1.s3-accelerate.amazonaws.com', port=443): Max retries exceeded with url: /repos/b2/46/b24626c9146af73e73aa519d4a20c1a86b307a35f46032052e370d56f2b91339/d6a31ef0dfe2071ba290b51133b82accd331524af30d8fb350be3026d39726bf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2JU7TKAQFN2FTF47%2F20240327%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240327T201748Z&X-Amz-Expires=86400&X-Amz-Signature=7ef711a082c7ad2e517b75f6da86e04737cd00d12d9ef28fb8db5b066dfb8dc6&X-Amz-SignedHeaders=host&partNumber=66&uploadId=2EZxKny3vGeyD2Z.WP3e5GFcKB8X_Z_3MiBx4FxvSiT1Zta_Ozmjh06K9MJbxHTI8x1Bi_.K3TAEsShUMCVtcl02e7aRKhB9xdpeBacrrzVQk5Je23QJ_eEa.KXxCw91&x-id=UploadPart (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:2393)')))"), '(Request ID: 10b326d9-5419-41c9-a091-04d1cb1d0b98)')' thrown while requesting PUT https://hf-hub-lfs-us-east-1.s3-accelerate.amazonaws.com/repos/b2/46/b24626c9146af73e73aa519d4a20c1a86b307a35f46032052e370d56f2b91339/d6a31ef0dfe2071ba290b51133b82accd331524af30d8fb350be3026d39726bf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2JU7TKAQFN2FTF47%2F20240327%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240327T201748Z&X-Amz-Expires=86400&X-Amz-Signature=7ef711a082c7ad2e517b75f6da86e04737cd00d12d9ef28fb8db5b066dfb8dc6&X-Amz-SignedHeaders=host&partNumber=66&uploadId=2EZxKny3vGeyD2Z.WP3e5GFcKB8X_Z_3MiBx4FxvSiT1Zta_Ozmjh06K9MJbxHTI8x1Bi_.K3TAEsShUMCVtcl02e7aRKhB9xdpeBacrrzVQk5Je23QJ_eEa.KXxCw91&x-id=UploadPart
-WARNING:huggingface_hub.utils._http:'(MaxRetryError("HTTPSConnectionPool(host='hf-hub-lfs-us-east-1.s3-accelerate.amazonaws.com', port=443): Max retries exceeded with url: /repos/b2/46/b24626c9146af73e73aa519d4a20c1a86b307a35f46032052e370d56f2b91339/d6a31ef0dfe2071ba290b51133b82accd331524af30d8fb350be3026d39726bf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2JU7TKAQFN2FTF47%2F20240327%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240327T201748Z&X-Amz-Expires=86400&X-Amz-Signature=7ef711a082c7ad2e517b75f6da86e04737cd00d12d9ef28fb8db5b066dfb8dc6&X-Amz-SignedHeaders=host&partNumber=66&uploadId=2EZxKny3vGeyD2Z.WP3e5GFcKB8X_Z_3MiBx4FxvSiT1Zta_Ozmjh06K9MJbxHTI8x1Bi_.K3TAEsShUMCVtcl02e7aRKhB9xdpeBacrrzVQk5Je23QJ_eEa.KXxCw91&x-id=UploadPart (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:2393)')))"), '(Request ID: 10b326d9-5419-41c9-a091-04d1cb1d0b98)')' thrown while requesting PUT https://hf-hub-lfs-us-east-1.s3-accelerate.amazonaws.com/repos/b2/46/b24626c9146af73e73aa519d4a20c1a86b307a35f46032052e370d56f2b91339/d6a31ef0dfe2071ba290b51133b82accd331524af30d8fb350be3026d39726bf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2JU7TKAQFN2FTF47%2F20240327%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240327T201748Z&X-Amz-Expires=86400&X-Amz-Signature=7ef711a082c7ad2e517b75f6da86e04737cd00d12d9ef28fb8db5b066dfb8dc6&X-Amz-SignedHeaders=host&partNumber=66&uploadId=2EZxKny3vGeyD2Z.WP3e5GFcKB8X_Z_3MiBx4FxvSiT1Zta_Ozmjh06K9MJbxHTI8x1Bi_.K3TAEsShUMCVtcl02e7aRKhB9xdpeBacrrzVQk5Je23QJ_eEa.KXxCw91&x-id=UploadPart
-Retrying in 1s [Retry 1/5].
-WARNING:huggingface_hub.utils._http:Retrying in 1s [Retry 1/5].
-/usr/local/linux/mambaforge-3.11/lib/python3.11/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
-  warnings.warn('Was asked to gather along dimension 0, but all '
- 40%|████      | 187/465 [20:06<3:41:08, 47.73s/it] 40%|████      | 188/465 [20:07<2:35:17, 33.64s/it] 41%|████      | 189/465 [20:08<1:49:06, 23.72s/it] 41%|████      | 190/465 [20:08<1:16:52, 16.77s/it] 41%|████      | 191/465 [20:09<54:21, 11.91s/it]   41%|████▏     | 192/465 [20:09<38:42,  8.51s/it] 42%|████▏     | 193/465 [20:10<27:45,  6.12s/it] 42%|████▏     | 194/465 [20:10<20:07,  4.45s/it] 42%|████▏     | 195/465 [20:11<15:02,  3.34s/it] 42%|████▏     | 196/465 [20:12<11:15,  2.51s/it] 42%|████▏     | 197/465 [20:12<08:36,  1.93s/it] 43%|████▎     | 198/465 [20:13<06:45,  1.52s/it] 43%|████▎     | 199/465 [20:13<05:28,  1.23s/it] 43%|████▎     | 200/465 [20:14<04:32,  1.03s/it] 43%|████▎     | 201/465 [20:15<03:57,  1.11it/s] 43%|████▎     | 202/465 [20:15<03:30,  1.25it/s] 44%|████▎     | 203/465 [20:16<03:11,  1.37it/s] 44%|████▍     | 204/465 [20:16<03:00,  1.45it/s] 44%|████▍     | 205/465 [20:17<03:05,  1.40it/s] 44%|████▍     | 206/465 [20:18<02:53,  1.49it/s] 45%|████▍     | 207/465 [20:18<02:44,  1.57it/s] 45%|████▍     | 208/465 [20:19<02:37,  1.63it/s] 45%|████▍     | 209/465 [20:19<02:32,  1.68it/s] 45%|████▌     | 210/465 [20:20<02:29,  1.70it/s] 45%|████▌     | 211/465 [20:21<02:27,  1.72it/s] 46%|████▌     | 212/465 [20:21<02:25,  1.74it/s] 46%|████▌     | 213/465 [20:22<02:23,  1.75it/s] 46%|████▌     | 214/465 [20:22<02:38,  1.59it/s] 46%|████▌     | 215/465 [20:23<02:31,  1.65it/s] 46%|████▋     | 216/465 [20:24<02:27,  1.68it/s] 47%|████▋     | 217/465 [20:24<02:22,  1.75it/s]Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-{'eval_loss': 6.058210372924805, 'eval_rouge1': 0.3997, 'eval_rouge2': 0.1674, 'eval_rougeL': 0.2188, 'eval_rougeLsum': 0.3446, 'eval_gen_len': 600.0, 'eval_runtime': 34.8589, 'eval_samples_per_second': 7.114, 'eval_steps_per_second': 0.229, 'epoch': 6.0}
-
-  0%|          | 0/8 [00:00<?, ?it/s][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 25%|██▌       | 2/8 [00:02<00:07,  1.26s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 38%|███▊      | 3/8 [00:05<00:08,  1.79s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 50%|█████     | 4/8 [00:07<00:08,  2.07s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 62%|██████▎   | 5/8 [00:10<00:06,  2.23s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 75%|███████▌  | 6/8 [00:12<00:04,  2.33s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 88%|████████▊ | 7/8 [00:15<00:02,  2.45s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
-100%|██████████| 8/8 [00:17<00:00,  2.33s/it][A                                                 
-                                             [A 47%|████▋     | 217/465 [20:58<02:22,  1.75it/s]
-100%|██████████| 8/8 [00:31<00:00,  2.33s/it][A
-                                             [A/usr/local/linux/mambaforge-3.11/lib/python3.11/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
-  warnings.warn('Was asked to gather along dimension 0, but all '
- 47%|████▋     | 218/465 [23:42<4:05:44, 59.69s/it] 47%|████▋     | 219/465 [23:42<2:52:01, 41.96s/it] 47%|████▋     | 220/465 [23:43<2:00:36, 29.54s/it] 48%|████▊     | 221/465 [23:43<1:24:45, 20.84s/it] 48%|████▊     | 222/465 [23:44<59:46, 14.76s/it]   48%|████▊     | 223/465 [23:44<42:21, 10.50s/it] 48%|████▊     | 224/465 [23:45<30:13,  7.52s/it] 48%|████▊     | 225/465 [23:46<21:45,  5.44s/it] 49%|████▊     | 226/465 [23:46<16:02,  4.03s/it] 49%|████▉     | 227/465 [23:47<11:50,  2.98s/it] 49%|████▉     | 228/465 [23:47<08:55,  2.26s/it] 49%|████▉     | 229/465 [23:48<06:54,  1.76s/it] 49%|████▉     | 230/465 [23:49<05:29,  1.40s/it] 50%|████▉     | 231/465 [23:49<04:30,  1.15s/it] 50%|████▉     | 232/465 [23:50<03:46,  1.03it/s] 50%|█████     | 233/465 [23:50<03:17,  1.18it/s] 50%|█████     | 234/465 [23:51<02:56,  1.31it/s] 51%|█████     | 235/465 [23:52<02:44,  1.40it/s] 51%|█████     | 236/465 [23:52<02:33,  1.49it/s] 51%|█████     | 237/465 [23:53<02:26,  1.55it/s] 51%|█████     | 238/465 [23:53<02:20,  1.61it/s] 51%|█████▏    | 239/465 [23:54<02:16,  1.66it/s] 52%|█████▏    | 240/465 [23:54<02:12,  1.70it/s] 52%|█████▏    | 241/465 [23:55<02:11,  1.71it/s] 52%|█████▏    | 242/465 [23:55<02:09,  1.73it/s] 52%|█████▏    | 243/465 [23:56<02:07,  1.74it/s] 52%|█████▏    | 244/465 [23:57<02:18,  1.60it/s] 53%|█████▎    | 245/465 [23:57<02:14,  1.64it/s] 53%|█████▎    | 246/465 [23:58<02:10,  1.68it/s] 53%|█████▎    | 247/465 [23:59<02:10,  1.67it/s] 53%|█████▎    | 248/465 [23:59<02:04,  1.74it/s]Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-{'eval_loss': 6.04926872253418, 'eval_rouge1': 0.3998, 'eval_rouge2': 0.1673, 'eval_rougeL': 0.2188, 'eval_rougeLsum': 0.3449, 'eval_gen_len': 600.0, 'eval_runtime': 34.0483, 'eval_samples_per_second': 7.284, 'eval_steps_per_second': 0.235, 'epoch': 7.0}
-
-  0%|          | 0/8 [00:00<?, ?it/s][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 25%|██▌       | 2/8 [00:02<00:07,  1.29s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 38%|███▊      | 3/8 [00:05<00:09,  1.84s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 50%|█████     | 4/8 [00:07<00:08,  2.12s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 62%|██████▎   | 5/8 [00:10<00:07,  2.36s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 75%|███████▌  | 6/8 [00:13<00:04,  2.44s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 88%|████████▊ | 7/8 [00:15<00:02,  2.50s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
-100%|██████████| 8/8 [00:18<00:00,  2.43s/it][A                                                 
-                                             [A 53%|█████▎    | 248/465 [24:34<02:04,  1.74it/s]
-100%|██████████| 8/8 [00:32<00:00,  2.43s/it][A
-                                             [A'(MaxRetryError("HTTPSConnectionPool(host='hf-hub-lfs-us-east-1.s3-accelerate.amazonaws.com', port=443): Max retries exceeded with url: /repos/b2/46/b24626c9146af73e73aa519d4a20c1a86b307a35f46032052e370d56f2b91339/3ea33f4a2934a99c9e36232c4f75084a1d7514451d5859f1cec76638b47a3f84?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2JU7TKAQFN2FTF47%2F20240327%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240327T202423Z&X-Amz-Expires=86400&X-Amz-Signature=f7ab87b1c3b951844edeb6642e07996bc00304affaff5f10fcc83e60c1081170&X-Amz-SignedHeaders=host&partNumber=57&uploadId=5LFD2Sp0DNDw3PU2Szr0ak0O0Q2MCgzRjiDNj4XYqprJPsPr82pIfo4tQUAV1lo0X2IVYKbKEBwKgeS6lCTwfjhWKeYAnFAhDOO0CSM7e6UiTroGCGFJd3FCPprfDzfj&x-id=UploadPart (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:2393)')))"), '(Request ID: 0fd993df-a966-41c0-85b9-995b1da6ff9f)')' thrown while requesting PUT https://hf-hub-lfs-us-east-1.s3-accelerate.amazonaws.com/repos/b2/46/b24626c9146af73e73aa519d4a20c1a86b307a35f46032052e370d56f2b91339/3ea33f4a2934a99c9e36232c4f75084a1d7514451d5859f1cec76638b47a3f84?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2JU7TKAQFN2FTF47%2F20240327%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240327T202423Z&X-Amz-Expires=86400&X-Amz-Signature=f7ab87b1c3b951844edeb6642e07996bc00304affaff5f10fcc83e60c1081170&X-Amz-SignedHeaders=host&partNumber=57&uploadId=5LFD2Sp0DNDw3PU2Szr0ak0O0Q2MCgzRjiDNj4XYqprJPsPr82pIfo4tQUAV1lo0X2IVYKbKEBwKgeS6lCTwfjhWKeYAnFAhDOO0CSM7e6UiTroGCGFJd3FCPprfDzfj&x-id=UploadPart
-WARNING:huggingface_hub.utils._http:'(MaxRetryError("HTTPSConnectionPool(host='hf-hub-lfs-us-east-1.s3-accelerate.amazonaws.com', port=443): Max retries exceeded with url: /repos/b2/46/b24626c9146af73e73aa519d4a20c1a86b307a35f46032052e370d56f2b91339/3ea33f4a2934a99c9e36232c4f75084a1d7514451d5859f1cec76638b47a3f84?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2JU7TKAQFN2FTF47%2F20240327%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240327T202423Z&X-Amz-Expires=86400&X-Amz-Signature=f7ab87b1c3b951844edeb6642e07996bc00304affaff5f10fcc83e60c1081170&X-Amz-SignedHeaders=host&partNumber=57&uploadId=5LFD2Sp0DNDw3PU2Szr0ak0O0Q2MCgzRjiDNj4XYqprJPsPr82pIfo4tQUAV1lo0X2IVYKbKEBwKgeS6lCTwfjhWKeYAnFAhDOO0CSM7e6UiTroGCGFJd3FCPprfDzfj&x-id=UploadPart (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:2393)')))"), '(Request ID: 0fd993df-a966-41c0-85b9-995b1da6ff9f)')' thrown while requesting PUT https://hf-hub-lfs-us-east-1.s3-accelerate.amazonaws.com/repos/b2/46/b24626c9146af73e73aa519d4a20c1a86b307a35f46032052e370d56f2b91339/3ea33f4a2934a99c9e36232c4f75084a1d7514451d5859f1cec76638b47a3f84?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2JU7TKAQFN2FTF47%2F20240327%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240327T202423Z&X-Amz-Expires=86400&X-Amz-Signature=f7ab87b1c3b951844edeb6642e07996bc00304affaff5f10fcc83e60c1081170&X-Amz-SignedHeaders=host&partNumber=57&uploadId=5LFD2Sp0DNDw3PU2Szr0ak0O0Q2MCgzRjiDNj4XYqprJPsPr82pIfo4tQUAV1lo0X2IVYKbKEBwKgeS6lCTwfjhWKeYAnFAhDOO0CSM7e6UiTroGCGFJd3FCPprfDzfj&x-id=UploadPart
-Retrying in 1s [Retry 1/5].
-WARNING:huggingface_hub.utils._http:Retrying in 1s [Retry 1/5].
-/usr/local/linux/mambaforge-3.11/lib/python3.11/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
-  warnings.warn('Was asked to gather along dimension 0, but all '
- 54%|█████▎    | 249/465 [26:37<2:52:21, 47.88s/it] 54%|█████▍    | 250/465 [26:38<2:00:41, 33.68s/it] 54%|█████▍    | 251/465 [26:38<1:24:42, 23.75s/it] 54%|█████▍    | 252/465 [26:39<59:38, 16.80s/it]   54%|█████▍    | 253/465 [26:40<42:09, 11.93s/it] 55%|█████▍    | 254/465 [26:40<30:12,  8.59s/it] 55%|█████▍    | 255/465 [26:41<21:38,  6.18s/it] 55%|█████▌    | 256/465 [26:42<15:38,  4.49s/it] 55%|█████▌    | 257/465 [26:42<11:28,  3.31s/it] 55%|█████▌    | 258/465 [26:43<08:33,  2.48s/it] 56%|█████▌    | 259/465 [26:43<06:33,  1.91s/it] 56%|█████▌    | 260/465 [26:44<05:10,  1.51s/it] 56%|█████▌    | 261/465 [26:44<04:11,  1.23s/it] 56%|█████▋    | 262/465 [26:45<03:29,  1.03s/it] 57%|█████▋    | 263/465 [26:46<03:10,  1.06it/s] 57%|█████▋    | 264/465 [26:46<02:47,  1.20it/s] 57%|█████▋    | 265/465 [26:47<02:30,  1.33it/s] 57%|█████▋    | 266/465 [26:47<02:18,  1.44it/s] 57%|█████▋    | 267/465 [26:48<02:10,  1.51it/s] 58%|█████▊    | 268/465 [26:49<02:05,  1.57it/s] 58%|█████▊    | 269/465 [26:49<02:01,  1.61it/s] 58%|█████▊    | 270/465 [26:50<01:57,  1.65it/s] 58%|█████▊    | 271/465 [26:50<01:54,  1.69it/s] 58%|█████▊    | 272/465 [26:51<02:03,  1.56it/s] 59%|█████▊    | 273/465 [26:52<02:00,  1.59it/s] 59%|█████▉    | 274/465 [26:52<01:56,  1.64it/s] 59%|█████▉    | 275/465 [26:53<01:52,  1.69it/s] 59%|█████▉    | 276/465 [26:53<01:51,  1.70it/s] 60%|█████▉    | 277/465 [26:54<01:50,  1.70it/s] 60%|█████▉    | 278/465 [26:54<01:47,  1.74it/s] 60%|██████    | 279/465 [26:55<01:44,  1.78it/s]Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-{'eval_loss': 6.043769836425781, 'eval_rouge1': 0.403, 'eval_rouge2': 0.1689, 'eval_rougeL': 0.2205, 'eval_rougeLsum': 0.3473, 'eval_gen_len': 600.0, 'eval_runtime': 34.9445, 'eval_samples_per_second': 7.097, 'eval_steps_per_second': 0.229, 'epoch': 8.0}
-
-  0%|          | 0/8 [00:00<?, ?it/s][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 25%|██▌       | 2/8 [00:02<00:07,  1.27s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 38%|███▊      | 3/8 [00:05<00:08,  1.79s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 50%|█████     | 4/8 [00:07<00:08,  2.06s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 62%|██████▎   | 5/8 [00:10<00:06,  2.22s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 75%|███████▌  | 6/8 [00:12<00:04,  2.33s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 88%|████████▊ | 7/8 [00:15<00:02,  2.39s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
-100%|██████████| 8/8 [00:17<00:00,  2.30s/it][A                                                 
-                                             [A 60%|██████    | 279/465 [27:29<01:44,  1.78it/s]
-100%|██████████| 8/8 [00:31<00:00,  2.30s/it][A
-                                             [A/usr/local/linux/mambaforge-3.11/lib/python3.11/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
-  warnings.warn('Was asked to gather along dimension 0, but all '
- 60%|██████    | 280/465 [30:24<3:14:27, 63.07s/it] 60%|██████    | 281/465 [30:25<2:16:03, 44.37s/it] 61%|██████    | 282/465 [30:25<1:35:14, 31.23s/it] 61%|██████    | 283/465 [30:26<1:06:48, 22.03s/it] 61%|██████    | 284/465 [30:26<47:02, 15.59s/it]   61%|██████▏   | 285/465 [30:27<33:15, 11.08s/it] 62%|██████▏   | 286/465 [30:27<23:40,  7.94s/it] 62%|██████▏   | 287/465 [30:28<17:00,  5.73s/it] 62%|██████▏   | 288/465 [30:29<12:21,  4.19s/it] 62%|██████▏   | 289/465 [30:29<09:16,  3.16s/it] 62%|██████▏   | 290/465 [30:30<06:57,  2.39s/it] 63%|██████▎   | 291/465 [30:31<05:20,  1.84s/it] 63%|██████▎   | 292/465 [30:31<04:12,  1.46s/it] 63%|██████▎   | 293/465 [30:32<03:25,  1.20s/it] 63%|██████▎   | 294/465 [30:32<02:52,  1.01s/it] 63%|██████▎   | 295/465 [30:33<02:28,  1.14it/s] 64%|██████▎   | 296/465 [30:34<02:21,  1.19it/s] 64%|██████▍   | 297/465 [30:34<02:07,  1.32it/s] 64%|██████▍   | 298/465 [30:35<01:56,  1.43it/s] 64%|██████▍   | 299/465 [30:35<01:50,  1.51it/s] 65%|██████▍   | 300/465 [30:36<01:45,  1.56it/s] 65%|██████▍   | 301/465 [30:36<01:41,  1.61it/s] 65%|██████▍   | 302/465 [30:37<01:38,  1.65it/s] 65%|██████▌   | 303/465 [30:38<01:35,  1.69it/s] 65%|██████▌   | 304/465 [30:38<01:43,  1.55it/s] 66%|██████▌   | 305/465 [30:39<01:39,  1.60it/s] 66%|██████▌   | 306/465 [30:39<01:36,  1.65it/s] 66%|██████▌   | 307/465 [30:40<01:33,  1.70it/s] 66%|██████▌   | 308/465 [30:41<01:31,  1.71it/s] 66%|██████▋   | 309/465 [30:41<01:29,  1.74it/s] 67%|██████▋   | 310/465 [30:42<01:26,  1.79it/s]Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-{'eval_loss': 6.037980079650879, 'eval_rouge1': 0.401, 'eval_rouge2': 0.168, 'eval_rougeL': 0.2195, 'eval_rougeLsum': 0.3458, 'eval_gen_len': 600.0, 'eval_runtime': 33.8278, 'eval_samples_per_second': 7.331, 'eval_steps_per_second': 0.236, 'epoch': 9.0}
-
-  0%|          | 0/8 [00:00<?, ?it/s][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 25%|██▌       | 2/8 [00:02<00:08,  1.39s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 38%|███▊      | 3/8 [00:05<00:09,  1.91s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 50%|█████     | 4/8 [00:08<00:08,  2.17s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 62%|██████▎   | 5/8 [00:10<00:06,  2.32s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 75%|███████▌  | 6/8 [00:13<00:04,  2.41s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 88%|████████▊ | 7/8 [00:15<00:02,  2.47s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
-100%|██████████| 8/8 [00:18<00:00,  2.39s/it][A                                                 
-                                             [A 67%|██████▋   | 310/465 [31:16<01:26,  1.79it/s]
-100%|██████████| 8/8 [00:32<00:00,  2.39s/it][A
-                                             [A'(MaxRetryError("HTTPSConnectionPool(host='hf-hub-lfs-us-east-1.s3-accelerate.amazonaws.com', port=443): Max retries exceeded with url: /repos/b2/46/b24626c9146af73e73aa519d4a20c1a86b307a35f46032052e370d56f2b91339/3bcde780507fc98af98caf59a55ff51ac50cb2d6428bd10655424fbc90aec42e?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2JU7TKAQFN2FTF47%2F20240327%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240327T203102Z&X-Amz-Expires=86400&X-Amz-Signature=5770651f26dc8456cdf96b385488c22879bb6bea924f66e3945477572f14dfc1&X-Amz-SignedHeaders=host&partNumber=64&uploadId=jPwMz3hNfgID5.LmqrLmiRTajFa_fHZSuyJ5_CcqHyExUueEeMaLJF6yfd3RFgY1Fz4KyF2yyYDRS5IQf8O5rIDc9PnJYRUgmoMPL595Z4FrNUwjye8wfZIpZefzKICY&x-id=UploadPart (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:2393)')))"), '(Request ID: 58362b0a-a610-4a62-b429-dc3d1ca31045)')' thrown while requesting PUT https://hf-hub-lfs-us-east-1.s3-accelerate.amazonaws.com/repos/b2/46/b24626c9146af73e73aa519d4a20c1a86b307a35f46032052e370d56f2b91339/3bcde780507fc98af98caf59a55ff51ac50cb2d6428bd10655424fbc90aec42e?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2JU7TKAQFN2FTF47%2F20240327%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240327T203102Z&X-Amz-Expires=86400&X-Amz-Signature=5770651f26dc8456cdf96b385488c22879bb6bea924f66e3945477572f14dfc1&X-Amz-SignedHeaders=host&partNumber=64&uploadId=jPwMz3hNfgID5.LmqrLmiRTajFa_fHZSuyJ5_CcqHyExUueEeMaLJF6yfd3RFgY1Fz4KyF2yyYDRS5IQf8O5rIDc9PnJYRUgmoMPL595Z4FrNUwjye8wfZIpZefzKICY&x-id=UploadPart
-WARNING:huggingface_hub.utils._http:'(MaxRetryError("HTTPSConnectionPool(host='hf-hub-lfs-us-east-1.s3-accelerate.amazonaws.com', port=443): Max retries exceeded with url: /repos/b2/46/b24626c9146af73e73aa519d4a20c1a86b307a35f46032052e370d56f2b91339/3bcde780507fc98af98caf59a55ff51ac50cb2d6428bd10655424fbc90aec42e?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2JU7TKAQFN2FTF47%2F20240327%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240327T203102Z&X-Amz-Expires=86400&X-Amz-Signature=5770651f26dc8456cdf96b385488c22879bb6bea924f66e3945477572f14dfc1&X-Amz-SignedHeaders=host&partNumber=64&uploadId=jPwMz3hNfgID5.LmqrLmiRTajFa_fHZSuyJ5_CcqHyExUueEeMaLJF6yfd3RFgY1Fz4KyF2yyYDRS5IQf8O5rIDc9PnJYRUgmoMPL595Z4FrNUwjye8wfZIpZefzKICY&x-id=UploadPart (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:2393)')))"), '(Request ID: 58362b0a-a610-4a62-b429-dc3d1ca31045)')' thrown while requesting PUT https://hf-hub-lfs-us-east-1.s3-accelerate.amazonaws.com/repos/b2/46/b24626c9146af73e73aa519d4a20c1a86b307a35f46032052e370d56f2b91339/3bcde780507fc98af98caf59a55ff51ac50cb2d6428bd10655424fbc90aec42e?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2JU7TKAQFN2FTF47%2F20240327%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240327T203102Z&X-Amz-Expires=86400&X-Amz-Signature=5770651f26dc8456cdf96b385488c22879bb6bea924f66e3945477572f14dfc1&X-Amz-SignedHeaders=host&partNumber=64&uploadId=jPwMz3hNfgID5.LmqrLmiRTajFa_fHZSuyJ5_CcqHyExUueEeMaLJF6yfd3RFgY1Fz4KyF2yyYDRS5IQf8O5rIDc9PnJYRUgmoMPL595Z4FrNUwjye8wfZIpZefzKICY&x-id=UploadPart
-Retrying in 1s [Retry 1/5].
-WARNING:huggingface_hub.utils._http:Retrying in 1s [Retry 1/5].
-/usr/local/linux/mambaforge-3.11/lib/python3.11/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
-  warnings.warn('Was asked to gather along dimension 0, but all '
- 67%|██████▋   | 311/465 [33:20<2:02:35, 47.76s/it] 67%|██████▋   | 312/465 [33:20<1:25:41, 33.60s/it] 67%|██████▋   | 313/465 [33:21<1:00:12, 23.76s/it] 68%|██████▊   | 314/465 [33:22<42:18, 16.81s/it]   68%|██████▊   | 315/465 [33:22<29:51, 11.94s/it] 68%|██████▊   | 316/465 [33:23<21:11,  8.53s/it] 68%|██████▊   | 317/465 [33:23<15:08,  6.14s/it] 68%|██████▊   | 318/465 [33:24<10:56,  4.47s/it] 69%|██████▊   | 319/465 [33:24<08:02,  3.30s/it] 69%|██████▉   | 320/465 [33:25<06:08,  2.54s/it] 69%|██████▉   | 321/465 [33:26<04:40,  1.95s/it] 69%|██████▉   | 322/465 [33:26<03:40,  1.54s/it] 69%|██████▉   | 323/465 [33:27<02:57,  1.25s/it] 70%|██████▉   | 324/465 [33:28<02:28,  1.05s/it] 70%|██████▉   | 325/465 [33:28<02:07,  1.10it/s] 70%|███████   | 326/465 [33:29<01:52,  1.24it/s] 70%|███████   | 327/465 [33:29<01:47,  1.29it/s] 71%|███████   | 328/465 [33:30<01:37,  1.40it/s] 71%|███████   | 329/465 [33:30<01:30,  1.50it/s] 71%|███████   | 330/465 [33:31<01:26,  1.57it/s] 71%|███████   | 331/465 [33:32<01:22,  1.62it/s] 71%|███████▏  | 332/465 [33:32<01:19,  1.67it/s] 72%|███████▏  | 333/465 [33:33<01:17,  1.70it/s] 72%|███████▏  | 334/465 [33:33<01:17,  1.68it/s] 72%|███████▏  | 335/465 [33:34<01:15,  1.71it/s] 72%|███████▏  | 336/465 [33:34<01:14,  1.73it/s] 72%|███████▏  | 337/465 [33:35<01:13,  1.74it/s] 73%|███████▎  | 338/465 [33:36<01:12,  1.76it/s] 73%|███████▎  | 339/465 [33:36<01:11,  1.76it/s] 73%|███████▎  | 340/465 [33:37<01:11,  1.76it/s] 73%|███████▎  | 341/465 [33:37<01:09,  1.79it/s]Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-{'eval_loss': 6.0378899574279785, 'eval_rouge1': 0.4082, 'eval_rouge2': 0.1713, 'eval_rougeL': 0.2236, 'eval_rougeLsum': 0.3519, 'eval_gen_len': 600.0, 'eval_runtime': 34.7389, 'eval_samples_per_second': 7.139, 'eval_steps_per_second': 0.23, 'epoch': 10.0}
-
-  0%|          | 0/8 [00:00<?, ?it/s][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 25%|██▌       | 2/8 [00:02<00:07,  1.26s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 38%|███▊      | 3/8 [00:05<00:08,  1.80s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 50%|█████     | 4/8 [00:07<00:08,  2.13s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 62%|██████▎   | 5/8 [00:10<00:06,  2.27s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 75%|███████▌  | 6/8 [00:12<00:04,  2.35s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 88%|████████▊ | 7/8 [00:15<00:02,  2.41s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
-100%|██████████| 8/8 [00:17<00:00,  2.30s/it][A                                                 
-                                             [A 73%|███████▎  | 341/465 [34:11<01:09,  1.79it/s]
-100%|██████████| 8/8 [00:30<00:00,  2.30s/it][A
-                                             [A/usr/local/linux/mambaforge-3.11/lib/python3.11/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
-  warnings.warn('Was asked to gather along dimension 0, but all '
- 74%|███████▎  | 342/465 [36:55<2:02:37, 59.82s/it] 74%|███████▍  | 343/465 [36:56<1:25:29, 42.04s/it] 74%|███████▍  | 344/465 [36:56<59:42, 29.60s/it]   74%|███████▍  | 345/465 [36:57<41:53, 20.95s/it] 74%|███████▍  | 346/465 [36:58<29:25, 14.83s/it] 75%|███████▍  | 347/465 [36:58<20:45, 10.55s/it] 75%|███████▍  | 348/465 [36:59<14:44,  7.56s/it] 75%|███████▌  | 349/465 [37:00<10:34,  5.47s/it] 75%|███████▌  | 350/465 [37:00<07:40,  4.00s/it] 75%|███████▌  | 351/465 [37:01<05:38,  2.97s/it] 76%|███████▌  | 352/465 [37:01<04:15,  2.26s/it] 76%|███████▌  | 353/465 [37:02<03:16,  1.76s/it] 76%|███████▌  | 354/465 [37:02<02:36,  1.41s/it] 76%|███████▋  | 355/465 [37:03<02:14,  1.22s/it] 77%|███████▋  | 356/465 [37:04<01:51,  1.03s/it] 77%|███████▋  | 357/465 [37:04<01:36,  1.12it/s] 77%|███████▋  | 358/465 [37:05<01:25,  1.25it/s] 77%|███████▋  | 359/465 [37:06<01:17,  1.36it/s] 77%|███████▋  | 360/465 [37:06<01:12,  1.46it/s] 78%|███████▊  | 361/465 [37:07<01:08,  1.53it/s] 78%|███████▊  | 362/465 [37:07<01:05,  1.58it/s] 78%|███████▊  | 363/465 [37:08<01:02,  1.62it/s] 78%|███████▊  | 364/465 [37:09<01:06,  1.51it/s] 78%|███████▊  | 365/465 [37:09<01:04,  1.56it/s] 79%|███████▊  | 366/465 [37:10<01:02,  1.59it/s] 79%|███████▉  | 367/465 [37:10<01:00,  1.63it/s] 79%|███████▉  | 368/465 [37:11<00:58,  1.66it/s] 79%|███████▉  | 369/465 [37:12<00:56,  1.70it/s] 80%|███████▉  | 370/465 [37:12<00:55,  1.72it/s] 80%|███████▉  | 371/465 [37:13<00:54,  1.74it/s] 80%|████████  | 372/465 [37:13<00:57,  1.61it/s]Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-{'eval_loss': 6.032817840576172, 'eval_rouge1': 0.4137, 'eval_rouge2': 0.1739, 'eval_rougeL': 0.2265, 'eval_rougeLsum': 0.3568, 'eval_gen_len': 600.0, 'eval_runtime': 33.5201, 'eval_samples_per_second': 7.399, 'eval_steps_per_second': 0.239, 'epoch': 11.0}
-
-  0%|          | 0/8 [00:00<?, ?it/s][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 25%|██▌       | 2/8 [00:02<00:07,  1.31s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 38%|███▊      | 3/8 [00:05<00:09,  1.87s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 50%|█████     | 4/8 [00:07<00:08,  2.15s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 62%|██████▎   | 5/8 [00:10<00:06,  2.31s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 75%|███████▌  | 6/8 [00:13<00:04,  2.40s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 88%|████████▊ | 7/8 [00:15<00:02,  2.46s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
-100%|██████████| 8/8 [00:17<00:00,  2.34s/it][A                                                 
-                                             [A 80%|████████  | 372/465 [37:48<00:57,  1.61it/s]
-100%|██████████| 8/8 [00:31<00:00,  2.34s/it][A
-                                             [A'(MaxRetryError("HTTPSConnectionPool(host='hf-hub-lfs-us-east-1.s3-accelerate.amazonaws.com', port=443): Max retries exceeded with url: /repos/b2/46/b24626c9146af73e73aa519d4a20c1a86b307a35f46032052e370d56f2b91339/24204f6a08b1e250b305dc45f5ef9934ee4cae9bbbc38592b3cd8452fb2c3d93?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2JU7TKAQFN2FTF47%2F20240327%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240327T203736Z&X-Amz-Expires=86400&X-Amz-Signature=8a7588020710c429bdc44c2fa9ec5006f0c26dc23dfe2fc7f7ee8455b99eacfc&X-Amz-SignedHeaders=host&partNumber=47&uploadId=UIBYHHDwPAKIuNpKT_.u5yE1K1n5Pc44QWuaB9FObXkS2MTbmjIu0p654a8eCpeIHU0woub6cs8ZwsY7fGoA27q4uZ0nZBLJbiG6CqDi8nPjGLhdXcyONWtuvaqtt_ol&x-id=UploadPart (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:2393)')))"), '(Request ID: 6f925bb7-31e7-401c-98f6-ca03938f197d)')' thrown while requesting PUT https://hf-hub-lfs-us-east-1.s3-accelerate.amazonaws.com/repos/b2/46/b24626c9146af73e73aa519d4a20c1a86b307a35f46032052e370d56f2b91339/24204f6a08b1e250b305dc45f5ef9934ee4cae9bbbc38592b3cd8452fb2c3d93?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2JU7TKAQFN2FTF47%2F20240327%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240327T203736Z&X-Amz-Expires=86400&X-Amz-Signature=8a7588020710c429bdc44c2fa9ec5006f0c26dc23dfe2fc7f7ee8455b99eacfc&X-Amz-SignedHeaders=host&partNumber=47&uploadId=UIBYHHDwPAKIuNpKT_.u5yE1K1n5Pc44QWuaB9FObXkS2MTbmjIu0p654a8eCpeIHU0woub6cs8ZwsY7fGoA27q4uZ0nZBLJbiG6CqDi8nPjGLhdXcyONWtuvaqtt_ol&x-id=UploadPart
-WARNING:huggingface_hub.utils._http:'(MaxRetryError("HTTPSConnectionPool(host='hf-hub-lfs-us-east-1.s3-accelerate.amazonaws.com', port=443): Max retries exceeded with url: /repos/b2/46/b24626c9146af73e73aa519d4a20c1a86b307a35f46032052e370d56f2b91339/24204f6a08b1e250b305dc45f5ef9934ee4cae9bbbc38592b3cd8452fb2c3d93?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2JU7TKAQFN2FTF47%2F20240327%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240327T203736Z&X-Amz-Expires=86400&X-Amz-Signature=8a7588020710c429bdc44c2fa9ec5006f0c26dc23dfe2fc7f7ee8455b99eacfc&X-Amz-SignedHeaders=host&partNumber=47&uploadId=UIBYHHDwPAKIuNpKT_.u5yE1K1n5Pc44QWuaB9FObXkS2MTbmjIu0p654a8eCpeIHU0woub6cs8ZwsY7fGoA27q4uZ0nZBLJbiG6CqDi8nPjGLhdXcyONWtuvaqtt_ol&x-id=UploadPart (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:2393)')))"), '(Request ID: 6f925bb7-31e7-401c-98f6-ca03938f197d)')' thrown while requesting PUT https://hf-hub-lfs-us-east-1.s3-accelerate.amazonaws.com/repos/b2/46/b24626c9146af73e73aa519d4a20c1a86b307a35f46032052e370d56f2b91339/24204f6a08b1e250b305dc45f5ef9934ee4cae9bbbc38592b3cd8452fb2c3d93?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2JU7TKAQFN2FTF47%2F20240327%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240327T203736Z&X-Amz-Expires=86400&X-Amz-Signature=8a7588020710c429bdc44c2fa9ec5006f0c26dc23dfe2fc7f7ee8455b99eacfc&X-Amz-SignedHeaders=host&partNumber=47&uploadId=UIBYHHDwPAKIuNpKT_.u5yE1K1n5Pc44QWuaB9FObXkS2MTbmjIu0p654a8eCpeIHU0woub6cs8ZwsY7fGoA27q4uZ0nZBLJbiG6CqDi8nPjGLhdXcyONWtuvaqtt_ol&x-id=UploadPart
-Retrying in 1s [Retry 1/5].
-WARNING:huggingface_hub.utils._http:Retrying in 1s [Retry 1/5].
-/usr/local/linux/mambaforge-3.11/lib/python3.11/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
-  warnings.warn('Was asked to gather along dimension 0, but all '
- 80%|████████  | 373/465 [39:51<1:13:02, 47.63s/it] 80%|████████  | 374/465 [39:51<50:54, 33.57s/it]   81%|████████  | 375/465 [39:52<35:30, 23.67s/it] 81%|████████  | 376/465 [39:53<24:49, 16.73s/it] 81%|████████  | 377/465 [39:53<17:25, 11.88s/it] 81%|████████▏ | 378/465 [39:54<12:18,  8.49s/it] 82%|████████▏ | 379/465 [39:54<08:45,  6.11s/it] 82%|████████▏ | 380/465 [39:55<06:17,  4.44s/it] 82%|████████▏ | 381/465 [39:55<04:34,  3.27s/it] 82%|████████▏ | 382/465 [39:56<03:24,  2.46s/it] 82%|████████▏ | 383/465 [39:57<02:39,  1.94s/it] 83%|████████▎ | 384/465 [39:57<02:04,  1.53s/it] 83%|████████▎ | 385/465 [39:58<01:39,  1.25s/it] 83%|████████▎ | 386/465 [39:58<01:22,  1.04s/it] 83%|████████▎ | 387/465 [39:59<01:09,  1.12it/s] 83%|████████▎ | 388/465 [40:00<01:01,  1.25it/s] 84%|████████▎ | 389/465 [40:00<00:55,  1.37it/s] 84%|████████▍ | 390/465 [40:01<00:51,  1.47it/s] 84%|████████▍ | 391/465 [40:01<00:51,  1.44it/s] 84%|████████▍ | 392/465 [40:02<00:48,  1.50it/s] 85%|████████▍ | 393/465 [40:03<00:45,  1.57it/s] 85%|████████▍ | 394/465 [40:03<00:43,  1.63it/s] 85%|████████▍ | 395/465 [40:04<00:42,  1.66it/s] 85%|████████▌ | 396/465 [40:04<00:40,  1.69it/s] 85%|████████▌ | 397/465 [40:05<00:40,  1.69it/s] 86%|████████▌ | 398/465 [40:05<00:39,  1.70it/s] 86%|████████▌ | 399/465 [40:06<00:42,  1.57it/s] 86%|████████▌ | 400/465 [40:07<00:39,  1.63it/s] 86%|████████▌ | 401/465 [40:07<00:38,  1.67it/s] 86%|████████▋ | 402/465 [40:08<00:37,  1.70it/s] 87%|████████▋ | 403/465 [40:08<00:36,  1.71it/s]Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-{'eval_loss': 6.0318193435668945, 'eval_rouge1': 0.4081, 'eval_rouge2': 0.1714, 'eval_rougeL': 0.2235, 'eval_rougeLsum': 0.3518, 'eval_gen_len': 600.0, 'eval_runtime': 34.3788, 'eval_samples_per_second': 7.214, 'eval_steps_per_second': 0.233, 'epoch': 12.0}
-
-  0%|          | 0/8 [00:00<?, ?it/s][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 25%|██▌       | 2/8 [00:02<00:07,  1.29s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 38%|███▊      | 3/8 [00:05<00:09,  1.81s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 50%|█████     | 4/8 [00:07<00:08,  2.08s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 62%|██████▎   | 5/8 [00:10<00:06,  2.30s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 75%|███████▌  | 6/8 [00:12<00:04,  2.37s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 88%|████████▊ | 7/8 [00:15<00:02,  2.43s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
-100%|██████████| 8/8 [00:17<00:00,  2.32s/it][A                                                 
-                                             [A 87%|████████▋ | 403/465 [40:42<00:36,  1.71it/s]
-100%|██████████| 8/8 [00:31<00:00,  2.32s/it][A
-                                             [A/usr/local/linux/mambaforge-3.11/lib/python3.11/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
-  warnings.warn('Was asked to gather along dimension 0, but all '
- 87%|████████▋ | 404/465 [43:38<1:04:17, 63.23s/it] 87%|████████▋ | 405/465 [43:38<44:26, 44.43s/it]   87%|████████▋ | 406/465 [43:39<30:45, 31.27s/it] 88%|████████▊ | 407/465 [43:40<21:19, 22.06s/it] 88%|████████▊ | 408/465 [43:40<14:50, 15.62s/it] 88%|████████▊ | 409/465 [43:41<10:25, 11.17s/it] 88%|████████▊ | 410/465 [43:42<07:19,  7.99s/it] 88%|████████▊ | 411/465 [43:42<05:11,  5.76s/it] 89%|████████▊ | 412/465 [43:43<03:42,  4.20s/it] 89%|████████▉ | 413/465 [43:43<02:42,  3.12s/it] 89%|████████▉ | 414/465 [43:44<02:00,  2.35s/it] 89%|████████▉ | 415/465 [43:44<01:31,  1.82s/it] 89%|████████▉ | 416/465 [43:45<01:11,  1.45s/it] 90%|████████▉ | 417/465 [43:46<00:59,  1.24s/it] 90%|████████▉ | 418/465 [43:46<00:48,  1.04s/it] 90%|█████████ | 419/465 [43:47<00:41,  1.12it/s] 90%|█████████ | 420/465 [43:47<00:35,  1.26it/s] 91%|█████████ | 421/465 [43:48<00:31,  1.38it/s] 91%|█████████ | 422/465 [43:49<00:29,  1.46it/s] 91%|█████████ | 423/465 [43:49<00:27,  1.55it/s] 91%|█████████ | 424/465 [43:50<00:25,  1.61it/s] 91%|█████████▏| 425/465 [43:50<00:26,  1.53it/s] 92%|█████████▏| 426/465 [43:51<00:24,  1.59it/s] 92%|█████████▏| 427/465 [43:52<00:23,  1.63it/s] 92%|█████████▏| 428/465 [43:52<00:22,  1.66it/s] 92%|█████████▏| 429/465 [43:53<00:21,  1.67it/s] 92%|█████████▏| 430/465 [43:53<00:20,  1.70it/s] 93%|█████████▎| 431/465 [43:54<00:19,  1.72it/s] 93%|█████████▎| 432/465 [43:54<00:19,  1.71it/s] 93%|█████████▎| 433/465 [43:55<00:20,  1.58it/s] 93%|█████████▎| 434/465 [43:56<00:18,  1.66it/s]Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-{'eval_loss': 6.03105354309082, 'eval_rouge1': 0.4106, 'eval_rouge2': 0.1726, 'eval_rougeL': 0.2248, 'eval_rougeLsum': 0.3538, 'eval_gen_len': 600.0, 'eval_runtime': 33.8705, 'eval_samples_per_second': 7.322, 'eval_steps_per_second': 0.236, 'epoch': 13.0}
-
-  0%|          | 0/8 [00:00<?, ?it/s][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 25%|██▌       | 2/8 [00:02<00:07,  1.32s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 38%|███▊      | 3/8 [00:05<00:09,  1.86s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 50%|█████     | 4/8 [00:07<00:08,  2.14s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 62%|██████▎   | 5/8 [00:10<00:06,  2.28s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 75%|███████▌  | 6/8 [00:13<00:04,  2.40s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 88%|████████▊ | 7/8 [00:15<00:02,  2.45s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
-100%|██████████| 8/8 [00:18<00:00,  2.45s/it][A                                                 
-                                             [A 93%|█████████▎| 434/465 [44:31<00:18,  1.66it/s]
-100%|██████████| 8/8 [00:32<00:00,  2.45s/it][A
-                                             [A'(MaxRetryError("HTTPSConnectionPool(host='hf-hub-lfs-us-east-1.s3-accelerate.amazonaws.com', port=443): Max retries exceeded with url: /repos/b2/46/b24626c9146af73e73aa519d4a20c1a86b307a35f46032052e370d56f2b91339/a6677586b06caa8116c0858cb629c1afd1743bc6c5418cb4c6ec4839af8e45a2?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2JU7TKAQFN2FTF47%2F20240327%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240327T204416Z&X-Amz-Expires=86400&X-Amz-Signature=222c39884eac1023053be0b9979e88865a42af1420a83271b4fd03fe87a45cbb&X-Amz-SignedHeaders=host&partNumber=59&uploadId=p_yMRobpxxv2hMLDzj4Y5_7yIFMaEneCyWcV1PGE9v2c5tTG.ca1KQKAgeo5.nhFH4h0wgvpyis9K19tRi1ez8NazGEB2MZBRP3Xzwhl5iU3qaA5lk9Jd35r9aa7AC_b&x-id=UploadPart (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:2393)')))"), '(Request ID: dc591567-ce4e-42fd-a3f6-b7d17cf1d4f9)')' thrown while requesting PUT https://hf-hub-lfs-us-east-1.s3-accelerate.amazonaws.com/repos/b2/46/b24626c9146af73e73aa519d4a20c1a86b307a35f46032052e370d56f2b91339/a6677586b06caa8116c0858cb629c1afd1743bc6c5418cb4c6ec4839af8e45a2?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2JU7TKAQFN2FTF47%2F20240327%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240327T204416Z&X-Amz-Expires=86400&X-Amz-Signature=222c39884eac1023053be0b9979e88865a42af1420a83271b4fd03fe87a45cbb&X-Amz-SignedHeaders=host&partNumber=59&uploadId=p_yMRobpxxv2hMLDzj4Y5_7yIFMaEneCyWcV1PGE9v2c5tTG.ca1KQKAgeo5.nhFH4h0wgvpyis9K19tRi1ez8NazGEB2MZBRP3Xzwhl5iU3qaA5lk9Jd35r9aa7AC_b&x-id=UploadPart
-WARNING:huggingface_hub.utils._http:'(MaxRetryError("HTTPSConnectionPool(host='hf-hub-lfs-us-east-1.s3-accelerate.amazonaws.com', port=443): Max retries exceeded with url: /repos/b2/46/b24626c9146af73e73aa519d4a20c1a86b307a35f46032052e370d56f2b91339/a6677586b06caa8116c0858cb629c1afd1743bc6c5418cb4c6ec4839af8e45a2?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2JU7TKAQFN2FTF47%2F20240327%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240327T204416Z&X-Amz-Expires=86400&X-Amz-Signature=222c39884eac1023053be0b9979e88865a42af1420a83271b4fd03fe87a45cbb&X-Amz-SignedHeaders=host&partNumber=59&uploadId=p_yMRobpxxv2hMLDzj4Y5_7yIFMaEneCyWcV1PGE9v2c5tTG.ca1KQKAgeo5.nhFH4h0wgvpyis9K19tRi1ez8NazGEB2MZBRP3Xzwhl5iU3qaA5lk9Jd35r9aa7AC_b&x-id=UploadPart (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:2393)')))"), '(Request ID: dc591567-ce4e-42fd-a3f6-b7d17cf1d4f9)')' thrown while requesting PUT https://hf-hub-lfs-us-east-1.s3-accelerate.amazonaws.com/repos/b2/46/b24626c9146af73e73aa519d4a20c1a86b307a35f46032052e370d56f2b91339/a6677586b06caa8116c0858cb629c1afd1743bc6c5418cb4c6ec4839af8e45a2?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2JU7TKAQFN2FTF47%2F20240327%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240327T204416Z&X-Amz-Expires=86400&X-Amz-Signature=222c39884eac1023053be0b9979e88865a42af1420a83271b4fd03fe87a45cbb&X-Amz-SignedHeaders=host&partNumber=59&uploadId=p_yMRobpxxv2hMLDzj4Y5_7yIFMaEneCyWcV1PGE9v2c5tTG.ca1KQKAgeo5.nhFH4h0wgvpyis9K19tRi1ez8NazGEB2MZBRP3Xzwhl5iU3qaA5lk9Jd35r9aa7AC_b&x-id=UploadPart
-Retrying in 1s [Retry 1/5].
-WARNING:huggingface_hub.utils._http:Retrying in 1s [Retry 1/5].
-/usr/local/linux/mambaforge-3.11/lib/python3.11/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
-  warnings.warn('Was asked to gather along dimension 0, but all '
- 94%|█████████▎| 435/465 [46:34<23:54, 47.80s/it] 94%|█████████▍| 436/465 [46:34<16:15, 33.63s/it] 94%|█████████▍| 437/465 [46:35<11:03, 23.71s/it] 94%|█████████▍| 438/465 [46:35<07:32, 16.77s/it] 94%|█████████▍| 439/465 [46:36<05:09, 11.91s/it] 95%|█████████▍| 440/465 [46:36<03:32,  8.51s/it] 95%|█████████▍| 441/465 [46:37<02:27,  6.13s/it] 95%|█████████▌| 442/465 [46:38<01:43,  4.51s/it] 95%|█████████▌| 443/465 [46:38<01:13,  3.34s/it] 95%|█████████▌| 444/465 [46:39<00:52,  2.51s/it] 96%|█████████▌| 445/465 [46:40<00:38,  1.93s/it] 96%|█████████▌| 446/465 [46:40<00:28,  1.52s/it] 96%|█████████▌| 447/465 [46:41<00:22,  1.23s/it] 96%|█████████▋| 448/465 [46:41<00:17,  1.04s/it] 97%|█████████▋| 449/465 [46:42<00:14,  1.11it/s] 97%|█████████▋| 450/465 [46:43<00:12,  1.16it/s] 97%|█████████▋| 451/465 [46:43<00:10,  1.29it/s] 97%|█████████▋| 452/465 [46:44<00:09,  1.40it/s] 97%|█████████▋| 453/465 [46:44<00:08,  1.48it/s] 98%|█████████▊| 454/465 [46:45<00:07,  1.53it/s] 98%|█████████▊| 455/465 [46:46<00:06,  1.60it/s] 98%|█████████▊| 456/465 [46:46<00:05,  1.62it/s] 98%|█████████▊| 457/465 [46:47<00:05,  1.52it/s] 98%|█████████▊| 458/465 [46:47<00:04,  1.58it/s] 99%|█████████▊| 459/465 [46:48<00:03,  1.64it/s] 99%|█████████▉| 460/465 [46:49<00:02,  1.69it/s] 99%|█████████▉| 461/465 [46:49<00:02,  1.73it/s] 99%|█████████▉| 462/465 [46:50<00:01,  1.74it/s]100%|█████████▉| 463/465 [46:50<00:01,  1.77it/s]100%|█████████▉| 464/465 [46:51<00:00,  1.68it/s]100%|██████████| 465/465 [46:51<00:00,  1.72it/s]Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-{'eval_loss': 6.0320916175842285, 'eval_rouge1': 0.4058, 'eval_rouge2': 0.1703, 'eval_rougeL': 0.2222, 'eval_rougeLsum': 0.3499, 'eval_gen_len': 600.0, 'eval_runtime': 34.9479, 'eval_samples_per_second': 7.096, 'eval_steps_per_second': 0.229, 'epoch': 14.0}
-
-  0%|          | 0/8 [00:00<?, ?it/s][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 25%|██▌       | 2/8 [00:02<00:07,  1.27s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 38%|███▊      | 3/8 [00:05<00:08,  1.80s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 50%|█████     | 4/8 [00:07<00:08,  2.07s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 62%|██████▎   | 5/8 [00:10<00:06,  2.23s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 75%|███████▌  | 6/8 [00:12<00:04,  2.33s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
- 88%|████████▊ | 7/8 [00:15<00:02,  2.39s/it][ASetting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
-
-100%|██████████| 8/8 [00:17<00:00,  2.29s/it][A                                                 
-                                             [A100%|██████████| 465/465 [47:25<00:00,  1.72it/s]
-100%|██████████| 8/8 [00:30<00:00,  2.29s/it][A
-                                             [AThere were missing keys in the checkpoint model loaded: ['lm_head.weight'].
-                                                 100%|██████████| 465/465 [50:08<00:00,  1.72it/s]100%|██████████| 465/465 [50:08<00:00,  6.47s/it]
-{'eval_loss': 6.031024932861328, 'eval_rouge1': 0.4132, 'eval_rouge2': 0.1737, 'eval_rougeL': 0.2263, 'eval_rougeLsum': 0.3561, 'eval_gen_len': 600.0, 'eval_runtime': 33.388, 'eval_samples_per_second': 7.428, 'eval_steps_per_second': 0.24, 'epoch': 15.0}
-{'train_runtime': 3008.1023, 'train_samples_per_second': 4.932, 'train_steps_per_second': 0.155, 'train_loss': 6.071467573924731, 'epoch': 15.0}
-*************TRAINING COMPLETED**************
-Logged in as: mllm-dev
-UPLOADING
-model.safetensors:   0%|          | 0.00/1.42G [00:00<?, ?B/s]
-optimizer.pt:   0%|          | 0.00/2.84G [00:00<?, ?B/s][A
-
-Upload 11 LFS files:   0%|          | 0/11 [00:00<?, ?it/s][A[A
-
-
-rng_state.pth:   0%|          | 0.00/14.6k [00:00<?, ?B/s][A[A[A
-
-
-
-model.safetensors:   0%|          | 0.00/1.42G [00:00<?, ?B/s][A[A[A[A
-
-
-
-
-scheduler.pt:   0%|          | 0.00/627 [00:00<?, ?B/s][A[A[A[A[A
-
-
-
-model.safetensors:   0%|          | 4.84M/1.42G [00:00<00:30, 46.6MB/s][A[A[A[Amodel.safetensors:   1%|          | 7.11M/1.42G [00:00<00:24, 57.6MB/s]
-optimizer.pt:   0%|          | 4.46M/2.84G [00:00<01:22, 34.5MB/s][Ascheduler.pt: 100%|██████████| 627/627 [00:00<00:00, 3.95kB/s]
-rng_state.pth: 100%|██████████| 14.6k/14.6k [00:00<00:00, 83.4kB/s]
-
-
-
-
-model.safetensors:   1%|          | 12.0M/1.42G [00:00<00:23, 59.7MB/s][A[A[A[A
-optimizer.pt:   0%|          | 12.0M/2.84G [00:00<00:50, 55.8MB/s][A
-
-
-optimizer.pt:   0%|          | 0.00/2.84G [00:00<?, ?B/s][A[A[Amodel.safetensors:   1%|          | 16.0M/1.42G [00:00<00:35, 39.3MB/s]
-
-
-
-
-rng_state.pth:   0%|          | 0.00/14.6k [00:00<?, ?B/s][A[A[A[A[A
-
-
-
-model.safetensors:   1%|▏         | 18.0M/1.42G [00:00<00:40, 34.8MB/s][A[A[A[A
-
-
-optimizer.pt:   0%|          | 8.31M/2.84G [00:00<00:34, 83.1MB/s][A[A[Amodel.safetensors:   2%|▏         | 31.3M/1.42G [00:00<00:19, 72.1MB/s]rng_state.pth: 100%|██████████| 14.6k/14.6k [00:00<00:00, 128kB/s]
-
-
-
-
-model.safetensors:   2%|▏         | 28.4M/1.42G [00:00<00:26, 53.3MB/s][A[A[A[A
-
-
-
-
-scheduler.pt:   0%|          | 0.00/627 [00:00<?, ?B/s][A[A[A[A[A
-optimizer.pt:   1%|          | 17.8M/2.84G [00:00<01:58, 23.7MB/s][Amodel.safetensors:   3%|▎         | 40.7M/1.42G [00:00<00:26, 51.7MB/s]
-optimizer.pt:   1%|          | 26.7M/2.84G [00:00<01:20, 35.1MB/s][Ascheduler.pt: 100%|██████████| 627/627 [00:00<00:00, 4.09kB/s]
-
-
-
-optimizer.pt:   1%|          | 16.6M/2.84G [00:00<01:36, 29.2MB/s][A[A[A
-
-
-
-model.safetensors:   2%|▏         | 35.0M/1.42G [00:00<00:41, 33.2MB/s][A[A[A[A
-
-
-
-
-optimizer.pt:   0%|          | 0.00/2.84G [00:00<?, ?B/s][A[A[A[A[A
-
-
-optimizer.pt:   1%|          | 26.1M/2.84G [00:00<01:04, 43.8MB/s][A[A[A
-
-
-
-model.safetensors:   3%|▎         | 44.3M/1.42G [00:01<00:30, 44.5MB/s][A[A[A[A
-
-
-
-
-optimizer.pt:   0%|          | 7.28M/2.84G [00:00<00:40, 69.3MB/s][A[A[A[A[A
-optimizer.pt:   1%|          | 32.0M/2.84G [00:01<01:48, 25.9MB/s][A
-
-
-
-
-optimizer.pt:   1%|          | 15.8M/2.84G [00:00<00:35, 78.5MB/s][A[A[A[A[A
-
-
-optimizer.pt:   1%|          | 32.8M/2.84G [00:00<01:24, 33.1MB/s][A[A[A
-
-
-
-model.safetensors:   4%|▎         | 50.7M/1.42G [00:01<00:44, 31.0MB/s][A[A[A[A
-
-
-optimizer.pt:   1%|▏         | 40.9M/2.84G [00:01<01:06, 42.3MB/s][A[A[A
-
-
-
-
-optimizer.pt:   1%|          | 23.7M/2.84G [00:00<01:05, 42.8MB/s][A[A[A[A[A
-optimizer.pt:   2%|▏         | 48.0M/2.84G [00:01<01:20, 34.6MB/s][A
-
-
-
-model.safetensors:   4%|▍         | 62.1M/1.42G [00:01<00:31, 43.7MB/s][A[A[A[A
-optimizer.pt:   2%|▏         | 59.2M/2.84G [00:01<01:03, 43.9MB/s][Amodel.safetensors:   3%|▎         | 48.0M/1.42G [00:01<01:06, 20.5MB/s]model.safetensors:   4%|▍         | 62.1M/1.42G [00:01<00:41, 32.7MB/s]
-
-
-
-model.safetensors:   5%|▍         | 68.7M/1.42G [00:01<00:39, 34.5MB/s][A[A[A[A
-
-
-optimizer.pt:   2%|▏         | 48.0M/2.84G [00:01<01:37, 28.6MB/s][A[A[A
-
-
-
-model.safetensors:   5%|▌         | 77.2M/1.42G [00:01<00:31, 42.4MB/s][A[A[A[A
-optimizer.pt:   2%|▏         | 64.8M/2.84G [00:02<01:32, 29.9MB/s][A
-
-
-
-
-optimizer.pt:   1%|          | 32.0M/2.84G [00:01<01:59, 23.6MB/s][A[A[A[A[Amodel.safetensors:   5%|▍         | 70.1M/1.42G [00:02<00:43, 31.2MB/s]
-
-
-
-
-optimizer.pt:   2%|▏         | 43.1M/2.84G [00:01<01:18, 35.6MB/s][A[A[A[A[A
-optimizer.pt:   3%|▎         | 73.9M/2.84G [00:02<01:14, 37.1MB/s][A
-
-
-optimizer.pt:   2%|▏         | 64.0M/2.84G [00:01<01:22, 33.7MB/s][A[A[A
-
-
-
-model.safetensors:   6%|▌         | 83.4M/1.42G [00:02<00:42, 31.5MB/s][A[A[A[A
-optimizer.pt:   3%|▎         | 79.1M/2.84G [00:02<01:17, 35.7MB/s][A
-
-
-optimizer.pt:   3%|▎         | 73.0M/2.84G [00:01<01:07, 40.8MB/s][A[A[Amodel.safetensors:   6%|▌         | 80.0M/1.42G [00:02<00:40, 33.3MB/s]
-
-
-
-model.safetensors:   6%|▋         | 91.3M/1.42G [00:02<00:34, 38.5MB/s][A[A[A[Amodel.safetensors:   7%|▋         | 95.8M/1.42G [00:02<00:26, 49.5MB/s]
-
-
-
-
-optimizer.pt:   2%|▏         | 49.4M/2.84G [00:01<01:34, 29.7MB/s][A[A[A[A[A
-
-
-
-model.safetensors:   7%|▋         | 97.0M/1.42G [00:02<00:44, 30.0MB/s][A[A[A[A
-optimizer.pt:   3%|▎         | 83.7M/2.84G [00:02<01:51, 24.8MB/s][A
-
-
-
-
-optimizer.pt:   2%|▏         | 64.0M/2.84G [00:01<01:14, 37.3MB/s][A[A[A[A[Amodel.safetensors:   7%|▋         | 104M/1.42G [00:02<00:31, 41.1MB/s] 
-
-
-
-model.safetensors:   8%|▊         | 111M/1.42G [00:02<00:28, 46.7MB/s] [A[A[A[A
-
-
-optimizer.pt:   3%|▎         | 80.0M/2.84G [00:02<01:42, 26.9MB/s][A[A[A
-
-
-
-
-optimizer.pt:   3%|▎         | 75.4M/2.84G [00:01<01:01, 45.1MB/s][A[A[A[A[A
-
-
-optimizer.pt:   3%|▎         | 89.8M/2.84G [00:02<01:18, 35.0MB/s][A[A[Amodel.safetensors:   8%|▊         | 112M/1.42G [00:03<00:37, 34.6MB/s]
-optimizer.pt:   3%|▎         | 96.0M/2.84G [00:03<01:39, 27.7MB/s][Amodel.safetensors:   9%|▉         | 128M/1.42G [00:03<00:25, 50.7MB/s]
-
-
-
-model.safetensors:   8%|▊         | 118M/1.42G [00:03<00:38, 33.8MB/s][A[A[A[A
-
-
-
-model.safetensors:   9%|▊         | 124M/1.42G [00:03<00:35, 37.0MB/s][A[A[A[A
-
-
-optimizer.pt:   3%|▎         | 96.0M/2.84G [00:02<01:37, 28.2MB/s][A[A[A
-optimizer.pt:   4%|▍         | 112M/2.84G [00:03<01:15, 36.0MB/s] [Amodel.safetensors:  10%|▉         | 136M/1.42G [00:03<00:26, 47.7MB/s]
-
-
-
-
-optimizer.pt:   3%|▎         | 81.2M/2.84G [00:02<01:40, 27.6MB/s][A[A[A[A[A
-
-
-optimizer.pt:   4%|▎         | 105M/2.84G [00:03<01:14, 36.6MB/s] [A[A[A
-
-
-
-
-optimizer.pt:   3%|▎         | 90.5M/2.84G [00:02<01:17, 35.3MB/s][A[A[A[A[A
-
-
-
-model.safetensors:   9%|▉         | 130M/1.42G [00:03<00:43, 30.0MB/s][A[A[A[Amodel.safetensors:  10%|█         | 144M/1.42G [00:03<00:31, 41.0MB/s]
-optimizer.pt:   5%|▍         | 128M/2.84G [00:03<01:07, 40.2MB/s][A
-
-
-
-model.safetensors:  10%|▉         | 141M/1.42G [00:03<00:29, 42.7MB/s][A[A[A[A
-optimizer.pt:   5%|▌         | 144M/2.84G [00:03<00:49, 54.7MB/s][A
-
-
-optimizer.pt:   4%|▍         | 112M/2.84G [00:03<01:41, 26.8MB/s][A[A[A
-
-
-
-
-optimizer.pt:   3%|▎         | 96.4M/2.84G [00:02<01:41, 27.1MB/s][A[A[A[A[Amodel.safetensors:  11%|█▏        | 160M/1.42G [00:03<00:27, 45.3MB/s]
-
-
-optimizer.pt:   4%|▍         | 127M/2.84G [00:03<01:03, 42.5MB/s][A[A[A
-
-
-
-
-optimizer.pt:   4%|▎         | 106M/2.84G [00:03<01:16, 35.7MB/s] [A[A[A[A[A
-optimizer.pt:   5%|▌         | 152M/2.84G [00:04<01:03, 42.3MB/s][A
-
-
-optimizer.pt:   5%|▍         | 135M/2.84G [00:03<01:12, 37.3MB/s][A[A[A
-
-
-optimizer.pt:   5%|▍         | 141M/2.84G [00:04<01:09, 38.8MB/s][A[A[A
-
-
-
-
-optimizer.pt:   4%|▍         | 112M/2.84G [00:03<01:42, 26.6MB/s][A[A[A[A[A
-optimizer.pt:   6%|▌         | 160M/2.84G [00:04<01:13, 36.6MB/s][Amodel.safetensors:  12%|█▏        | 176M/1.42G [00:04<00:32, 38.8MB/s]
-
-
-
-
-optimizer.pt:   4%|▍         | 122M/2.84G [00:03<01:16, 35.4MB/s][A[A[A[A[A
-
-
-
-model.safetensors:  10%|█         | 147M/1.42G [00:04<01:07, 18.9MB/s][A[A[A[A
-
-
-
-model.safetensors:  11%|█         | 158M/1.42G [00:04<00:47, 26.7MB/s][A[A[A[Amodel.safetensors:  14%|█▎        | 192M/1.42G [00:04<00:28, 43.3MB/s]
-optimizer.pt:   6%|▌         | 176M/2.84G [00:04<01:04, 41.1MB/s][A
-
-
-optimizer.pt:   5%|▌         | 147M/2.84G [00:04<01:42, 26.3MB/s][A[A[A
-
-
-optimizer.pt:   5%|▌         | 155M/2.84G [00:04<01:23, 32.3MB/s][A[A[A
-
-
-
-model.safetensors:  12%|█▏        | 164M/1.42G [00:05<00:53, 23.6MB/s][A[A[A[A
-optimizer.pt:   7%|▋         | 192M/2.84G [00:05<01:01, 42.9MB/s][Amodel.safetensors:  15%|█▍        | 208M/1.42G [00:05<00:27, 43.5MB/s]
-
-
-
-model.safetensors:  12%|█▏        | 174M/1.42G [00:05<00:38, 32.2MB/s][A[A[A[A
-
-
-
-
-optimizer.pt:   5%|▍         | 128M/2.84G [00:04<02:17, 19.8MB/s][A[A[A[A[A
-
-
-
-
-optimizer.pt:   5%|▍         | 138M/2.84G [00:04<01:37, 27.8MB/s][A[A[A[A[A
-
-
-optimizer.pt:   6%|▌         | 160M/2.84G [00:05<01:57, 22.9MB/s][A[A[A
-optimizer.pt:   7%|▋         | 208M/2.84G [00:05<01:00, 43.1MB/s][Amodel.safetensors:  16%|█▌        | 224M/1.42G [00:05<00:28, 42.6MB/s]
-
-
-optimizer.pt:   6%|▌         | 169M/2.84G [00:05<01:24, 31.5MB/s][A[A[A
-optimizer.pt:   8%|▊         | 224M/2.84G [00:05<00:46, 56.6MB/s][A
-
-
-
-model.safetensors:  13%|█▎        | 180M/1.42G [00:05<00:55, 22.3MB/s][A[A[A[A
-
-
-
-
-optimizer.pt:   5%|▌         | 144M/2.84G [00:04<01:58, 22.6MB/s][A[A[A[A[Amodel.safetensors:  17%|█▋        | 240M/1.42G [00:05<00:26, 44.7MB/s]
-
-
-
-model.safetensors:  13%|█▎        | 188M/1.42G [00:05<00:43, 28.4MB/s][A[A[A[A
-optimizer.pt:   8%|▊         | 232M/2.84G [00:05<00:56, 46.5MB/s][A
-
-
-optimizer.pt:   6%|▌         | 176M/2.84G [00:05<01:51, 23.9MB/s][A[A[Amodel.safetensors:  18%|█▊        | 256M/1.42G [00:06<00:23, 49.4MB/s]
-
-
-optimizer.pt:   7%|▋         | 185M/2.84G [00:05<01:22, 32.3MB/s][A[A[A
-
-
-
-
-optimizer.pt:   6%|▌         | 160M/2.84G [00:05<01:32, 28.9MB/s][A[A[A[A[Amodel.safetensors:  19%|█▉        | 271M/1.42G [00:06<00:18, 62.1MB/s]
-optimizer.pt:   8%|▊         | 240M/2.84G [00:06<01:05, 39.9MB/s][A
-
-
-
-model.safetensors:  14%|█▎        | 194M/1.42G [00:06<00:52, 23.6MB/s][A[A[A[A
-
-
-
-
-optimizer.pt:   6%|▌         | 170M/2.84G [00:05<01:12, 36.9MB/s][A[A[A[A[A
-
-
-
-model.safetensors:  15%|█▍        | 206M/1.42G [00:06<00:34, 35.2MB/s][A[A[A[A
-
-
-optimizer.pt:   7%|▋         | 192M/2.84G [00:06<01:32, 28.5MB/s][A[A[Amodel.safetensors:  20%|█▉        | 280M/1.42G [00:06<00:22, 51.0MB/s]
-
-
-optimizer.pt:   7%|▋         | 203M/2.84G [00:06<01:07, 39.3MB/s][A[A[A
-optimizer.pt:   9%|▉         | 256M/2.84G [00:06<01:01, 42.0MB/s][A
-
-
-
-
-optimizer.pt:   6%|▌         | 176M/2.84G [00:05<01:36, 27.6MB/s][A[A[A[A[Amodel.safetensors:  20%|██        | 288M/1.42G [00:06<00:26, 42.8MB/s]
-
-
-
-
-optimizer.pt:   7%|▋         | 191M/2.84G [00:05<01:03, 41.6MB/s][A[A[A[A[A
-
-
-
-model.safetensors:  15%|█▍        | 213M/1.42G [00:06<00:48, 24.8MB/s][A[A[A[A
-optimizer.pt:  10%|▉         | 272M/2.84G [00:06<00:57, 44.6MB/s][A
-
-
-
-
-optimizer.pt:   7%|▋         | 199M/2.84G [00:06<01:03, 41.6MB/s][A[A[A[A[A
-
-
-
-model.safetensors:  16%|█▌        | 224M/1.42G [00:07<00:39, 30.4MB/s][A[A[A[A
-
-
-optimizer.pt:   7%|▋         | 209M/2.84G [00:06<01:47, 24.5MB/s][A[A[A
-
-
-optimizer.pt:   8%|▊         | 220M/2.84G [00:06<01:17, 33.7MB/s][A[A[A
-optimizer.pt:  10%|█         | 288M/2.84G [00:07<00:55, 45.6MB/s][A
-
-
-
-
-optimizer.pt:   7%|▋         | 208M/2.84G [00:06<01:09, 38.1MB/s][A[A[A[A[A
-optimizer.pt:  11%|█         | 304M/2.84G [00:07<00:54, 46.3MB/s][A
-
-
-
-
-optimizer.pt:   8%|▊         | 224M/2.84G [00:06<00:56, 45.9MB/s][A[A[A[A[A
-
-
-optimizer.pt:   8%|▊         | 226M/2.84G [00:07<01:35, 27.3MB/s][A[A[A
-
-
-
-
-optimizer.pt:   8%|▊         | 235M/2.84G [00:06<00:48, 54.0MB/s][A[A[A[A[A
-
-
-optimizer.pt:   8%|▊         | 234M/2.84G [00:07<01:15, 34.6MB/s][A[A[A
-optimizer.pt:  11%|█         | 315M/2.84G [00:07<00:49, 51.3MB/s][A
-
-
-
-model.safetensors:  17%|█▋        | 240M/1.42G [00:07<00:44, 26.4MB/s][A[A[A[Amodel.safetensors:  21%|██▏       | 304M/1.42G [00:07<00:42, 26.4MB/s]model.safetensors:  22%|██▏       | 318M/1.42G [00:07<00:30, 35.9MB/s]
-
-
-optimizer.pt:   8%|▊         | 240M/2.84G [00:07<01:32, 28.1MB/s][A[A[A
-
-
-
-
-optimizer.pt:   9%|▊         | 242M/2.84G [00:07<01:07, 38.6MB/s][A[A[A[A[A
-
-
-
-model.safetensors:  18%|█▊        | 256M/1.42G [00:08<00:34, 33.5MB/s][A[A[A[A
-optimizer.pt:  11%|█▏        | 321M/2.84G [00:08<01:06, 37.9MB/s][A
-
-
-optimizer.pt:   9%|▉         | 252M/2.84G [00:07<01:03, 40.6MB/s][A[A[A
-
-
-
-
-optimizer.pt:   9%|▉         | 251M/2.84G [00:07<00:56, 45.7MB/s][A[A[A[A[A
-
-
-
-model.safetensors:  19%|█▉        | 270M/1.42G [00:08<00:25, 44.9MB/s][A[A[A[A
-optimizer.pt:  12%|█▏        | 335M/2.84G [00:08<00:48, 51.5MB/s][Amodel.safetensors:  23%|██▎       | 326M/1.42G [00:08<00:32, 33.8MB/s]
-
-
-optimizer.pt:   9%|▉         | 259M/2.84G [00:07<01:09, 37.1MB/s][A[A[Amodel.safetensors:  24%|██▎       | 336M/1.42G [00:08<00:31, 34.9MB/s]
-
-
-optimizer.pt:   9%|▉         | 266M/2.84G [00:08<00:59, 42.9MB/s][A[A[A
-
-
-
-
-optimizer.pt:   9%|▉         | 257M/2.84G [00:07<01:12, 35.6MB/s][A[A[A[A[A
-optimizer.pt:  12%|█▏        | 343M/2.84G [00:08<01:01, 40.4MB/s][Amodel.safetensors:  25%|██▍       | 349M/1.42G [00:08<00:23, 46.1MB/s]
-
-
-
-
-optimizer.pt:   9%|▉         | 266M/2.84G [00:07<00:58, 43.9MB/s][A[A[A[A[A
-
-
-
-model.safetensors:  20%|█▉        | 278M/1.42G [00:08<00:33, 33.6MB/s][A[A[A[A
-optimizer.pt:  12%|█▏        | 350M/2.84G [00:08<00:57, 43.2MB/s][Amodel.safetensors:  25%|██▌       | 357M/1.42G [00:08<00:26, 39.6MB/s]
-
-
-optimizer.pt:  10%|▉         | 273M/2.84G [00:08<01:26, 29.8MB/s][A[A[A
-
-
-
-
-optimizer.pt:  10%|▉         | 273M/2.84G [00:07<01:18, 32.7MB/s][A[A[A[A[A
-
-
-optimizer.pt:  10%|▉         | 282M/2.84G [00:08<01:04, 39.7MB/s][A[A[A
-
-
-
-model.safetensors:  20%|██        | 288M/1.42G [00:09<00:37, 30.0MB/s][A[A[A[A
-optimizer.pt:  13%|█▎        | 356M/2.84G [00:09<01:29, 27.6MB/s][Amodel.safetensors:  26%|██▌       | 368M/1.42G [00:09<00:27, 38.2MB/s]
-
-
-
-
-optimizer.pt:  10%|█         | 288M/2.84G [00:08<01:01, 41.3MB/s][A[A[A[A[A
-
-
-optimizer.pt:  10%|█         | 289M/2.84G [00:08<01:24, 30.0MB/s][A[A[A
-
-
-
-model.safetensors:  21%|██▏       | 304M/1.42G [00:09<00:32, 34.2MB/s][A[A[A[A
-
-
-optimizer.pt:  10%|█         | 297M/2.84G [00:09<01:06, 38.4MB/s][A[A[A
-optimizer.pt:  13%|█▎        | 368M/2.84G [00:09<01:18, 31.6MB/s][A
-
-
-
-
-optimizer.pt:  11%|█         | 304M/2.84G [00:08<00:55, 45.5MB/s][A[A[A[A[Amodel.safetensors:  27%|██▋       | 384M/1.42G [00:09<00:24, 41.8MB/s]
-
-
-
-model.safetensors:  23%|██▎       | 320M/1.42G [00:09<00:28, 38.9MB/s][A[A[A[A
-
-
-optimizer.pt:  11%|█         | 304M/2.84G [00:09<01:28, 28.5MB/s][A[A[A
-
-
-
-model.safetensors:  23%|██▎       | 331M/1.42G [00:09<00:23, 46.5MB/s][A[A[A[Amodel.safetensors:  28%|██▊       | 400M/1.42G [00:09<00:23, 43.1MB/s]
-optimizer.pt:  14%|█▎        | 384M/2.84G [00:09<01:10, 34.6MB/s][A
-
-
-
-
-optimizer.pt:  11%|█▏        | 320M/2.84G [00:08<00:56, 44.6MB/s][A[A[A[A[A
-
-
-optimizer.pt:  11%|█▏        | 320M/2.84G [00:09<00:54, 46.4MB/s][A[A[Amodel.safetensors:  29%|██▉       | 412M/1.42G [00:09<00:19, 51.9MB/s]
-optimizer.pt:  14%|█▍        | 397M/2.84G [00:09<00:54, 45.1MB/s][A
-
-
-
-
-optimizer.pt:  12%|█▏        | 336M/2.84G [00:09<00:52, 47.2MB/s][A[A[A[A[A
-
-
-optimizer.pt:  12%|█▏        | 328M/2.84G [00:09<01:03, 39.6MB/s][A[A[A
-optimizer.pt:  14%|█▍        | 403M/2.84G [00:10<01:04, 37.9MB/s][A
-
-
-
-model.safetensors:  24%|██▍       | 338M/1.42G [00:10<00:31, 34.3MB/s][A[A[A[A
-
-
-
-
-optimizer.pt:  12%|█▏        | 352M/2.84G [00:09<00:40, 61.1MB/s][A[A[A[A[A
-
-
-
-model.safetensors:  25%|██▍       | 352M/1.42G [00:10<00:22, 46.8MB/s][A[A[A[A
-
-
-
-
-optimizer.pt:  13%|█▎        | 360M/2.84G [00:09<00:47, 52.0MB/s][A[A[A[A[A
-optimizer.pt:  15%|█▍        | 416M/2.84G [00:10<01:02, 39.0MB/s][A
-
-
-optimizer.pt:  12%|█▏        | 336M/2.84G [00:10<01:17, 32.1MB/s][A[A[A
-
-
-
-
-optimizer.pt:  13%|█▎        | 368M/2.84G [00:09<00:53, 46.3MB/s][A[A[A[A[Amodel.safetensors:  29%|██▉       | 419M/1.42G [00:10<00:38, 25.9MB/s]
-
-
-
-model.safetensors:  25%|██▌       | 359M/1.42G [00:10<00:31, 33.4MB/s][A[A[A[A
-optimizer.pt:  15%|█▌        | 432M/2.84G [00:10<00:58, 41.0MB/s][A
-
-
-optimizer.pt:  12%|█▏        | 352M/2.84G [00:10<01:08, 36.2MB/s][A[A[A
-
-
-
-
-optimizer.pt:  14%|█▎        | 384M/2.84G [00:10<00:53, 46.2MB/s][A[A[A[A[A
-
-
-
-model.safetensors:  26%|██▌       | 368M/1.42G [00:11<00:32, 32.3MB/s][A[A[A[Amodel.safetensors:  30%|███       | 432M/1.42G [00:11<00:34, 28.6MB/s]
-optimizer.pt:  16%|█▌        | 448M/2.84G [00:11<00:53, 44.5MB/s][A
-
-
-optimizer.pt:  13%|█▎        | 368M/2.84G [00:10<00:57, 42.7MB/s][A[A[A
-
-
-
-
-optimizer.pt:  14%|█▍        | 400M/2.84G [00:10<00:51, 47.7MB/s][A[A[A[A[A
-
-
-
-model.safetensors:  27%|██▋       | 384M/1.42G [00:11<00:28, 35.9MB/s][A[A[A[A
-optimizer.pt:  16%|█▋        | 464M/2.84G [00:11<00:54, 43.8MB/s][A
-
-
-
-model.safetensors:  28%|██▊       | 400M/1.42G [00:11<00:20, 49.9MB/s][A[A[A[A
-
-
-optimizer.pt:  14%|█▎        | 384M/2.84G [00:11<00:58, 42.2MB/s][A[A[Amodel.safetensors:  32%|███▏      | 448M/1.42G [00:11<00:35, 27.6MB/s]
-
-
-
-
-optimizer.pt:  15%|█▍        | 416M/2.84G [00:10<00:52, 46.2MB/s][A[A[A[A[Amodel.safetensors:  33%|███▎      | 464M/1.42G [00:11<00:24, 38.5MB/s]
-
-
-optimizer.pt:  14%|█▍        | 400M/2.84G [00:11<00:54, 45.0MB/s][A[A[A
-optimizer.pt:  17%|█▋        | 480M/2.84G [00:11<00:54, 43.2MB/s][A
-
-
-
-model.safetensors:  29%|██▊       | 408M/1.42G [00:12<00:27, 36.4MB/s][A[A[A[A
-optimizer.pt:  17%|█▋        | 492M/2.84G [00:12<00:45, 52.1MB/s][A
-
-
-
-
-optimizer.pt:  15%|█▌        | 432M/2.84G [00:11<00:50, 47.7MB/s][A[A[A[A[Amodel.safetensors:  33%|███▎      | 471M/1.42G [00:12<00:25, 37.0MB/s]
-
-
-optimizer.pt:  15%|█▍        | 416M/2.84G [00:11<00:52, 45.8MB/s][A[A[A
-optimizer.pt:  18%|█▊        | 499M/2.84G [00:12<00:53, 43.8MB/s][A
-
-
-
-
-optimizer.pt:  16%|█▌        | 448M/2.84G [00:11<00:47, 50.3MB/s][A[A[A[A[Amodel.safetensors:  34%|███▍      | 480M/1.42G [00:12<00:27, 34.5MB/s]
-
-
-
-
-optimizer.pt:  16%|█▌        | 460M/2.84G [00:11<00:39, 59.5MB/s][A[A[A[A[A
-
-
-
-model.safetensors:  29%|██▉       | 416M/1.42G [00:12<00:34, 28.9MB/s][A[A[A[A
-
-
-
-model.safetensors:  30%|███       | 427M/1.42G [00:12<00:26, 37.4MB/s][A[A[A[A
-optimizer.pt:  18%|█▊        | 512M/2.84G [00:12<00:53, 43.2MB/s][A
-
-
-optimizer.pt:  15%|█▌        | 432M/2.84G [00:12<00:55, 43.4MB/s][A[A[A
-optimizer.pt:  19%|█▊        | 528M/2.84G [00:12<00:39, 58.3MB/s][Amodel.safetensors:  35%|███▍      | 496M/1.42G [00:12<00:24, 38.0MB/s]
-
-
-
-
-optimizer.pt:  16%|█▋        | 468M/2.84G [00:11<00:58, 40.8MB/s][A[A[A[A[A
-
-
-optimizer.pt:  16%|█▌        | 448M/2.84G [00:12<00:55, 43.1MB/s][A[A[Amodel.safetensors:  36%|███▌      | 512M/1.42G [00:13<00:21, 43.2MB/s]
-
-
-
-model.safetensors:  31%|███       | 434M/1.42G [00:13<00:39, 24.7MB/s][A[A[A[A
-
-
-optimizer.pt:  16%|█▋        | 464M/2.84G [00:12<00:50, 46.7MB/s][A[A[A
-
-
-
-model.safetensors:  31%|███▏      | 445M/1.42G [00:13<00:29, 32.9MB/s][A[A[A[A
-
-
-
-
-optimizer.pt:  17%|█▋        | 480M/2.84G [00:12<01:05, 36.1MB/s][A[A[A[A[A
-optimizer.pt:  19%|█▉        | 536M/2.84G [00:13<01:10, 32.5MB/s][Amodel.safetensors:  37%|███▋      | 528M/1.42G [00:13<00:20, 43.3MB/s]
-
-
-
-
-optimizer.pt:  17%|█▋        | 494M/2.84G [00:12<00:49, 47.2MB/s][A[A[A[A[A
-
-
-optimizer.pt:  17%|█▋        | 480M/2.84G [00:13<00:46, 50.9MB/s][A[A[A
-
-
-optimizer.pt:  17%|█▋        | 490M/2.84G [00:13<00:41, 56.8MB/s][A[A[Amodel.safetensors:  38%|███▊      | 544M/1.42G [00:13<00:18, 46.9MB/s]
-optimizer.pt:  19%|█▉        | 544M/2.84G [00:13<01:15, 30.3MB/s][A
-
-
-
-
-optimizer.pt:  18%|█▊        | 501M/2.84G [00:12<01:06, 35.1MB/s][A[A[A[A[A
-
-
-
-model.safetensors:  32%|███▏      | 451M/1.42G [00:13<00:41, 23.3MB/s][A[A[A[Amodel.safetensors:  39%|███▉      | 560M/1.42G [00:13<00:17, 49.0MB/s]
-
-
-optimizer.pt:  18%|█▊        | 497M/2.84G [00:13<00:57, 40.9MB/s][A[A[Amodel.safetensors:  41%|████      | 576M/1.42G [00:14<00:13, 62.0MB/s]
-optimizer.pt:  20%|█▉        | 560M/2.84G [00:14<01:09, 32.7MB/s][A
-
-
-
-model.safetensors:  33%|███▎      | 464M/1.42G [00:14<00:34, 27.7MB/s][A[A[A[A
-
-
-
-
-optimizer.pt:  18%|█▊        | 512M/2.84G [00:13<01:14, 31.2MB/s][A[A[A[A[Amodel.safetensors:  41%|████      | 584M/1.42G [00:14<00:15, 54.3MB/s]
-
-
-optimizer.pt:  18%|█▊        | 512M/2.84G [00:14<00:57, 40.3MB/s][A[A[A
-optimizer.pt:  20%|██        | 576M/2.84G [00:14<01:02, 36.0MB/s][A
-
-
-
-model.safetensors:  34%|███▍      | 480M/1.42G [00:14<00:27, 34.0MB/s][A[A[A[A
-
-
-
-
-optimizer.pt:  19%|█▊        | 528M/2.84G [00:13<01:02, 36.9MB/s][A[A[A[A[A
-
-
-
-model.safetensors:  35%|███▍      | 494M/1.42G [00:14<00:20, 45.8MB/s][A[A[A[A
-
-
-optimizer.pt:  19%|█▊        | 528M/2.84G [00:14<00:52, 44.3MB/s][A[A[A
-optimizer.pt:  21%|██        | 592M/2.84G [00:14<00:57, 38.8MB/s][A
-
-
-
-
-optimizer.pt:  19%|█▉        | 544M/2.84G [00:14<01:00, 38.2MB/s][A[A[A[A[A
-optimizer.pt:  21%|██▏       | 608M/2.84G [00:15<00:56, 39.3MB/s][A
-
-
-optimizer.pt:  19%|█▉        | 544M/2.84G [00:14<01:01, 37.3MB/s][A[A[A
-
-
-
-
-optimizer.pt:  20%|█▉        | 560M/2.84G [00:14<00:55, 41.3MB/s][A[A[A[A[A
-optimizer.pt:  22%|██▏       | 624M/2.84G [00:15<00:43, 51.4MB/s][A
-
-
-
-model.safetensors:  35%|███▌      | 502M/1.42G [00:15<00:34, 26.3MB/s][A[A[A[A
-
-
-optimizer.pt:  20%|█▉        | 557M/2.84G [00:15<00:49, 46.5MB/s][A[A[A
-optimizer.pt:  22%|██▏       | 632M/2.84G [00:15<00:50, 44.0MB/s][A
-
-
-
-model.safetensors:  36%|███▌      | 512M/1.42G [00:15<00:32, 27.9MB/s][A[A[A[A
-
-
-
-
-optimizer.pt:  20%|██        | 576M/2.84G [00:14<00:54, 41.6MB/s][A[A[A[A[A
-
-
-optimizer.pt:  20%|█▉        | 564M/2.84G [00:15<01:03, 35.8MB/s][A[A[A
-
-
-
-model.safetensors:  37%|███▋      | 528M/1.42G [00:15<00:25, 34.8MB/s][A[A[A[A
-optimizer.pt:  23%|██▎       | 640M/2.84G [00:15<00:57, 38.4MB/s][Amodel.safetensors:  42%|████▏     | 592M/1.42G [00:16<00:49, 16.9MB/s]
-optimizer.pt:  23%|██▎       | 656M/2.84G [00:16<00:41, 53.2MB/s][A
-
-
-
-model.safetensors:  38%|███▊      | 543M/1.42G [00:16<00:18, 46.8MB/s][A[A[A[A
-
-
-optimizer.pt:  20%|██        | 576M/2.84G [00:15<00:59, 37.8MB/s][A[A[A
-
-
-
-
-optimizer.pt:  21%|██        | 592M/2.84G [00:15<00:53, 42.0MB/s][A[A[A[A[Amodel.safetensors:  42%|████▏     | 599M/1.42G [00:16<00:40, 20.1MB/s]
-optimizer.pt:  23%|██▎       | 664M/2.84G [00:16<00:47, 45.6MB/s][A
-
-
-
-
-optimizer.pt:  21%|██▏       | 608M/2.84G [00:15<00:49, 44.8MB/s][A[A[A[A[A
-
-
-
-model.safetensors:  39%|███▉      | 551M/1.42G [00:16<00:22, 39.0MB/s][A[A[A[Amodel.safetensors:  43%|████▎     | 608M/1.42G [00:16<00:37, 21.5MB/s]
-
-
-optimizer.pt:  21%|██        | 592M/2.84G [00:16<01:01, 36.4MB/s][A[A[A
-optimizer.pt:  24%|██▎       | 672M/2.84G [00:16<00:55, 38.8MB/s][A
-
-
-
-
-optimizer.pt:  22%|██▏       | 624M/2.84G [00:15<00:46, 47.8MB/s][A[A[A[A[A
-
-
-
-model.safetensors:  39%|███▉      | 560M/1.42G [00:16<00:24, 35.0MB/s][A[A[A[Amodel.safetensors:  44%|████▍     | 624M/1.42G [00:16<00:28, 28.1MB/s]
-
-
-optimizer.pt:  21%|██▏       | 608M/2.84G [00:16<00:53, 41.8MB/s][A[A[A
-
-
-
-model.safetensors:  40%|████      | 574M/1.42G [00:16<00:17, 47.8MB/s][A[A[A[Amodel.safetensors:  45%|████▌     | 639M/1.42G [00:16<00:19, 39.7MB/s]
-
-
-
-
-optimizer.pt:  23%|██▎       | 640M/2.84G [00:15<00:42, 51.3MB/s][A[A[A[A[A
-
-
-optimizer.pt:  22%|██▏       | 624M/2.84G [00:16<00:47, 46.4MB/s][A[A[A
-
-
-optimizer.pt:  22%|██▏       | 636M/2.84G [00:16<00:40, 54.7MB/s][A[A[Amodel.safetensors:  46%|████▌     | 647M/1.42G [00:17<00:21, 35.9MB/s]
-
-
-
-
-optimizer.pt:  23%|██▎       | 656M/2.84G [00:16<00:41, 52.0MB/s][A[A[A[A[A
-
-
-
-model.safetensors:  41%|████      | 582M/1.42G [00:17<00:23, 36.1MB/s][A[A[A[A
-
-
-
-model.safetensors:  42%|████▏     | 592M/1.42G [00:17<00:21, 37.8MB/s][A[A[A[A
-
-
-
-
-optimizer.pt:  24%|██▎       | 672M/2.84G [00:16<00:40, 53.7MB/s][A[A[A[A[A
-
-
-optimizer.pt:  23%|██▎       | 643M/2.84G [00:17<00:56, 38.9MB/s][A[A[Amodel.safetensors:  46%|████▌     | 656M/1.42G [00:17<00:24, 30.7MB/s]
-optimizer.pt:  24%|██▍       | 688M/2.84G [00:17<01:31, 23.4MB/s][A
-
-
-
-model.safetensors:  43%|████▎     | 608M/1.42G [00:17<00:18, 43.6MB/s][A[A[A[A
-
-
-
-
-optimizer.pt:  24%|██▍       | 688M/2.84G [00:16<00:41, 52.2MB/s][A[A[A[A[A
-optimizer.pt:  25%|██▍       | 699M/2.84G [00:17<01:10, 30.3MB/s][A
-
-
-optimizer.pt:  23%|██▎       | 656M/2.84G [00:17<00:50, 42.8MB/s][A[A[Amodel.safetensors:  47%|████▋     | 672M/1.42G [00:17<00:20, 35.6MB/s]
-
-
-
-model.safetensors:  44%|████▍     | 624M/1.42G [00:18<00:16, 48.1MB/s][A[A[A[A
-
-
-
-
-optimizer.pt:  25%|██▍       | 704M/2.84G [00:17<00:37, 57.0MB/s][A[A[A[A[A
-optimizer.pt:  25%|██▍       | 706M/2.84G [00:18<01:19, 27.0MB/s][A
-
-
-optimizer.pt:  24%|██▎       | 672M/2.84G [00:17<00:49, 43.9MB/s][A[A[Amodel.safetensors:  48%|████▊     | 688M/1.42G [00:18<00:17, 41.7MB/s]
-
-
-
-model.safetensors:  45%|████▌     | 640M/1.42G [00:18<00:15, 49.1MB/s][A[A[A[A
-
-
-
-
-optimizer.pt:  25%|██▌       | 720M/2.84G [00:17<00:43, 48.5MB/s][A[A[A[A[A
-optimizer.pt:  25%|██▌       | 720M/2.84G [00:18<01:07, 31.3MB/s][A
-
-
-optimizer.pt:  24%|██▍       | 688M/2.84G [00:18<00:52, 41.1MB/s][A[A[A
-
-
-
-model.safetensors:  46%|████▌     | 656M/1.42G [00:18<00:15, 48.9MB/s][A[A[A[Amodel.safetensors:  50%|████▉     | 704M/1.42G [00:18<00:18, 37.7MB/s]
-
-
-
-
-optimizer.pt:  26%|██▌       | 736M/2.84G [00:17<00:41, 50.3MB/s][A[A[A[A[A
-optimizer.pt:  26%|██▌       | 736M/2.84G [00:18<01:01, 34.2MB/s][A
-
-
-
-model.safetensors:  47%|████▋     | 672M/1.42G [00:18<00:14, 50.7MB/s][A[A[A[A
-
-
-optimizer.pt:  25%|██▍       | 704M/2.84G [00:18<00:51, 41.8MB/s][A[A[Amodel.safetensors:  51%|█████     | 720M/1.42G [00:19<00:16, 41.7MB/s]
-optimizer.pt:  26%|██▋       | 751M/2.84G [00:19<00:45, 46.1MB/s][A
-
-
-
-model.safetensors:  48%|████▊     | 685M/1.42G [00:19<00:12, 60.6MB/s][A[A[A[A
-
-
-
-
-optimizer.pt:  26%|██▋       | 752M/2.84G [00:18<00:41, 49.9MB/s][A[A[A[A[A
-
-
-optimizer.pt:  25%|██▌       | 715M/2.84G [00:18<00:43, 48.7MB/s][A[A[A
-optimizer.pt:  27%|██▋       | 759M/2.84G [00:19<00:51, 40.0MB/s][A
-
-
-
-
-optimizer.pt:  27%|██▋       | 768M/2.84G [00:18<00:38, 53.7MB/s][A[A[A[A[A
-
-
-optimizer.pt:  25%|██▌       | 721M/2.84G [00:19<00:53, 39.7MB/s][A[A[Amodel.safetensors:  52%|█████▏    | 736M/1.42G [00:19<00:16, 41.1MB/s]
-
-
-
-model.safetensors:  49%|████▉     | 693M/1.42G [00:19<00:17, 42.1MB/s][A[A[A[A
-
-
-
-
-optimizer.pt:  28%|██▊       | 784M/2.84G [00:18<00:37, 54.4MB/s][A[A[A[A[A
-optimizer.pt:  27%|██▋       | 768M/2.84G [00:19<00:56, 36.6MB/s][A
-
-
-optimizer.pt:  26%|██▌       | 736M/2.84G [00:19<00:50, 42.1MB/s][A[A[A
-
-
-
-model.safetensors:  50%|████▉     | 704M/1.42G [00:19<00:16, 43.2MB/s][A[A[A[A
-
-
-
-
-optimizer.pt:  28%|██▊       | 795M/2.84G [00:18<00:33, 61.3MB/s][A[A[A[A[A
-optimizer.pt:  28%|██▊       | 784M/2.84G [00:20<00:53, 38.8MB/s][Amodel.safetensors:  53%|█████▎    | 752M/1.42G [00:20<00:19, 34.7MB/s]
-
-
-optimizer.pt:  26%|██▋       | 752M/2.84G [00:19<00:48, 43.0MB/s][A[A[A
-
-
-
-
-optimizer.pt:  28%|██▊       | 802M/2.84G [00:19<00:45, 44.7MB/s][A[A[A[A[A
-optimizer.pt:  28%|██▊       | 798M/2.84G [00:20<00:40, 50.2MB/s][Amodel.safetensors:  54%|█████▍    | 768M/1.42G [00:20<00:14, 45.2MB/s]
-
-
-
-model.safetensors:  51%|█████     | 720M/1.42G [00:20<00:17, 40.2MB/s][A[A[A[A
-
-
-
-
-optimizer.pt:  29%|██▊       | 814M/2.84G [00:19<00:37, 53.4MB/s][A[A[A[A[A
-
-
-optimizer.pt:  27%|██▋       | 768M/2.84G [00:19<00:43, 47.9MB/s][A[A[A
-optimizer.pt:  28%|██▊       | 805M/2.84G [00:20<00:46, 44.1MB/s][Amodel.safetensors:  55%|█████▍    | 775M/1.42G [00:20<00:15, 40.9MB/s]
-
-
-
-model.safetensors:  52%|█████▏    | 736M/1.42G [00:20<00:16, 41.3MB/s][A[A[A[A
-optimizer.pt:  29%|██▊       | 816M/2.84G [00:20<00:49, 41.1MB/s][A
-
-
-optimizer.pt:  28%|██▊       | 784M/2.84G [00:20<00:42, 47.9MB/s][A[A[A
-
-
-
-model.safetensors:  53%|█████▎    | 752M/1.42G [00:20<00:15, 42.3MB/s][A[A[A[A
-
-
-optimizer.pt:  28%|██▊       | 800M/2.84G [00:20<00:40, 50.7MB/s][A[A[A
-
-
-
-model.safetensors:  54%|█████▍    | 766M/1.42G [00:21<00:12, 52.8MB/s][A[A[A[Amodel.safetensors:  55%|█████▌    | 784M/1.42G [00:21<00:21, 29.1MB/s]
-optimizer.pt:  29%|██▉       | 832M/2.84G [00:21<00:47, 42.4MB/s][Amodel.safetensors:  56%|█████▋    | 799M/1.42G [00:21<00:15, 40.5MB/s]
-
-
-optimizer.pt:  29%|██▊       | 816M/2.84G [00:20<00:38, 52.5MB/s][A[A[A
-
-
-
-model.safetensors:  54%|█████▍    | 773M/1.42G [00:21<00:15, 40.7MB/s][A[A[A[Amodel.safetensors:  57%|█████▋    | 807M/1.42G [00:21<00:18, 33.6MB/s]
-optimizer.pt:  30%|██▉       | 848M/2.84G [00:21<00:52, 38.0MB/s][A
-
-
-optimizer.pt:  29%|██▉       | 832M/2.84G [00:21<00:38, 51.5MB/s][A[A[A
-
-
-
-model.safetensors:  55%|█████▌    | 784M/1.42G [00:21<00:16, 37.7MB/s][A[A[A[Amodel.safetensors:  57%|█████▋    | 816M/1.42G [00:21<00:18, 32.9MB/s]
-optimizer.pt:  30%|███       | 864M/2.84G [00:21<00:48, 40.8MB/s][A
-
-
-
-model.safetensors:  56%|█████▋    | 800M/1.42G [00:22<00:16, 38.3MB/s][A[A[A[A
-optimizer.pt:  31%|███       | 880M/2.84G [00:22<00:44, 44.1MB/s][Amodel.safetensors:  59%|█████▊    | 832M/1.42G [00:22<00:16, 35.9MB/s]
-
-
-
-model.safetensors:  57%|█████▋    | 815M/1.42G [00:22<00:11, 50.6MB/s][A[A[A[Amodel.safetensors:  60%|█████▉    | 848M/1.42G [00:22<00:13, 40.9MB/s]
-optimizer.pt:  32%|███▏      | 896M/2.84G [00:22<00:42, 45.6MB/s][Amodel.safetensors:  61%|██████    | 864M/1.42G [00:22<00:10, 54.4MB/s]
-optimizer.pt:  32%|███▏      | 912M/2.84G [00:22<00:32, 58.5MB/s][A
-
-
-
-model.safetensors:  58%|█████▊    | 823M/1.42G [00:22<00:15, 38.2MB/s][A[A[A[A
-optimizer.pt:  32%|███▏      | 920M/2.84G [00:22<00:39, 48.5MB/s][A
-
-
-
-model.safetensors:  59%|█████▊    | 832M/1.42G [00:22<00:15, 38.1MB/s][A[A[A[Amodel.safetensors:  61%|██████▏   | 872M/1.42G [00:22<00:13, 41.1MB/s]
-
-
-optimizer.pt:  30%|██▉       | 848M/2.84G [00:22<01:22, 24.0MB/s][A[A[A
-
-
-optimizer.pt:  30%|███       | 858M/2.84G [00:22<01:10, 28.2MB/s][A[A[A
-optimizer.pt:  33%|███▎      | 928M/2.84G [00:23<00:45, 41.9MB/s][A
-
-
-
-model.safetensors:  60%|█████▉    | 848M/1.42G [00:23<00:14, 40.2MB/s][A[A[A[Amodel.safetensors:  62%|██████▏   | 880M/1.42G [00:23<00:14, 36.6MB/s]
-
-
-
-model.safetensors:  61%|██████    | 864M/1.42G [00:23<00:10, 52.9MB/s][A[A[A[A
-
-
-optimizer.pt:  30%|███       | 864M/2.84G [00:23<01:15, 26.2MB/s][A[A[A
-optimizer.pt:  33%|███▎      | 944M/2.84G [00:23<00:42, 44.2MB/s][A
-
-
-optimizer.pt:  31%|███       | 873M/2.84G [00:23<01:01, 32.0MB/s][A[A[Amodel.safetensors:  63%|██████▎   | 896M/1.42G [00:23<00:12, 40.9MB/s]model.safetensors:  64%|██████▍   | 911M/1.42G [00:23<00:09, 54.2MB/s]
-
-
-
-model.safetensors:  61%|██████▏   | 871M/1.42G [00:23<00:13, 40.4MB/s][A[A[A[A
-optimizer.pt:  34%|███▍      | 960M/2.84G [00:23<00:40, 46.0MB/s][A
-
-
-optimizer.pt:  31%|███       | 880M/2.84G [00:23<01:11, 27.5MB/s][A[A[A
-
-
-
-model.safetensors:  62%|██████▏   | 880M/1.42G [00:23<00:13, 38.7MB/s][A[A[A[Amodel.safetensors:  65%|██████▍   | 919M/1.42G [00:24<00:11, 43.2MB/s]
-optimizer.pt:  34%|███▍      | 976M/2.84G [00:24<00:41, 45.0MB/s][A
-
-
-optimizer.pt:  32%|███▏      | 896M/2.84G [00:23<00:57, 34.0MB/s][A[A[Amodel.safetensors:  65%|██████▌   | 928M/1.42G [00:24<00:12, 38.0MB/s]
-
-
-
-model.safetensors:  63%|██████▎   | 896M/1.42G [00:24<00:13, 40.0MB/s][A[A[A[A
-
-
-optimizer.pt:  32%|███▏      | 912M/2.84G [00:24<00:52, 36.7MB/s][A[A[A
-optimizer.pt:  35%|███▍      | 992M/2.84G [00:24<00:45, 40.2MB/s][A
-
-
-
-model.safetensors:  64%|██████▍   | 912M/1.42G [00:24<00:12, 41.5MB/s][A[A[A[Amodel.safetensors:  67%|██████▋   | 944M/1.42G [00:24<00:12, 38.8MB/s]
-
-
-optimizer.pt:  33%|███▎      | 928M/2.84G [00:24<00:49, 38.7MB/s][A[A[Amodel.safetensors:  68%|██████▊   | 960M/1.42G [00:25<00:10, 44.0MB/s]
-optimizer.pt:  36%|███▌      | 1.01G/2.84G [00:25<00:43, 42.1MB/s][A
-
-
-
-model.safetensors:  65%|██████▌   | 928M/1.42G [00:25<00:11, 44.5MB/s][A[A[A[A
-
-
-optimizer.pt:  33%|███▎      | 937M/2.84G [00:24<00:43, 44.0MB/s][A[A[A
-
-
-
-model.safetensors:  67%|██████▋   | 944M/1.42G [00:25<00:10, 47.1MB/s][A[A[A[A
-optimizer.pt:  36%|███▌      | 1.02G/2.84G [00:25<00:43, 41.3MB/s][A
-
-
-
-
-optimizer.pt:  29%|██▉       | 821M/2.84G [00:24<05:35, 6.01MB/s][A[A[A[A[A
-
-
-optimizer.pt:  33%|███▎      | 944M/2.84G [00:25<00:55, 33.9MB/s][A[A[Amodel.safetensors:  69%|██████▉   | 976M/1.42G [00:25<00:12, 36.2MB/s]model.safetensors:  70%|██████▉   | 991M/1.42G [00:25<00:09, 47.0MB/s]
-optimizer.pt:  37%|███▋      | 1.04G/2.84G [00:25<00:40, 44.0MB/s][A
-
-
-optimizer.pt:  34%|███▍      | 960M/2.84G [00:25<00:46, 40.6MB/s][A[A[A
-
-
-
-
-optimizer.pt:  29%|██▉       | 832M/2.84G [00:24<04:05, 8.18MB/s][A[A[A[A[Amodel.safetensors:  70%|███████   | 998M/1.42G [00:25<00:09, 43.0MB/s]
-
-
-optimizer.pt:  34%|███▍      | 976M/2.84G [00:25<00:42, 44.0MB/s][A[A[A
-optimizer.pt:  37%|███▋      | 1.06G/2.84G [00:26<00:41, 43.4MB/s][A
-
-
-
-
-optimizer.pt:  30%|██▉       | 848M/2.84G [00:25<02:44, 12.1MB/s][A[A[A[A[Amodel.safetensors:  71%|███████   | 1.01G/1.42G [00:26<00:10, 38.9MB/s]
-
-
-optimizer.pt:  35%|███▍      | 992M/2.84G [00:25<00:37, 49.6MB/s][A[A[Amodel.safetensors:  72%|███████▏  | 1.02G/1.42G [00:26<00:07, 54.0MB/s]
-
-
-
-
-optimizer.pt:  30%|███       | 864M/2.84G [00:25<01:57, 16.8MB/s][A[A[A[A[A
-optimizer.pt:  38%|███▊      | 1.07G/2.84G [00:26<00:41, 42.9MB/s][A
-
-
-optimizer.pt:  36%|███▌      | 1.01G/2.84G [00:26<00:36, 50.3MB/s][A[A[A
-
-
-
-
-optimizer.pt:  31%|███       | 880M/2.84G [00:25<01:29, 21.9MB/s][A[A[A[A[Amodel.safetensors:  73%|███████▎  | 1.03G/1.42G [00:26<00:09, 41.6MB/s]
-optimizer.pt:  38%|███▊      | 1.09G/2.84G [00:26<00:39, 44.4MB/s][A
-
-
-optimizer.pt:  36%|███▌      | 1.02G/2.84G [00:26<00:36, 50.1MB/s][A[A[A
-
-
-
-
-optimizer.pt:  32%|███▏      | 896M/2.84G [00:26<01:10, 27.6MB/s][A[A[A[A[A
-
-
-
-model.safetensors:  68%|██████▊   | 960M/1.42G [00:27<00:23, 19.8MB/s][A[A[A[A
-optimizer.pt:  39%|███▉      | 1.10G/2.84G [00:27<00:40, 43.1MB/s][A
-
-
-
-model.safetensors:  69%|██████▊   | 974M/1.42G [00:27<00:16, 26.3MB/s][A[A[A[Amodel.safetensors:  73%|███████▎  | 1.04G/1.42G [00:27<00:13, 28.0MB/s]
-
-
-
-
-optimizer.pt:  32%|███▏      | 912M/2.84G [00:26<01:02, 31.0MB/s][A[A[A[A[A
-
-
-
-model.safetensors:  69%|██████▉   | 981M/1.42G [00:27<00:16, 25.9MB/s][A[A[A[A
-optimizer.pt:  39%|███▉      | 1.12G/2.84G [00:27<00:39, 43.0MB/s][A
-
-
-
-
-optimizer.pt:  33%|███▎      | 928M/2.84G [00:26<00:54, 35.1MB/s][A[A[A[A[A
-
-
-optimizer.pt:  37%|███▋      | 1.04G/2.84G [00:27<00:55, 32.4MB/s][A[A[A
-optimizer.pt:  40%|████      | 1.14G/2.84G [00:27<00:37, 45.9MB/s][A
-
-
-
-model.safetensors:  70%|██████▉   | 992M/1.42G [00:27<00:16, 26.1MB/s][A[A[A[A
-
-
-
-
-optimizer.pt:  33%|███▎      | 944M/2.84G [00:27<00:47, 40.0MB/s][A[A[A[A[Amodel.safetensors:  74%|███████▍  | 1.06G/1.42G [00:28<00:14, 24.8MB/s]
-
-
-optimizer.pt:  37%|███▋      | 1.06G/2.84G [00:27<00:48, 37.1MB/s][A[A[Amodel.safetensors:  75%|███████▌  | 1.07G/1.42G [00:28<00:10, 34.6MB/s]
-
-
-
-model.safetensors:  71%|███████   | 1.01G/1.42G [00:28<00:12, 33.1MB/s][A[A[A[A
-optimizer.pt:  41%|████      | 1.15G/2.84G [00:28<00:35, 47.2MB/s][A
-
-
-
-
-optimizer.pt:  34%|███▍      | 960M/2.84G [00:27<00:47, 39.6MB/s][A[A[A[A[Amodel.safetensors:  76%|███████▌  | 1.08G/1.42G [00:28<00:09, 34.9MB/s]
-optimizer.pt:  41%|████      | 1.17G/2.84G [00:28<00:31, 52.6MB/s][A
-
-
-
-model.safetensors:  72%|███████▏  | 1.02G/1.42G [00:28<00:10, 37.5MB/s][A[A[A[A
-
-
-optimizer.pt:  38%|███▊      | 1.07G/2.84G [00:28<00:49, 35.6MB/s][A[A[A
-
-
-
-
-optimizer.pt:  34%|███▍      | 976M/2.84G [00:27<00:41, 44.4MB/s][A[A[A[A[A
-
-
-
-
-optimizer.pt:  35%|███▍      | 990M/2.84G [00:27<00:34, 54.2MB/s][A[A[A[A[Amodel.safetensors:  77%|███████▋  | 1.09G/1.42G [00:28<00:10, 32.9MB/s]
-optimizer.pt:  42%|████▏     | 1.18G/2.84G [00:28<00:32, 50.3MB/s][A
-
-
-optimizer.pt:  38%|███▊      | 1.09G/2.84G [00:28<00:46, 38.0MB/s][A[A[A
-
-
-
-model.safetensors:  73%|███████▎  | 1.04G/1.42G [00:29<00:10, 36.1MB/s][A[A[A[Amodel.safetensors:  78%|███████▊  | 1.10G/1.42G [00:29<00:08, 37.3MB/s]
-
-
-
-
-optimizer.pt:  35%|███▌      | 997M/2.84G [00:28<00:44, 41.0MB/s][A[A[A[A[A
-optimizer.pt:  42%|████▏     | 1.20G/2.84G [00:29<00:35, 46.7MB/s][A
-
-
-
-model.safetensors:  74%|███████▍  | 1.06G/1.42G [00:29<00:08, 40.6MB/s][A[A[A[A
-
-
-optimizer.pt:  39%|███▉      | 1.10G/2.84G [00:29<00:44, 38.6MB/s][A[A[A
-
-
-
-
-optimizer.pt:  36%|███▌      | 1.01G/2.84G [00:28<00:45, 40.2MB/s][A[A[A[A[Amodel.safetensors:  79%|███████▉  | 1.12G/1.42G [00:29<00:07, 38.3MB/s]
-optimizer.pt:  43%|████▎     | 1.22G/2.84G [00:29<00:36, 45.0MB/s][A
-
-
-
-model.safetensors:  76%|███████▌  | 1.07G/1.42G [00:29<00:07, 44.5MB/s][A[A[A[A
-
-
-optimizer.pt:  39%|███▉      | 1.12G/2.84G [00:29<00:40, 42.3MB/s][A[A[A
-
-
-
-
-optimizer.pt:  36%|███▌      | 1.02G/2.84G [00:28<00:39, 45.5MB/s][A[A[A[A[A
-
-
-
-model.safetensors:  77%|███████▋  | 1.09G/1.42G [00:29<00:07, 46.9MB/s][A[A[A[A
-optimizer.pt:  43%|████▎     | 1.23G/2.84G [00:29<00:34, 46.0MB/s][A
-
-
-
-
-optimizer.pt:  37%|███▋      | 1.04G/2.84G [00:29<00:36, 49.9MB/s][A[A[A[A[A
-
-
-
-model.safetensors:  78%|███████▊  | 1.10G/1.42G [00:30<00:06, 51.2MB/s][A[A[A[A
-
-
-
-
-optimizer.pt:  37%|███▋      | 1.06G/2.84G [00:29<00:32, 54.1MB/s][A[A[A[A[A
-
-
-
-model.safetensors:  79%|███████▊  | 1.12G/1.42G [00:30<00:04, 61.0MB/s][A[A[A[A
-optimizer.pt:  44%|████▍     | 1.25G/2.84G [00:30<00:34, 46.2MB/s][A
-
-
-optimizer.pt:  40%|████      | 1.14G/2.84G [00:29<00:49, 34.3MB/s][A[A[A
-optimizer.pt:  45%|████▍     | 1.26G/2.84G [00:30<00:33, 46.5MB/s][A
-
-
-
-model.safetensors:  79%|███████▉  | 1.13G/1.42G [00:30<00:06, 42.5MB/s][A[A[A[A
-
-
-
-
-optimizer.pt:  38%|███▊      | 1.07G/2.84G [00:29<00:41, 42.6MB/s][A[A[A[A[A
-
-
-optimizer.pt:  41%|████      | 1.15G/2.84G [00:30<00:51, 32.8MB/s][A[A[A
-optimizer.pt:  45%|████▌     | 1.28G/2.84G [00:30<00:33, 47.1MB/s][A
-
-
-
-model.safetensors:  80%|████████  | 1.14G/1.42G [00:30<00:06, 40.5MB/s][A[A[A[A
-
-
-
-
-optimizer.pt:  38%|███▊      | 1.09G/2.84G [00:30<00:38, 45.4MB/s][A[A[A[A[A
-
-
-optimizer.pt:  41%|████      | 1.17G/2.84G [00:30<00:42, 38.9MB/s][A[A[A
-optimizer.pt:  46%|████▌     | 1.30G/2.84G [00:31<00:31, 49.5MB/s][A
-
-
-
-model.safetensors:  81%|████████  | 1.15G/1.42G [00:31<00:06, 42.5MB/s][A[A[A[A
-
-
-
-
-optimizer.pt:  39%|███▉      | 1.10G/2.84G [00:30<00:36, 47.1MB/s][A[A[A[A[A
-optimizer.pt:  46%|████▌     | 1.31G/2.84G [00:31<00:30, 49.3MB/s][A
-
-
-
-model.safetensors:  82%|████████▏ | 1.17G/1.42G [00:31<00:05, 47.9MB/s][A[A[A[A
-
-
-
-
-optimizer.pt:  39%|███▉      | 1.12G/2.84G [00:30<00:33, 50.7MB/s][A[A[A[A[A
-optimizer.pt:  47%|████▋     | 1.33G/2.84G [00:31<00:24, 60.8MB/s][Amodel.safetensors:  80%|████████  | 1.14G/1.42G [00:31<00:17, 15.8MB/s]
-
-
-optimizer.pt:  42%|████▏     | 1.18G/2.84G [00:31<00:49, 33.7MB/s][A[A[Amodel.safetensors:  81%|████████  | 1.14G/1.42G [00:31<00:14, 18.5MB/s]
-optimizer.pt:  47%|████▋     | 1.33G/2.84G [00:31<00:29, 51.5MB/s][A
-
-
-
-model.safetensors:  83%|████████▎ | 1.18G/1.42G [00:31<00:05, 46.4MB/s][A[A[A[A
-
-
-
-
-optimizer.pt:  40%|████      | 1.14G/2.84G [00:31<00:34, 49.3MB/s][A[A[A[A[A
-
-
-optimizer.pt:  42%|████▏     | 1.20G/2.84G [00:31<00:44, 36.8MB/s][A[A[Amodel.safetensors:  81%|████████  | 1.15G/1.42G [00:32<00:13, 19.8MB/s]
-
-
-
-
-optimizer.pt:  41%|████      | 1.15G/2.84G [00:31<00:34, 49.1MB/s][A[A[A[A[A
-
-
-
-model.safetensors:  85%|████████▍ | 1.20G/1.42G [00:32<00:04, 44.8MB/s][A[A[A[A
-optimizer.pt:  47%|████▋     | 1.34G/2.84G [00:32<00:40, 36.5MB/s][A
-
-
-optimizer.pt:  43%|████▎     | 1.22G/2.84G [00:32<00:39, 40.6MB/s][A[A[Amodel.safetensors:  82%|████████▏ | 1.17G/1.42G [00:32<00:09, 26.0MB/s]
-
-
-
-
-optimizer.pt:  41%|████      | 1.17G/2.84G [00:31<00:33, 49.3MB/s][A[A[A[A[A
-
-
-optimizer.pt:  43%|████▎     | 1.23G/2.84G [00:32<00:36, 43.8MB/s][A[A[A
-optimizer.pt:  48%|████▊     | 1.36G/2.84G [00:32<00:36, 41.0MB/s][Amodel.safetensors:  83%|████████▎ | 1.18G/1.42G [00:32<00:07, 31.4MB/s]
-optimizer.pt:  48%|████▊     | 1.38G/2.84G [00:32<00:26, 54.9MB/s][A
-
-
-optimizer.pt:  44%|████▍     | 1.25G/2.84G [00:32<00:33, 48.0MB/s][A[A[A
-
-
-
-model.safetensors:  86%|████████▌ | 1.22G/1.42G [00:32<00:05, 34.8MB/s][A[A[A[A
-
-
-
-
-optimizer.pt:  42%|████▏     | 1.18G/2.84G [00:32<00:36, 45.3MB/s][A[A[A[A[Amodel.safetensors:  85%|████████▍ | 1.20G/1.42G [00:33<00:06, 35.6MB/s]
-
-
-optimizer.pt:  44%|████▍     | 1.26G/2.84G [00:32<00:26, 59.6MB/s][A[A[A
-optimizer.pt:  49%|████▉     | 1.38G/2.84G [00:33<00:31, 46.5MB/s][A
-
-
-
-model.safetensors:  87%|████████▋ | 1.23G/1.42G [00:33<00:04, 42.9MB/s][A[A[A[A
-
-
-
-
-optimizer.pt:  42%|████▏     | 1.20G/2.84G [00:32<00:30, 54.1MB/s][A[A[A[A[A
-
-
-optimizer.pt:  45%|████▍     | 1.27G/2.84G [00:32<00:30, 52.3MB/s][A[A[A
-
-
-
-
-optimizer.pt:  42%|████▏     | 1.20G/2.84G [00:32<00:32, 51.0MB/s][A[A[A[A[Amodel.safetensors:  86%|████████▌ | 1.22G/1.42G [00:33<00:05, 38.9MB/s]
-
-
-optimizer.pt:  45%|████▌     | 1.28G/2.84G [00:33<00:28, 54.3MB/s][A[A[A
-
-
-
-
-optimizer.pt:  43%|████▎     | 1.21G/2.84G [00:32<00:29, 56.0MB/s][A[A[A[A[A
-
-
-
-model.safetensors:  87%|████████▋ | 1.24G/1.42G [00:33<00:05, 36.1MB/s][A[A[A[A
-optimizer.pt:  49%|████▉     | 1.39G/2.84G [00:33<00:40, 35.6MB/s][A
-
-
-
-model.safetensors:  88%|████████▊ | 1.25G/1.42G [00:33<00:03, 45.6MB/s][A[A[A[Amodel.safetensors:  87%|████████▋ | 1.23G/1.42G [00:33<00:04, 42.3MB/s]
-
-
-optimizer.pt:  45%|████▌     | 1.28G/2.84G [00:33<00:37, 41.2MB/s][A[A[A
-
-
-
-
-optimizer.pt:  43%|████▎     | 1.22G/2.84G [00:32<00:41, 39.1MB/s][A[A[A[A[A
-
-
-optimizer.pt:  45%|████▌     | 1.29G/2.84G [00:33<00:33, 45.6MB/s][A[A[A
-optimizer.pt:  50%|████▉     | 1.41G/2.84G [00:33<00:36, 39.3MB/s][A
-
-
-
-model.safetensors:  88%|████████▊ | 1.25G/1.42G [00:33<00:04, 33.7MB/s][A[A[A[Amodel.safetensors:  88%|████████▊ | 1.25G/1.42G [00:34<00:03, 44.4MB/s]
-
-
-
-
-optimizer.pt:  43%|████▎     | 1.23G/2.84G [00:33<00:37, 43.3MB/s][A[A[A[A[A
-
-
-
-
-optimizer.pt:  44%|████▍     | 1.24G/2.84G [00:33<00:28, 55.6MB/s][A[A[A[A[A
-optimizer.pt:  50%|█████     | 1.42G/2.84G [00:34<00:33, 42.2MB/s][A
-
-
-
-model.safetensors:  89%|████████▉ | 1.26G/1.42G [00:34<00:04, 34.3MB/s][A[A[A[A
-
-
-optimizer.pt:  46%|████▌     | 1.30G/2.84G [00:33<00:50, 30.4MB/s][A[A[Amodel.safetensors:  89%|████████▉ | 1.26G/1.42G [00:34<00:03, 46.4MB/s]
-
-
-
-
-optimizer.pt:  44%|████▍     | 1.25G/2.84G [00:33<00:38, 40.8MB/s][A[A[A[A[A
-optimizer.pt:  51%|█████     | 1.44G/2.84G [00:34<00:32, 42.4MB/s][A
-
-
-
-model.safetensors:  90%|█████████ | 1.28G/1.42G [00:34<00:03, 39.7MB/s][A[A[A[A
-
-
-optimizer.pt:  46%|████▌     | 1.31G/2.84G [00:34<00:43, 35.5MB/s][A[A[A
-
-
-
-
-optimizer.pt:  44%|████▍     | 1.26G/2.84G [00:33<00:32, 47.9MB/s][A[A[A[A[Amodel.safetensors:  90%|█████████ | 1.28G/1.42G [00:34<00:02, 48.2MB/s]
-
-
-
-model.safetensors:  91%|█████████▏| 1.30G/1.42G [00:34<00:02, 42.1MB/s][A[A[A[A
-
-
-optimizer.pt:  47%|████▋     | 1.33G/2.84G [00:34<00:38, 39.4MB/s][A[A[A
-optimizer.pt:  51%|█████▏    | 1.46G/2.84G [00:34<00:32, 42.4MB/s][A
-
-
-
-
-optimizer.pt:  45%|████▍     | 1.27G/2.84G [00:34<00:44, 35.6MB/s][A[A[A[A[Amodel.safetensors:  91%|█████████▏| 1.30G/1.42G [00:35<00:03, 40.9MB/s]
-
-
-
-model.safetensors:  92%|█████████▏| 1.31G/1.42G [00:35<00:02, 42.8MB/s][A[A[A[A
-
-
-
-
-optimizer.pt:  45%|████▌     | 1.28G/2.84G [00:34<00:43, 36.1MB/s][A[A[A[A[A
-
-
-optimizer.pt:  47%|████▋     | 1.34G/2.84G [00:34<00:36, 40.6MB/s][A[A[A
-optimizer.pt:  52%|█████▏    | 1.47G/2.84G [00:35<00:33, 41.0MB/s][Amodel.safetensors:  92%|█████████▏| 1.31G/1.42G [00:35<00:02, 44.2MB/s]
-
-
-optimizer.pt:  48%|████▊     | 1.36G/2.84G [00:35<00:32, 45.4MB/s][A[A[A
-
-
-
-
-optimizer.pt:  46%|████▌     | 1.30G/2.84G [00:34<00:36, 41.9MB/s][A[A[A[A[A
-
-
-
-model.safetensors:  94%|█████████▎| 1.33G/1.42G [00:35<00:02, 43.8MB/s][A[A[A[A
-optimizer.pt:  52%|█████▏    | 1.49G/2.84G [00:35<00:31, 43.5MB/s][Amodel.safetensors:  94%|█████████▎| 1.33G/1.42G [00:35<00:02, 44.6MB/s]
-
-
-optimizer.pt:  48%|████▊     | 1.38G/2.84G [00:35<00:30, 48.7MB/s][A[A[A
-
-
-
-model.safetensors:  95%|█████████▍| 1.34G/1.42G [00:35<00:01, 47.5MB/s][A[A[A[A
-
-
-
-
-optimizer.pt:  46%|████▌     | 1.31G/2.84G [00:34<00:35, 42.6MB/s][A[A[A[A[A
-optimizer.pt:  53%|█████▎    | 1.50G/2.84G [00:36<00:31, 42.0MB/s][A
-
-
-
-model.safetensors:  96%|█████████▌| 1.36G/1.42G [00:36<00:01, 50.2MB/s][A[A[A[Amodel.safetensors:  95%|█████████▍| 1.34G/1.42G [00:36<00:01, 44.2MB/s]
-
-
-optimizer.pt:  49%|████▉     | 1.39G/2.84G [00:35<00:30, 47.3MB/s][A[A[A
-
-
-
-
-optimizer.pt:  47%|████▋     | 1.33G/2.84G [00:35<00:32, 45.9MB/s][A[A[A[A[A
-
-
-
-model.safetensors:  97%|█████████▋| 1.37G/1.42G [00:36<00:00, 60.6MB/s][A[A[A[A
-optimizer.pt:  54%|█████▎    | 1.52G/2.84G [00:36<00:28, 46.7MB/s][A
-
-
-optimizer.pt:  50%|████▉     | 1.41G/2.84G [00:36<00:28, 49.8MB/s][A[A[Amodel.safetensors:  96%|█████████▌| 1.36G/1.42G [00:36<00:01, 43.7MB/s]
-
-
-
-
-optimizer.pt:  47%|████▋     | 1.34G/2.84G [00:35<00:34, 43.5MB/s][A[A[A[A[Amodel.safetensors:  97%|█████████▋| 1.38G/1.42G [00:36<00:00, 56.0MB/s]
-optimizer.pt:  54%|█████▍    | 1.54G/2.84G [00:36<00:28, 45.2MB/s][A
-
-
-
-model.safetensors:  97%|█████████▋| 1.38G/1.42G [00:36<00:00, 40.4MB/s][A[A[A[A
-
-
-optimizer.pt:  50%|█████     | 1.42G/2.84G [00:36<00:28, 49.0MB/s][A[A[Amodel.safetensors:  98%|█████████▊| 1.38G/1.42G [00:36<00:00, 49.8MB/s]
-
-
-
-model.safetensors:  98%|█████████▊| 1.39G/1.42G [00:36<00:00, 42.0MB/s][A[A[A[A
-optimizer.pt:  55%|█████▍    | 1.55G/2.84G [00:36<00:27, 47.4MB/s][A
-
-
-
-
-optimizer.pt:  48%|████▊     | 1.36G/2.84G [00:36<00:33, 43.8MB/s][A[A[A[A[A
-
-
-optimizer.pt:  51%|█████     | 1.44G/2.84G [00:36<00:27, 51.2MB/s][A[A[A
-
-
-
-
-optimizer.pt:  48%|████▊     | 1.37G/2.84G [00:36<00:28, 51.5MB/s][A[A[A[A[Amodel.safetensors:  98%|█████████▊| 1.39G/1.42G [00:37<00:00, 41.6MB/s]
-
-
-
-model.safetensors:  99%|█████████▉| 1.41G/1.42G [00:37<00:00, 45.0MB/s][A[A[A[A
-optimizer.pt:  55%|█████▌    | 1.57G/2.84G [00:37<00:26, 47.6MB/s][A
-
-
-optimizer.pt:  51%|█████▏    | 1.46G/2.84G [00:37<00:26, 52.0MB/s][A[A[Amodel.safetensors: 100%|██████████| 1.42G/1.42G [00:37<00:00, 37.8MB/s]
-model.safetensors:  99%|█████████▉| 1.41G/1.42G [00:37<00:00, 42.8MB/s]
-
-
-
-
-optimizer.pt:  49%|████▊     | 1.38G/2.84G [00:36<00:41, 34.9MB/s][A[A[A[A[A
-optimizer.pt:  56%|█████▌    | 1.58G/2.84G [00:37<00:26, 48.2MB/s][A
-
-
-optimizer.pt:  52%|█████▏    | 1.47G/2.84G [00:37<00:26, 52.4MB/s][A[A[A
-
-
-
-rng_state.pth:   0%|          | 0.00/14.6k [00:00<?, ?B/s][A[A[A[Amodel.safetensors: 100%|██████████| 1.42G/1.42G [00:37<00:00, 37.5MB/s]
-rng_state.pth: 100%|██████████| 14.6k/14.6k [00:00<00:00, 106kB/s]
-
-optimizer.pt:  56%|█████▋    | 1.60G/2.84G [00:37<00:25, 49.1MB/s][A
-optimizer.pt:  57%|█████▋    | 1.62G/2.84G [00:38<00:19, 61.2MB/s][A
-
-Upload 11 LFS files:   9%|▉         | 1/11 [00:38<06:22, 38.20s/it][A[Ascheduler.pt:   0%|          | 0.00/627 [00:00<?, ?B/s]scheduler.pt: 100%|██████████| 627/627 [00:00<00:00, 7.19kB/s]
-
-optimizer.pt:  57%|█████▋    | 1.62G/2.84G [00:38<00:24, 48.9MB/s][A
-
-
-optimizer.pt:  52%|█████▏    | 1.49G/2.84G [00:38<00:42, 32.1MB/s][A[A[A
-optimizer.pt:  57%|█████▋    | 1.63G/2.84G [00:38<00:29, 40.5MB/s][A
-
-
-optimizer.pt:  53%|█████▎    | 1.50G/2.84G [00:38<00:40, 33.2MB/s][A[A[A
-optimizer.pt:  58%|█████▊    | 1.65G/2.84G [00:39<00:34, 34.5MB/s][A
-optimizer.pt:  59%|█████▊    | 1.66G/2.84G [00:39<00:25, 46.0MB/s][A
-
-
-optimizer.pt:  54%|█████▎    | 1.52G/2.84G [00:39<00:36, 36.2MB/s][A[A[A
-
-
-optimizer.pt:  54%|█████▍    | 1.54G/2.84G [00:39<00:31, 41.4MB/s][A[A[A
-optimizer.pt:  59%|█████▉    | 1.67G/2.84G [00:39<00:29, 40.1MB/s][A
-
-
-
-
-optimizer.pt:  49%|████▉     | 1.39G/2.84G [00:38<01:44, 13.9MB/s][A[A[A[A[A
-
-
-
-
-optimizer.pt:  50%|████▉     | 1.41G/2.84G [00:38<01:11, 20.0MB/s][A[A[A[A[A
-
-
-optimizer.pt:  55%|█████▍    | 1.55G/2.84G [00:39<00:29, 43.9MB/s][A[A[A
-optimizer.pt:  59%|█████▉    | 1.68G/2.84G [00:40<00:34, 33.9MB/s][A
-
-
-
-
-optimizer.pt:  50%|████▉     | 1.41G/2.84G [00:39<01:09, 20.6MB/s][A[A[A[A[A
-
-
-optimizer.pt:  55%|█████▌    | 1.57G/2.84G [00:39<00:28, 45.1MB/s][A[A[A
-optimizer.pt:  60%|█████▉    | 1.70G/2.84G [00:40<00:29, 39.2MB/s][A
-
-
-
-
-optimizer.pt:  50%|█████     | 1.42G/2.84G [00:39<01:03, 22.3MB/s][A[A[A[A[A
-
-
-optimizer.pt:  56%|█████▌    | 1.58G/2.84G [00:40<00:27, 45.1MB/s][A[A[A
-optimizer.pt:  60%|██████    | 1.71G/2.84G [00:40<00:27, 41.4MB/s][A
-
-
-
-
-optimizer.pt:  51%|█████     | 1.44G/2.84G [00:39<00:48, 28.7MB/s][A[A[A[A[A
-
-
-
-
-optimizer.pt:  51%|█████     | 1.45G/2.84G [00:40<00:37, 36.6MB/s][A[A[A[A[A
-
-
-optimizer.pt:  56%|█████▋    | 1.60G/2.84G [00:40<00:26, 47.3MB/s][A[A[A
-optimizer.pt:  61%|██████    | 1.73G/2.84G [00:41<00:25, 43.2MB/s][A
-
-
-optimizer.pt:  57%|█████▋    | 1.62G/2.84G [00:40<00:25, 47.9MB/s][A[A[A
-
-
-
-
-optimizer.pt:  51%|█████▏    | 1.46G/2.84G [00:40<00:45, 30.5MB/s][A[A[A[A[A
-optimizer.pt:  61%|██████▏   | 1.74G/2.84G [00:41<00:24, 44.6MB/s][A
-
-
-
-
-optimizer.pt:  52%|█████▏    | 1.47G/2.84G [00:40<00:38, 35.6MB/s][A[A[A[A[A
-
-
-optimizer.pt:  57%|█████▋    | 1.63G/2.84G [00:41<00:25, 47.6MB/s][A[A[A
-optimizer.pt:  62%|██████▏   | 1.76G/2.84G [00:41<00:24, 44.2MB/s][A
-
-
-
-
-optimizer.pt:  52%|█████▏    | 1.49G/2.84G [00:41<00:38, 34.7MB/s][A[A[A[A[A
-optimizer.pt:  63%|██████▎   | 1.78G/2.84G [00:42<00:23, 44.7MB/s][A
-
-
-optimizer.pt:  58%|█████▊    | 1.65G/2.84G [00:41<00:30, 39.2MB/s][A[A[A
-
-
-
-
-optimizer.pt:  53%|█████▎    | 1.50G/2.84G [00:41<00:34, 38.2MB/s][A[A[A[A[A
-optimizer.pt:  63%|██████▎   | 1.79G/2.84G [00:42<00:22, 47.0MB/s][A
-
-
-optimizer.pt:  59%|█████▊    | 1.66G/2.84G [00:42<00:27, 42.1MB/s][A[A[A
-
-
-
-
-optimizer.pt:  54%|█████▎    | 1.52G/2.84G [00:41<00:31, 41.9MB/s][A[A[A[A[A
-optimizer.pt:  64%|██████▎   | 1.81G/2.84G [00:42<00:21, 48.2MB/s][A
-
-
-
-
-optimizer.pt:  54%|█████▍    | 1.54G/2.84G [00:42<00:28, 45.8MB/s][A[A[A[A[A
-optimizer.pt:  64%|██████▍   | 1.82G/2.84G [00:42<00:19, 52.8MB/s][A
-optimizer.pt:  65%|██████▍   | 1.84G/2.84G [00:43<00:15, 64.2MB/s][A
-
-
-optimizer.pt:  59%|█████▉    | 1.68G/2.84G [00:42<00:31, 36.6MB/s][A[A[A
-
-
-
-
-optimizer.pt:  55%|█████▍    | 1.55G/2.84G [00:42<00:27, 46.3MB/s][A[A[A[A[A
-optimizer.pt:  65%|██████▌   | 1.85G/2.84G [00:43<00:18, 54.9MB/s][A
-
-
-optimizer.pt:  60%|█████▉    | 1.70G/2.84G [00:43<00:29, 38.4MB/s][A[A[A
-optimizer.pt:  65%|██████▌   | 1.86G/2.84G [00:43<00:20, 47.6MB/s][A
-
-
-
-
-optimizer.pt:  55%|█████▌    | 1.57G/2.84G [00:42<00:28, 44.8MB/s][A[A[A[A[A
-
-
-optimizer.pt:  60%|██████    | 1.71G/2.84G [00:43<00:27, 41.4MB/s][A[A[A
-
-
-
-
-optimizer.pt:  56%|█████▌    | 1.58G/2.84G [00:43<00:26, 47.8MB/s][A[A[A[A[A
-
-
-optimizer.pt:  61%|██████    | 1.73G/2.84G [00:43<00:27, 41.0MB/s][A[A[A
-
-
-
-
-optimizer.pt:  56%|█████▋    | 1.60G/2.84G [00:43<00:24, 50.2MB/s][A[A[A[A[A
-optimizer.pt:  66%|██████▌   | 1.87G/2.84G [00:44<00:27, 34.7MB/s][A
-optimizer.pt:  66%|██████▋   | 1.89G/2.84G [00:44<00:20, 47.0MB/s][A
-
-
-optimizer.pt:  61%|██████▏   | 1.74G/2.84G [00:44<00:26, 41.0MB/s][A[A[A
-optimizer.pt:  67%|██████▋   | 1.90G/2.84G [00:44<00:20, 45.5MB/s][A
-
-
-
-
-optimizer.pt:  57%|█████▋    | 1.62G/2.84G [00:43<00:24, 49.3MB/s][A[A[A[A[A
-optimizer.pt:  67%|██████▋   | 1.90G/2.84G [00:44<00:23, 39.1MB/s][A
-
-
-optimizer.pt:  62%|██████▏   | 1.76G/2.84G [00:44<00:25, 41.7MB/s][A[A[A
-
-
-
-
-optimizer.pt:  57%|█████▋    | 1.63G/2.84G [00:44<00:24, 48.3MB/s][A[A[A[A[A
-optimizer.pt:  68%|██████▊   | 1.92G/2.84G [00:45<00:16, 54.5MB/s][A
-
-
-
-
-optimizer.pt:  58%|█████▊    | 1.65G/2.84G [00:44<00:23, 50.0MB/s][A[A[A[A[A
-optimizer.pt:  68%|██████▊   | 1.93G/2.84G [00:45<00:19, 46.7MB/s][A
-
-
-optimizer.pt:  63%|██████▎   | 1.78G/2.84G [00:45<00:26, 39.5MB/s][A[A[A
-
-
-
-
-optimizer.pt:  59%|█████▊    | 1.66G/2.84G [00:44<00:22, 51.4MB/s][A[A[A[A[A
-optimizer.pt:  68%|██████▊   | 1.94G/2.84G [00:45<00:24, 36.9MB/s][A
-
-
-optimizer.pt:  63%|██████▎   | 1.79G/2.84G [00:45<00:23, 44.0MB/s][A[A[A
-
-
-optimizer.pt:  64%|██████▎   | 1.81G/2.84G [00:45<00:22, 44.9MB/s][A[A[A
-optimizer.pt:  69%|██████▉   | 1.95G/2.84G [00:46<00:22, 39.4MB/s][A
-
-
-optimizer.pt:  64%|██████▍   | 1.82G/2.84G [00:45<00:19, 51.5MB/s][A[A[A
-optimizer.pt:  69%|██████▉   | 1.97G/2.84G [00:46<00:16, 53.8MB/s][A
-
-
-
-
-optimizer.pt:  59%|█████▉    | 1.68G/2.84G [00:45<00:29, 39.4MB/s][A[A[A[A[A
-optimizer.pt:  70%|██████▉   | 1.98G/2.84G [00:46<00:19, 44.5MB/s][A
-
-
-optimizer.pt:  64%|██████▍   | 1.83G/2.84G [00:46<00:25, 39.0MB/s][A[A[A
-
-
-
-
-optimizer.pt:  60%|█████▉    | 1.70G/2.84G [00:45<00:27, 41.0MB/s][A[A[A[A[A
-optimizer.pt:  70%|██████▉   | 1.98G/2.84G [00:46<00:21, 39.2MB/s][A
-
-
-optimizer.pt:  65%|██████▍   | 1.84G/2.84G [00:46<00:23, 42.8MB/s][A[A[A
-
-
-optimizer.pt:  65%|██████▌   | 1.85G/2.84G [00:46<00:19, 49.8MB/s][A[A[A
-
-
-
-
-optimizer.pt:  60%|██████    | 1.71G/2.84G [00:45<00:26, 42.1MB/s][A[A[A[A[A
-optimizer.pt:  70%|███████   | 2.00G/2.84G [00:47<00:21, 39.6MB/s][A
-
-
-
-
-optimizer.pt:  61%|██████    | 1.73G/2.84G [00:46<00:26, 42.5MB/s][A[A[A[A[A
-
-
-optimizer.pt:  65%|██████▌   | 1.86G/2.84G [00:46<00:28, 34.8MB/s][A[A[A
-optimizer.pt:  71%|███████   | 2.02G/2.84G [00:47<00:18, 44.2MB/s][A
-
-
-
-
-optimizer.pt:  61%|██████▏   | 1.74G/2.84G [00:46<00:24, 44.2MB/s][A[A[A[A[A
-
-
-optimizer.pt:  66%|██████▌   | 1.87G/2.84G [00:47<00:26, 37.0MB/s][A[A[A
-optimizer.pt:  72%|███████▏  | 2.03G/2.84G [00:47<00:19, 41.8MB/s][A
-
-
-
-
-optimizer.pt:  62%|██████▏   | 1.76G/2.84G [00:46<00:22, 46.9MB/s][A[A[A[A[A
-optimizer.pt:  72%|███████▏  | 2.05G/2.84G [00:47<00:14, 54.4MB/s][A
-
-
-
-
-optimizer.pt:  62%|██████▏   | 1.77G/2.84G [00:47<00:19, 55.0MB/s][A[A[A[A[A
-
-
-optimizer.pt:  67%|██████▋   | 1.89G/2.84G [00:47<00:24, 38.6MB/s][A[A[A
-optimizer.pt:  72%|███████▏  | 2.06G/2.84G [00:48<00:17, 45.0MB/s][A
-
-
-
-
-optimizer.pt:  63%|██████▎   | 1.78G/2.84G [00:47<00:25, 41.6MB/s][A[A[A[A[A
-
-
-optimizer.pt:  67%|██████▋   | 1.90G/2.84G [00:48<00:22, 41.5MB/s][A[A[A
-optimizer.pt:  73%|███████▎  | 2.06G/2.84G [00:48<00:18, 41.3MB/s][A
-
-
-
-
-optimizer.pt:  63%|██████▎   | 1.79G/2.84G [00:47<00:26, 39.9MB/s][A[A[A[A[A
-
-
-optimizer.pt:  68%|██████▊   | 1.92G/2.84G [00:48<00:20, 43.8MB/s][A[A[A
-optimizer.pt:  73%|███████▎  | 2.08G/2.84G [00:48<00:16, 45.5MB/s][A
-
-
-optimizer.pt:  68%|██████▊   | 1.94G/2.84G [00:48<00:18, 49.2MB/s][A[A[A
-
-
-
-
-optimizer.pt:  64%|██████▎   | 1.81G/2.84G [00:48<00:23, 44.3MB/s][A[A[A[A[A
-optimizer.pt:  74%|███████▍  | 2.10G/2.84G [00:49<00:16, 46.1MB/s][A
-
-
-optimizer.pt:  69%|██████▉   | 1.95G/2.84G [00:48<00:17, 51.0MB/s][A[A[A
-
-
-
-
-optimizer.pt:  64%|██████▍   | 1.82G/2.84G [00:48<00:21, 47.8MB/s][A[A[A[A[A
-optimizer.pt:  74%|███████▍  | 2.11G/2.84G [00:49<00:15, 46.9MB/s][A
-
-
-optimizer.pt:  69%|██████▉   | 1.97G/2.84G [00:49<00:17, 50.9MB/s][A[A[A
-
-
-
-
-optimizer.pt:  65%|██████▍   | 1.84G/2.84G [00:48<00:23, 43.1MB/s][A[A[A[A[A
-optimizer.pt:  75%|███████▍  | 2.13G/2.84G [00:49<00:15, 47.3MB/s][A
-
-
-optimizer.pt:  70%|██████▉   | 1.98G/2.84G [00:49<00:16, 50.6MB/s][A[A[A
-
-
-optimizer.pt:  70%|███████   | 1.99G/2.84G [00:49<00:15, 55.9MB/s][A[A[A
-
-
-
-
-optimizer.pt:  65%|██████▌   | 1.86G/2.84G [00:49<00:21, 46.1MB/s][A[A[A[A[A
-
-
-
-
-optimizer.pt:  66%|██████▌   | 1.87G/2.84G [00:49<00:20, 47.6MB/s][A[A[A[A[A
-optimizer.pt:  76%|███████▌  | 2.14G/2.84G [00:50<00:18, 37.0MB/s][A
-
-
-optimizer.pt:  70%|███████   | 2.00G/2.84G [00:50<00:23, 35.6MB/s][A[A[A
-optimizer.pt:  76%|███████▌  | 2.16G/2.84G [00:50<00:14, 46.6MB/s][A
-optimizer.pt:  76%|███████▋  | 2.17G/2.84G [00:50<00:15, 42.6MB/s][A
-
-
-
-
-optimizer.pt:  67%|██████▋   | 1.89G/2.84G [00:49<00:21, 43.5MB/s][A[A[A[A[A
-
-
-optimizer.pt:  71%|███████   | 2.02G/2.84G [00:50<00:20, 40.4MB/s][A[A[A
-
-
-
-
-optimizer.pt:  67%|██████▋   | 1.90G/2.84G [00:50<00:20, 46.3MB/s][A[A[A[A[A
-
-
-optimizer.pt:  72%|███████▏  | 2.03G/2.84G [00:50<00:17, 45.1MB/s][A[A[A
-optimizer.pt:  77%|███████▋  | 2.18G/2.84G [00:51<00:16, 39.7MB/s][A
-
-
-
-
-optimizer.pt:  68%|██████▊   | 1.92G/2.84G [00:50<00:18, 50.4MB/s][A[A[A[A[A
-
-
-optimizer.pt:  72%|███████▏  | 2.05G/2.84G [00:50<00:15, 49.8MB/s][A[A[A
-optimizer.pt:  77%|███████▋  | 2.19G/2.84G [00:51<00:16, 39.1MB/s][A
-optimizer.pt:  78%|███████▊  | 2.21G/2.84G [00:51<00:12, 51.8MB/s][A
-
-
-
-
-optimizer.pt:  68%|██████▊   | 1.94G/2.84G [00:50<00:18, 48.9MB/s][A[A[A[A[A
-
-
-optimizer.pt:  73%|███████▎  | 2.06G/2.84G [00:51<00:16, 46.4MB/s][A[A[A
-
-
-
-
-optimizer.pt:  69%|██████▊   | 1.95G/2.84G [00:50<00:15, 56.3MB/s][A[A[A[A[A
-optimizer.pt:  78%|███████▊  | 2.22G/2.84G [00:51<00:14, 43.5MB/s][A
-
-
-optimizer.pt:  73%|███████▎  | 2.08G/2.84G [00:51<00:16, 45.2MB/s][A[A[A
-optimizer.pt:  78%|███████▊  | 2.22G/2.84G [00:52<00:15, 38.6MB/s][A
-
-
-
-
-optimizer.pt:  69%|██████▉   | 1.95G/2.84G [00:51<00:23, 37.8MB/s][A[A[A[A[A
-
-
-optimizer.pt:  74%|███████▍  | 2.10G/2.84G [00:51<00:15, 49.1MB/s][A[A[A
-
-
-optimizer.pt:  74%|███████▍  | 2.11G/2.84G [00:52<00:13, 54.4MB/s][A[A[A
-
-
-
-
-optimizer.pt:  69%|██████▉   | 1.97G/2.84G [00:51<00:20, 41.7MB/s][A[A[A[A[A
-optimizer.pt:  79%|███████▉  | 2.24G/2.84G [00:52<00:14, 42.7MB/s][A
-
-
-
-
-optimizer.pt:  70%|██████▉   | 1.98G/2.84G [00:51<00:18, 45.3MB/s][A[A[A[A[A
-optimizer.pt:  79%|███████▉  | 2.26G/2.84G [00:52<00:13, 44.0MB/s][A
-
-
-optimizer.pt:  74%|███████▍  | 2.11G/2.84G [00:52<00:19, 37.2MB/s][A[A[A
-
-
-
-
-optimizer.pt:  70%|███████   | 2.00G/2.84G [00:52<00:17, 48.1MB/s][A[A[A[A[A
-optimizer.pt:  80%|████████  | 2.27G/2.84G [00:53<00:11, 47.3MB/s][A
-
-
-optimizer.pt:  75%|███████▍  | 2.13G/2.84G [00:52<00:16, 43.2MB/s][A[A[A
-
-
-
-
-optimizer.pt:  71%|███████   | 2.02G/2.84G [00:52<00:16, 50.3MB/s][A[A[A[A[A
-optimizer.pt:  81%|████████  | 2.29G/2.84G [00:53<00:11, 48.4MB/s][A
-
-
-optimizer.pt:  76%|███████▌  | 2.14G/2.84G [00:53<00:15, 45.1MB/s][A[A[A
-
-
-
-
-optimizer.pt:  72%|███████▏  | 2.03G/2.84G [00:52<00:16, 48.8MB/s][A[A[A[A[A
-
-
-optimizer.pt:  76%|███████▌  | 2.16G/2.84G [00:53<00:14, 45.8MB/s][A[A[A
-optimizer.pt:  81%|████████  | 2.30G/2.84G [00:53<00:11, 45.9MB/s][A
-
-
-
-
-optimizer.pt:  72%|███████▏  | 2.05G/2.84G [00:53<00:15, 50.5MB/s][A[A[A[A[A
-
-
-optimizer.pt:  77%|███████▋  | 2.18G/2.84G [00:53<00:13, 48.8MB/s][A[A[A
-optimizer.pt:  82%|████████▏ | 2.32G/2.84G [00:54<00:11, 44.5MB/s][A
-optimizer.pt:  82%|████████▏ | 2.34G/2.84G [00:54<00:08, 56.8MB/s][A
-
-
-
-
-optimizer.pt:  73%|███████▎  | 2.06G/2.84G [00:53<00:16, 46.7MB/s][A[A[A[A[A
-
-
-optimizer.pt:  77%|███████▋  | 2.19G/2.84G [00:54<00:13, 47.2MB/s][A[A[A
-optimizer.pt:  83%|████████▎ | 2.34G/2.84G [00:54<00:10, 49.4MB/s][A
-
-
-
-
-optimizer.pt:  73%|███████▎  | 2.08G/2.84G [00:53<00:15, 50.2MB/s][A[A[A[A[A
-
-
-optimizer.pt:  78%|███████▊  | 2.21G/2.84G [00:54<00:12, 50.9MB/s][A[A[A
-optimizer.pt:  83%|████████▎ | 2.35G/2.84G [00:54<00:11, 40.9MB/s][A
-
-
-optimizer.pt:  78%|███████▊  | 2.22G/2.84G [00:54<00:11, 53.0MB/s][A[A[A
-optimizer.pt:  83%|████████▎ | 2.37G/2.84G [00:55<00:08, 55.6MB/s][A
-
-
-
-
-optimizer.pt:  74%|███████▍  | 2.10G/2.84G [00:54<00:15, 46.9MB/s][A[A[A[A[A
-
-
-optimizer.pt:  79%|███████▉  | 2.24G/2.84G [00:55<00:11, 49.9MB/s][A[A[A
-
-
-
-
-optimizer.pt:  74%|███████▍  | 2.11G/2.84G [00:54<00:15, 47.8MB/s][A[A[A[A[A
-optimizer.pt:  84%|████████▎ | 2.38G/2.84G [00:55<00:13, 33.8MB/s][A
-
-
-optimizer.pt:  79%|███████▉  | 2.26G/2.84G [00:55<00:11, 51.8MB/s][A[A[A
-
-
-
-
-optimizer.pt:  75%|███████▍  | 2.13G/2.84G [00:54<00:14, 49.7MB/s][A[A[A[A[A
-optimizer.pt:  84%|████████▍ | 2.38G/2.84G [00:55<00:14, 32.4MB/s][A
-
-
-optimizer.pt:  80%|████████  | 2.27G/2.84G [00:55<00:10, 52.9MB/s][A[A[A
-
-
-
-
-optimizer.pt:  76%|███████▌  | 2.14G/2.84G [00:55<00:13, 50.7MB/s][A[A[A[A[A
-
-
-optimizer.pt:  81%|████████  | 2.29G/2.84G [00:55<00:10, 53.6MB/s][A[A[A
-optimizer.pt:  85%|████████▍ | 2.40G/2.84G [00:56<00:12, 35.3MB/s][A
-
-
-
-
-optimizer.pt:  76%|███████▌  | 2.16G/2.84G [00:55<00:14, 47.4MB/s][A[A[A[A[A
-
-
-optimizer.pt:  81%|████████  | 2.30G/2.84G [00:56<00:09, 54.8MB/s][A[A[A
-
-
-
-
-optimizer.pt:  77%|███████▋  | 2.18G/2.84G [00:55<00:13, 49.0MB/s][A[A[A[A[A
-optimizer.pt:  85%|████████▌ | 2.42G/2.84G [00:56<00:11, 37.2MB/s][A
-
-
-optimizer.pt:  82%|████████▏ | 2.32G/2.84G [00:56<00:09, 52.7MB/s][A[A[A
-
-
-
-
-optimizer.pt:  77%|███████▋  | 2.19G/2.84G [00:56<00:12, 50.1MB/s][A[A[A[A[A
-optimizer.pt:  86%|████████▌ | 2.43G/2.84G [00:57<00:10, 38.4MB/s][A
-
-
-optimizer.pt:  82%|████████▏ | 2.34G/2.84G [00:56<00:09, 51.0MB/s][A[A[A
-
-
-
-
-optimizer.pt:  78%|███████▊  | 2.21G/2.84G [00:56<00:12, 51.7MB/s][A[A[A[A[A
-optimizer.pt:  86%|████████▌ | 2.45G/2.84G [00:57<00:09, 41.3MB/s][A
-
-
-
-
-optimizer.pt:  78%|███████▊  | 2.22G/2.84G [00:56<00:11, 52.8MB/s][A[A[A[A[A
-
-
-optimizer.pt:  83%|████████▎ | 2.35G/2.84G [00:57<00:10, 45.5MB/s][A[A[A
-
-
-
-
-optimizer.pt:  79%|███████▊  | 2.24G/2.84G [00:56<00:09, 60.5MB/s][A[A[A[A[A
-optimizer.pt:  87%|████████▋ | 2.46G/2.84G [00:57<00:08, 44.6MB/s][A
-
-
-
-
-optimizer.pt:  79%|███████▉  | 2.24G/2.84G [00:57<00:13, 42.8MB/s][A[A[A[A[A
-optimizer.pt:  87%|████████▋ | 2.48G/2.84G [00:58<00:08, 44.1MB/s][A
-
-
-optimizer.pt:  83%|████████▎ | 2.37G/2.84G [00:57<00:11, 41.4MB/s][A[A[A
-
-
-optimizer.pt:  84%|████████▍ | 2.38G/2.84G [00:58<00:10, 44.7MB/s][A[A[A
-
-
-
-
-optimizer.pt:  79%|███████▉  | 2.26G/2.84G [00:57<00:14, 41.4MB/s][A[A[A[A[A
-optimizer.pt:  88%|████████▊ | 2.50G/2.84G [00:58<00:07, 43.8MB/s][A
-optimizer.pt:  88%|████████▊ | 2.51G/2.84G [00:58<00:07, 46.2MB/s][A
-
-
-
-
-optimizer.pt:  80%|████████  | 2.27G/2.84G [00:57<00:13, 41.9MB/s][A[A[A[A[A
-
-
-
-
-optimizer.pt:  80%|████████  | 2.28G/2.84G [00:57<00:10, 52.0MB/s][A[A[A[A[A
-
-
-optimizer.pt:  85%|████████▍ | 2.40G/2.84G [00:58<00:11, 38.6MB/s][A[A[A
-
-
-optimizer.pt:  85%|████████▍ | 2.41G/2.84G [00:58<00:09, 44.2MB/s][A[A[A
-optimizer.pt:  89%|████████▉ | 2.53G/2.84G [00:59<00:06, 47.4MB/s][A
-
-
-
-
-optimizer.pt:  81%|████████  | 2.29G/2.84G [00:58<00:13, 40.3MB/s][A[A[A[A[A
-optimizer.pt:  90%|████████▉ | 2.54G/2.84G [00:59<00:06, 49.0MB/s][A
-
-
-optimizer.pt:  85%|████████▌ | 2.42G/2.84G [00:59<00:11, 35.2MB/s][A[A[A
-optimizer.pt:  90%|█████████ | 2.56G/2.84G [00:59<00:04, 60.4MB/s][A
-
-
-
-
-optimizer.pt:  81%|████████  | 2.30G/2.84G [00:58<00:13, 40.2MB/s][A[A[A[A[A
-
-
-
-
-optimizer.pt:  82%|████████▏ | 2.32G/2.84G [00:58<00:10, 50.9MB/s][A[A[A[A[A
-
-
-optimizer.pt:  86%|████████▌ | 2.43G/2.84G [00:59<00:10, 40.1MB/s][A[A[A
-optimizer.pt:  90%|█████████ | 2.57G/2.84G [00:59<00:05, 47.1MB/s][A
-
-
-optimizer.pt:  86%|████████▌ | 2.45G/2.84G [00:59<00:08, 46.0MB/s][A[A[A
-
-
-
-
-optimizer.pt:  82%|████████▏ | 2.32G/2.84G [00:59<00:13, 37.1MB/s][A[A[A[A[A
-optimizer.pt:  91%|█████████ | 2.58G/2.84G [01:00<00:06, 38.7MB/s][A
-
-
-optimizer.pt:  87%|████████▋ | 2.46G/2.84G [00:59<00:07, 50.4MB/s][A[A[A
-optimizer.pt:  91%|█████████ | 2.59G/2.84G [01:00<00:04, 51.3MB/s][A
-
-
-
-
-optimizer.pt:  82%|████████▏ | 2.34G/2.84G [00:59<00:13, 37.2MB/s][A[A[A[A[A
-
-
-optimizer.pt:  87%|████████▋ | 2.48G/2.84G [01:00<00:07, 50.5MB/s][A[A[A
-optimizer.pt:  92%|█████████▏| 2.60G/2.84G [01:00<00:05, 46.9MB/s][A
-
-
-
-
-optimizer.pt:  83%|████████▎ | 2.35G/2.84G [00:59<00:11, 40.9MB/s][A[A[A[A[A
-
-
-optimizer.pt:  88%|████████▊ | 2.50G/2.84G [01:00<00:07, 48.1MB/s][A[A[A
-optimizer.pt:  92%|█████████▏| 2.61G/2.84G [01:00<00:05, 38.6MB/s][A
-
-
-
-
-optimizer.pt:  83%|████████▎ | 2.37G/2.84G [00:59<00:10, 46.7MB/s][A[A[A[A[A
-
-
-optimizer.pt:  88%|████████▊ | 2.51G/2.84G [01:00<00:06, 49.8MB/s][A[A[A
-optimizer.pt:  92%|█████████▏| 2.62G/2.84G [01:01<00:04, 43.5MB/s][A
-optimizer.pt:  93%|█████████▎| 2.64G/2.84G [01:01<00:03, 58.4MB/s][A
-
-
-
-
-optimizer.pt:  84%|████████▍ | 2.38G/2.84G [01:00<00:09, 45.5MB/s][A[A[A[A[A
-
-
-
-
-optimizer.pt:  84%|████████▍ | 2.40G/2.84G [01:00<00:07, 55.6MB/s][A[A[A[A[A
-
-
-optimizer.pt:  89%|████████▉ | 2.53G/2.84G [01:01<00:05, 52.8MB/s][A[A[A
-optimizer.pt:  93%|█████████▎| 2.65G/2.84G [01:01<00:03, 50.8MB/s][A
-
-
-optimizer.pt:  90%|████████▉ | 2.54G/2.84G [01:01<00:05, 52.4MB/s][A[A[A
-
-
-
-
-optimizer.pt:  85%|████████▍ | 2.40G/2.84G [01:00<00:10, 41.0MB/s][A[A[A[A[A
-optimizer.pt:  94%|█████████▎| 2.66G/2.84G [01:01<00:04, 41.4MB/s][A
-
-
-optimizer.pt:  90%|████████▉ | 2.55G/2.84G [01:01<00:04, 58.4MB/s][A[A[A
-optimizer.pt:  94%|█████████▍| 2.67G/2.84G [01:02<00:03, 44.2MB/s][A
-
-
-
-
-optimizer.pt:  85%|████████▌ | 2.42G/2.84G [01:01<00:11, 36.2MB/s][A[A[A[A[A
-
-
-
-
-optimizer.pt:  86%|████████▌ | 2.43G/2.84G [01:01<00:09, 41.3MB/s][A[A[A[A[A
-optimizer.pt:  95%|█████████▍| 2.69G/2.84G [01:02<00:03, 44.8MB/s][A
-
-
-optimizer.pt:  90%|█████████ | 2.56G/2.84G [01:02<00:09, 30.0MB/s][A[A[A
-
-
-
-
-optimizer.pt:  86%|████████▌ | 2.45G/2.84G [01:01<00:08, 45.3MB/s][A[A[A[A[A
-optimizer.pt:  95%|█████████▌| 2.70G/2.84G [01:02<00:02, 47.4MB/s][A
-
-
-optimizer.pt:  91%|█████████ | 2.58G/2.84G [01:02<00:08, 30.3MB/s][A[A[A
-
-
-
-
-optimizer.pt:  87%|████████▋ | 2.46G/2.84G [01:02<00:08, 45.4MB/s][A[A[A[A[A
-optimizer.pt:  96%|█████████▌| 2.72G/2.84G [01:03<00:02, 48.4MB/s][A
-
-
-optimizer.pt:  91%|█████████▏| 2.59G/2.84G [01:03<00:06, 36.0MB/s][A[A[A
-optimizer.pt:  96%|█████████▋| 2.74G/2.84G [01:03<00:02, 50.3MB/s][A
-
-
-optimizer.pt:  92%|█████████▏| 2.61G/2.84G [01:03<00:05, 41.6MB/s][A[A[A
-optimizer.pt:  97%|█████████▋| 2.75G/2.84G [01:03<00:01, 47.4MB/s][A
-
-
-
-
-optimizer.pt:  87%|████████▋ | 2.48G/2.84G [01:02<00:10, 32.7MB/s][A[A[A[A[A
-
-
-optimizer.pt:  92%|█████████▏| 2.62G/2.84G [01:03<00:04, 45.6MB/s][A[A[A
-optimizer.pt:  98%|█████████▊| 2.77G/2.84G [01:04<00:01, 45.9MB/s][A
-
-
-optimizer.pt:  93%|█████████▎| 2.64G/2.84G [01:03<00:04, 48.3MB/s][A[A[A
-optimizer.pt:  98%|█████████▊| 2.78G/2.84G [01:04<00:00, 58.4MB/s][A
-
-
-
-
-optimizer.pt:  88%|████████▊ | 2.50G/2.84G [01:03<00:09, 35.1MB/s][A[A[A[A[A
-
-
-optimizer.pt:  94%|█████████▎| 2.66G/2.84G [01:04<00:03, 50.6MB/s][A[A[A
-
-
-
-
-optimizer.pt:  88%|████████▊ | 2.51G/2.84G [01:03<00:08, 40.7MB/s][A[A[A[A[A
-optimizer.pt:  98%|█████████▊| 2.79G/2.84G [01:04<00:00, 50.0MB/s][A
-
-
-optimizer.pt:  94%|█████████▍| 2.67G/2.84G [01:04<00:03, 51.6MB/s][A[A[A
-optimizer.pt:  99%|█████████▊| 2.80G/2.84G [01:04<00:00, 41.9MB/s][A
-
-
-
-
-optimizer.pt:  89%|████████▉ | 2.53G/2.84G [01:03<00:07, 43.2MB/s][A[A[A[A[A
-
-
-optimizer.pt:  95%|█████████▍| 2.69G/2.84G [01:04<00:02, 53.1MB/s][A[A[A
-
-
-
-
-optimizer.pt:  90%|████████▉ | 2.54G/2.84G [01:04<00:06, 46.1MB/s][A[A[A[A[A
-optimizer.pt:  99%|█████████▉| 2.82G/2.84G [01:05<00:00, 42.8MB/s][A
-
-
-
-
-optimizer.pt:  90%|█████████ | 2.56G/2.84G [01:04<00:05, 49.6MB/s][A[A[A[A[A
-
-
-optimizer.pt:  95%|█████████▌| 2.70G/2.84G [01:05<00:02, 49.4MB/s][A[A[A
-optimizer.pt: 100%|█████████▉| 2.83G/2.84G [01:05<00:00, 46.1MB/s][A
-
-
-
-
-optimizer.pt:  91%|█████████ | 2.58G/2.84G [01:04<00:05, 50.3MB/s][A[A[A[A[Aoptimizer.pt: 100%|██████████| 2.84G/2.84G [01:05<00:00, 43.2MB/s]
-
-
-
-optimizer.pt:  96%|█████████▌| 2.72G/2.84G [01:05<00:02, 47.5MB/s][A[A[A
-
-
-
-
-optimizer.pt:  91%|█████████ | 2.59G/2.84G [01:04<00:04, 56.5MB/s][A[A[A[A[A
-
-Upload 11 LFS files:  18%|█▊        | 2/11 [01:06<04:48, 32.10s/it][A[A
-
-
-optimizer.pt:  96%|█████████▋| 2.74G/2.84G [01:05<00:02, 49.4MB/s][A[A[A
-
-
-
-
-optimizer.pt:  91%|█████████▏| 2.59G/2.84G [01:05<00:06, 40.0MB/s][A[A[A[A[A
-
-
-
-
-optimizer.pt:  92%|█████████▏| 2.61G/2.84G [01:05<00:06, 37.5MB/s][A[A[A[A[A
-
-
-
-
-optimizer.pt:  92%|█████████▏| 2.62G/2.84G [01:06<00:05, 39.1MB/s][A[A[A[A[A
-
-
-
-
-optimizer.pt:  93%|█████████▎| 2.64G/2.84G [01:06<00:04, 43.4MB/s][A[A[A[A[A
-
-
-
-
-optimizer.pt:  94%|█████████▎| 2.66G/2.84G [01:06<00:04, 37.0MB/s][A[A[A[A[A
-
-
-
-
-optimizer.pt:  94%|█████████▍| 2.67G/2.84G [01:07<00:04, 41.3MB/s][A[A[A[A[A
-
-
-
-
-optimizer.pt:  95%|█████████▍| 2.69G/2.84G [01:07<00:03, 40.8MB/s][A[A[A[A[A
-
-
-
-
-optimizer.pt:  95%|█████████▌| 2.70G/2.84G [01:07<00:02, 45.8MB/s][A[A[A[A[A
-
-
-
-
-optimizer.pt:  96%|█████████▌| 2.72G/2.84G [01:08<00:02, 49.2MB/s][A[A[A[A[A
-
-
-
-
-optimizer.pt:  96%|█████████▋| 2.74G/2.84G [01:08<00:02, 49.4MB/s][A[A[A[A[A
-
-
-
-
-optimizer.pt:  97%|█████████▋| 2.75G/2.84G [01:08<00:01, 49.4MB/s][A[A[A[A[A
-
-
-
-
-optimizer.pt:  98%|█████████▊| 2.77G/2.84G [01:09<00:01, 51.5MB/s][A[A[A[A[A
-
-
-
-
-optimizer.pt:  98%|█████████▊| 2.78G/2.84G [01:09<00:01, 52.7MB/s][A[A[A[A[A
-
-
-
-
-optimizer.pt:  99%|█████████▊| 2.80G/2.84G [01:09<00:00, 52.5MB/s][A[A[A[A[A
-
-
-
-
-optimizer.pt:  99%|█████████▉| 2.82G/2.84G [01:10<00:00, 52.0MB/s][A[A[A[A[A
-
-
-
-
-optimizer.pt: 100%|█████████▉| 2.83G/2.84G [01:10<00:00, 54.5MB/s][A[A[A[A[A
-
-
-optimizer.pt:  97%|█████████▋| 2.75G/2.84G [01:11<00:09, 8.84MB/s][A[A[Aoptimizer.pt: 100%|██████████| 2.84G/2.84G [01:10<00:00, 40.3MB/s]
-
-
-
-optimizer.pt:  98%|█████████▊| 2.77G/2.84G [01:11<00:06, 11.7MB/s][A[A[A
-
-
-optimizer.pt:  98%|█████████▊| 2.78G/2.84G [01:11<00:03, 15.0MB/s][A[A[A
-
-
-optimizer.pt:  99%|█████████▊| 2.80G/2.84G [01:12<00:02, 18.9MB/s][A[A[A
-
-
-optimizer.pt:  99%|█████████▉| 2.82G/2.84G [01:12<00:00, 23.7MB/s][A[A[A
-
-
-optimizer.pt: 100%|█████████▉| 2.83G/2.84G [01:12<00:00, 29.0MB/s][A[A[Aoptimizer.pt: 100%|██████████| 2.84G/2.84G [01:12<00:00, 39.0MB/s]
-
-
-Upload 11 LFS files:  55%|█████▍    | 6/11 [01:13<00:43,  8.80s/it][A[AUpload 11 LFS files: 100%|██████████| 11/11 [01:13<00:00,  6.68s/it]
-uploading done!
