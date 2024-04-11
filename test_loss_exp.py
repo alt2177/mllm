@@ -57,17 +57,41 @@ def train_test_val_split(dataset, tokenizer, prop_eval: float = 0.2):
 
     return train_dataset, test_dataset, validation_dataset
 
-def write_results(file_path: str):
-datetime.today().strftime('%Y-%m-%d %H:%M:%S')
-    f = open("accuracy_merge_drug_data_dare_linear.txt", "a")
-    f.write(f"DARE Ties merge validation results : {validation_result}\n")
-    f.write(f"DARE Ties test results : {test_result}\n\n")
-    f.close()
 
-def preprocess_function(examples):
+def write_results(test_results, val_results, file_path: str = "model_results.txt"):
+    """ 
+    write the results of our model to a file
+
+
+    """
+    # hold the current date and time information
+    time_now = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
+
+    # generate result string
+    result_str = "Date and Time: {}\nTest Results: {}\nValidation Results: {}".format(time_now,
+                                                                                      test_results,
+                                                                                      val_results)
+    # write to file
+    with open(file_path, "a") as file:
+        file.write(result_str)
+
+    # f = open("accuracy_merge_drug_data_dare_linear.txt", "a")
+    # f.write(f"DARE Ties merge validation results : {validation_result}\n")
+    # f.write(f"DARE Ties test results : {test_result}\n\n")
+    # f.close()
+
+
+def preprocess_function(examples, tokenizer):
+    """
+
+    """
     return tokenizer(examples["text"], truncation=True,max_length=1024)
 
+
 def compute_metrics(eval_pred):
+    """
+
+    """
     predictions, labels = eval_pred
     predictions = np.argmax(predictions, axis=1)
     return accuracy.compute(predictions=predictions, references=labels)
@@ -101,9 +125,15 @@ def main():
     
     # print results
     validation_result = trainer.evaluate(eval_dataset=validation_dataset)
-    print("Merge validation:", validation_result)
-
     test_result = trainer.evaluate(eval_dataset=test_dataset)
+    write_results(test_result, validation_result)
+
+
+    #print("Merge validation:", validation_result)
+
+if __name__ == "__main__":
+    main()
+
 
 
 # from transformers import AutoModelForSequenceClassification, TrainingArguments, Trainer
