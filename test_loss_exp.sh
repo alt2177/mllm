@@ -11,18 +11,18 @@
 #SBATCH --mail-user=austin.tao@berkeley.edu
 
 # run script via Makefile
-#pip uninstall transformers
-#pip install transformers==4.28.0
-#pip install accelerate -U
-#pip install transformers
-#pip install torch
-#pip install datasets
-#pip install evaluate
-#pip install numpy
-#pip install huggingface
-#pip install regex --upgrade
-#pip install huggingface_hub
-#git config user.email "mllm.dev.222@gmail.com"
-#git config user.name "mllm-dev"
-#git remote set-url origin https://huggingface.co/mllm-dev/yelp_finetuned_6gpu_full
+pip uninstall transformers
+pip install transformers==4.28.0
+pip install accelerate -U
+pip install transformers
+pip install torch
+pip install datasets
+pip install evaluate
+pip install numpy
+pip install huggingface
+pip install regex --upgrade
+pip install huggingface_hub
+git config user.email "mllm.dev.222@gmail.com"
+git config user.name "mllm-dev"
+git remote set-url origin https://huggingface.co/mllm-dev/yelp_finetuned_6gpu_full
 python3 test_loss_exp.py
