@@ -1,13 +1,19 @@
+# ======================================================================
+# Author: Austin Tao (modified from drug_experiment/merge_eval.py)
+#
+# script to determine why we are seeing higher than average test loss values with our merge
 #
 #
-#
-#
+#======================================================================
 
+import torch
+from torch.nn.functional import softmax
 from datasets import load_dataset,Dataset
 from datetime import datetime
 import numpy as np
 import evaluate
 from transformers import AutoTokenizer, AutoModelForSequenceClassification, DataCollatorWithPadding, Trainer
+
 
 def train_test_val_split(dataset, tokenizer, prop_eval: float = 0.2):
     """
@@ -92,6 +98,7 @@ def compute_metrics(eval_pred):
     """
 
     """
+    accuracy = evaluate.load("accuracy")
     predictions, labels = eval_pred
     predictions = np.argmax(predictions, axis=1)
     return accuracy.compute(predictions=predictions, references=labels)
@@ -114,7 +121,6 @@ def main():
     data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
 
 
-    accuracy = evaluate.load("accuracy")
 
     trainer = Trainer(
         model=model,
