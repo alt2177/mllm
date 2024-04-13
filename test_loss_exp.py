@@ -46,10 +46,15 @@ def eval_with_probs(trainer: Trainer,
         # Extract logits and convert to probabilities
         logits = predictions.predictions
         probabilities = softmax(torch.tensor(logits), dim=-1).numpy()
+
+        # add the true labels
+        labels = dataset["label"]
+        df = pd.DataFrame(probabilities)
+        df["true_label"] = dataset["label"]
         
         # Save probabilities to a CSV file
         probabilities_file = f"{output_dir}/{name}_probabilities.csv"
-        pd.DataFrame(probabilities).to_csv(probabilities_file, index=False)
+        df.to_csv(probabilities_file, index = False)
         print(f"Saved {name} probabilities to {probabilities_file}")
         
         # Calculate and print accuracy if labels are present
