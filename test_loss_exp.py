@@ -14,7 +14,7 @@ from typing import Any, Tuple, Dict  # for type annotations
 from torch.nn.functional import softmax
 from datasets import load_dataset,Dataset
 from datetime import datetime
-from transformers import AutoTokenizer, AutoModelForSequenceClassification, DataCollatorWithPadding, Trainer
+from transformers import AutoTokenizer, AutoModelForSequenceClassification, DataCollatorWithPadding, Trainer, PreTrainedTokenizerBase
 from sklearn.metrics import accuracy_score
 
 
