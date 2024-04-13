@@ -205,7 +205,9 @@ def compute_metrics(eval_pred: Tuple[np.ndarray, np.ndarray]) -> Dict[str, float
 
 def main():
     # load tokenizer
-    tokenizer = AutoTokenizer.from_pretrained("mllm-dev/gpt2_m_experiment_drug_data_ties")
+    #tokenizer = AutoTokenizer.from_pretrained("mllm-dev/gpt2_m_experiment_drug_data_ties")
+    tokenizer = AutoTokenizer.from_pretrained("mllm-dev/gpt2_m_experiment_drug_data_linear")
+    model = AutoModelForSequenceClassification.from_pretrained("mllm-dev/gpt2_m_experiment_drug_data_linear")
 
     # load dataset
     dataset = load_dataset("lewtun/drug-reviews")
@@ -214,7 +216,7 @@ def main():
     training_dataset, test_dataset, validation_dataset = train_test_val_split(dataset, tokenizer)
 
     # Load model directly
-    model = AutoModelForSequenceClassification.from_pretrained("mllm-dev/gpt2_m_experiment_drug_data_ties")
+    #model = AutoModelForSequenceClassification.from_pretrained("mllm-dev/gpt2_m_experiment_drug_data_ties")
     model.config.pad_token_id = tokenizer.eos_token_id
     model.resize_token_embeddings(len(tokenizer))
     data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
