@@ -3,7 +3,7 @@ dataset = load_dataset("lewtun/drug-reviews")
 
 # Load model directly
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
-tokenizer = AutoTokenizer.from_pretrained("mllm-dev/gpt2_m_experiment_drug_data_dare_linear")
+tokenizer = AutoTokenizer.from_pretrained("mllm-dev/gpt2_m_experiment_drug_data_dare_linear_test")
 
 
 def preprocess_function(examples):
@@ -37,7 +37,7 @@ def compute_metrics(eval_pred):
 
 from transformers import AutoModelForSequenceClassification, TrainingArguments, Trainer
 model = AutoModelForSequenceClassification.from_pretrained(
-    "mllm-dev/gpt2_m_experiment_drug_data_dare_linear", num_labels=10
+    "mllm-dev/gpt2_m_experiment_drug_data_dare_linear_test", num_labels=10
 )
 model.config.pad_token_id = tokenizer.eos_token_id
 model.resize_token_embeddings(len(tokenizer))
