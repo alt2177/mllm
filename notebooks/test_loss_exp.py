@@ -181,7 +181,11 @@ plt.show()
 
 
 
-#|%%--%%| <klpftFZAqZ|OVrFUGCDdX>
+#|%%--%%| <klpftFZAqZ|2ZVXGw5sHA>
+r"""°°°
+# START LOOKING HERE
+°°°"""
+#|%%--%%| <2ZVXGw5sHA|OVrFUGCDdX>
 
 true_labels = ties_test.select("true_label")
 true_labels = true_labels.to_numpy()
@@ -196,7 +200,22 @@ for i, row in enumerate(ties_test.rows()):
 
 print(inlabel_ties)
 
-#|%%--%%| <LYQPCdwt1j|t0kM7yAz5G>
+#|%%--%%| <LYQPCdwt1j|ypshuD3Ocy>
+
+print(inlabel_ties[:10])
+
+#|%%--%%| <ypshuD3Ocy|vWPz8sDGtQ>
+
+first_ten = ties_test.select("true_label")[:10].to_numpy()
+first_ten[0][0]
+
+ties_test.rows()[1][first_ten[1][0]]
+ties_test.head(2)
+for i, rows in enumerate(ties_test.rows()):
+    print(row[])
+
+
+#|%%--%%| <vWPz8sDGtQ|t0kM7yAz5G>
 
 true_labels = base_test.select("true_label").to_numpy()
 inlabel_base_2 = []
@@ -221,9 +240,50 @@ ax = plt.gca()
 ax.spines['top'].set_visible(False)
 ax.spines['right'].set_visible(False)
 
-plt.hist(inlabel_ties, bins = 20, density = True, alpha = 0.5, label = "TIES Merge", color='dodgerblue')
-plt.hist(inlabel_base_2, bins = 20, density = True, alpha = 0.3, label = "Fine-Tune 2", color='blue')
-plt.hist(inlabel_dare_lin, bins = 20, density = True, alpha = 0.3, label = "DARE Linear Merge", color='springgreen')
+plt.hist(inlabel_ties, bins = 50, alpha = 0.3, label = "TIES Merge", color='dodgerblue')
+# plt.hist(inlabel_base_2, bins = 20, alpha = 0.3, label = "Fine-Tune 2", color='blue')
+# plt.hist(inlabel_dare_lin, bins = 20, alpha = 0.5, label = "DARE Linear Merge", color='springgreen')
+plt.title('Distribution of Values Conditioned on True Label (Testing)')
+plt.xlabel('Probability')
+plt.ylabel('Frequency')
+plt.grid(True)
+plt.legend()
+# plt.savefig("notebooks/images/inlabel_ties.png")
+plt.show()
+
+#|%%--%%| <528FBLOXZD|C3v4ZYezvu>
+r"""°°°
+## Plot where we started zooming in hella and adding hella bins
+°°°"""
+#|%%--%%| <C3v4ZYezvu|mVn6FMzKXR>
+
+# plotting on different plots
+plt.figure(figsize = (10, 6), dpi = 100)
+ax = plt.gca()
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+plt.hist(inlabel_base_2, alpha = 0.3, label = "Fine-Tune 2", color='blue')
+plt.hist(inlabel_ties, alpha = 0.3, label = "TIES Merge", color='green')
+# plt.hist(inlabel_dare_lin, bins = 20, alpha = 0.5, label = "DARE Linear Merge", color='springgreen')
+plt.xlim([0.0, 0.00025])
+plt.title('Distribution of Values Conditioned on True Label (Testing)')
+plt.xlabel('Probability')
+plt.ylabel('Frequency')
+plt.grid(True)
+plt.legend()
+plt.savefig("notebooks/images/zoom.png")
+plt.show()
+
+#|%%--%%| <mVn6FMzKXR|U3WfEp1aGO>
+
+
+# plotting on different plots
+plt.figure(figsize = (10, 6), dpi = 100)
+ax = plt.gca()
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+# plt.hist(inlabel_base_2, bins = 20, alpha = 0.3, label = "Fine-Tune 2", color='blue')
+plt.hist(inlabel_dare_lin, bins = 20, alpha = 0.5, label = "DARE Linear Merge", color='springgreen')
 plt.title('Distribution of Values Conditioned on True Label (Testing)')
 plt.xlabel('Probability')
 plt.ylabel('Frequency')
@@ -232,7 +292,11 @@ plt.legend()
 plt.savefig("notebooks/images/inlabel_ties.png")
 plt.show()
 
-#|%%--%%| <528FBLOXZD|vBlmdeKn7v>
+#|%%--%%| <U3WfEp1aGO|p2l2p1l1Zm>
+
+
+
+#|%%--%%| <p2l2p1l1Zm|vBlmdeKn7v>
 
 ties_test.columns
 
