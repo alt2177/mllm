@@ -18,10 +18,14 @@ from transformers import AutoTokenizer, AutoModelForSequenceClassification, Data
 from sklearn.metrics import accuracy_score
 
 
+import re
+
+
 def eval_with_probs(trainer: Trainer,
-                              test_dataset: Dataset,
-                              validation_dataset:Dataset,
-                              output_dir: str = "test_loss_exp") -> None:
+                    test_dataset: Dataset,
+                    validation_dataset:Dataset,
+                    file_prefix: str,
+                    output_dir: str = "test_loss_exp") -> None:
     """
     Evaluate the model on test and validation datasets using the provided Trainer object,
     compute probabilities, and save the results along with accuracy to CSV files.
@@ -30,6 +34,7 @@ def eval_with_probs(trainer: Trainer,
         - trainer (Trainer): The Hugging Face Trainer object.
         - test_dataset (datasets.Dataset): The dataset for testing.
         - validation_dataset (datasets.Dataset): The dataset for validation.
+        - file_prefix (str): prefix to add to the outputted file
         - output_dir (str): Directory path where the results will be saved.
 
     Returns:
@@ -53,7 +58,7 @@ def eval_with_probs(trainer: Trainer,
         df["true_label"] = dataset["label"]
         
         # Save probabilities to a CSV file
-        probabilities_file = f"{output_dir}/{name}_probabilities.csv"
+        probabilities_file = "{}/{}_{}_probabilities.csv".format(output_dir, file_prefix, name)
         df.to_csv(probabilities_file, index = False)
         print(f"Saved {name} probabilities to {probabilities_file}")
         
@@ -203,14 +208,25 @@ def compute_metrics(eval_pred: Tuple[np.ndarray, np.ndarray]) -> Dict[str, float
     return accuracy.compute(predictions=predictions, references=labels)
 
 
-def main():
-    # load tokenizer
-    #tokenizer = AutoTokenizer.from_pretrained("mllm-dev/gpt2_m_experiment_drug_data_ties")
-    tokenizer = AutoTokenizer.from_pretrained("mllm-dev/gpt2_m_experiment_drug_data_linear")
-    model = AutoModelForSequenceClassification.from_pretrained("mllm-dev/gpt2_m_experiment_drug_data_linear")
+def run_exp(model_path: str,
+            dataset_path: str,
+            file_prefix: str = "") -> None:
+    """
+    Run and get the experiment probabilities for a particular model
+
+    Args:
+        - model_path (str): path to the model in HF
+        - dataset_path (str): path to the dataset in HF
+
+    Returns:
+        None. Writes to file if successful.
+    """
+
+    tokenizer = AutoTokenizer.from_pretrained(model_str)
+    model = AutoModelForSequenceClassification.from_pretrained(model_str)
 
     # load dataset
-    dataset = load_dataset("lewtun/drug-reviews")
+    dataset = load_dataset(dataset_str)
     
     # split into train-test-val
     training_dataset, test_dataset, validation_dataset = train_test_val_split(dataset, tokenizer)
@@ -229,13 +245,70 @@ def main():
         compute_metrics=compute_metrics
     )
     
-    # print results
-    # validation_result = trainer.evaluate(eval_dataset=validation_dataset)
-    # test_result = trainer.evaluate(eval_dataset=test_dataset)
-    # write_results(test_result, validation_result)
+    # set file prefix to model name if not provided
+    if file_prefix == "":
+        match = re.search(r'\/(.*)', model_path)
+        file_prefix = match.group(1)
 
-    # get probabilities
-    eval_with_probs(trainer, test_dataset, validation_dataset)
+    # get probabilities and write to file
+    eval_with_probs(trainer, test_dataset, validation_dataset, file_prefix)
+
+
+def main() -> None:
+
+    # get the path of all the models for yelp and imdb
+    model_paths = [
+        "mllm-dev/gpt2_untrained",
+        "mllm-dev/gpt2_f_experiment_0",
+        "mllm-dev/gpt2_f_experiment_1",
+        "mllm-dev/gpt2_f_experiment_2",
+        "mllm-dev/gpt2_f_experiment_3",
+        "mllm-dev/gpt2_f_experiment_4",
+        "mllm-dev/gpt2_f_experiment_5",
+        "mllm-dev/gpt2_f_experiment_6",
+        "mllm-dev/gpt2_f_experiment_7",
+        "mllm-dev/gpt2_f_experiment_8",
+        "mllm-dev/gpt2_f_experiment_9",
+        "mllm-dev/gpt_f_experiment_large",
+        "mllm-dev/gpt2_m_experiment_dare_linear",
+        "mllm-dev/gpt2_m_experiment_ties",
+        "mllm-dev/gpt2_m_experiment_linear",
+        "mllm-dev/gpt2_m_experiment",       # note that this is DARE TIES
+    ] 
+
+    # get the paths for drug dataset models
+    drug_model_paths = [
+        "mllm-dev/gpt2_f_experiment_0_drug_data",
+        "mllm-dev/gpt2_f_experiment_1_drug_data",
+        "mllm-dev/gpt2_f_experiment_2_drug_data",
+        "mllm-dev/gpt2_f_experiment_3_drug_data",
+        "mllm-dev/gpt2_f_experiment_4_drug_data",
+        "mllm-dev/gpt2_f_experiment_drug_data_large",
+        "mllm-dev/gpt2_m_experiment_drug_data_linear",
+        "mllm-dev/gpt2_m_experiment_drug_data_ties",
+        "mllm-dev/gpt2_m_experiment_drug_data_dare_linear",
+        "mllm-dev/gpt2_m_experiment_drug_data_dare_ties",
+        "mllm-dev/gpt2_m_experiment_drug_data_dare_linear_test",
+        "mllm-dev/gpt2_m_experiment_drug_data_ties_test",
+
+    ]
+
+    # define dataset paths
+    dataset_paths = [
+        "yelp_review_full",
+        "imdb",
+        "lewtun/drug-reviews"
+    ] 
+
+    # run and get prediction probabilities and accuracies for yelp
+    for path in model_paths:
+        run_exp(path, "yelp_review_full")
+
+    for path in drug_model_paths:
+        run_exp(path, "lewtun/drug-reviews")
+
+
+
 
 
 if __name__ == "__main__":
