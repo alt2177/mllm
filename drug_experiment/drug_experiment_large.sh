@@ -5,8 +5,8 @@
 #SBATCH --nodes=1# Use one node
 #SBATCH --account=phudish_p
 #SBATCH --partition=lambda        # Specify the partition to run on
-#SBATCH --gres=gpu:6                  # Request one GPU
-#SBATCH --output=output_1.log     # Standard output and error log
+#SBATCH --gres=gpu:2                  # Request one GPU
+#SBATCH --output=output_2.log     # Standard output and error log
 #SBATCH --mail-type=FAIL,END           # Send email on job END and FAIL
 #SBATCH --mail-user=phudish_p@berkeley.edu 
 
@@ -24,4 +24,4 @@
 #git config user.name "mllm-dev"
 #pip install accelerate -U
 #python -m torch.distributed.launch --nproc_per_node=6 main.py
-python drug_dataset_large.py
+python drug_dataset_large_test.py
