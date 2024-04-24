@@ -1,12 +1,12 @@
 #!/bin/bash
 
 ## Resource Requests
-#SBATCH --job-name=fine_tuning_billsum_t5 # Job name
+#SBATCH --job-name=large_drug_data # Job name
 #SBATCH --nodes=1# Use one node
 #SBATCH --account=phudish_p
 #SBATCH --partition=lambda        # Specify the partition to run on
 #SBATCH --gres=gpu:2                  # Request one GPU
-#SBATCH --output=output_2.log     # Standard output and error log
+#SBATCH --output=large_drug_data.log     # Standard output and error log
 #SBATCH --mail-type=FAIL,END           # Send email on job END and FAIL
 #SBATCH --mail-user=phudish_p@berkeley.edu 
 
