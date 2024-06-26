@@ -1,8 +1,6 @@
 import mllm
 
 def main():
-<<<<<<< HEAD
-<<<<<<< HEAD
     # set our collective token
     access_token = "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" 
     username = "mllm-dev"
@@ -17,9 +15,6 @@ def main():
 
     # pad tokens
     data_collator = DataCollatorWithPadding(tokenizer=tokenizer) 
-
-    # id2label = {0: "NEGATIVE", 1: "POSITIVE"}
-    # label2id = {"NEGATIVE": 0, "POSITIVE": 1}
 
     # create model
     model = AutoModelForSequenceClassification.from_pretrained(
@@ -47,19 +42,8 @@ def main():
         save_strategy="epoch",
         load_best_model_at_end=True,
         push_to_hub=True,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        hub_token=access_tokens,
-=======
-=======
+
 	    hub_model_id=f"{username}/{output_repo}",
->>>>>>> f97b2ef44 (began testing MLLM.py)
-=======
-	    hub_model_id=f"{username}/{output_repo}",
->>>>>>> main
-        hub_token = access_token
->>>>>>> e8a460892 (model trained)
     )
 
     trainer = Trainer(
@@ -69,16 +53,8 @@ def main():
         eval_dataset=small_eval_dataset,
         tokenizer=tokenizer,
         data_collator=data_collator,
-<<<<<<< HEAD
         compute_metrics=compute_metrics,
-<<<<<<< HEAD
         hub_token=access_tokens,
-=======
-#        hub_token = access_token
->>>>>>> e8a460892 (model trained)
-=======
-        compute_metrics=compute_metrics
->>>>>>> f97b2ef44 (began testing MLLM.py)
     )
 
     result = trainer.train()
@@ -99,27 +75,12 @@ def main():
         repo_type="model"
     )
     print('uploading done!')
-
-
-    # model eval
-    #eval_result = trainer.evaluate(eval_dataset=tokenized_imdb["test"])
-
-
-    #print(f"Fine tune model accuracy : {eval_result['eval_accuracy']}")
-
-=======
-	my_mllm = mllm.MLLM()
-	my_mllm.train()
-	my_mllm.write_results()
-	print("DONE!")
->>>>>>> 2b79c839a (confirmed MLLM functional on Lambda)
-=======
+    
 	print("================= BEGIN! =================")
 	my_mllm = mllm.MLLM()
 	my_mllm.train()
 	my_mllm.write_results()
 	print("================= DONE! =================")
->>>>>>> 898b93796 (fixed results printing)
 
 
 if __name__ == "__main__":
