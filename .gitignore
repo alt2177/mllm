@@ -2,6 +2,39 @@
 venv/
 /yelp_finetune_epoch_1_gpt2_1
 output.log
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+*.csv
+=======
+=======
+>>>>>>> b83eb4ba6 (debugged MLLM)
+=======
+>>>>>>> 6370e429a (model trained)
+<<<<<<< HEAD
+>>>>>>> e8a460892 (model trained)
+=======
+=======
+output.log
+>>>>>>> 313add349 (pushing again)
+<<<<<<< HEAD
+>>>>>>> 114167d1e (pushing again)
+=======
+=======
+*.csv
+>>>>>>> 65f8d1f67 (debugged MLLM)
+>>>>>>> b83eb4ba6 (debugged MLLM)
+=======
+*.csv
+exp_*/
+<<<<<<< HEAD
+>>>>>>> d97921162 (updated gitignore to ignore exp_*)
+=======
+experiment*/
+>>>>>>> de9d3b714 (updated gitignore)
+=======
 *.csv
 exp_*/
 experiment*/
+>>>>>>> main

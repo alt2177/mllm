@@ -6,15 +6,50 @@
 #SBATCH --partition=jsteinhardt        # Specify the partition to run on
 #SBATCH --nodelist=saruman
 #SBATCH --gres=gpu:1                   # Request one GPU
+<<<<<<< HEAD
+<<<<<<< HEAD
 #SBATCH --output=output.log     # Standard output and error log
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 #SBATCH --mail-type=BEGIN,END,FAIL           # Send email on job END and FAIL
 #SBATCH --mail-user=mllm.dev.222@gmail.com
+=======
+#SBATCH --mail-type=END,FAIL           # Send email on job END and FAIL
+#SBATCH --mail-user=robert_thompson@berkeley.edu
+=======
+#SBATCH --output=my_gpu_job_%j.log     # Standard output and error log
+#SBATCH --mail-type=BEGIN, END, FAIL           # Send email on job END and FAIL
+#SBATCH --mail-user= austin.tao@berkeley.edu, phudish_p@berkeley.edu, sean_mcavoy@berkeley.edu, robert_thompson@berkeley.edu 
+>>>>>>> 82f519b2f (created sbatch file)
+<<<<<<< HEAD
+>>>>>>> 7888da94f (created sbatch file)
+=======
+=======
+#SBATCH --output=output.log     # Standard output and error log
+#SBATCH --mail-type=END,FAIL           # Send email on job END and FAIL
+#SBATCH --mail-user=austin.tao@berkeley.edu,phudish_p@berkeley.edu,sean_mcavoy@berkeley.edu,robert_thompson@berkeley.edu 
+>>>>>>> 9e63d322e (debugging fine_tune.sh)
+>>>>>>> cbe69ee22 (debugging fine_tune.sh)
+=======
+#SBATCH --mail-type=BEGIN,END,FAIL           # Send email on job END and FAIL
+#SBATCH --mail-user=mllm.dev.222@gmail.com
+>>>>>>> f97b2ef44 (began testing MLLM.py)
+=======
+#SBATCH --mail-type=BEGIN,END,FAIL           # Send email on job END and FAIL
+#SBATCH --mail-user=mllm.dev.222@gmail.com
+>>>>>>> main
 
 # Load any modules and set up your environment
 module load python/3.8
 module load cuda/10.1                 # Load CUDA module, if required
 
 # run script via Makefile
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3d1721335 (job completed)
 pip uninstall transformers
 pip install transformers==4.28.0
 pip install torch
@@ -28,4 +63,34 @@ git config user.email "mllm.dev.222@gmail.com"
 git config user.name "mllm-dev"
 echo $(pwd)
 #python -m torch.distributed.launch --nproc_per_node=1 main.py
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 python3 ./main.py
+=======
+python main.py
+=======
+make run
+>>>>>>> 82f519b2f (created sbatch file)
+<<<<<<< HEAD
+>>>>>>> 7888da94f (created sbatch file)
+=======
+=======
+pip uninstall transformers
+pip install transformers==4.28.0
+pip install torch 
+pip install datasets
+pip install evaluate
+pip install numpy
+pip install huggingface
+echo $(pwd)
+python3 ./main.py
+#make run
+>>>>>>> 9e63d322e (debugging fine_tune.sh)
+>>>>>>> cbe69ee22 (debugging fine_tune.sh)
+=======
+python3 ./main.py
+>>>>>>> f97b2ef44 (began testing MLLM.py)
+=======
+python3 ./main.py
+>>>>>>> main

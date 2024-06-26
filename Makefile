@@ -20,6 +20,7 @@ run:
 	sbatch lambda_fine_tune.sh
 	make clean
 
+
 # Run tests
 test: venv
 	${VENV}/bin/pytest tests/

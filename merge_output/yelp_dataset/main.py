@@ -1,8 +1,13 @@
 from huggingface_hub import HfApi, HfFolder, create_repo
+<<<<<<< HEAD
+from transformers import AutoTokenizer, DataCollatorWithPadding, AutoModelForSequenceClassification, TrainingArguments, Trainer
+from datasets import load_dataset
+=======
 from transformers import DataCollatorWithPadding, AutoModelForSequenceClassification, TrainingArguments, Trainer
 from torch.utils.data.distributed import DistributedSampler
 from datasets import load_dataset
 from transformers import AutoTokenizer, TrainerCallback
+>>>>>>> main
 import evaluate
 import numpy as np
 import torch
@@ -21,10 +26,22 @@ def compute_metrics(eval_pred):
     return accuracy.compute(predictions=predictions, references=labels)
 
 def main():
+<<<<<<< HEAD
+    # set our collective token and HF info
+    access_token = "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" 
+    username = "mllm-dev"
+<<<<<<< HEAD:merge_output/yelp_dataset/main.py
+    output_repo = "yelp_finetuned_gpt2_6gpu_1"
+=======
+    # repo that will be made on huggingface
+    output_repo = "yelp_finetuned_6gpu_full"
+>>>>>>> 3ff4795f6 (add comments):main.py
+=======
     # set our collective token
     access_token = "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" 
     username = "mllm-dev"
     output_repo = "yelp_finetuned_gpt2_6gpu_1"
+>>>>>>> main
 
     # load and tokenize data
     dataset = load_dataset("yelp_review_full")
@@ -45,12 +62,26 @@ def main():
     model.config.pad_token_id = tokenizer.eos_token_id
     model.resize_token_embeddings(len(tokenizer))
 
+<<<<<<< HEAD
+<<<<<<< HEAD:merge_output/yelp_dataset/main.py
+=======
+>>>>>>> main
     #small_train_dataset = tokenized_yelp["train"].shuffle(seed=42).select(range(300000))
     #small_eval_dataset = tokenized_yelp["test"].shuffle(seed=42).select(range(50000))
     tokenized_yelp_train = tokenized_yelp["train"].shuffle(seed=42)
     tokenized_yelp_test = tokenized_yelp["test"].shuffle(seed=42)
+<<<<<<< HEAD
+=======
+    small_train_dataset = tokenized_yelp["train"].shuffle(seed=42)
+    small_eval_dataset = tokenized_yelp["test"].shuffle(seed=42)
+
+    # create the repo before we try to push the model to huggingface
+>>>>>>> 3ff4795f6 (add comments):main.py
+    HfFolder.save_token(access_token)
+=======
     HfFolder.save_token(access_token)
 
+>>>>>>> main
     api = HfApi()
     user = api.whoami(token=access_token)
     try:
@@ -67,7 +98,15 @@ def main():
         per_device_train_batch_size=24,
         per_device_eval_batch_size=24,
         num_train_epochs=2,
+<<<<<<< HEAD
+<<<<<<< HEAD:merge_output/yelp_dataset/main.py
 	    fp16=True,
+=======
+	fp16=True,
+>>>>>>> 3ff4795f6 (add comments):main.py
+=======
+	    fp16=True,
+>>>>>>> main
         weight_decay=0.01,
         evaluation_strategy="epoch",
         save_strategy="epoch",
@@ -94,6 +133,10 @@ def main():
     torch.save(probs,"test_probs_yelp_1.pt")
    # trainer.evaluate()
 
+<<<<<<< HEAD
+<<<<<<< HEAD:merge_output/yelp_dataset/main.py
+=======
+>>>>>>> main
     HfFolder.save_token(access_token)
 
     api = HfApi()
@@ -124,5 +167,10 @@ def main():
 
     #return
 
+<<<<<<< HEAD
+=======
+>>>>>>> 3ff4795f6 (add comments):main.py
+=======
+>>>>>>> main
 if __name__ == "__main__":
     main()
