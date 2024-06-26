@@ -28,7 +28,7 @@ class MLLM:
         evaluation_strategy="epoch",
         save_strategy="epoch",
         load_best_model_at_end=True,
-        push_to_hub=True,
+        push_to_hub=False,
         hub_token=access_token
     )
 
@@ -133,7 +133,7 @@ class MLLM:
         return model
 
 
-    def train(self, train_dataset, test_dataset):
+    def train(self):
 
         trainer = Trainer(
             model=self.model,
@@ -145,8 +145,17 @@ class MLLM:
             compute_metrics=self.compute_metrics,
         )
 
-        self.result = trainer.train()
-        print(result)
+        results = trainer.train()
+        self.result = {"global_step": results[0], **results[2]}
+
+    def write_results(self, file_name: str = "results.txt"):
+        # make our result pretty to print
+        max_key_len = max(len(str(key)) for key in self.result.keys())
+        results = ""
+        for key, value in self.result.items():
+            results += f"{key:<{max_key_len}}: {value}\n"
+        with open(file_name, "w") as file:
+            file.write(results)
 
 
 
@@ -156,5 +165,4 @@ class MLLM:
 
 
 
-
-
+# TrainOutput(global_step=16, training_loss=4.030867576599121, metrics={'train_runtime': 79.5431, 'train_samples_per_second': 12.572, 'train_steps_per_second': 0.201, 'train_loss': 4.030867576599121, 'epoch': 1.0})
