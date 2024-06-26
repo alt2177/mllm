@@ -1,4 +1,4 @@
-# Mixture of Large Language Models (MLLM): Blending Ensemble Learning and Deep Learning
+# Merge of Large Language Models (MLLM): Blending Ensemble Learning and Deep Learning
 
 Authors:
 
@@ -9,16 +9,18 @@ Authors:
 
 ## Description
 
-We aim to develop Mixture of Large Language Models (MLLM) that leverages several medium sized LLMs (~100 million parameters each) to attempt to match the performance of state-of-the-art LLMs such as GPT3.5 (~175 billion parameters at time of original publication).
+Merging models has come about as a popular new paradigm for improving pretrained model
+performance at lower paramaters and without the need to retrain. There are several ways
+to merge models and a significant amount of work right now going into testing
+different combinations of models to find out what can bring about large improvements.
 
-We specifically will be assessing summarization performance on a particular domain, in our case on the
+We aim to benchmark and evaluate a Merge of Large Language Models (MLLM) that leverages several medium sized LLMs (~100 million parameters each)
+to attempt to match the performance of larger, state-of-the-art LLMs. We focus on classification tasks and
+
+classification performance on a particular domain, in our case on the
 [Drug Review Dataset (Drugs.com) via UCI ML Repository](https://archive.ics.uci.edu/dataset/462/drug+review+dataset+drugs+com).
 
-Merging models has come about as a popular new paradigm for improving pretrained model performance at lower paramaters and without the need to retrain. There are several ways to merge models and a significant amount of work right now going into testing different combinations of models to find out what can bring about large improvements.
-
 ## Technologies
-
-Our data is stored on [XetHub](https://about.xethub.com/?) at [https://xethub.com/alt2177/mllm-data](https://xethub.com/alt2177/mllm-data). We use both [Polars](https://github.com/pola-rs/polars) and [Pandas](https://pandas.pydata.org/) for our EDA and data pre-processing. For examples, see the `notebooks` folder.
 
 We will be using [MergeKit](https://github.com/arcee-ai/mergekit) to run our LLM merging operations. In preliminary tests there are several different types we need to test and work through to see what our best options are.
 
