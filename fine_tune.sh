@@ -11,6 +11,7 @@
 #SBATCH --output=output.log     # Standard output and error log
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #SBATCH --mail-type=BEGIN,END,FAIL           # Send email on job END and FAIL
 #SBATCH --mail-user=mllm.dev.222@gmail.com
 =======
@@ -34,6 +35,10 @@
 #SBATCH --mail-type=BEGIN,END,FAIL           # Send email on job END and FAIL
 #SBATCH --mail-user=mllm.dev.222@gmail.com
 >>>>>>> f97b2ef44 (began testing MLLM.py)
+=======
+#SBATCH --mail-type=BEGIN,END,FAIL           # Send email on job END and FAIL
+#SBATCH --mail-user=mllm.dev.222@gmail.com
+>>>>>>> main
 
 # Load any modules and set up your environment
 module load python/3.8
@@ -58,6 +63,7 @@ git config user.email "mllm.dev.222@gmail.com"
 git config user.name "mllm-dev"
 echo $(pwd)
 #python -m torch.distributed.launch --nproc_per_node=1 main.py
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 python3 ./main.py
@@ -85,3 +91,6 @@ python3 ./main.py
 =======
 python3 ./main.py
 >>>>>>> f97b2ef44 (began testing MLLM.py)
+=======
+python3 ./main.py
+>>>>>>> main

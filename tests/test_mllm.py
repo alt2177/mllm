@@ -5,9 +5,13 @@ import mllm
 from datasets import load_dataset
 import os
 <<<<<<< HEAD
+<<<<<<< HEAD
 from typing import Type
 =======
 >>>>>>> f97b2ef44 (began testing MLLM.py)
+=======
+from typing import Type
+>>>>>>> main
 
 class TestMLLM:
     @pytest.fixture
@@ -16,10 +20,14 @@ class TestMLLM:
         return mllm.MLLM()
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     def test_init(self, mllm_instance: Type[mllm.MLLM]):
 =======
     def test_init(self, mllm_instance):
 >>>>>>> f97b2ef44 (began testing MLLM.py)
+=======
+    def test_init(self, mllm_instance: Type[mllm.MLLM]):
+>>>>>>> main
         """Test initialization of the MLLM class."""
         assert mllm_instance is not None
         assert mllm_instance.model is not None
@@ -34,8 +42,11 @@ class TestMLLM:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b83eb4ba6 (debugged MLLM)
+=======
+>>>>>>> main
     # def test_load_dataset_local(self, tmp_path, mllm_instance):
     #     """Test loading a dataset from a local file."""
     #     # Create a dummy dataset file
@@ -43,6 +54,7 @@ class TestMLLM:
     #     dataset_file.write_text("dummy content")
     #     with pytest.raises(FileNotFoundError):
     #         mllm_instance.load_dataset(local_path=str(dataset_file))
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     def test_load_dataset_local(self, tmp_path, mllm_instance):
@@ -55,6 +67,8 @@ class TestMLLM:
 >>>>>>> f97b2ef44 (began testing MLLM.py)
 =======
 >>>>>>> b83eb4ba6 (debugged MLLM)
+=======
+>>>>>>> main
 
     def test_tokenize_data(self, mllm_instance):
         """Test the tokenization process."""

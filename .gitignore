@@ -5,6 +5,7 @@ output.log
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 *.csv
 =======
 =======
@@ -32,3 +33,8 @@ exp_*/
 =======
 experiment*/
 >>>>>>> de9d3b714 (updated gitignore)
+=======
+*.csv
+exp_*/
+experiment*/
+>>>>>>> main

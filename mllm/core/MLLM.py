@@ -1,10 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
 # MLLM Class source file
 # 
 
 import os
+<<<<<<< HEAD
 =======
 # Class for MLLM, which we can create instances of to run tests or otherwise
 #
@@ -17,11 +21,14 @@ import os
 
 import os
 >>>>>>> b83eb4ba6 (debugged MLLM)
+=======
+>>>>>>> main
 from transformers import DataCollatorWithPadding, AutoModelForSequenceClassification, TrainingArguments, Trainer
 from datasets import load_dataset
 from transformers import AutoTokenizer
 import evaluate
 import numpy as np
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 """
@@ -40,18 +47,24 @@ import os
 >>>>>>> f522bc7a8 (began trying to use mergekit in our data pipeline)
 =======
 >>>>>>> be4e74db6 (began transitioning code into package structure)
+=======
+>>>>>>> main
 
 
 class MLLM:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> be4e74db6 (began transitioning code into package structure)
+=======
+>>>>>>> main
     # HuggingFace access token
     access_token = "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"
 
     # specify output directory
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     output_dir = "test_MLLM"
@@ -61,6 +74,9 @@ class MLLM:
 =======
     output_dir = "test_MLLM"
 >>>>>>> b83eb4ba6 (debugged MLLM)
+=======
+    output_dir = "test_MLLM"
+>>>>>>> main
 
     # training arguments
     training_args = TrainingArguments(
@@ -92,8 +108,11 @@ class MLLM:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b83eb4ba6 (debugged MLLM)
+=======
+>>>>>>> main
         # set dataset and tokenize
         self.dataset = self.load_dataset() 
         self.tokenize_data()
@@ -109,6 +128,7 @@ class MLLM:
         self.tokenizer: AutoTokenizer 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         self.model = self.create_model()
         self.dataset = self.load_dataset() 
@@ -120,6 +140,8 @@ class MLLM:
 >>>>>>> be4e74db6 (began transitioning code into package structure)
 =======
 >>>>>>> b83eb4ba6 (debugged MLLM)
+=======
+>>>>>>> main
 
     
     def load_dataset(self, hf_dataset_name: str = "yelp_review_full" , local_path: str = None):
@@ -143,10 +165,14 @@ class MLLM:
                 raise FileNotFoundError(f"The specified path does not exist: {local_path}")
         # otherwise, load from HF
 <<<<<<< HEAD
+<<<<<<< HEAD
         elif hf_dataset_name:
 =======
         elif dataset_name:
 >>>>>>> be4e74db6 (began transitioning code into package structure)
+=======
+        elif hf_dataset_name:
+>>>>>>> main
             dataset = load_dataset(hf_dataset_name)
         else:
             raise ValueError("Either dataset_name or local_path must be provided.")
@@ -163,12 +189,16 @@ class MLLM:
         # create tokenizer and tokenize
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b83eb4ba6 (debugged MLLM)
+=======
+>>>>>>> main
         tokenizer = AutoTokenizer.from_pretrained("openai-community/gpt2", use_auth_token = self.access_token)
         self.tokenizer = tokenizer
         tokenizer.pad_token = tokenizer.eos_token
         tokenized_data = self.dataset.map(lambda examples:tokenizer(examples["text"], truncation=True,max_length=1024),batched=True)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         tokenizer = AutoTokenizer.from_pretrained("openai-community/gpt2", use_auth_token = access_token)
@@ -177,11 +207,14 @@ class MLLM:
 >>>>>>> be4e74db6 (began transitioning code into package structure)
 =======
 >>>>>>> b83eb4ba6 (debugged MLLM)
+=======
+>>>>>>> main
 
         # set data collator with tokenizer
         self.data_collator = DataCollatorWithPadding(tokenizer = tokenizer) 
         self.dataset = tokenized_data
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     def train_test_val_split(self, train_size : int = 1000, test_size : int = 1000, val_size : int = None):
@@ -191,17 +224,24 @@ class MLLM:
 =======
     def train_test_val_split(self, train_size : int = 1000, test_size : int = 1000, val_size : int = None):
 >>>>>>> b83eb4ba6 (debugged MLLM)
+=======
+    def train_test_val_split(self, train_size : int = 1000, test_size : int = 1000, val_size : int = None):
+>>>>>>> main
         """
 
         """
         train_dataset = self.dataset["train"].shuffle(seed=42).select(range(train_size))
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
         test_dataset = self.dataset["test"].shuffle(seed=4).select(range(test_size))
         
         # create validation set if we ask for one
         if val_size:
             val_dataset = self.dataset["train"].shuffle(seed=420).select(range(val_size))
+<<<<<<< HEAD
 =======
         test_dataset = self.dataset["test"].shuffle(seed=42).select(range(test_size))
         
@@ -216,6 +256,8 @@ class MLLM:
         if val_size:
             val_dataset = self.dataset["train"].shuffle(seed=420).select(range(val_size))
 >>>>>>> b83eb4ba6 (debugged MLLM)
+=======
+>>>>>>> main
             return train_dataset, test_dataset, val_dataset
         else:
             return train_dataset, test_dataset
@@ -231,12 +273,16 @@ class MLLM:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b83eb4ba6 (debugged MLLM)
+=======
+>>>>>>> main
             use_auth_token = self.access_token
         )
         model.config.pad_token_id = self.tokenizer.eos_token_id
         model.resize_token_embeddings(len(self.tokenizer))
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             use_auth_token = access_token
@@ -249,6 +295,8 @@ class MLLM:
 >>>>>>> be4e74db6 (began transitioning code into package structure)
 =======
 >>>>>>> b83eb4ba6 (debugged MLLM)
+=======
+>>>>>>> main
         return model
 
 
@@ -258,14 +306,18 @@ class MLLM:
             model=self.model,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b83eb4ba6 (debugged MLLM)
+=======
+>>>>>>> main
             args=self.training_args,
             train_dataset=self.train_dataset,
             eval_dataset=self.test_dataset,
             tokenizer=self.tokenizer,
             data_collator=self.data_collator,
             compute_metrics=self.compute_metrics,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             args=training_args,
@@ -277,6 +329,8 @@ class MLLM:
 >>>>>>> be4e74db6 (began transitioning code into package structure)
 =======
 >>>>>>> b83eb4ba6 (debugged MLLM)
+=======
+>>>>>>> main
         )
 
         self.result = trainer.train()
@@ -288,6 +342,7 @@ class MLLM:
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -347,6 +402,8 @@ class MLLM:
 >>>>>>> f522bc7a8 (began trying to use mergekit in our data pipeline)
 =======
 >>>>>>> be4e74db6 (began transitioning code into package structure)
+=======
+>>>>>>> main
 
 
 

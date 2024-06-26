@@ -66,11 +66,15 @@ def main():
         push_to_hub=True,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         hub_token=access_tokens,
 =======
 =======
 	    hub_model_id=f"{username}/{output_repo}",
 >>>>>>> f97b2ef44 (began testing MLLM.py)
+=======
+	    hub_model_id=f"{username}/{output_repo}",
+>>>>>>> main
         hub_token = access_token
 >>>>>>> e8a460892 (model trained)
     )

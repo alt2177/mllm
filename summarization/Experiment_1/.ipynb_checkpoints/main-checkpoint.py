@@ -4,7 +4,10 @@ from datasets import load_dataset
 from transformers import AutoTokenizer
 import evaluate
 import numpy as np
+<<<<<<< HEAD
 import torch
+=======
+>>>>>>> main
 
 # from mllm.data.load_drug_data import load_drug_data
 # from mllm.core.MLLM import MLLM 
@@ -21,8 +24,11 @@ def preprocess_function(examples):
     return tokenizer(examples["text"], truncation=True,max_length=1024)
 
 def main():
+<<<<<<< HEAD
     #initialize the torch distributed api
     torch.distributed.init_process_group(backend="nccl")
+=======
+>>>>>>> main
     # set our collective token
     access_token = "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" 
     username = "mllm-dev"
@@ -53,6 +59,7 @@ def main():
     model.resize_token_embeddings(len(tokenizer))
 
     # create training-val split
+<<<<<<< HEAD
 <<<<<<< HEAD:summarization/Experiment_1/.ipynb_checkpoints/main-checkpoint.py
     #small_train_dataset = tokenized_yelp["train"].shuffle(seed=42).select(range(10))
     #small_eval_dataset = tokenized_yelp["test"].shuffle(seed=42).select(range(10))
@@ -60,6 +67,10 @@ def main():
     small_train_dataset = tokenized_yelp["train"].shuffle(seed=42).select(range(1000))
     small_eval_dataset = tokenized_yelp["test"].shuffle(seed=42).select(range(1000))
 >>>>>>> 817d4eeb6 (starting to parallelize with torch):main.py
+=======
+    #small_train_dataset = tokenized_yelp["train"].shuffle(seed=42).select(range(10))
+    #small_eval_dataset = tokenized_yelp["test"].shuffle(seed=42).select(range(10))
+>>>>>>> main
  
     output_dir = "imdb_finetune_gpt2_test_epoch_5"
     # training loop
